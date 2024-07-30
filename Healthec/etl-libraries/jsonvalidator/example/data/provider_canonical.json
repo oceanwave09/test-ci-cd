@@ -1,0 +1,288 @@
+[
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10902309",
+      "first_name": "First10902309",
+      "last_name": "Last10902309",
+      "npi": "",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "InActive",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "111111111"
+      },
+      "taxonomy": "208000000X",
+      "row_id": "fed65e60-7c9d-4365-b44a-3359d44c3db8",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "NP",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "12427656",
+      "first_name": "First12427656",
+      "last_name": "Last12427656",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "111111111"
+      },
+      "taxonomy": "363L00000X",
+      "row_id": "02de0d59-aa98-4468-84c5-e4e1f13a34eb",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10903636",
+      "first_name": "First10903636",
+      "last_name": "Last10903636",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Inactive",
+        "end_date": "12162020",
+        "name": "EBPA",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "208100000X",
+      "row_id": "6b65de4c-7fff-45bb-9a8c-62fe5ba1a953",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10902158",
+      "first_name": "First10902158",
+      "last_name": "Last10902158",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "",
+        "name": "EBPA",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "207Q00000X",
+      "row_id": "e37918b4-00ab-4d0b-a796-000e98de790d",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10902158",
+      "first_name": "First10902158",
+      "last_name": "Last10902158",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "SCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "name": "Soarian",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "207Q00000X",
+      "row_id": "2b71810e-e7d4-4c25-93a7-1069e99687fc",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10902158",
+      "first_name": "First10902158",
+      "last_name": "Last10902158",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "name": "Anthem",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "111111111"
+      },
+      "taxonomy": "207Q00000X",
+      "row_id": "aea12fff-e931-4522-9898-aa8aba0015d5",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10902158",
+      "first_name": "First10902158",
+      "last_name": "Last10902158",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "name": "MaineCare",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1669423",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "207Q00000X",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10902158",
+      "first_name": "First10902158",
+      "last_name": "Last10902158",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "name": "Aetna",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "207Q00000X",
+      "row_id": "87775c73-331f-461c-90b4-df30f1a4771a",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10901929",
+      "first_name": "First10901929",
+      "last_name": "Last10901929",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "name": "Soarian",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "207Q00000X",
+      "row_id": "31346a58-cdf3-4c0b-a81b-efdd3e1daca1",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "NoReply@HealthEC.COM",
+      "external_id": "10901929",
+      "first_name": "First10901929",
+      "last_name": "Last10901929",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "name": "Anthem",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "207Q00000X",
+      "row_id": "7d5e9323-0752-4fd4-86b6-ef0c606ed0a5",
+      "work_phone": "732-271-0600"
+    }
+  },
+  {
+    "provider": {
+      "degree": "MD",
+      "email": "Alan.Ross@MaineGeneral.org",
+      "external_id": "10903636",
+      "first_name": "First10903636",
+      "last_name": "Last10903636",
+      "npi": "1119423111",
+      "participation_qualifier": "1",
+      "pcp_type": "PCP",
+      "plan": {
+        "aco_network_name": "General Region Health Alliance",
+        "affiliation_status": "Active",
+        "end_date": "12162020",
+        "name": "Soarian",
+        "signed_contract_indicator": "Y"
+      },
+      "practice": {
+        "group_npi": "1119423111",
+        "name": "General Practice",
+        "tin": "11111111111"
+      },
+      "taxonomy": "208100000X",
+      "row_id": "6833b648-543f-4d7d-b46e-f74f705fc8ad",
+      "work_phone": "732-271-0600"
+    }
+  }
+]
+

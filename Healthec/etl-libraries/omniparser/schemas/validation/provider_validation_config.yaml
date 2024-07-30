@@ -1,0 +1,26 @@
+physician_name:
+  key_path: physician_name
+  type: string
+  min_length: 1
+
+physician_phone_work:
+  key_path: physician_phone_work
+  type: string
+
+provider_org_tin:
+  key_path: provider_org_tin
+  required: True
+  type: string
+  min_length: 9
+
+provider_org_group_npi:
+  key_path: provider_org_group_npi
+  required: True
+  type: string
+  min_length: 9
+
+physician_npi:
+  key_path: physician_npi
+  required: True
+  type: string
+  min_length: 10

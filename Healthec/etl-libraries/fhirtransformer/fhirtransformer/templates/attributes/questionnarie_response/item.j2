@@ -1,0 +1,25 @@
+[
+  {% for item_entry in data.response_items %}
+  {
+    "linkId": "{{ item_entry.item_id }}",
+    "text": "{{ item_entry.item_name }}",
+    "item": [
+    {% for question_entry in item_entry.questions %}
+    {
+      "linkId": "{{ question_entry.question_id }}",
+      {%- if question_entry.answers -%}
+      "answers": [
+          {
+            "valueString": "{{ question_entry.answers }}"
+          }
+        ],
+      {%- endif %}
+      "text": "{{ question_entry.question }}"
+    }
+    {% if not loop.last %},{% endif %}
+    {% endfor %}
+    ]
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

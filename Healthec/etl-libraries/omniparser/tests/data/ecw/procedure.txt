@@ -1,0 +1,30 @@
+apuid|RecordID|PatientId|PatientAccountNo|encounterId|EncounterDate|ProviderNPI|Ecwstructid|Question|QuestionID|Answers|AnswerID|ItemName|ItemID|CategoryName|CategoryID|MainCategoryName|MainCategoryID
+280807|280807.17502.436659.4030|17502|17502|436659|2022-02-03|1033655741||PEDS Response form completed |4030|09/20/2016||PEDS response form|311226|Developmental screen |311225|Procedure|170670
+280807|280807.17502.341226.4003|17502|17502|341226|2021-02-23|1285693960||Does your child enjoy being swung, bounced on your knee, etc?|4003|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4004|17502|17502|341226|2021-02-23|1285693960||Does your child take an interest in other children?|4004|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4005|17502|17502|341226|2021-02-23|1285693960||Does your child like climbing on things, such as up stairs?|4005|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4006|17502|17502|341226|2021-02-23|1285693960||Does your child enjoy playing peek-a-boo/hide-and-seek?|4006|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4007|17502|17502|341226|2021-02-23|1285693960||Does your child ever pretend, for example, to talk on the phone or take care of a doll or pretend other things?|4007|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4008|17502|17502|341226|2021-02-23|1285693960||Does your child ever use his/her index finger to point, to ask for something?|4008|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4009|17502|17502|341226|2021-02-23|1285693960||Does your child ever use his/her index finger to point, to indicate interest in something?|4009|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4010|17502|17502|341226|2021-02-23|1285693960||Can your child play properly with small toys without just mouthing, fiddling, or dropping them?|4010|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4011|17502|17502|341226|2021-02-23|1285693960||Does your child ever bring objects over to you to show you something?|4011|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4012|17502|17502|341226|2021-02-23|1285693960||Does your child look you in the eye for more than a second or two?|4012|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4013|17502|17502|341226|2021-02-23|1285693960||Does your child ever seem oversensitive to noise? |4013|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4014|17502|17502|341226|2021-02-23|1285693960||Does your child smile in response to your face or your smile?|4014|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4015|17502|17502|341226|2021-02-23|1285693960||Does your child imitate you?|4015|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4016|17502|17502|341226|2021-02-23|1285693960||Does your child respond to his/her name when you call|4016|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4017|17502|17502|341226|2021-02-23|1285693960||If you point to a toy across the room, does your child look at it?|4017|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4018|17502|17502|341226|2021-02-23|1285693960||Does your child walk?|4018|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4019|17502|17502|341226|2021-02-23|1285693960||Does your child look at things you are looking at|4019|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4020|17502|17502|341226|2021-02-23|1285693960||Does your child make unusual finger movements near his/her face?|4020|No||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4021|17502|17502|341226|2021-02-23|1285693960||Does your child try to attract your attention to his/her own activity|4021|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4022|17502|17502|341226|2021-02-23|1285693960||Have your ever wondered if your child is deaf?|4022|No||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4023|17502|17502|341226|2021-02-23|1285693960||Does your child understand what people say?|4023|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4024|17502|17502|341226|2021-02-23|1285693960||Does your child sometimes stare at nothing or wander with no purpose?|4024|No||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.341226.4025|17502|17502|341226|2021-02-23|1285693960||Does your child look at your face to check your reaction when faced with something unfamiliar?|4025|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.366950.4030|17502|17502|366950|2021-07-20|1801238258||PEDS Response form completed |4030|07/20/2021||PEDS response form|311226|Developmental screen |311225|Procedure|170670
+280807|280807.17502.366950.4003|17502|17502|366950|2021-07-20|1801238258||Does your child enjoy being swung, bounced on your knee, etc?|4003|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.366950.4004|17502|17502|366950|2021-07-20|1801238258||Does your child take an interest in other children?|4004|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.366950.4005|17502|17502|366950|2021-07-20|1801238258||Does your child like climbing on things, such as up stairs?|4005|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670
+280807|280807.17502.366950.4006|17502|17502|366950|2021-07-20|1801238258||Does your child enjoy playing peek-a-boo/hide-and-seek?|4006|Yes||M-CHAT questionaire|311224|M-CHAT|311223|Procedure|170670

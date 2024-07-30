@@ -1,0 +1,909 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "PR1",
+            "min": 1,
+            "max": -1,
+            "elements": [
+              {
+                "name": "patient_sequence",
+                "index": 1
+              },              
+              {
+                "name": "set_id",
+                "index": 2,
+                "default": ""
+              },
+              {
+                "name": "procedure_coding_method",
+                "index": 3,
+                "default": ""
+              },
+              {
+                "name": "procedure_code_identifier",
+                "index": 4,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "procedure_code_text",
+                "index": 4,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "procedure_code_system",
+                "index": 4,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "procedure_code_alternate_identifier",
+                "index": 4,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "procedure_code_alternate_text",
+                "index": 4,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "procedure_code_alternate_system",
+                "index": 4,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "procedure_description",
+                "index": 5,
+                "default": ""
+              },
+              {
+                "name": "procedure_date_time",
+                "index": 6,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "procedure_degree_of_precision",
+                "index": 6,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "procedure_functional_type",
+                "index": 7,
+                "default": ""
+              },
+              {
+                "name": "procedure_minutes",
+                "index": 8,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_identifier",
+                "index": 9,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_family_name",
+                "index": 9,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_given_name",
+                "index": 9,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_initial",
+                "index": 9,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_suffix",
+                "index": 9,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_prefix",
+                "index": 9,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_degree",
+                "index": 9,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_source_table",
+                "index": 9,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_assigning_authority",
+                "index": 9,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_name_type_code",
+                "index": 9,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_identifier_check_digit",
+                "index": 9,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_check_digit_scheme",
+                "index": 9,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_identifier_type_code",
+                "index": 9,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_assigning_facility",
+                "index": 9,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_name_representation_code",
+                "index": 9,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_name_context",
+                "index": 9,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_name_validity_range",
+                "index": 9,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_name_assembly_order",
+                "index": 9,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_effective_date",
+                "index": 9,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_expiration_date",
+                "index": 9,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_professional_suffix",
+                "index": 9,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_assigning_jurisdiction",
+                "index": 9,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "anesthesiologist_assigning_agency_or_department",
+                "index": 9,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "anesthesia_code",
+                "index": 10,
+                "default": ""
+              },
+              {
+                "name": "anesthesia_minutes",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "surgeon_identifier",
+                "index": 12,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "surgeon_family_name",
+                "index": 12,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "surgeon_given_name",
+                "index": 12,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "surgeon_initial",
+                "index": 12,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "surgeon_suffix",
+                "index": 12,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "surgeon_prefix",
+                "index": 12,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "surgeon_degree",
+                "index": 12,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "surgeon_source_table",
+                "index": 12,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "surgeon_assigning_authority",
+                "index": 12,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "surgeon_name_type_code",
+                "index": 12,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "surgeon_identifier_check_digit",
+                "index": 12,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "surgeon_check_digit_scheme",
+                "index": 12,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "surgeon_identifier_type_code",
+                "index": 12,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "surgeon_assigning_facility",
+                "index": 12,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "surgeon_name_representation_code",
+                "index": 12,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "surgeon_name_context",
+                "index": 12,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "surgeon_name_validity_range",
+                "index": 12,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "surgeon_name_assembly_order",
+                "index": 12,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "surgeon_effective_date",
+                "index": 12,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "surgeon_expiration_date",
+                "index": 12,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "surgeon_professional_suffix",
+                "index": 12,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "surgeon_assigning_jurisdiction",
+                "index": 12,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "surgeon_assigning_agency_or_department",
+                "index": 12,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_identifier",
+                "index": 13,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_family_name",
+                "index": 13,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_given_name",
+                "index": 13,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_initial",
+                "index": 13,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_suffix",
+                "index": 13,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_prefix",
+                "index": 13,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_degree",
+                "index": 13,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_source_table",
+                "index": 13,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_assigning_authority",
+                "index": 13,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_name_type_code",
+                "index": 13,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_identifier_check_digit",
+                "index": 13,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_check_digit_scheme",
+                "index": 13,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_identifier_type_code",
+                "index": 13,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_assigning_facility",
+                "index": 13,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_name_representation_code",
+                "index": 13,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_name_context",
+                "index": 13,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_name_validity_range",
+                "index": 13,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_name_assembly_order",
+                "index": 13,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_effective_date",
+                "index": 13,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_expiration_date",
+                "index": 13,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_professional_suffix",
+                "index": 13,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_assigning_jurisdiction",
+                "index": 13,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "procedure_practitioner_assigning_agency_or_department",
+                "index": 13,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "consent_code",
+                "index": 14,
+                "default": ""
+              },
+              {
+                "name": "procedure_priority",
+                "index": 15,
+                "default": ""
+              },
+              {
+                "name": "associated_diagnosis_code_identifier",
+                "index": 16,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "associated_diagnosis_code_text",
+                "index": 16,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "associated_diagnosis_code_system",
+                "index": 16,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "associated_diagnosis_code_alternate_identifier",
+                "index": 16,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "associated_diagnosis_code_alternate_text",
+                "index": 16,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "associated_diagnosis_code_alternate_system",
+                "index": 16,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "procedure_code_modifier",
+                "index": 17,
+                "default": ""
+              },
+              {
+                "name": "procedure_drg_type",
+                "index": 18,
+                "default": ""
+              },
+              {
+                "name": "tissue_type_code",
+                "index": 19,
+                "default": ""
+              },
+              {
+                "name": "procedure_identifier",
+                "index": 20,
+                "default": ""
+              },
+              {
+                "name": "procedure_action_code",
+                "index": 21,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "PR1": {
+          "array":[
+            {
+              "xpath": "PR1",
+              "object": {
+                "patient_sequence":{
+                  "xpath": "patient_sequence"
+                },                
+                "set_id": {
+                  "xpath": "set_id"
+                },
+                "procedure_coding_method": {
+                  "xpath": "procedure_coding_method"
+                },
+                "procedure_code_identifier": {
+                  "xpath": "procedure_code_identifier"
+                },
+                "procedure_code_text": {
+                  "xpath": "procedure_code_text"
+                },
+                "procedure_code_system": {
+                  "xpath": "procedure_code_system"
+                },
+                "procedure_code_alternate_identifier": {
+                  "xpath": "procedure_code_alternate_identifier"
+                },
+                "procedure_code_alternate_text": {
+                  "xpath": "procedure_code_alternate_text"
+                },
+                "procedure_code_alternate_system": {
+                  "xpath": "procedure_code_alternate_system"
+                },
+                "procedure_description": {
+                  "xpath": "procedure_description"
+                },
+                "procedure_date_time": {
+                  "xpath": "procedure_date_time"
+                },
+                "procedure_degree_of_precision": {
+                  "xpath": "procedure_degree_of_precision"
+                },
+                "procedure_functional_type": {
+                  "xpath": "procedure_functional_type"
+                },
+                "procedure_minutes": {
+                  "xpath": "procedure_minutes"
+                },
+                "anesthesiologist_identifier": {
+                  "xpath": "anesthesiologist_identifier"
+                },
+                "anesthesiologist_family_name": {
+                  "xpath": "anesthesiologist_family_name"
+                },
+                "anesthesiologist_given_name": {
+                  "xpath": "anesthesiologist_given_name"
+                },
+                "anesthesiologist_initial": {
+                  "xpath": "anesthesiologist_initial"
+                },
+                "anesthesiologist_suffix": {
+                  "xpath": "anesthesiologist_suffix"
+                },
+                "anesthesiologist_prefix": {
+                  "xpath": "anesthesiologist_prefix"
+                },
+                "anesthesiologist_degree": {
+                  "xpath": "anesthesiologist_degree"
+                },
+                "anesthesiologist_source_table": {
+                  "xpath": "anesthesiologist_source_table"
+                },
+                "anesthesiologist_assigning_authority": {
+                  "xpath": "anesthesiologist_assigning_authority"
+                },
+                "anesthesiologist_name_type_code": {
+                  "xpath": "anesthesiologist_name_type_code"
+                },
+                "anesthesiologist_identifier_check_digit": {
+                  "xpath": "anesthesiologist_identifier_check_digit"
+                },
+                "anesthesiologist_check_digit_scheme": {
+                  "xpath": "anesthesiologist_check_digit_scheme"
+                },
+                "anesthesiologist_identifier_type_code": {
+                  "xpath": "anesthesiologist_identifier_type_code"
+                },
+                "anesthesiologist_assigning_facility": {
+                  "xpath": "anesthesiologist_assigning_facility"
+                },
+                "anesthesiologist_name_representation_code": {
+                  "xpath": "anesthesiologist_name_representation_code"
+                },
+                "anesthesiologist_name_context": {
+                  "xpath": "anesthesiologist_name_context"
+                },
+                "anesthesiologist_name_validity_range": {
+                  "xpath": "anesthesiologist_name_validity_range"
+                },
+                "anesthesiologist_name_assembly_order": {
+                  "xpath": "anesthesiologist_name_assembly_order"
+                },
+                "anesthesiologist_effective_date": {
+                  "xpath": "anesthesiologist_effective_date"
+                },
+                "anesthesiologist_expiration_date": {
+                  "xpath": "anesthesiologist_expiration_date"
+                },
+                "anesthesiologist_professional_suffix": {
+                  "xpath": "anesthesiologist_professional_suffix"
+                },
+                "anesthesiologist_assigning_jurisdiction": {
+                  "xpath": "anesthesiologist_assigning_jurisdiction"
+                },
+                "anesthesiologist_assigning_agency_or_department": {
+                  "xpath": "anesthesiologist_assigning_agency_or_department"
+                },
+                "anesthesia_code": {
+                  "xpath": "anesthesia_code"
+                },
+                "anesthesia_minutes": {
+                  "xpath": "anesthesia_minutes"
+                },
+                "surgeon_identifier": {
+                  "xpath": "surgeon_identifier"
+                },
+                "surgeon_family_name": {
+                  "xpath": "surgeon_family_name"
+                },
+                "surgeon_given_name": {
+                  "xpath": "surgeon_given_name"
+                },
+                "surgeon_initial": {
+                  "xpath": "surgeon_initial"
+                },
+                "surgeon_suffix": {
+                  "xpath": "surgeon_suffix"
+                },
+                "surgeon_prefix": {
+                  "xpath": "surgeon_prefix"
+                },
+                "surgeon_degree": {
+                  "xpath": "surgeon_degree"
+                },
+                "surgeon_source_table": {
+                  "xpath": "surgeon_source_table"
+                },
+                "surgeon_assigning_authority": {
+                  "xpath": "surgeon_assigning_authority"
+                },
+                "surgeon_name_type_code": {
+                  "xpath": "surgeon_name_type_code"
+                },
+                "surgeon_identifier_check_digit": {
+                  "xpath": "surgeon_identifier_check_digit"
+                },
+                "surgeon_check_digit_scheme": {
+                  "xpath": "surgeon_check_digit_scheme"
+                },
+                "surgeon_identifier_type_code": {
+                  "xpath": "surgeon_identifier_type_code"
+                },
+                "surgeon_assigning_facility": {
+                  "xpath": "surgeon_assigning_facility"
+                },
+                "surgeon_name_representation_code": {
+                  "xpath": "surgeon_name_representation_code"
+                },
+                "surgeon_name_context": {
+                  "xpath": "surgeon_name_context"
+                },
+                "surgeon_name_validity_range": {
+                  "xpath": "surgeon_name_validity_range"
+                },
+                "surgeon_name_assembly_order": {
+                  "xpath": "surgeon_name_assembly_order"
+                },
+                "surgeon_effective_date": {
+                  "xpath": "surgeon_effective_date"
+                },
+                "surgeon_expiration_date": {
+                  "xpath": "surgeon_expiration_date"
+                },
+                "surgeon_professional_suffix": {
+                  "xpath": "surgeon_professional_suffix"
+                },
+                "surgeon_assigning_jurisdiction": {
+                  "xpath": "surgeon_assigning_jurisdiction"
+                },
+                "surgeon_assigning_agency_or_department": {
+                  "xpath": "surgeon_assigning_agency_or_department"
+                },
+                "procedure_practitioner_identifier": {
+                  "xpath": "procedure_practitioner_identifier"
+                },
+                "procedure_practitioner_family_name": {
+                  "xpath": "procedure_practitioner_family_name"
+                },
+                "procedure_practitioner_given_name": {
+                  "xpath": "procedure_practitioner_given_name"
+                },
+                "procedure_practitioner_initial": {
+                  "xpath": "procedure_practitioner_initial"
+                },
+                "procedure_practitioner_suffix": {
+                  "xpath": "procedure_practitioner_suffix"
+                },
+                "procedure_practitioner_prefix": {
+                  "xpath": "procedure_practitioner_prefix"
+                },
+                "procedure_practitioner_degree": {
+                  "xpath": "procedure_practitioner_degree"
+                },
+                "procedure_practitioner_source_table": {
+                  "xpath": "procedure_practitioner_source_table"
+                },
+                "procedure_practitioner_assigning_authority": {
+                  "xpath": "procedure_practitioner_assigning_authority"
+                },
+                "procedure_practitioner_name_type_code": {
+                  "xpath": "procedure_practitioner_name_type_code"
+                },
+                "procedure_practitioner_identifier_check_digit": {
+                  "xpath": "procedure_practitioner_identifier_check_digit"
+                },
+                "procedure_practitioner_check_digit_scheme": {
+                  "xpath": "procedure_practitioner_check_digit_scheme"
+                },
+                "procedure_practitioner_identifier_type_code": {
+                  "xpath": "procedure_practitioner_identifier_type_code"
+                },
+                "procedure_practitioner_assigning_facility": {
+                  "xpath": "procedure_practitioner_assigning_facility"
+                },
+                "procedure_practitioner_name_representation_code": {
+                  "xpath": "procedure_practitioner_name_representation_code"
+                },
+                "procedure_practitioner_name_context": {
+                  "xpath": "procedure_practitioner_name_context"
+                },
+                "procedure_practitioner_name_validity_range": {
+                  "xpath": "procedure_practitioner_name_validity_range"
+                },
+                "procedure_practitioner_name_assembly_order": {
+                  "xpath": "procedure_practitioner_name_assembly_order"
+                },
+                "procedure_practitioner_effective_date": {
+                  "xpath": "procedure_practitioner_effective_date"
+                },
+                "procedure_practitioner_expiration_date": {
+                  "xpath": "procedure_practitioner_expiration_date"
+                },
+                "procedure_practitioner_professional_suffix": {
+                  "xpath": "procedure_practitioner_professional_suffix"
+                },
+                "procedure_practitioner_assigning_jurisdiction": {
+                  "xpath": "procedure_practitioner_assigning_jurisdiction"
+                },
+                "procedure_practitioner_assigning_agency_or_department": {
+                  "xpath": "procedure_practitioner_assigning_agency_or_department"
+                },
+                "consent_code": {
+                  "xpath": "consent_code"
+                },
+                "procedure_priority": {
+                  "xpath": "procedure_priority"
+                },
+                "associated_diagnosis_code_identifier": {
+                  "xpath": "associated_diagnosis_code_identifier"
+                },
+                "associated_diagnosis_code_text": {
+                  "xpath": "associated_diagnosis_code_text"
+                },
+                "associated_diagnosis_code_system": {
+                  "xpath": "associated_diagnosis_code_system"
+                },
+                "associated_diagnosis_code_alternate_identifier": {
+                  "xpath": "associated_diagnosis_code_alternate_identifier"
+                },
+                "associated_diagnosis_code_alternate_text": {
+                  "xpath": "associated_diagnosis_code_alternate_text"
+                },
+                "associated_diagnosis_code_alternate_system": {
+                  "xpath": "associated_diagnosis_code_alternate_system"
+                },
+                "procedure_code_modifier": {
+                  "xpath": "procedure_code_modifier"
+                },
+                "procedure_drg_type": {
+                  "xpath": "procedure_drg_type"
+                },
+                "tissue_type_code": {
+                  "xpath": "tissue_type_code"
+                },
+                "procedure_identifier": {
+                  "xpath": "procedure_identifier"
+                },
+                "procedure_action_code": {
+                  "xpath": "procedure_action_code"
+                }
+              }
+            }
+      ]}
+      }
+    }
+  }
+}

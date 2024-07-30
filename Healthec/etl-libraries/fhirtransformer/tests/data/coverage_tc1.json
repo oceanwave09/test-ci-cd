@@ -1,0 +1,42 @@
+{
+  "mrn": "AB98761",
+  "mrn_system": "http://xyz.com/codes/identifier",
+  "status": "active",
+  "type_code": "EHCPOL",
+  "type_display": "extended healthcare",
+  "type_system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+  "member_id": "AB987601",
+  "subscriber_id": "AB9876",
+  "beneficiary_patient_id": "f2b8db7e-c0a4-40d2-a245-93ea68699394",
+  "insurer_organization_id": "7533a02e-37ca-4ac1-bddd-d1e2c0c7df01",
+  "relationship_code": "self",
+  "relationship_display": "Self",
+  "period_start_date": "2023-01-01",
+  "period_end_date": "2023-12-31",
+  "class_type_code": "plan",
+  "class_type_system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+  "class_value": "BG4352",
+  "class_name": "Full Coverage: Medical, Dental, Pharmacy, Vision, EHC",
+  "order": 2,
+  "network": "aco network",
+  "copay_type_code": "gpvisit",
+  "copay_type_system": "http://terminology.hl7.org/CodeSystem/coverage-copay-type",
+  "copay_money_value": 20.00,
+  "copay_money_currency": "USD",
+  "extensions": [
+    {
+      "url": "http://healthec.com/extensions/patients/flags/hospice",
+      "value_extensions": [
+        {
+          "url": "http://healthec.com/extensions/patients/flags/hospice#value",
+          "value_boolean": "true"
+        },
+        {
+          "url": "http://healthec.com/extensions/patients/flags/hospice#period",
+          "value_period_start": "2023-01-01T00:00:00",
+          "value_period_end": "2023-12-31T00:00:00"
+        }
+      ]
+    }
+  ]
+}

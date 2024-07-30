@@ -1,0 +1,42 @@
+[
+  {% for entry in data.care_team %}
+  {
+    {%- if entry.sequence -%}
+    "sequence": {{ entry.sequence }},
+    {%- endif %}
+    "provider": {
+      {%- if entry.provider_practitioner_id -%}
+      "reference": "Practitioner/{{ entry.provider_practitioner_id }}"
+      {%- endif %}
+    },
+    {%- if entry.responsible -%}
+    "responsible": {{ entry.responsible }},
+    {%- endif %}
+    "role": {
+      {% if entry.role_code %}
+      "coding": [
+        {
+          "system": "{{ entry.role_system }}",
+          "code": "{{ entry.role_code }}",
+          "display": "{{ entry.role_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ entry.role_text }}"
+    },
+    "qualification": {
+      {% if entry.qualification_code %}
+      "coding": [
+        {
+          "system": "{{ entry.qualification_system }}",
+          "code": "{{ entry.qualification_code }}",
+          "display": "{{ entry.qualification_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ entry.qualification_text }}"
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

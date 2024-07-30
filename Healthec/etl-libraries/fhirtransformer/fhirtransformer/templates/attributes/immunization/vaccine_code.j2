@@ -1,0 +1,21 @@
+{
+  {%- if data.vaccine_code -%}
+    "coding" : [{
+      "system" : "{{ data.vaccine_system }}",
+      "code" : "{{ data.vaccine_code }}",
+      "display": "{{ data.vaccine_display }}"
+    }],
+  {% elif data.vaccines %}
+    "coding" : [
+      {% for entry in data.vaccines %}
+      {
+        "system" : "{{ entry.vaccine_system }}",
+        "code" : "{{ entry.vaccine_code }}",
+        "display": "{{ entry.vaccine_display }}"
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+  {%- endif %}
+  "text": "{{ data.vaccine_text }}"
+}

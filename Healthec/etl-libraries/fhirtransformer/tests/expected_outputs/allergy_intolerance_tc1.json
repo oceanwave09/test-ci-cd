@@ -1,0 +1,68 @@
+{
+  "resourceType": "AllergyIntolerance",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "RI",
+            "display": "Resource Identifier"
+          }
+        ]
+      },
+      "value": "8576713"
+    }
+  ],
+  "clinicalStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+        "code": "active"
+      }
+    ]
+  },
+  "verificationStatus": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+        "code": "confirmed"
+      }
+    ]
+  },
+  "category": [
+    "medication"
+  ],
+  "criticality": "high",
+  "code": {
+    "coding": [
+      {
+        "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+        "code": "7980",
+        "display": "Penicillin G"
+      }
+    ]
+  },
+  "patient": {
+    "reference": "Patient/dda84174-22dc-4af5-a5f0-2e9f828365c8"
+  },
+  "recordedDate": "2010-03-01",
+  "recorder": {
+    "reference": "Practitioner/2bb088a4-5259-47b2-8d0b-8d67d4af8fca"
+  },
+  "reaction": [
+    {
+      "manifestation": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "247472004",
+              "display": "Hives"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

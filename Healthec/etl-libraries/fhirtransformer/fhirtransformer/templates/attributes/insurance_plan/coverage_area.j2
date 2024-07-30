@@ -1,0 +1,8 @@
+[
+  {% for area in data.coverage_area %}
+  {
+    "reference": "Location/{{ area.location_id }}"
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

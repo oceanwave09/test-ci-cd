@@ -1,0 +1,37 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "category": {% include "attributes/observation/category.j2" %},
+  "code": {% include "attributes/observation/code.j2" %},
+  "subject": {% include "attributes/patient_reference.j2" %},
+  "encounter": {% include "attributes/encounter_reference.j2" %},
+  {%- if data.effective_date_time -%}
+  "effectiveDateTime": "{{ data.effective_date_time }}",
+  {%- endif %}
+  "effectivePeriod": {% include "attributes/observation/effective_period.j2" %},
+  "performer": {% include "attributes/observation/performer.j2" %},
+  {% if data.quantity_value -%}
+  "valueQuantity": {% include "attributes/observation/quantity.j2" %},
+  {%- endif %}
+  "valueString": "{{ data.value_string }}",
+  "valueCodeableConcept": {% include "attributes/observation/value.j2" %},
+  "interpretation": {% include "attributes/observation/interpretation.j2" %},
+  "bodySite": {% include "attributes/observation/body_site.j2" %},
+  "method": {% include "attributes/observation/method.j2" %},
+  "referenceRange": {% include "attributes/observation/reference_range.j2" %},
+  "component": {% include "attributes/observation/component.j2" %}
+{% endblock %}

@@ -1,0 +1,8 @@
+ncqa_hedis_payment_date:
+  key_path: payment_date
+  type: string
+
+ncqa_hedis_beneficary_id:
+  key_path: beneficiary_id
+  min_length: 1
+  required: True

@@ -1,0 +1,61 @@
+[
+    {
+        "patient": { //fhir:Patient
+            "firstName": "",
+            "lastName": "",
+            "middleInitial": "",
+            "address": {
+              "line1": "",
+              "line2": "",
+              "city": "",
+              "state": "",
+              "zip": ""
+            },
+            // expand on other fields
+        },
+        "expand_other_resource_types": {
+        },
+        "practice": { //fhir:Organization
+            "name": "",
+            "externalId": "",
+            "tin": "",
+            "address": {
+                "line1": "",
+                "line2": "",
+                "city": "",
+                "state": "",
+                "zip": ""
+            },
+            "groupNpi": "" // used to figure out the partOf (hierarchy) relationship in fhir:Organization
+            // expand on other fields based on the above
+        },
+        "provider": { //fhir:Practitioner & fhir:PractionerRole
+            "firstName": "",
+            "lastName": "",
+            "middleInitial": "",
+            "type": "", // role
+            "specialty": "",
+            "npi": "",
+            "tin": "" // used to figure out the practice this provider should be associated
+            // expand on other fields
+        },
+        "facilities" :[
+            {
+                "name": "",
+                "address": {
+                    "line1": "",
+                    "line2": "",
+                    "city": "",
+                    "state": "",
+                    "zip": ""
+                }
+                // expand on other fields based on the above
+            }
+        ],
+        "plan": {
+            "name": "",
+            "externalId": "",
+            // expand on other fields based on the above
+        },
+    }
+]

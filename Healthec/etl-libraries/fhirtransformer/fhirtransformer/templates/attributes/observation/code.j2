@@ -1,0 +1,24 @@
+{
+  {% if data.code or data.loinc_code %}
+  "coding": [
+    {% if data.code %}
+    {
+      "system": "{{ data.code_system }}",
+      "code": "{{ data.code }}",
+      "display": "{{ data.code_display }}"
+    }
+    {%- endif %}
+    {% if data.code and data.loinc_code %}
+    ,
+    {%- endif %}
+    {% if data.loinc_code %}
+    {
+      "system": "{{ data.loinc_code_system }}",
+      "code": "{{ data.loinc_code }}",
+      "display": "{{ data.loinc_code_display }}"
+    }
+    {%- endif %}
+  ],
+  {%- endif %}
+  "text": "{{ data.code_text }}"
+}

@@ -1,0 +1,16 @@
+[
+  {%- if data.diet_preference_code or data.diet_preference_text -%}
+  {
+    {% if data.diet_preference_code %}
+    "coding": [
+      {
+        "system": "{{ data.diet_preference_system }}",
+        "code": "{{ data.diet_preference_code }}",
+        "display": "{{ data.diet_preference_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.diet_preference_text }}"
+  }
+  {%- endif %}
+]

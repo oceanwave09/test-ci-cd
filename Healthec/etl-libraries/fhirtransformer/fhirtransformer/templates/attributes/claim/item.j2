@@ -1,0 +1,149 @@
+[
+  {% for line in data.service_lines %}
+  {
+    {%- if line.sequence -%}
+    "sequence": {{ line.sequence }},
+    {%- endif %}
+    {%- if line.careteam_sequence -%}
+    "careTeamSequence": [{{ line.careteam_sequence }}],
+    {%- endif %}
+    {%- if line.diagnosis_sequence -%}
+    "diagnosisSequence": [{{ line.diagnosis_sequence }}],
+    {%- endif %}
+    {%- if line.procedure_sequence -%}
+    "procedureSequence": [{{ line.procedure_sequence }}],
+    {%- endif %}
+    "revenue": {
+      {% if line.revenue_code %}
+      "coding": [
+        {
+          "system": "{{ line.revenue_system }}",
+          "code": "{{ line.revenue_code }}",
+          "display": "{{ line.revenue_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ line.revenue_text }}"
+    },
+    "category": {
+      {% if line.category_code %}
+      "coding": [
+        {
+          "system": "{{ line.category_system }}",
+          "code": "{{ line.category_code }}",
+          "display": "{{ line.category_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ line.category_text }}"
+    },
+    "productOrService": {
+      {% if line.product_or_service %}
+      "coding": [
+        {% for pos in line.product_or_service %}
+        {
+          "system": "{{ pos.system }}",
+          "code": "{{ pos.code }}",
+          "display": "{{ pos.display }}"
+        }
+        {% if not loop.last %},{% endif %}
+        {% endfor %}
+      ],
+      {%- endif %}
+      "text": "{{ line.product_or_service_text }}"
+    },
+    "modifier": [
+      {% for modifier in line.svc_modifiers %}
+      {
+        {% if modifier.modifier_code %}
+        "coding": [
+          {
+            "system": "{{ modifier.modifier_system }}",
+            "code": "{{ modifier.modifier_code }}",
+            "display": "{{ modifier.modifier_display }}"
+          } 
+        ],
+        {%- endif %}
+        "text": "{{ modifier.modifier_text }}"
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+    "servicedDate": "{{ line.service_date_time }}",
+    "servicedPeriod": {
+      {%- if line.service_period_start -%}
+      "start": "{{ line.service_period_start }}"
+      {%- endif %}
+      {%- if line.service_period_start and line.service_period_end -%}
+      ,
+      {%- endif -%}
+      {%- if line.service_period_end -%}
+      "end": "{{ line.service_period_end }}"
+      {%- endif %}
+    },
+    "locationCodeableConcept": {
+      {% if line.location_code %}
+      "coding": [
+        {
+          "system": "{{ line.location_system }}",
+          "code": "{{ line.location_code }}",
+          "display": "{{ line.location_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ line.location_text }}"
+    },
+    "locationReference": {
+      {% if line.location_id %}
+      "reference": "Location/{{ line.location_id }}"
+      {%- endif %}
+    },
+    {% if line.patient_paid_amount %}
+    "patientPaid": {
+      "value": {{ line.patient_paid_amount }},
+      "currency": "{{ line.patient_paid_currency }}"
+    },
+    {%- endif %}
+    {% if line.quantity_value %}
+    "quantity": {
+      "value": {{ line.quantity_value }},
+      "unit": "{{ line.quantity_unit }}",
+      "system": "{{ line.quantity_system }}",
+      "code": "{{ line.quantity_code }}"
+    },
+    {%- endif %}
+    {% if line.unit_value %}
+    "unitPrice": {
+      "value": {{ line.unit_value }},
+      "currency": "{{ line.unit_currency }}"
+    },
+    {%- endif %}
+    {% if line.net_value %}
+    "net": {
+      "value": {{ line.net_value }},
+      "currency": "{{ line.net_currency }}"
+    },
+    {%- endif %}
+    "bodySite": {
+      {% if line.body_site_code %}
+      "coding": [
+        {
+          "system": "{{ line.body_site_system }}",
+          "code": "{{ line.body_site_code }}",
+          "display": "{{ line.body_site_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ line.body_site_text }}"
+    },
+    "encounter": [
+      {% if line.encounter_id %}
+      {
+        "reference": "Encounter/{{ line.encounter_id }}"
+      }
+      {%- endif %}
+    ]
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

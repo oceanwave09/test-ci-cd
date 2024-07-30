@@ -1,0 +1,21 @@
+{
+  {%- if data.status_reason_code -%}
+    "coding" : [{
+      "system" : "{{ data.status_reason_system }}",
+      "code" : "{{ data.status_reason_code }}",
+      "display": "{{ data.status_reason_display }}"
+    }],
+  {% elif data.status_reasons %}
+    "coding" : [
+      {% for entry in data.status_reasons %}
+      {
+        "system" : "{{ entry.status_reason_system }}",
+        "code" : "{{ entry.status_reason_code }}",
+        "display": "{{ entry.status_reason_display }}"
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+  {%- endif %}
+  "text": "{{ data.status_reason_text }}"
+}

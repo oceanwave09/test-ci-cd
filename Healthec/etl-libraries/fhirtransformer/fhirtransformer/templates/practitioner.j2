@@ -1,0 +1,48 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {% if data.ssn -%}
+    {% include "attributes/ssn.j2" %}
+    {%- endif %}
+    {%- if data.ssn and data.npi -%}
+    ,
+    {%- endif %}
+    {% if data.npi -%}
+    {% include "attributes/npi.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.npi) and data.tax_id -%}
+    ,
+    {%- endif %}
+    {% if data.tax_id -%}
+    {% include "attributes/tax_id.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.npi or data.tax_id) and data.source_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.npi or data.tax_id or data.source_id) and data.upin -%}
+    ,
+    {%- endif -%}
+    {% if data.upin -%}
+    {% include "attributes/upin.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.npi or data.tax_id or data.source_id or data.upin ) and data.state_license -%}
+    ,
+    {%- endif -%}
+    {% if data.state_license -%}
+    {% include "attributes/state_license.j2" %}
+    {%- endif %}
+  ],
+  "active": {% include "attributes/active.j2" %},
+  "name": {% include "attributes/name.j2" %},
+  "telecom": {% include "attributes/telecom.j2" %}, 
+  "gender": "{{ data.gender }}",
+  "birthDate": "{{ data.dob }}",
+  "address": {% include "attributes/address.j2" %},
+  "qualification": {% include "attributes/practitioner/qualification.j2" %}
+{% endblock %}

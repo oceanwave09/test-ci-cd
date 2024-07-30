@@ -1,0 +1,6 @@
+~ROW1~,~Domain~,~Patient First Name~,~Patient Last Name~,~Date of Birth~,~External Patient ID~,~External Practice ID~,~Smoking Status Code~,~Smoking Status Name~,~Smoking Dictionary Name~,~Start Date~,~End Date~,~Last Confirmed Date~,~Vendor~,~Source Type~
+~1~,~Smoking Status~,~First7660601~,~Last7660601~,~19600101~,~7660601~,~Epic~,~5~,~Never~,~~,~~,~~,~20230405~,~~,~~
+~2~,~Smoking Status~,~First7660602~,~Last7660602~,~19580101~,~7660602~,~Epic~,~1~,~Every Day~,~~,~~,~~,~20230424~,~~,~~
+~3~,~Smoking Status~,~First7660603~,~Last7660603~,~19920101~,~7660603~,~Epic~,~2~,~Some Days~,~~,~~,~~,~20230412~,~~,~~
+~4~,~Smoking Status~,~First7660604~,~Last7660604~,~19890101~,~7660604~,~Epic~,~4~,~Former~,~~,~~,~~,~20230416~,~~,~~
+~5~,~Smoking Status~,~First7660605~,~Last7660605~,~19690101~,~7660605~,~Epic~,~5~,~Never~,~~,~~,~~,~20230404~,~~,~~

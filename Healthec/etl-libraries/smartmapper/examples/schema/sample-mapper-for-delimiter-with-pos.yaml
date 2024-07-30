@@ -1,0 +1,21 @@
+is_delimited_file: true
+has_header: true
+field_mappings:
+    member_id: "pos=1"
+    lastname: "pos=5"
+    firstname: "pos=6"
+    middle_initials: "pos=7"
+    member_ssn: "pos=8"
+    phone_home: "pos=9;type=bigint"
+    street_address_1: "pos=10"
+    street_address_2: "pos=11"
+    city: "pos=12"
+    state: "pos=13"
+    zip: "pos=14"
+    country: "pos=15;fillna=US"
+    dob: "pos=16;type=date"
+    sex: "pos=17;fillna=U"
+    phone_mobile: "pos=24;type=bigint"
+    fax: "pos=25;type=bigint"
+    phone_work: "pos=26;type=bigint"
+    email: "pos=27"

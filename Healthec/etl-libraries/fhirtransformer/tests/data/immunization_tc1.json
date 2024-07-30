@@ -1,0 +1,19 @@
+{
+  "source_id": "8576713",
+  "status": "completed",
+  "vaccine_code": "GNHEP",
+  "vaccine_system": "urn:oid:1.2.36.1.2001.1005.17",
+  "location_id": "d4dc14ea-a5a2-481e-aa0d-3432e0b562eb",
+  "practitioner_id": "2bb088a4-5259-47b2-8d0b-8d67d4af8fca",
+  "patient_id": "dda84174-22dc-4af5-a5f0-2e9f828365c8",
+  "occurrence_date_time": "2015-01-17T16:00:00+10:00",
+  "expiration_date": "2023-02-28",
+  "site_code": "LT",
+  "site_display": "left thigh",
+  "site_system": "http://terminology.hl7.org/CodeSystem/v3-ActSite",
+  "route_code": "IM",
+  "route_display": "Injection, intramuscular",
+  "route_system": "http://terminology.hl7.org/CodeSystem/v3-RouteOfAdministration",
+  "dose_quantity_value": "0.5",
+  "dose_quantity_code": "ml"
+}

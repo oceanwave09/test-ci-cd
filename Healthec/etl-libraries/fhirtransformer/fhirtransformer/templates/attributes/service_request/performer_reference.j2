@@ -1,0 +1,12 @@
+[
+  {%- if data.performer_practitioner_id -%}
+  {
+    "reference": "Practitioner/{{ data.performer_practitioner_id }}"
+  }
+  {%- endif %}
+  {%- if data.performer_organization_id -%}
+  {
+    "reference": "Organization/{{ data.performer_organization_id }}"
+  }
+  {%- endif %}
+]

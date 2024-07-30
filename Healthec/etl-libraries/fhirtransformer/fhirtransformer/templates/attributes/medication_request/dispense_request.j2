@@ -1,0 +1,27 @@
+{
+  {%- if data.number_of_repeats_allowed -%}
+    "numberOfRepeatsAllowed": {{ data.number_of_repeats_allowed }},
+  {%- endif %}
+  {%- if data.quantity -%}
+  "quantity": {
+    "value": {{ data.quantity }},
+    "unit": "{{ data.quantity_unit }}",
+    "system": "{{ data.quantity_system }}",
+    "code": "{{ data.quantity_code }}"
+  },
+  {%- endif %}
+  {%- if data.days_supply -%}
+  "expectedSupplyDuration": {
+    "value": "{{ data.days_supply }}",
+    "unit": "{{ data.supply_unit | default("days") }}",
+    "system": "http://unitsofmeasure.org",
+    "code": "d"
+  },
+  {%- endif %}
+  {%- if data.dispenser_organization_id -%}
+  "dispenser": {
+      "reference": "Organization/{{ data.dispenser_organization_id }}"
+  },
+  {%- endif %}
+  "validityPeriod": {% include "attributes/period.j2" %}
+}

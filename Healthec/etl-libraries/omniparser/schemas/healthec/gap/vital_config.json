@@ -1,0 +1,304 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": ",",
+    "replace_double_quotes": false,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "row",
+            "index": 1
+          },
+          {
+            "name": "domain",
+            "index": 2
+          },
+          {
+            "name": "patient_first_name",
+            "index": 3
+          },
+          {
+            "name": "patient_last_name",
+            "index": 4
+          },
+          {
+            "name": "patient_dob",
+            "index": 5
+          },
+          {
+            "name": "external_patient_id",
+            "index": 6
+          },
+          {
+            "name": "external_practice_id",
+            "index": 7
+          },
+          {
+            "name": "vital_code",
+            "index": 8
+          },
+          {
+            "name": "vital_name",
+            "index": 9
+          },
+          {
+            "name": "vital_dictionary_name",
+            "index": 10
+          },
+          {
+            "name": "date_performed",
+            "index": 11
+          },
+          {
+            "name": "date_ordered",
+            "index": 12
+          },
+          {
+            "name": "date_due",
+            "index": 13
+          },
+          {
+            "name": "value",
+            "index": 14
+          },
+          {
+            "name": "provider_npi",
+            "index": 15
+          },
+          {
+            "name": "practice_tin",
+            "index": 16
+          },
+          {
+            "name": "provider_name",
+            "index": 17
+          },
+          {
+            "name": "record_verified",
+            "index": 18
+          },
+          {
+            "name": "med_unnecessary_reason_code",
+            "index": 19
+          },
+          {
+            "name": "med_unnecessary_reason_name",
+            "index": 20
+          },
+          {
+            "name": "med_unnecessary_reason_dictionary",
+            "index": 21
+          },
+          {
+            "name": "remove_specified_vital_flag",
+            "index": 22
+          },
+          {
+            "name": "vendor",
+            "index": 23
+          },
+          {
+            "name": "source_type",
+            "index": 24
+          },
+          {
+            "name": "patient_id",
+            "index": 25
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "row": {
+          "xpath": "row",
+          "template": "remove_special_char"
+        },
+        "domain": {
+          "xpath": "domain",
+          "template": "remove_special_char"
+        },
+        "patient_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_dob",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "external_patient_id": {
+          "xpath": "external_patient_id",
+          "template": "remove_special_char"
+        },
+        "external_practice_id": {
+          "xpath": "external_practice_id",
+          "template": "remove_special_char"
+        },
+        "vital_code": {
+          "xpath": "vital_code",
+          "template": "remove_special_char"
+        },
+        "vital_name": {
+          "xpath": "vital_name",
+          "template": "remove_special_char"
+        },
+        "vital_dictionary_name": {
+          "xpath": "vital_dictionary_name",
+          "template": "remove_special_char"
+        },
+        "date_performed": {
+          "xpath": "date_performed",
+          "template": "remove_special_char"
+        },
+        "date_ordered": {
+          "xpath": "date_ordered",
+          "template": "remove_special_char"
+        },
+        "date_due": {
+          "xpath": "date_due",
+          "template": "remove_special_char"
+        },
+        "value": {
+          "xpath": "value",
+          "template": "remove_special_char"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "practice_tin": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "practice_tin",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "provider_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "record_verified": {
+          "xpath": "record_verified",
+          "template": "remove_special_char"
+        },
+        "med_unnecessary_reason_code": {
+          "xpath": "med_unnecessary_reason_code",
+          "template": "remove_special_char"
+        },
+        "med_unnecessary_reason_name": {
+          "xpath": "med_unnecessary_reason_name",
+          "template": "remove_special_char"
+        },
+        "med_unnecessary_reason_dictionary": {
+          "xpath": "med_unnecessary_reason_dictionary",
+          "template": "remove_special_char"
+        },
+        "remove_specified_vital_flag": {
+          "xpath": "remove_specified_vital_flag",
+          "template": "remove_special_char"
+        },
+        "vendor": {
+          "xpath": "vendor",
+          "template": "remove_special_char"
+        },
+        "source_type": {
+          "xpath": "source_type",
+          "template": "remove_special_char"
+        },
+        "patient_id": {
+          "xpath": "patient_id",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

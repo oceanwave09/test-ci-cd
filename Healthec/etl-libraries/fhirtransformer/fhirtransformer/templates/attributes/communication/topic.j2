@@ -1,0 +1,12 @@
+{
+  {% if data.topic_code %}
+  "coding": [
+    {
+      "system": "{{ data.topic_system }}",
+      "code": "{{ data.topic_code }}",
+      "display": "{{ data.topic_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.topic_text }}"
+}

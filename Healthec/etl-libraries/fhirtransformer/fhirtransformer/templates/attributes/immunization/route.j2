@@ -1,0 +1,21 @@
+{
+  {%- if data.route_code -%}
+    "coding" : [{
+      "system" : "{{ data.route_system }}",
+      "code" : "{{ data.route_code }}",
+      "display": "{{ data.route_display }}"
+    }],
+  {% elif data.routes %}
+    "coding" : [
+      {% for entry in data.routes %}
+      {
+        "system" : "{{ entry.route_system }}",
+        "code" : "{{ entry.route_code }}",
+        "display": "{{ entry.route_display }}"
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+  {%- endif %}
+  "text": "{{ data.route_text }}"
+}

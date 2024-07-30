@@ -1,0 +1,8 @@
+[
+  {% if data.note_text or data.note_time%}
+  {
+    "text": "{{ data.note_text }}",
+    "time": "{{ data.note_time }}"
+  }
+  {%- endif %}
+]

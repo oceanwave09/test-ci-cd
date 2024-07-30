@@ -1,0 +1,14 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "status": "{{ data.status }}",
+  "topic": {% include "attributes/communication/topic.j2" %},
+  {%- if data.sent_date -%}
+  "sent": "{{ data.sent_date }}",
+  {%- endif %}
+  "statusReason": {% include "attributes/communication/status_reason.j2" %},
+  "subject": {% include "attributes/patient_reference.j2" %},
+  "note": {% include "attributes/communication/note.j2" %}
+{% endblock %}

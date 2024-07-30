@@ -1,0 +1,7 @@
+{
+  "result": [
+    {
+      "reference": "Observation/${obs_id}"
+    }
+  ]
+}

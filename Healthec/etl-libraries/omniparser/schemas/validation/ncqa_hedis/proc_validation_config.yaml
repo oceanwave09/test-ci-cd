@@ -1,0 +1,9 @@
+ncqa_hedis_pocedure_code:
+  key_path: procedure_code
+  required: True
+  type: string
+
+ncqa_hedis_member_id:
+  key_path: member_id
+  min_length: 1
+  required: True

@@ -1,0 +1,44 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "patient": {% include "attributes/patient_reference.j2" %},
+  "date": "{{ data.recorded_date_time }}",
+  "name": "{{ data.name }}",
+  "relationship": {% include "attributes/family_member_history/relationship.j2" %},
+  "sex": {% include "attributes/family_member_history/sex.j2" %},
+  "bornPeriod": {% include "attributes/family_member_history/born_period.j2" %},
+  "bornDate": "{{ data.born_date_time }}",
+  "bornString": "{{ data.born_string }}",
+  "ageString": "{{ data.age_string }}",
+  {%- if data.age_value -%}
+  "ageAge": {% include "attributes/family_member_history/age.j2" %},
+  {%- endif %}
+  {%- if data.estimated_age == "true" -%}
+  "estimatedAge": true,
+  {%- endif %}
+  {%- if data.deceased_boolean == "true" -%}
+  "deceasedBoolean": true,
+  "deceasedDate": "{{ data.deceased_date }}",
+  "deceasedString": "{{ data.deceased_string }}",
+  {%- endif %}
+  "condition": [
+    {
+      "code": {% include "attributes/family_member_history/code.j2" %},
+      {%- if data.contributed_to_death -%}
+      "contributedToDeath": {{ data.contributed_to_death }},
+      {%- endif %}
+      {%- if data.onset_age_value -%}
+      "onsetAge": {% include "attributes/family_member_history/onset_age.j2" %},
+      {%- endif %}
+      "outcome": {% include "attributes/family_member_history/outcome.j2" %}
+    }
+  ]
+{% endblock %}

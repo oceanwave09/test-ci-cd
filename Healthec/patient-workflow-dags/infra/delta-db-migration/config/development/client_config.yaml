@@ -1,0 +1,30 @@
+data_s3_bucket: phm-development-datapipeline-bucket
+tenants:
+  nucleo:
+    analytical:
+      - ANALYTICAL
+    staging:
+      - PRACTICE
+      - PROVIDER
+      - BENEFICIARY
+      - MEDICAL_CLAIM
+      - RX_CLAIM
+      - ECW
+      - GAP
+      - GI
+      - CCLF
+      - NCQA_HEDIS
+  cynchealth:
+    analytical:
+      - ANALYTICAL
+    staging:
+      - PRACTICE
+      - PROVIDER
+      - BENEFICIARY
+      - MEDICAL_CLAIM
+      - RX_CLAIM
+      - ECW
+      - GAP
+      - GI
+      - CCLF
+      - NCQA_HEDIS

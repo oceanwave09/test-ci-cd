@@ -1,0 +1,36 @@
+{
+  "contact": [
+    {
+      "purpose": {
+        "coding": [
+          {
+            "system": "http: //terminology.hl7.org/CodeSystem/contactentity-type",
+            "code": "PRESS"
+          }
+        ]
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "022-655 2334"
+        }
+      ]
+    },
+    {
+      "purpose": {
+        "coding": [
+          {
+            "system": "http: //terminology.hl7.org/CodeSystem/contactentity-type",
+            "code": "PATINF"
+          }
+        ]
+      },
+      "telecom": [
+        {
+          "system": "phone",
+          "value": "022-655 2335"
+        }
+      ]
+    }
+  ]
+}

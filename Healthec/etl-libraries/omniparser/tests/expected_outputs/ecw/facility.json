@@ -1,0 +1,216 @@
+[
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "26",
+		"facility_name": "Facility26",
+		"row_id": "b5589088-0986-410e-b9e5-b7ce0d57a662"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "6",
+		"facility_name": "Facility6",
+		"row_id": "b338bba6-02d7-48f6-b69d-6b521b88d2ce"
+	},
+	{
+		"address_city": "Edison",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "75",
+		"facility_name": "Facility75",
+		"row_id": "4f1c96ed-71de-4faf-8ebb-fab208a5c61b"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "267",
+		"facility_name": "Facility267",
+		"row_id": "b06f53fb-a79f-4223-95fe-cf4c5135b732"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "268",
+		"facility_name": "Facility268",
+		"row_id": "0df580ec-c08f-46d2-b17e-042eabfaf69d"
+	},
+	{
+		"address_city": "ROOSEVELT",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "2",
+		"facility_name": "Facility2",
+		"row_id": "9e737d2b-0615-4f26-9a0b-14812e14e04f"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_line_2": "Suite #630",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "136",
+		"facility_name": "Facility136",
+		"row_id": "8e934dbd-154c-415e-8b77-94441eb0a362"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "49",
+		"facility_name": "Facility49",
+		"row_id": "ce1c28f6-f66f-4dd3-b0ed-f65319de2f0b"
+	},
+	{
+		"address_city": "Ewing",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "57",
+		"facility_name": "Facility57",
+		"row_id": "fdadb2a0-bc6a-4941-8599-c754325d201a"
+	},
+	{
+		"apuid": "280807",
+		"facility_id": "76",
+		"facility_name": "Facility76",
+		"row_id": "6afea44c-79ed-4d14-aba1-d3911369cacf"
+	},
+	{
+		"apuid": "280807",
+		"facility_id": "84",
+		"facility_name": "Facility84",
+		"row_id": "39948541-82e2-4d32-85a9-b7f042a26ca9"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_line_2": "Suite #630",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "112",
+		"facility_name": "Facility112",
+		"row_id": "25dfbf5e-1c79-4d2b-9739-fdd6880faafa"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "36",
+		"facility_name": "Facility36",
+		"row_id": "67586f95-f4c9-4684-8030-16163784404c"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_line_2": "Suite #630",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "37",
+		"facility_name": "Facility37",
+		"row_id": "9fc1a78e-bf11-4dc8-9e0e-b5d452bf25a4"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "45",
+		"facility_name": "Facility45",
+		"row_id": "69bf69bc-89ea-4307-883c-eb0910874890"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NM",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "4",
+		"facility_name": "Facility4",
+		"row_id": "92f8d0cc-b74a-4f63-a438-7b16f1adf2b1"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "3",
+		"facility_name": "Facility3",
+		"row_id": "437ee3f0-569e-451d-9e27-d91e38de69ea"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "9",
+		"facility_name": "Facility9",
+		"row_id": "2778e7a8-511d-4915-9864-29c391b8e834"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "19",
+		"facility_name": "Facility19",
+		"row_id": "e50b8780-973b-4a38-86eb-fe92864ca361"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "58",
+		"facility_name": "Facility58",
+		"row_id": "7e0560bc-75b8-456a-b643-d51a6228b95f"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "94",
+		"facility_name": "Facility94",
+		"row_id": "1d48ef79-f020-4a99-9926-e941c24fb60e"
+	},
+	{
+		"address_city": "Edison",
+		"address_line_1": "343 Thornall Street",
+		"address_state": "NJ",
+		"address_zip": "08837",
+		"apuid": "280807",
+		"facility_id": "124",
+		"facility_name": "Facility124",
+		"row_id": "ae40db03-6c3b-4bfa-aeaf-a04750cb6a84"
+	}
+]

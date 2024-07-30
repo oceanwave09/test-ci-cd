@@ -1,0 +1,25 @@
+{
+  {% if data.code %}
+  "coding": [
+    {
+      "system": "{{ data.code_system }}",
+      "code": "{{ data.code }}",
+      "display": "{{ data.code_display }}"
+    }
+  ],
+  {% elif data.codes %}
+  "coding": [
+    {% for code in data.codes %}
+      {% if code.code %}
+        {
+          "system": "{{ code.code_system }}",
+          "code": "{{ code.code }}",
+          "display": "{{ code.code_display }}"
+        }
+      {% endif %}
+    {% if not loop.last %},{% endif %}
+    {% endfor %}
+  ],
+  {%- endif %}
+  "text": "{{ data.code_text }}"
+}

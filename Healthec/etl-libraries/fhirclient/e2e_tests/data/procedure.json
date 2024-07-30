@@ -1,0 +1,49 @@
+{
+  "resourceType": "Procedure",
+  "status": "in-progress",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "80146002",
+        "display": "Appendectomy (Procedure)"
+      }
+    ],
+    "text": "Appendectomy"
+  },
+  "subject": {
+    "reference": "Patient/${pat_id}"
+  },
+  "encounter": {
+    "reference": "Encounter/${enc_id}"
+  },
+  "performedDateTime": "2013-04-05",
+  "recorder": {
+    "reference": "Practitioner/${pract_id}"
+  },
+  "asserter": {
+    "reference": "Practitioner/${pract_id}"
+  },
+  "performer": [
+    {
+      "actor": {
+        "reference": "Practitioner/${pract_id}"
+      }
+    }
+  ],
+  "reasonCode": [
+    {
+      "text": "Generalized abdominal pain 24 hours. Localized in RIF with rebound and guarding"
+    }
+  ],
+  "followUp": [
+    {
+      "text": "ROS 5 days  - 2013-04-10"
+    }
+  ],
+  "note": [
+    {
+      "text": "Routine Appendectomy. Appendix was inflamed and in retro-caecal position"
+    }
+  ]
+}

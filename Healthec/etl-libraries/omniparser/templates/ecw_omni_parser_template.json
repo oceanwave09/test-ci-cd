@@ -1,0 +1,434 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "csv2"
+    },
+    "file_declaration": {
+        "delimiter": "|",
+        "replace_double_quotes": true,
+        "records": [
+            { "rows": 1, "min": 1, "max": 1 },
+            {
+                "is_target": true,
+                "columns": [
+                    {
+                        "name": "attribute_name1",
+                        "index": 0
+                    },
+                    {
+                        "name": "attribute_name2",
+                        "index": 0
+                    }
+                    // other fields... 
+                ]
+            }
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": {
+            "object": {
+                "patient": {
+                    "object": {
+                        "apuid": {"xpath": "patient_apuid"},
+                        "recordId": {"xpath": "patient_record_id"},
+                        "patientId": {"xpath": "patient_id"},
+                        "patientAccountNo": {"xpath": "patient_account_no"},
+                        "namePrefix": {"xpath": "patient_name_prefix"},
+                        "nameSuffix": {"xpath": "patient_name_suffix"},
+                        "firstName": {"xpath": "patient_first_name"},
+                        "middleName": {"xpath": "patient_middle_name"},
+                        "lastName": {"xpath": "patient_last_name"},
+                        "previousName": {"xpath": "patient_previous_name"},
+                        "dateOfBirth": {"xpath": "patient_date_of_birth"},
+                        "gender": {"xpath": "patient_gender"},
+                        "address": {
+                            "object": {
+                                "line1": {"xpath": "patient_address_line_1"},
+                                "line2": {"xpath": "patient_address_line_2"},
+                                "city": {"xpath": "patient_address_city"},
+                                "state": {"xpath": "patient_address_state"},
+                                "zip": {"xpath": "patient_address_zip"}
+                            }
+                        },
+                        "maritalStatus": {"xpath": "patient_marital_status"},
+                        "race": {"xpath": "patient_race"},
+                        "language": {"xpath": "patient_language"},
+                        "ethnicGroup": {"xpath": "patient_ethnic_group"},
+                        "primaryPhoneNumber": {"xpath": "patient_primary_phone_number"},
+                        "secondaryPhoneNumber": {"xpath": "patient_secondary_phone_number"},
+                        "primaryEmail": {"xpath": "patient_primary_email"},
+                        "patientDeathIndication": {"xpath": "patient_death_indication"},
+                        "patientDeathDate": {"xpath": "patient_death_date"},
+                        "provider": {
+                            "object": {
+                                "id": {"xpath": "provider_id"},
+                                "npi": {"xpath": "provider_npi"},
+                                "lastName": {"xpath": "provider_last_name"},
+                                "firstName": {"xpath": "provider_first_name"},
+                                "middleName": {"xpath": "provider_middle_name"},
+                                "nameSuffix": {"xpath": "provider_name_suffix"},
+                                "namePrefix": {"xpath": "provider_name_prefix"}
+                            }
+                        },
+                        "primaryIns": {
+                            "object": {
+                                "payorName": {"xpath": "primary_ins_payor_name"},
+                                "insId": {"xpath": "primary_ins_ins_id"},
+                                "payerCode": {"xpath": "primary_ins_payer_code"},
+                                "subscriberNo": {"xpath": "primary_ins_subscriber_no"},
+                                "medicaidId": {"xpath": "primary_ins_medicaid_id"},
+                                "insuranceClass": {"xpath": "primary_ins_insurance_class"},
+                                "startDate": {"xpath": "primary_ins_start_date"},
+                                "endDate": {"xpath": "primary_ins_end_date"}
+                            }
+                        },
+                        "secondaryIns": {
+                            "object": {
+                                "payorName": {"xpath": "secondary_ins_payor_name"},
+                                "insId": {"xpath": "secondary_ins_ins_id"},
+                                "payerCode": {"xpath": "secondary_ins_payer_code"},
+                                "subscriberNo": {"xpath": "secondary_ins_subscriber_no"},
+                                "medicaidId": {"xpath": "secondary_ins_medicaid_id"},
+                                "insuranceClass": {"xpath": "secondary_ins_insurance_class"},
+                                "startDate": {"xpath": "secondary_ins_start_date"},
+                                "endDate": {"xpath": "secondary_ins_end_date"}
+                            }
+                        },
+                        "tertiaryIns": {
+                            "object": {
+                                "payorName": {"xpath": "tertiary_ins_payor_name"},
+                                "insId": {"xpath": "tertiary_ins_ins_id"},
+                                "payerCode": {"xpath": "tertiary_ins_payer_code"},
+                                "subscriberNo": {"xpath": "tertiary_ins_subscriber_no"},
+                                "medicaidId": {"xpath": "tertiary_ins_medicaid_id"},
+                                "insuranceClass": {"xpath": "tertiary_ins_insurance_class"},
+                                "startDate": {"xpath": "tertiary_ins_start_date"},
+                                "endDate": {"xpath": "tertiary_ins_end_date"}
+
+                            }
+                        },
+                        "encounter": {
+                            "object": {
+                                "id": {"xpath": "encounter_id"},
+                                "date": {"xpath": "encounter_date"},
+                                "itemID" : {"xpath": "encounter_item_id"},
+                                "visitType": {"xpath": "encounter_visit_type"},
+                                "status": {"xpath": "encounter_status"},
+                                "startTime": {"xpath": "encounter_start_time"},
+                                "endTime": {"xpath": "encounter_end_time"},
+                                "reason": {"xpath": "encounter_reason"},
+                                "lockStatus": {"xpath": "encounter_lock_status"},
+                                "medicationReconciliationFlag": {"xpath": "encounter_medication_reconciliation_flag"},
+                                "pos": {"xpath": "encounter_pos"}
+                            }
+                        },
+                        "allergy": {
+                            "object": {
+                                "itemId": {"xpath": "allergy_item_id"},
+                                "allergiesVerified": {"xpath": "allergies_verified"},
+                                "allergenType": {"xpath": "allergen_type"},
+                                "description": {"xpath": "allergy_description"},
+                                "reactionText": {"xpath": "allergy_reaction_text"},
+                                "status": {"xpath": "allergy_status"},
+                                "id": {"xpath": "allergy_id"},
+                                "modifiedDate": {"xpath": "allergy_modified_date"}
+                            }
+                        },
+                        "diagnosis": {
+                            "object": {
+                                "icdCode": {"xpath": "diagnosis_icd_code"},
+                                "name": {"xpath": "diagnosis_name"},
+                                "assessmentOnsetDate": {"xpath": "diagnosis_assessment_onset_date"}
+                            }
+                        },
+                        "examination": {
+                            "object": { 
+                                "ecwStructId": {"xpath": "exam_ecw_struct_id"},
+                                "question": {"xpath": "exam_question"},
+                                "questionId": {"xpath": "exam_question_id"},
+                                "answers": {"xpath": "exam_answers"},
+                                "answerId": {"xpath": "exam_answer_id"},
+                                "itemName": {"xpath": "exam_item_name"},
+                                "itemId": {"xpath": "exam_item_id"},
+                                "categoryName": {"xpath": "exam_category_name"},
+                                "categoryId": {"xpath": "exam_category_id"},
+                                "mainCategoryName": {"xpath": "exam_main_category_name"},
+                                "mainCategoryId": {"xpath": "exam_main_category_id"}
+                            }
+                        },
+                        "facility": {
+                            "object": {
+                                "id" : {"xpath": "facility_id"},
+                                "name" : {"xpath": "facility_name"},
+                                "address": {
+                                    "object": {
+                                        "line1" : {"xpath": "facility_address_line_1"},
+                                        "line2" : {"xpath": "facility_address_line_2"},
+                                        "city" : {"xpath": "facility_address_city"},
+                                        "state" : {"xpath": "facility_address_state"},
+                                        "zip" : {"xpath": "facility_address_zip"}
+                                    }
+                                }
+                            }
+                        },
+                        "familyHistory": {
+                            "object": {
+                                "relationship" : {"xpath": "family_hist_relationship"},
+                                "status" : {"xpath": "family_hist_status"},
+                                "age" : {"xpath": "family_hist_age"},
+                                "dateOfBirth" : {"xpath": "family_hist_date_of_birth"},
+                                "icdItemId" : {"xpath": "family_hist_icd_item_id"},
+                                "icdCode" : {"xpath": "family_hist_icd_code"},
+                                "icdDesc" : {"xpath": "family_hist_icd_desc"},
+                                "diagnosedYear" : {"xpath": "family_hist_diagnosed_year"},
+                                "diagnosedAge" : {"xpath": "family_hist_diagnosed_age"}
+                            }
+                        },
+                        "hospitalization": {
+                            "object": {
+                                "reason" : {"xpath": "hospitalization_reason"},
+                                "hospitalizationDate" : {"xpath": "hospitalization_date"}
+                                }
+                        },
+                        "Immunization": {
+                            "object": {
+                                "itemID" : {"xpath": "immunization_item_id"},
+                                "givenDate" : {"xpath": "immunization_given_date"},
+                                "description" : {"xpath": "immunization_description"},
+                                "historyFlag" : {"xpath": "immunization_history_flag"},
+                                "lotNumber" : {"xpath": "immunization_lotnumber"},
+                                "vaccineManufacturer" : {"xpath": "immunization_vaccine_manufacturer"},
+                                "immunizationDose" : {"xpath": "immunization_dose"},
+                                "site" : {"xpath": "immunization_site"},
+                                "route" : {"xpath": "immunization_route"},
+                                "expirationDate" : {"xpath": "immunization_expiration_date"},
+                                "cvxCode" : {"xpath": "immunization_cvx_code"},
+                                "cptCode" : {"xpath": "immunization_cpt_code"},
+                                "immunizationGivenBy" : {"xpath": "immunization_given_by"},
+                                "immunizationStatus" : {"xpath": "immunization_status"},
+                                "vfcStatus" : {"xpath": "immunization_vfc_status"}
+                            }
+                        },
+                        "hpi": {
+                            "object": {
+                                "ecwStructId" : {"xpath": "hpi_ecw_struct_id"},
+                                "question" : {"xpath": "hpi_question"},
+                                "questionId" : {"xpath": "hpi_question_id"},
+                                "answers" : {"xpath": "hpi_answers"},
+                                "answerId" : {"xpath": "hpi_answer_id"},
+                                "itemName" : {"xpath": "hpi_item_name"},
+                                "itemId" : {"xpath": "hpi_item_id"},
+                                "categoryName" : {"xpath": "hpi_category_name"},
+                                "categoryId" : {"xpath": "hpi_category_id"},
+                                "mainCategoryName" : {"xpath": "hpi_main_category_name"},
+                                "mainCategoryId" : {"xpath": "hpi_main_category_id"}
+                                }
+                        },
+                        "medicalHistory": {
+                            "object": {
+                                "pastHistory" : {"xpath": "medical_hist_past_history"},
+                                "historyICDs" : {"xpath": "medical_hist_history_icds"}
+                                }
+                        },
+                        "medications": {
+                            "object": {
+                                "itemID" : {"xpath": "medication_item_id"},
+                                "medicationOriginID" : {"xpath": "medication_origin_id"},
+                                "medicationCodeSystem" : {"xpath": "medication_code_system"},
+                                "medicationCode" : {"xpath": "medication_code"},
+                                "medicationDescription" : {"xpath": "medication_description"},
+                                "prescriptionDate" : {"xpath": "medication_prescription_date"},
+                                "prescriptionBeginDate" : {"xpath": "medication_prescription_begindate"},
+                                "prescriptionEndDate" : {"xpath": "medication_prescription_end_date"},
+                                "daysSupply" : {"xpath": "medication_days_supply"},
+                                "quantity" : {"xpath": "medication_quantity"},
+                                "refills" : {"xpath": "medication_refills"},
+                                "strength" : {"xpath": "medication_strength"},
+                                "formulation" : {"xpath": "medication_formulation"},
+                                "route" : {"xpath": "medication_route"},
+                                "frequency" : {"xpath": "medication_frequency"},
+                                "take" : {"xpath": "medication_take"},
+                                "medicationStatus" : {"xpath": "medication_status"}
+                            }
+                        },
+                        "ordersAndResults": {
+                            "object": {
+                                "itemID" : {"xpath": "orders_and_results_item_id"},
+                                "lonic" : {"xpath": "orders_and_results_loinc"},
+                                "cpt" : {"xpath": "orders_and_results_cpt"},
+                                "orderId" : {"xpath": "orders_and_results_order_id"},
+                                "orderDate" : {"xpath": "orders_and_results_order_date"},
+                                "orderDescription" : {"xpath": "orders_and_results_order_description"},
+                                "resultDescription" : {"xpath": "orders_and_results_result_description"},
+                                "collectionDate" : {"xpath": "orders_and_results_collection_date"},
+                                "resultDate" : {"xpath": "orders_and_results_result_date"},
+                                "resultText" : {"xpath": "orders_and_results_result_text"},
+                                "labReviewedFlag" : {"xpath": "orders_and_results_lab_reviewed_flag"},
+                                "reviewedById" : {"xpath": "orders_and_results_reviewed_by_id"},
+                                "resultNumeric" : {"xpath": "orders_and_results_result_numeric"},
+                                "refRange" : {"xpath": "orders_and_results_ref_range"},
+                                "hlUnits" : {"xpath": "orders_and_results_hl_units"},
+                                "resultModifyTimestamp" : {"xpath": "orders_and_results_result_modify_timestamp"},
+                                "labCompanyId" : {"xpath": "orders_and_results_lab_company_id"},
+                                "labCompanyName" : {"xpath": "orders_and_results_lab_company_name"}
+                            }
+                        },
+                        "physicalExam": {
+                            "object": {
+                                "ecwStructId": {"xpath": "physical_exam_ecw_struct_id"},
+                                "question": {"xpath": "physical_exam_question"},
+                                "questionID": {"xpath": "physical_exam_question_id"},
+                                "answers": {"xpath": "physical_exam_answers"},
+                                "answerID": {"xpath": "physical_exam_answer_id"},
+                                "itemName": {"xpath": "physical_exam_item_name"},
+                                "itemID": {"xpath": "physical_exam_item_id"},
+                                "categoryName": {"xpath": "physical_exam_category_name"},
+                                "categoryID": {"xpath": "physical_exam_category_id"},
+                                "mainCategoryName": {"xpath": "physical_exam_main_category_name"},
+                                "mainCategoryID": {"xpath": "physical_exam_main_category_id"}
+                            }
+                        },
+                        "practiceUsers":{
+                            "object":{
+                                "id" : {"xpath": "user_id"},
+                                "type" : {"xpath": "user_type"},
+                                "firstName" : {"xpath": "user_first_name"},
+                                "lastName" : {"xpath": "user_last_name"},
+                                "providerNPI" : {"xpath": "user_provider_npi"},
+                                "speciality" : {"xpath": "user_speciality"},
+                                "facilityID" : {"xpath": "user_facility_id"},
+                                "dateOfBirth" : {"xpath": "user_date_of_birth"},
+                                "gender" : {"xpath": "user_gender"},
+                                "status" : {"xpath": "user_status"}
+                            }
+                        },
+                        "preventive":{
+                            "object":{
+                                "ecwStructid" : {"xpath": "preventive_ecw_struct_id"},
+                                "question" : {"xpath": "preventive_question"},
+                                "questionID" : {"xpath": "preventive_question_id"},
+                                "answers" : {"xpath": "preventive_answers"},
+                                "answerID" : {"xpath": "preventive_answer_id"},
+                                "itemName" : {"xpath": "preventive_item_name"},
+                                "itemID" : {"xpath": "preventive_item_id"},
+                                "categoryName" : {"xpath": "preventive_category_name"},
+                                "categoryID" : {"xpath": "preventive_category_id"},
+                                "mainCategoryName" : {"xpath": "preventive_main_category_name"},
+                                "mainCategoryID" : {"xpath": "preventive_main_category_id"}
+                            }
+                        },
+                        "problemList":{
+                            "object":{
+                                "asmtId" : {"xpath": "problem_list_asmt_id"},
+                                "onsetDate" : {"xpath": "problem_list_onset_date"},
+                                "code" : {"xpath": "problem_list_code"},
+                                "name" : {"xpath": "problem_list_name"},
+                                "encounterId" : {"xpath": "problem_list_encounter_id"},
+                                "status" : {"xpath": "problem_list_status"},
+                                "ptCondition" : {"xpath": "problem_list_pt_condition"},
+                                "risk" : {"xpath": "problem_list_risk"},
+                                "addedDate" : {"xpath": "problem_list_added_date"},
+                                "resolvedOn" : {"xpath": "problem_list_resolved_on"}    
+                            }
+                        },
+                        "surgicalHistory": {
+                            "object": {
+                                "reason": {"xpath": "surgical_hist_reason"},
+                                "surgicalDate": {"xpath": "surgical_hist_surgical_date"},
+                                "cptCode": {"xpath": "surgical_hist_cpt_code"}
+                            }
+                        },
+                        "ObgynHistory": {
+                            "object": {
+                                "ecwStructId": {"xpath": "obgym_hist_ecw_struct_id"},
+                                "question": {"xpath": "obgym_hist_question"},
+                                "questionID": {"xpath": "obgym_hist_question_id"},
+                                "answers": {"xpath": "obgym_hist_answers"},
+                                "answerID": {"xpath": "obgym_hist_answer_id"},
+                                "itemName": {"xpath": "obgym_hist_item_name"},
+                                "itemID": {"xpath": "obgym_hist_item_id"},
+                                "categoryName": {"xpath": "obgym_hist_category_name"},
+                                "categoryID": {"xpath": "obgym_hist_category_id"},
+                                "mainCategoryName": {"xpath": "obgym_hist_main_category_name"},
+                                "mainCategoryID": {"xpath": "obgym_hist_main_category_id"}
+                            }
+                        },
+                        "socialHistory": {
+                            "object": {
+                                "ecwStructId": {"xpath": "social_hist_ecw_struct_id"},
+                                "question": {"xpath": "social_hist_question"},
+                                "questionID": {"xpath": "social_hist_question_id"},
+                                "answers": {"xpath": "social_hist_answers"},
+                                "answerID": {"xpath": "social_hist_answer_id"},
+                                "itemName": {"xpath": "social_hist_item_name"},
+                                "itemID": {"xpath": "social_hist_item_id"},
+                                "categoryName": {"xpath": "social_hist_category_name"},
+                                "categoryID": {"xpath": "social_hist_category_id"},
+                                "mainCategoryName": {"xpath": "social_hist_main_category_name"},
+                                "mainCategoryID": {"xpath": "social_hist_main_category_id"}
+                            }
+                        },
+                        "refferal": {
+                            "object": {
+                                "id": {"xpath": "refferal_id"},
+                                "SpecialityCode": {"xpath": "refferal_speciality_code"},
+                                "Speciality": {"xpath": "refferal_speciality"},
+                                "ReferralType": {"xpath": "refferal_type"},
+                                "ReferralStatus": {"xpath": "refferal_status"},
+                                "ReferralFromName": {"xpath": "refferal_from_name"},
+                                "ReferralFromNPI": {"xpath": "refferal_from_npi"},
+                                "ReferralToName": {"xpath": "refferal_to_name"},
+                                "ReferralTONPI": {"xpath": "refferal_to_npi"},
+                                "FacilityFrom": {"xpath": "refferal_facility_from"},
+                                "FacilityTo": {"xpath": "refferal_facility_to"},
+                                "ReferralDate": {"xpath": "refferal_date"}
+                            }
+                        },
+                        "procedure": {
+                            "object": {
+                                "ecwStructId": {"xpath": "procedure_ecw_struct_id"},
+                                "question": {"xpath": "procedure_question"},
+                                "questionID": {"xpath": "procedure_question_id"},
+                                "answers": {"xpath": "procedure_answers"},
+                                "answerID": {"xpath": "procedure_answer_id"},
+                                "itemName": {"xpath": "procedure_item_name"},
+                                "itemID": {"xpath": "procedure_item_id"},
+                                "categoryName": {"xpath": "procedure_category_name"},
+                                "categoryID": {"xpath": "procedure_category_id"},
+                                "mainCategoryName": {"xpath": "procedure_main_category_name"},
+                                "mainCategoryID": {"xpath": "procedure_main_category_id"}
+                            }
+                        },
+                        "procedureCodes": {
+                            "object": {
+                                "serviceDate": {"xpath": "procedure_codes_service_date"},
+                                "cptCode": {"xpath": "procedure_codes_cpt_code"},
+                                "cptCodeType": {"xpath": "procedure_codes_cpt_code_type"},
+                                "modifier1": {"xpath": "procedure_codes_modifier_1"},
+                                "modifier2": {"xpath": "procedure_codes_modifier_2"},
+                                "modifier3": {"xpath": "procedure_codes_modifier_3"},
+                                "modifier4": {"xpath": "procedure_codes_modifier_4"},
+                                "icdCode1": {"xpath": "procedure_codes_icd_code_1"},
+                                "icdCode2": {"xpath": "procedure_codes_icd_code_2"},
+                                "icdCode3": {"xpath": "procedure_codes_icd_code_3"},
+                                "icdCode4": {"xpath": "procedure_codes_icd_code_4"},
+                                "placeofService": {"xpath": "procedure_codes_pos"},
+                                "posCodeDescription": {"xpath": "procedure_codes_pos_code_desc"}
+                            }
+                        },
+                        "vital": {
+                            "object": {
+                                "itemID": {"xpath": "vital_item_id"},
+                                "vitalsCapturedBy": {"xpath": "vitals_captured_by"},
+                                "vitalsName": {"xpath": "vitals_name"},
+                                "standardVital": {"xpath": "standard_vital"},
+                                "vitalsValue": {"xpath": "vitals_value"},
+                                "modifiedDate": {"xpath": "vital_modified_date"}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

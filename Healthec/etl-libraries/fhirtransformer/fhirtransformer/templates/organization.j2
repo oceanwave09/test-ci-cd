@@ -1,0 +1,57 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.tax_id -%}
+    {% include "attributes/tax_id.j2" %}
+    {%- endif %}
+    {%- if data.tax_id and data.sub_group_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.sub_group_id -%}
+    {% include "attributes/sub_group_id.j2" %}
+    {%- endif %}
+    {%- if (data.tax_id or data.sub_group_id) and data.group_npi -%}
+    ,
+    {%- endif -%}
+    {%- if data.group_npi -%}
+    {% include "attributes/group_npi.j2" %}
+    {%- endif %}
+    {%- if (data.tax_id or data.sub_group_id or data.group_npi) and data.source_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if (data.tax_id or data.sub_group_id or data.group_npi or data.source_id) and data.ssn -%}
+    ,
+    {%- endif -%}
+    {% if data.ssn -%}
+    {% include "attributes/ssn.j2" %}
+    {%- endif %}
+    {%- if (data.tax_id or data.sub_group_id or data.group_npi or data.source_id or data.ssn) and data.provider_number -%}
+    ,
+    {%- endif -%}
+    {% if data.provider_number -%}
+    {% include "attributes/organization/provider_number.j2" %}
+    {%- endif %}
+    {%- if (data.tax_id or data.sub_group_id or data.group_npi or data.source_id or data.ssn or data.provider_number) and data.nabp_id -%}
+    ,
+    {%- endif -%}
+    {% if data.nabp_id -%}
+    {% include "attributes/organization/nabp_id.j2" %}
+    {%- endif %}
+  ],
+  "active": {% include "attributes/active.j2" %},
+  "type": {% include "attributes/organization/type.j2" %},
+  "name": "{{ data.name }}",
+  {%- if data.alias -%}
+  "alias": ["{{ data.alias }}"],
+  {%- endif %}
+  "partOf": {% include "attributes/organization/parent_organization_reference.j2" %},
+  "telecom": {% include "attributes/telecom.j2" %},
+  "address": {% include "attributes/address.j2" %},
+  "contact": {% include "attributes/contact.j2" %}
+{% endblock %}

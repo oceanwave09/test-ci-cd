@@ -1,0 +1,67 @@
+[
+  {% for diagnosis in data.diagnoses %}
+  {
+    {%- if diagnosis.sequence -%}
+    "sequence": {{diagnosis.sequence}},
+    {%- endif %}
+    "diagnosisCodeableConcept": {
+      {% if diagnosis.diagnosis_code %}
+      "coding": [
+        {
+          "system": "{{ diagnosis.diagnosis_system }}",
+          "code": "{{ diagnosis.diagnosis_code }}",
+          "display": "{{ diagnosis.diagnosis_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ diagnosis.diagnosis_text }}"
+    },
+    "diagnosisReference": {
+      {% if diagnosis.diagnosis_condition_id %}
+      "reference": "Condition/{{ diagnosis.diagnosis_condition_id }}"
+      {%- endif %}
+    },
+    "type": [
+      {%- if diagnosis.type_code or diagnosis.type_text -%}
+      {
+        {% if diagnosis.type_code %}
+        "coding": [
+          {
+            "system": "{{ diagnosis.type_system }}",
+            "code": "{{ diagnosis.type_code }}",
+            "display": "{{ diagnosis.type_display }}"
+          } 
+        ],
+        {%- endif %}
+        "text": "{{ diagnosis.type_text }}"
+      }
+      {%- endif %}
+    ],
+    "onAdmission": {
+      {% if diagnosis.on_admission_code %}
+      "coding": [
+        {
+          "system": "{{ diagnosis.on_admission_system }}",
+          "code": "{{ diagnosis.on_admission_code }}",
+          "display": "{{ diagnosis.on_admission_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ diagnosis.on_admission_text }}"
+    },
+    "packageCode": {
+      {% if diagnosis.drg_code %}
+      "coding": [
+        {
+          "system": "{{ diagnosis.drg_system }}",
+          "code": "{{ diagnosis.drg_code }}",
+          "display": "{{ diagnosis.drg_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ diagnosis.drg_text }}"
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

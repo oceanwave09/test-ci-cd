@@ -1,0 +1,12 @@
+{
+  {% if data.coverage_type_code %}
+  "coding": [
+    {
+      "system": "{{ data.coverage_type_system }}",
+      "code": "{{ data.coverage_type_code }}",
+      "display": "{{ data.coverage_type_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.coverage_type_text }}"
+}

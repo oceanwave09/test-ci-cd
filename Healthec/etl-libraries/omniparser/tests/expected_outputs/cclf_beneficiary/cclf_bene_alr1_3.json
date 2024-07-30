@@ -1,0 +1,22 @@
+[
+	{
+		"bene_1st_name": "2501FirstName",
+		"bene_brth_dt": "01/01/1965",
+		"bene_last_name": "2501LastName",
+		"bene_mbi_id": "1AAAAMKR10",
+		"bene_sex_cd": "2",
+		"master_id": "202084193",
+		"rev_line_cnt": "16",
+		"row_id": "23df2245-dc9d-4365-b44a-3359d44c3db8"
+	},
+	{
+		"bene_1st_name": "2502FirstName",
+		"bene_brth_dt": "01/01/1947",
+		"bene_last_name": "2502LastName",
+		"bene_mbi_id": "1AAAAMKR20",
+		"bene_sex_cd": "2",
+		"master_id": "383593303",
+		"rev_line_cnt": "2",
+		"row_id": "f6c7d13e-0a98-4468-84c5-e4e1f13a34eb"
+	}
+]

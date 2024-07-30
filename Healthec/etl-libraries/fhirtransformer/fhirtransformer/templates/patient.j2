@@ -1,0 +1,122 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {% if data.ssn -%}
+    {% include "attributes/ssn.j2" %}
+    {%- endif %}
+    {%- if data.ssn and data.health_record_key -%}
+    ,
+    {%- endif %}
+    {% if data.health_record_key -%}
+    {% include "attributes/health_record_key.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key) and data.mrn -%}
+    ,
+    {%- endif %}
+    {% if data.mrn -%}
+    {% include "attributes/medical_record.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn) and data.medicare_number -%}
+    ,
+    {%- endif %}
+    {% if data.medicare_number -%}
+    {% include "attributes/medicare_number.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number) and data.member_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.member_id -%}
+    {% include "attributes/member_id.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id) and data.subscriber_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.subscriber_id -%}
+    {% include "attributes/subscriber_id.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.subscriber_id) and data.medicaid_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.medicaid_id -%}
+    {% include "attributes/medicaid_id.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.subscriber_id or data.medicaid_id) and data.mbi -%}
+    ,
+    {%- endif -%}
+    {%- if data.mbi -%}
+    {% include "attributes/mbi.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.subscriber_id or data.medicaid_id or data.mbi) and data.source_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.subscriber_id or data.medicaid_id or data.mbi or data.source_id) and data.mihin_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.mihin_id -%}
+    {% include "attributes/mihin_id.j2" %}
+    {%- endif -%}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.source_id) and data.driver_license -%}
+    ,
+    {%- endif -%}
+    {%- if data.driver_license -%}
+    {% include "attributes/driver_license.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.source_id or data.driver_license) and data.patient_external_id  -%}
+    ,
+    {%- endif -%}
+    {%- if data.patient_external_id -%}
+    {% include "attributes/patient_external_id.j2" %}
+    {%- endif %}
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.source_id or data.driver_license or data.patient_external_id) and data.patient_internal_id  -%}
+    ,
+    {%- endif -%}
+
+    {%- if data.patient_internal_id -%}
+    {% include "attributes/patient_internal_id.j2" %}
+    {%- endif %}
+
+    {%- if (data.ssn or data.health_record_key or data.mrn or data.medicare_number or data.member_id or data.source_id or data.driver_license or data.patient_external_id or data.patient_internal_id) and data.source_file_id  -%}
+    ,
+    {%- endif -%}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "name": {% include "attributes/name.j2" %},
+  "active": {% include "attributes/active.j2" %},
+  "telecom": {% include "attributes/telecom.j2" %},
+  "gender": "{{ data.gender }}",
+  "birthDate": "{{ data.dob }}",
+  "address": {% include "attributes/address.j2" %},
+  "maritalStatus": {% include "attributes/patient/marital_status.j2" %},
+  {%- if data.deceased_date_time -%}
+  "deceasedDateTime": "{{ data.deceased_date_time }}",
+  {% elif data.deceased_indication %}
+  "deceasedBoolean": {{ data.deceased_indication}},
+  {%- endif %}
+  "extension": [
+    {% if data.race or data.race_code -%}
+    {% include "attributes/patient/race.j2" %}
+    {%- endif %}
+    {% if (data.race or data.race_code) and (data.ethnicity or data.ethnicity_code) -%}
+    ,
+    {%- endif %}
+    {% if data.ethnicity or data.ethnicity_code -%}
+    {% include "attributes/patient/ethnicity.j2" %}
+    {%- endif %}
+    {% if (data.race or data.race_code or data.ethnicity or data.ethnicity_code) and data.extensions -%}
+    ,
+    {%- endif %}
+    {% include "attributes/patient/extension.j2" %}
+  ],
+  "contact": {% include "attributes/patient/contact.j2" %},
+  "communication": {% include "attributes/patient/communication.j2" %},
+  "generalPractitioner": {% include "attributes/patient/practitioner_reference.j2" %},
+  "managingOrganization": {% include "attributes/organization_reference.j2" %}
+{% endblock %}

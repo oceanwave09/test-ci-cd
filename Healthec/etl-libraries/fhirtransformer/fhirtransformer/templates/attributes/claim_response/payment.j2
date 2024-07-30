@@ -1,0 +1,21 @@
+{
+  {%- if data.payment_value -%}
+  "amount":{
+    "value" : {{ data.payment_value }},
+    "currency" : "{{ data.payment_currency }}"
+  },
+  {%- endif %}
+  "type": {
+    {% if data.payment_type_code %}
+    "coding": [
+      {
+        "system": "{{ data.payment_type_system }}",
+        "code": "{{ data.payment_type_code }}",
+        "display": "{{ data.payment_type_display }}"
+      }
+    ],
+    {%- endif %}
+    "text": "{{ data.payment_type_text }}"
+  },
+  "date": "{{ data.payment_date }}"
+}

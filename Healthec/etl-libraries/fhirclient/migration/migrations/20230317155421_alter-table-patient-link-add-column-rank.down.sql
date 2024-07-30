@@ -1,0 +1,6 @@
+BEGIN;
+
+ALTER TABLE IF EXISTS patient_link
+    DROP COLUMN IF EXISTS rank;
+
+COMMIT;

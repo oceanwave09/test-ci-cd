@@ -1,0 +1,102 @@
+.except-changes: &except-changes
+  changes:
+    - "**/*.{md}"
+    - ".gitignore"
+
+
+.auth:
+  before_script:
+    - echo "Setting up gitlab ci token"
+    - echo -e "machine gitlab.com\nlogin gitlab-ci-token\npassword ${CI_JOB_TOKEN}" > ~/.netrc
+
+
+.lint:
+  before_script:
+    - poetry install --only dev
+  script:
+    - poetry run flake8
+
+
+.version:
+  extends: .auth
+  script:
+    - git config --global user.email "semantic-release-bot@healthec.com"
+    - git config --global user.name "semantic-release-bot"
+    - poetry run semantic-release --minor publish
+
+
+.s3sync:
+  image:
+    name: registry.gitlab.com/health-ec/infrastructure/utility-docker/tgdeployment:0.0.2
+    entrypoint:
+      - "/usr/bin/env"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  variables:
+    TARGET_ENV: ""
+    AWS_ACCOUNT_ID: ""
+    SRC_PATH: ""
+    DEST_S3_PATH: ""
+  before_script:
+    - |
+      if [ "$CI_COMMIT_BRANCH" == "main" ]
+      then
+        AWS_SECRET_ACCESS_KEY="${HEC_AWS_SECRET_ACCESS_KEY}"
+        AWS_ACCESS_KEY_ID="${HEC_AWS_ACCESS_KEY_ID}"
+        AWS_DEFAULT_REGION="${HEC_AWS_DEFAULT_REGION}"
+      fi
+  script:
+    - |
+      echo "pushing files from $SRC_PATH to $DEST_S3_PATH"
+
+      export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
+      export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+      export AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION
+      echo "session=aws sts assume-role --role-arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/terraform-provisioner --role-session-name gatlab-ci-assumed"
+      session=`aws sts assume-role --role-arn arn:aws:iam::${AWS_ACCOUNT_ID}:role/terraform-provisioner --role-session-name gatlab-ci-assumed`
+      export AWS_ACCESS_KEY_ID=`echo ${session} | jq .Credentials.AccessKeyId | sed -e 's/^"//' -e 's/"$//'`
+      export AWS_SECRET_ACCESS_KEY=`echo ${session} | jq .Credentials.SecretAccessKey | sed -e 's/^"//' -e 's/"$//'`
+      export AWS_SESSION_TOKEN=`echo ${session} | jq .Credentials.SessionToken | sed -e 's/^"//' -e 's/"$//'`
+      aws sts get-caller-identity
+
+      echo "aws s3 sync ${SRC_PATH} ${DEST_S3_PATH} --delete"
+      aws s3 sync ${SRC_PATH} ${DEST_S3_PATH} --delete
+
+
+
+.docker:
+  image:
+    # An alpine-based image with the `docker` CLI installed.
+    name: registry.gitlab.com/health-ec/platform/infrastructure/build-images/docker-zip:v1.0.0
+
+  # This will run a Docker daemon in a container
+  # (Docker-In-Docker), which will be available at
+  # thedockerhost:2375. If you make e.g. port 5000 public in
+  # Docker (`docker run -p 5000:5000 yourimage`) it will be
+  # exposed at thedockerhost:5000.
+  services:
+    - name: docker:dind
+      alias: dockerdaemon
+
+  variables:
+    # Tell docker CLI how to talk to Docker daemon.
+    DOCKER_HOST: tcp://dockerdaemon:2375/
+    # Use the overlayfs driver for improved performance.
+    DOCKER_DRIVER: overlay2
+    # Disable TLS since we're running inside local network.
+    DOCKER_TLS_CERTDIR: ""
+    INSTALL_DIRECTORY: "."
+    INFRA_DIRECTORY: "infra/docker"
+    DOCKERFILE_NAME: "Dockerfile"
+    CI_REGISTRY_IMAGE_NAME: ""
+    PYTHON_GITLAB_USER: __token__
+    PYTHON_GITLAB_TOKEN: ${PYTHON_TOKEN}
+    PYTHON_GITLAB_PACKAGE_ID: ${PYTHON_PROJECT_ID}
+
+  script:
+    - API_VERSION=v$(cat $INSTALL_DIRECTORY/pyproject.toml | grep -m 1 version | sed 's/[^0-9.]//g')
+    - echo $API_VERSION
+    - $INSTALL_DIRECTORY/$INFRA_DIRECTORY/build_dependencies.sh
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" "$CI_REGISTRY"
+    - docker build -t "$CI_REGISTRY_IMAGE_NAME:latest" -t "$CI_REGISTRY_IMAGE_NAME:$API_VERSION" -f "$INSTALL_DIRECTORY/$INFRA_DIRECTORY/$DOCKERFILE_NAME" --build-arg PYTHON_GITLAB_USER=$PYTHON_GITLAB_USER --build-arg PYTHON_GITLAB_TOKEN=$PYTHON_GITLAB_TOKEN --build-arg PYTHON_GITLAB_PACKAGE_ID=$PYTHON_GITLAB_PACKAGE_ID .
+    - docker push "$CI_REGISTRY_IMAGE_NAME:latest"
+    - docker push "$CI_REGISTRY_IMAGE_NAME:$API_VERSION"

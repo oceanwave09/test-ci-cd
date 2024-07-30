@@ -1,0 +1,189 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "item_id",
+            "index": 3
+          },
+          {
+            "name": "patient_id",
+            "index": 4
+          },
+          {
+            "name": "patient_account_no",
+            "index": 5
+          },
+          {
+            "name": "encounter_id",
+            "index": 6
+          },
+          {
+            "name": "provider_npi",
+            "index": 7
+          },
+          {
+            "name": "given_date",
+            "index": 8
+          },
+          {
+            "name": "immunization_description",
+            "index": 9
+          },
+          {
+            "name": "history_flag",
+            "index": 10
+          },
+          {
+            "name": "lot_number",
+            "index": 11
+          },
+          {
+            "name": "vaccine_manufacturer",
+            "index": 12
+          },
+          {
+            "name": "immunization_dose",
+            "index": 13
+          },
+          {
+            "name": "site",
+            "index": 14
+          },
+          {
+            "name": "route",
+            "index": 15
+          },
+          {
+            "name": "expiration_date",
+            "index": 16
+          },
+          {
+            "name": "cvx_code",
+            "index": 17
+          },
+          {
+            "name": "cpt_code",
+            "index": 18
+          },
+          {
+            "name": "immunization_given_by",
+            "index": 19
+          },
+          {
+            "name": "immunization_status",
+            "index": 20
+          },
+          {
+            "name": "vfc_status",
+            "index": 21
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "item_id": {
+          "xpath": "item_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "given_date": {
+          "xpath": "given_date"
+        },
+        "immunization_description": {
+          "xpath": "immunization_description"
+        },
+        "history_flag": {
+          "xpath": "history_flag"
+        },
+        "lot_number": {
+          "xpath": "lot_number"
+        },
+        "vaccine_manufacturer": {
+          "xpath": "vaccine_manufacturer"
+        },
+        "immunization_dose": {
+          "xpath": "immunization_dose"
+        },
+        "site": {
+          "xpath": "site"
+        },
+        "route": {
+          "xpath": "route"
+        },
+        "expiration_date": {
+          "xpath": "expiration_date"
+        },
+        "cvx_code": {
+          "xpath": "cvx_code"
+        },
+        "cpt_code": {
+          "xpath": "cpt_code"
+        },
+        "immunization_given_by": {
+          "xpath": "immunization_given_by"
+        },
+        "immunization_status": {
+          "xpath": "immunization_status"
+        },
+        "vfc_status": {
+          "xpath": "vfc_status"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,626 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "IN2",
+            "min": 1,
+            "max": -1,
+            "elements": [
+              {
+                "name": "patient_sequence",
+                "index": 1
+              },
+              {
+                "name": "insureds_employee_id",
+                "index": 2,
+                "default": ""
+              },
+              {
+                "name": "insureds_social_security_number",
+                "index": 3,
+                "default": ""
+              },
+              {
+                "name": "insureds_employers_name_and_id",
+                "index": 4,
+                "default": ""
+              },
+              {
+                "name": "employer_information_data",
+                "index": 5,
+                "default": ""
+              },
+              {
+                "name": "mail_claim_party",
+                "index": 6,
+                "default": ""
+              },
+              {
+                "name": "medicare_health_ins_card_number",
+                "index": 7,
+                "default": ""
+              },
+              {
+                "name": "medicaid_case_name",
+                "index": 8,
+                "default": ""
+              },
+              {
+                "name": "medicaid_case_number",
+                "index": 9,
+                "default": ""
+              },
+              {
+                "name": "military_sponsor_name",
+                "index": 10,
+                "default": ""
+              },
+              {
+                "name": "military_id_number",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "dependent_of_military_recipient",
+                "index": 12,
+                "default": ""
+              },
+              {
+                "name": "military_organization",
+                "index": 13,
+                "default": ""
+              },
+              {
+                "name": "military_station",
+                "index": 14,
+                "default": ""
+              },
+              {
+                "name": "military_service",
+                "index": 15,
+                "default": ""
+              },
+              {
+                "name": "military_rank_grade",
+                "index": 16,
+                "default": ""
+              },
+              {
+                "name": "military_status",
+                "index": 17,
+                "default": ""
+              },
+              {
+                "name": "military_retire_date",
+                "index": 18,
+                "default": ""
+              },
+              {
+                "name": "military_non_avail_cert_on_file",
+                "index": 19,
+                "default": ""
+              },
+              {
+                "name": "baby_coverage",
+                "index": 20,
+                "default": ""
+              },
+              {
+                "name": "combine_baby_bill",
+                "index": 21,
+                "default": ""
+              },
+              {
+                "name": "blood_deductible",
+                "index": 22,
+                "default": ""
+              },
+              {
+                "name": "special_coverage_approval_name",
+                "index": 23,
+                "default": ""
+              },
+              {
+                "name": "special_coverage_approval_title",
+                "index": 24,
+                "default": ""
+              },
+              {
+                "name": "non_covered_insurance_code",
+                "index": 25,
+                "default": ""
+              },
+              {
+                "name": "payor_id",
+                "index": 26,
+                "default": ""
+              },
+              {
+                "name": "payor_subscriber_id",
+                "index": 27,
+                "default": ""
+              },
+              {
+                "name": "eligibility_source",
+                "index": 28,
+                "default": ""
+              },
+              {
+                "name": "room_coverage_type_amount",
+                "index": 29,
+                "default": ""
+              },
+              {
+                "name": "policy_type_amount",
+                "index": 30,
+                "default": ""
+              },
+              {
+                "name": "daily_deductible",
+                "index": 31,
+                "default": ""
+              },
+              {
+                "name": "living_dependency",
+                "index": 32,
+                "default": ""
+              },
+              {
+                "name": "ambulatory_status",
+                "index": 33,
+                "default": ""
+              },
+              {
+                "name": "citizenship",
+                "index": 34,
+                "default": ""
+              },
+              {
+                "name": "primary_language",
+                "index": 35,
+                "default": ""
+              },
+              {
+                "name": "living_arrangement",
+                "index": 36,
+                "default": ""
+              },
+              {
+                "name": "publicity_code",
+                "index": 37,
+                "default": ""
+              },
+              {
+                "name": "protection_indicator",
+                "index": 38,
+                "default": ""
+              },
+              {
+                "name": "student_indicator",
+                "index": 39,
+                "default": ""
+              },
+              {
+                "name": "religion",
+                "index": 40,
+                "default": ""
+              },
+              {
+                "name": "mothers_maiden_name",
+                "index": 41,
+                "default": ""
+              },
+              {
+                "name": "nationality",
+                "index": 42,
+                "default": ""
+              },
+              {
+                "name": "ethnic_group",
+                "index": 43,
+                "default": ""
+              },
+              {
+                "name": "marital_status",
+                "index": 44,
+                "default": ""
+              },
+              {
+                "name": "insureds_employment_start_date",
+                "index": 45,
+                "default": ""
+              },
+              {
+                "name": "employment_stop_date",
+                "index": 46,
+                "default": ""
+              },
+              {
+                "name": "job_title",
+                "index": 47,
+                "default": ""
+              },
+              {
+                "name": "job_code_class",
+                "index": 48,
+                "default": ""
+              },
+              {
+                "name": "job_status",
+                "index": 49,
+                "default": ""
+              },
+              {
+                "name": "employer_contact_person_name",
+                "index": 50,
+                "default": ""
+              },
+              {
+                "name": "employer_contact_person_phone_number",
+                "index": 51,
+                "default": ""
+              },
+              {
+                "name": "employer_contact_reason",
+                "index": 52,
+                "default": ""
+              },
+              {
+                "name": "insureds_contact_persons_name",
+                "index": 53,
+                "default": ""
+              },
+              {
+                "name": "insureds_contact_person_phone_number",
+                "index": 54,
+                "default": ""
+              },
+              {
+                "name": "insureds_contact_person_reason",
+                "index": 55,
+                "default": ""
+              },
+              {
+                "name": "relationship_to_the_patient_start_date",
+                "index": 56,
+                "default": ""
+              },
+              {
+                "name": "relationship_to_the_patient_stop_date",
+                "index": 57,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_reason",
+                "index": 58,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_phone_number",
+                "index": 59,
+                "default": ""
+              },
+              {
+                "name": "policy_scope",
+                "index": 60,
+                "default": ""
+              },
+              {
+                "name": "policy_source",
+                "index": 61,
+                "default": ""
+              },
+              {
+                "name": "patient_member_number",
+                "index": 62,
+                "default": ""
+              },
+              {
+                "name": "guarantors_relationship_to_insured",
+                "index": 63,
+                "default": ""
+              },
+              {
+                "name": "insureds_phone_number_home",
+                "index": 64,
+                "default": ""
+              },
+              {
+                "name": "insureds_employer_phone_number",
+                "index": 65,
+                "default": ""
+              },
+              {
+                "name": "military_handicapped_program",
+                "index": 66,
+                "default": ""
+              },
+              {
+                "name": "suspend_flag",
+                "index": 67,
+                "default": ""
+              },
+              {
+                "name": "copay_limit_flag",
+                "index": 68,
+                "default": ""
+              },
+              {
+                "name": "stoploss_limit_flag",
+                "index": 69,
+                "default": ""
+              },
+              {
+                "name": "insured_organization_name_and_id",
+                "index": 70,
+                "default": ""
+              },
+              {
+                "name": "insured_employer_organization_name_and_id",
+                "index": 71,
+                "default": ""
+              },
+              {
+                "name": "race",
+                "index": 72,
+                "default": ""
+              },
+              {
+                "name": "patients_relationship_to_insured",
+                "index": 73,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "IN2": {
+          "array":[
+            {
+              "xpath": "IN2",
+              "object": {
+                "patient_sequence": {
+                  "xpath": "patient_sequence"
+                },
+                "insureds_employee_id": {
+                  "xpath": "insureds_employee_id"
+                },
+                "insureds_social_security_number": {
+                  "xpath": "insureds_social_security_number"
+                },
+                "insureds_employers_name_and_id": {
+                  "xpath": "insureds_employers_name_and_id"
+                },
+                "employer_information_data": {
+                  "xpath": "employer_information_data"
+                },
+                "mail_claim_party": {
+                  "xpath": "mail_claim_party"
+                },
+                "medicare_health_ins_card_number": {
+                  "xpath": "medicare_health_ins_card_number"
+                },
+                "medicaid_case_name": {
+                  "xpath": "medicaid_case_name"
+                },
+                "medicaid_case_number": {
+                  "xpath": "medicaid_case_number"
+                },
+                "military_sponsor_name": {
+                  "xpath": "military_sponsor_name"
+                },
+                "military_id_number": {
+                  "xpath": "military_id_number"
+                },
+                "dependent_of_military_recipient": {
+                  "xpath": "dependent_of_military_recipient"
+                },
+                "military_organization": {
+                  "xpath": "military_organization"
+                },
+                "military_station": {
+                  "xpath": "military_station"
+                },
+                "military_service": {
+                  "xpath": "military_service"
+                },
+                "military_rank_grade": {
+                  "xpath": "military_rank_grade"
+                },
+                "military_status": {
+                  "xpath": "military_status"
+                },
+                "military_retire_date": {
+                  "xpath": "military_retire_date"
+                },
+                "military_non_avail_cert_on_file": {
+                  "xpath": "military_non_avail_cert_on_file"
+                },
+                "baby_coverage": {
+                  "xpath": "baby_coverage"
+                },
+                "combine_baby_bill": {
+                  "xpath": "combine_baby_bill"
+                },
+                "blood_deductible": {
+                  "xpath": "blood_deductible"
+                },
+                "special_coverage_approval_name": {
+                  "xpath": "special_coverage_approval_name"
+                },
+                "special_coverage_approval_title": {
+                  "xpath": "special_coverage_approval_title"
+                },
+                "non_covered_insurance_code": {
+                  "xpath": "non_covered_insurance_code"
+                },
+                "payor_id": {
+                  "xpath": "payor_id"
+                },
+                "payor_subscriber_id": {
+                  "xpath": "payor_subscriber_id"
+                },
+                "eligibility_source": {
+                  "xpath": "eligibility_source"
+                },
+                "room_coverage_type_amount": {
+                  "xpath": "room_coverage_type_amount"
+                },
+                "policy_type_amount": {
+                  "xpath": "policy_type_amount"
+                },
+                "daily_deductible": {
+                  "xpath": "daily_deductible"
+                },
+                "living_dependency": {
+                  "xpath": "living_dependency"
+                },
+                "ambulatory_status": {
+                  "xpath": "ambulatory_status"
+                },
+                "citizenship": {
+                  "xpath": "citizenship"
+                },
+                "primary_language": {
+                  "xpath": "primary_language"
+                },
+                "living_arrangement": {
+                  "xpath": "living_arrangement"
+                },
+                "publicity_code": {
+                  "xpath": "publicity_code"
+                },
+                "protection_indicator": {
+                  "xpath": "protection_indicator"
+                },
+                "student_indicator": {
+                  "xpath": "student_indicator"
+                },
+                "religion": {
+                  "xpath": "religion"
+                },
+                "mothers_maiden_name": {
+                  "xpath": "mothers_maiden_name"
+                },
+                "nationality": {
+                  "xpath": "nationality"
+                },
+                "ethnic_group": {
+                  "xpath": "ethnic_group"
+                },
+                "marital_status": {
+                  "xpath": "marital_status"
+                },
+                "insureds_employment_start_date": {
+                  "xpath": "insureds_employment_start_date"
+                },
+                "employment_stop_date": {
+                  "xpath": "employment_stop_date"
+                },
+                "job_title": {
+                  "xpath": "job_title"
+                },
+                "job_code_class": {
+                  "xpath": "job_code_class"
+                },
+                "job_status": {
+                  "xpath": "job_status"
+                },
+                "employer_contact_person_name": {
+                  "xpath": "employer_contact_person_name"
+                },
+                "employer_contact_person_phone_number": {
+                  "xpath": "employer_contact_person_phone_number"
+                },
+                "employer_contact_reason": {
+                  "xpath": "employer_contact_reason"
+                },
+                "insureds_contact_persons_name": {
+                  "xpath": "insureds_contact_persons_name"
+                },
+                "insureds_contact_person_phone_number": {
+                  "xpath": "insureds_contact_person_phone_number"
+                },
+                "insureds_contact_person_reason": {
+                  "xpath": "insureds_contact_person_reason"
+                },
+                "relationship_to_the_patient_start_date": {
+                  "xpath": "relationship_to_the_patient_start_date"
+                },
+                "relationship_to_the_patient_stop_date": {
+                  "xpath": "relationship_to_the_patient_stop_date"
+                },
+                "insurance_co_contact_reason": {
+                  "xpath": "insurance_co_contact_reason"
+                },
+                "insurance_co_contact_phone_number": {
+                  "xpath": "insurance_co_contact_phone_number"
+                },
+                "policy_scope": {
+                  "xpath": "policy_scope"
+                },
+                "policy_source": {
+                  "xpath": "policy_source"
+                },
+                "patient_member_number": {
+                  "xpath": "patient_member_number"
+                },
+                "guarantors_relationship_to_insured": {
+                  "xpath": "guarantors_relationship_to_insured"
+                },
+                "insureds_phone_number_home": {
+                  "xpath": "insureds_phone_number_home"
+                },
+                "insureds_employer_phone_number": {
+                  "xpath": "insureds_employer_phone_number"
+                },
+                "military_handicapped_program": {
+                  "xpath": "military_handicapped_program"
+                },
+                "suspend_flag": {
+                  "xpath": "suspend_flag"
+                },
+                "copay_limit_flag": {
+                  "xpath": "copay_limit_flag"
+                },
+                "stoploss_limit_flag": {
+                  "xpath": "stoploss_limit_flag"
+                },
+                "insured_organization_name_and_id": {
+                  "xpath": "insured_organization_name_and_id"
+                },
+                "insured_employer_organization_name_and_id": {
+                  "xpath": "insured_employer_organization_name_and_id"
+                },
+                "race": {
+                  "xpath": "race"
+                },
+                "patients_relationship_to_insured": {
+                  "xpath": "patients_relationship_to_insured"
+                }
+              }
+            }
+      ]}
+      }
+    }
+  }
+}

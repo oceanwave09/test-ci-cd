@@ -1,0 +1,74 @@
+{
+  "source_system": "http://www.BenefitsInc.com/fhir/remittance",
+  "source_id": "R3500",
+  "type_system": "http://terminology.hl7.org/CodeSystem/claim-type",
+  "type_code": "oral",
+  "status": "active",
+  "use": "claim",
+  "outcome": "completed",
+  "patient_id": "f41ba4cf-a1d4-4735-b23a-b017d7d0dc75",
+  "claim_id": "f2b8db7e-c0a4-40d2-a245-93ea68699394",
+  "created_date_time": "2014-08-16",
+  "organization_id":"f2e8db7e-c0a4-40d2-a245-93ea68699394",
+  "adjudications":[
+    {
+      "category_code": "copay",
+      "quantity_value": 210,
+      "amount_value":135.57,
+      "reason_system" : "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+      "reason_code" : "ar002",
+      "reason_display" : "Plan Limit Reached"
+      
+    },
+    {
+      "category_code": "benefit",
+      "quantity_value": 19,
+      "amount_value": 90.47,
+      "amount_currency" : "USD",
+      "reason_system" : "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+      "reason_code" : "ar002",
+      "reason_display" : "Plan Limit Reached"
+      
+    }
+  ],
+  "claim_items":[
+    {
+      "adjudications":[
+        {
+          "category_code": "copay",
+          "quantity_value": 210,
+          "amount_value":135.57,
+          "reason_system" : "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+          "reason_code" : "ar002",
+          "reason_display" : "Plan Limit Reached"
+          
+        },
+        {
+          "category_code": "benefit",
+          "quantity_value": 19,
+          "amount_value": 90.47,
+          "amount_currency" : "USD",
+          "reason_system" : "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+          "reason_code" : "ar002",
+          "reason_display" : "Plan Limit Reached"
+          
+        }
+      ]
+    }
+  ],
+  "payment_value": 230,
+  "payment_currency": "USD",
+  "payment_date": "2014-08-16",
+  "total_amounts":[
+    {
+      "category_code": "benefit",
+      "value": 90.47,
+      "currency" : "USD"
+    },
+    {
+      "category_code": "copay",
+      "value": 135.57,
+      "currency" : "USD"
+    }
+  ]
+}

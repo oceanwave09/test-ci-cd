@@ -1,0 +1,33 @@
+{
+  "resourceType": "Observation",
+  "status": "preliminary",
+  "code": {
+      "coding": [
+          {
+              "system": "http://loinc.org",
+              "code": "2708-6",
+              "display": "Oxygen saturation in Arterial blood"
+          },
+          {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation in Arterial blood by Pulse oximetry"
+          },
+          {
+              "system": "urn:iso:std:iso:11073:10101",
+              "code": "150456",
+              "display": "MDC_PULS_OXIM_SAT_O2"
+          }
+      ]
+  },
+  "subject": {
+      "reference": "Patient/${pat_id}"
+  },
+  "effectiveDateTime": "2014-12-05T09:30:10+01:00",
+  "valueQuantity": {
+      "value": 95,
+      "unit": "%",
+      "system": "http://unitsofmeasure.org",
+      "code": "%"
+  }
+}

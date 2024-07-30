@@ -1,0 +1,93 @@
+{
+    "data_asset_type": null,
+    "expectation_suite_name": "radaid_brcadiag",
+    "expectations": [
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "row_id"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'row_id' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_match_regex",
+            "kwargs": {
+                "column": "row_id",
+                "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'row_id' column follow the regex pattern."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "first_name"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'first_name' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "last_name"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'last_name' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "mrn"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'mrn' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "diag_date"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'diag_date' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "diag_name"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'diag_name' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "diag_result"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'diag_result' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_table_row_count_to_be_between",
+            "kwargs": {
+                "min_value": 1,
+                "max_value": 1000000
+            },
+            "meta": {
+                "description": "Ensure that the total row count in the file is between 1 and 1000000."
+            }
+        }
+    ],
+    "ge_cloud_id": null,
+    "meta": {
+        "great_expectations_version": "0.17.15"
+    }
+}

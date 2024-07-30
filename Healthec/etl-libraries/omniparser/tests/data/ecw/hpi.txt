@@ -1,0 +1,30 @@
+apuid|RecordID|PatientId|PatientAccountNo|encounterId|EncounterDate|ProviderNPI|Ecwstructid|Question|QuestionID|Answers|AnswerID|ItemName|ItemID|CategoryName|CategoryID|MainCategoryName|MainCategoryID
+280807|280807.17502.2473498.47|17502|17502|2473498|2022-10-17|1427131036|44|Feeling down, depressed, or hopeless|47|Yes||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2473511.47|17502|17502|2473511|2022-10-17|1427131036|44|Feeling down, depressed, or hopeless|47|Yes||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2514390.47|17502|17502|2514390|2022-10-17|1427131036|44|Feeling down, depressed, or hopeless|47|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2457682.47|17502|17502|2457682|2022-10-17|1427131036|44|Feeling down, depressed, or hopeless|47|Yes||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2473575.47|17502|17502|2473575|2022-10-17|1427131036|44|Feeling down, depressed, or hopeless|47|Yes||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2517560.47|17502|17502|2517560|2022-10-17|1679623896|44|Feeling down, depressed, or hopeless|47|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2550354.47|17502|17502|2550354|2022-10-17|1235225871|44|Feeling down, depressed, or hopeless|47|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2471657.47|17502|17502|2471657|2022-10-18|1205940046|44|Feeling down, depressed, or hopeless|47|Yes||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2473498.46|17502|17502|2473498|2022-10-17|1427131036|43|Little interest or pleasure in doing things|46|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2473511.46|17502|17502|2473511|2022-10-17|1427131036|43|Little interest or pleasure in doing things|46|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2514390.46|17502|17502|2514390|2022-10-17|1427131036|43|Little interest or pleasure in doing things|46|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2473575.46|17502|17502|2473575|2022-10-17|1427131036|43|Little interest or pleasure in doing things|46|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2517560.46|17502|17502|2517560|2022-10-17|1679623896|43|Little interest or pleasure in doing things|46|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2550354.46|17502|17502|2550354|2022-10-17|1235225871|43|Little interest or pleasure in doing things|46|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2471657.46|17502|17502|2471657|2022-10-18|1205940046|43|Little interest or pleasure in doing things|46|No||PHQ-2 In last two weeks have you been bothered by|20534|Depression Screening|234469|HPI|93
+280807|280807.17502.2509021.44|17502|17502|2509021|2022-10-17|1871851568|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2542901.44|17502|17502|2542901|2022-10-17|1871851568|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2489735.44|17502|17502|2489735|2022-10-17|1205940046|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2545195.44|17502|17502|2545195|2022-10-17|1871851568|45|Little interest or pleasure in doing things|44|Several days|166|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2496409.44|17502|17502|2496409|2022-10-17|1871851568|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2521935.44|17502|17502|2521935|2022-10-17|1871851568|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2526658.44|17502|17502|2526658|2022-10-17|1518170364|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2473498.44|17502|17502|2473498|2022-10-17|1427131036|45|Little interest or pleasure in doing things|44|Several days|166|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2473511.44|17502|17502|2473511|2022-10-17|1427131036|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2457682.44|17502|17502|2457682|2022-10-17|1427131036|45|Little interest or pleasure in doing things|44|More than half the days|167|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2473575.44|17502|17502|2473575|2022-10-17|1427131036|45|Little interest or pleasure in doing things|44|Several days|166|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2517824.44|17502|17502|2517824|2022-10-17|1679623896|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2517560.44|17502|17502|2517560|2022-10-17|1679623896|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93
+280807|280807.17502.2533209.44|17502|17502|2533209|2022-10-17|1396385019|45|Little interest or pleasure in doing things|44|Not at all|165|PHQ-9|20535|Depression Screening|234469|HPI|93

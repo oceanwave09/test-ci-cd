@@ -1,0 +1,170 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "date_of_documentation",
+            "index": 6
+          },
+          {
+            "name": "status",
+            "index": 7
+          },
+          {
+            "name": "allergen_contraindication",
+            "index": 8
+          },
+          {
+            "name": "severity",
+            "index": 9
+          },
+          {
+            "name": "allergen_type",
+            "index": 10
+          },
+          {
+            "name": "reaction",
+            "index": 11
+          },
+          {
+            "name": "allergy_verified_flag",
+            "index": 12
+          },
+          {
+            "name": "ndc_code_if_allergy_is_medication",
+            "index": 13
+          },
+          {
+            "name": "allergy_modified_date",
+            "index": 14
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "date_of_documentation": {
+          "xpath": "date_of_documentation"
+        },
+        "status": {
+          "xpath": "status"
+        },
+        "allergen_contraindication": {
+          "xpath": "allergen_contraindication"
+        },
+        "severity": {
+          "xpath": "severity"
+        },
+        "allergen_type": {
+          "xpath": "allergen_type"
+        },
+        "reaction": {
+          "xpath": "reaction"
+        },
+        "allergy_verified_flag": {
+          "xpath": "allergy_verified_flag"
+        },
+        "ndc_code_if_allergy_is_medication": {
+          "xpath": "ndc_code_if_allergy_is_medication"
+        },
+        "allergy_modified_date": {
+          "xpath": "allergy_modified_date"
+        }
+      }
+    }
+  }
+}

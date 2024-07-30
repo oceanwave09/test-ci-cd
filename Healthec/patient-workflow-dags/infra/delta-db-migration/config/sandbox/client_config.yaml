@@ -1,0 +1,16 @@
+data_s3_bucket: hec-sandbox-data-pipeline-bucket
+tenants:
+  testdp:
+    analytical:
+      - ANALYTICAL
+    staging:
+      - PRACTICE
+      - PROVIDER
+      - BENEFICIARY
+      - MEDICAL_CLAIM
+      - RX_CLAIM
+      - ECW
+      - GAP
+      - GI
+      - CCLF
+      - NCQA_HEDIS

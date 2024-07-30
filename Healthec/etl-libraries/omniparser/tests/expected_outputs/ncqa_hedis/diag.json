@@ -1,0 +1,42 @@
+[
+	{
+		"diagnosis_code": "E08.3543",
+		"diagnosis_flag": "X",
+		"end_date": "20220408",
+		"member_id": "95055",
+		"row_id": "bf37f966-8c9d-4365-b44a-3359d44c3db8",
+		"start_date": "20220408"
+	},
+	{
+		"diagnosis_code": "L89.112",
+		"diagnosis_flag": "X",
+		"end_date": "20220625",
+		"member_id": "95123",
+		"row_id": "222fa85f-ba98-4468-84c5-e4e1f13a34eb",
+		"start_date": "20220625"
+	},
+	{
+		"diagnosis_code": "448922007",
+		"diagnosis_flag": "S",
+		"end_date": "20220531",
+		"member_id": "95123",
+		"row_id": "7bb67942-8fff-45bb-9a8c-62fe5ba1a953",
+		"start_date": "20220531"
+	},
+	{
+		"diagnosis_code": "367391000119102",
+		"diagnosis_flag": "S",
+		"end_date": "20210311",
+		"member_id": "95125",
+		"row_id": "d3cab3ba-10ab-4d0b-a796-000e98de790d",
+		"start_date": "20210311"
+	},
+	{
+		"diagnosis_code": "O24.913",
+		"diagnosis_flag": "X",
+		"end_date": "20270428",
+		"member_id": "95139",
+		"row_id": "ccc22c04-f7d4-4c25-93a7-1069e99687fc",
+		"start_date": "20270428"
+	}
+]

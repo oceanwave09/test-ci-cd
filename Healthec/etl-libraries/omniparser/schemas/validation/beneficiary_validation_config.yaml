@@ -1,0 +1,14 @@
+beneficiary_insurance_group_plan_id:
+  key_path: insurance_group_plan_id
+  min_length: 1
+  required: True
+
+beneficiary_physician_npi:
+  key_path: physician_npi
+  required: True
+  type: string
+  min_length: 10
+
+beneficiary_member_zip:
+  key_path: member_zip
+  type: string

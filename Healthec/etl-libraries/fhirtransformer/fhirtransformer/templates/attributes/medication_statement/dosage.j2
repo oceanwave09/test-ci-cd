@@ -1,0 +1,64 @@
+[
+  {% for dosage in data.dosages %}
+  {
+    {%- if dosage.sequence -%}
+    "sequence": {{ dosage.sequence }},
+    {%- endif %}
+    "text": "{{ dosage.text }}",
+    "additionalInstruction": [
+      {%- if dosage.additional_instruction_code or dosage.additional_instruction_code_text -%}
+      {
+        {%- if dosage.additional_instruction_code -%}
+        "coding": [
+          "system": "{{ dosage.additional_instruction_code_system }}",
+          "code": "{{ dosage.additional_instruction_code }}",
+          "display": "{{ dosage.additional_instruction_code_display }}"
+        ],
+        {%- endif %}
+        "text": "{{ dosage.additional_instruction_code_text }}"
+      }
+      {%- endif %}
+    ],
+    "patientInstruction": "{{ data.patient_instruction }}",
+    {%- if dosage.frequency -%}
+    "timing": {
+      "repeat": {
+        "frequency": {{ dosage.frequency }},
+        "periodUnit": "{{ dosage.frequency_period_unit }}"
+      }
+    },
+    {%- endif %}
+    "route": {
+      {%- if dosage.route_code -%}
+      "coding": [
+        "system": "{{ dosage.route_system }}",
+        "code": "{{ dosage.route_code }}",
+        "display": "{{ dosage.route_display }}"
+      ],
+      {%- endif %}
+      "text": "{{ dosage.route_text }}"
+    },
+    "doseAndRate": [
+      {
+        {%- if dosage.quantity -%}
+        "doseQuantity": {
+          "value": {{ dosage.quantity }},
+          "unit": "{{ dosage.quantity_unit }}"
+        },
+        {%- endif %}
+        "type": {
+          {%- if dosage.rate_code -%}
+          "coding": [
+            "system": "{{ dosage.rate_system }}",
+            "code": "{{ dosage.rate_code }}",
+            "display": "{{ dosage.rate_display }}"
+          ],
+          {%- endif %}
+          "text": "{{ dosage.rate_text }}"
+        }
+      }
+    ]
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

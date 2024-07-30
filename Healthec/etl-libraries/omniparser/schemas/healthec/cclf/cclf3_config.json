@@ -1,0 +1,119 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          { "name": "CUR_CLM_UNIQ_ID", "start_pos": 1, "length": 13 },
+          { "name": "BENE_MBI_ID", "start_pos": 14, "length": 11 },
+          { "name": "BENE_HIC_NUM", "start_pos": 25, "length": 11 },
+          { "name": "CLM_TYPE_CD", "start_pos": 36, "length": 2 },
+          { "name": "CLM_VAL_SQNC_NUM", "start_pos": 38, "length": 2 },
+          { "name": "CLM_PRCDR_CD", "start_pos": 40, "length": 7 },
+          { "name": "CLM_PRCDR_PRFRM_DT", "start_pos": 47, "length": 10 },
+          { "name": "BENE_EQTBL_BIC_HICN_NUM", "start_pos": 57, "length": 11 },
+          { "name": "PRVDR_OSCAR_NUM", "start_pos": 68, "length": 6 },
+          { "name": "CLM_FROM_DT", "start_pos": 74, "length": 10 },
+          { "name": "CLM_THRU_DT", "start_pos": 84, "length": 10 },
+          { "name": "DGNS_PRCDR_ICD_IND", "start_pos": 94, "length": 1 },
+          { "name": "CLM_BLG_PRVDR_OSCAR_NUM", "start_pos": 95, "length": 20 }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "cur_clm_uniq_id": { "xpath": "CUR_CLM_UNIQ_ID", "type": "int" },
+        "bene_mbi_id": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_MBI_ID",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_hic_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_HIC_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_type_cd": { "xpath": "CLM_TYPE_CD", "type": "int" },
+        "clm_val_sqnc_num": { "xpath": "CLM_VAL_SQNC_NUM", "type": "int" },
+        "clm_prcdr_cd": {
+          "xpath": "CLM_PRCDR_CD",
+          "template": "remove_special_char"
+        },
+        "clm_prcdr_prfrm_dt": {
+          "xpath": "CLM_PRCDR_PRFRM_DT",
+          "template": "remove_special_char"
+        },
+        "bene_eqtbl_bic_hicn_num": {
+          "xpath": "BENE_EQTBL_BIC_HICN_NUM",
+          "template": "remove_special_char"
+        },
+        "prvdr_oscar_num": {
+          "xpath": "PRVDR_OSCAR_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_from_dt": {
+          "xpath": "CLM_FROM_DT",
+          "template": "remove_special_char"
+        },
+        "clm_thru_dt": {
+          "xpath": "CLM_THRU_DT",
+          "template": "remove_special_char"
+        },
+        "dgns_prcdr_icd_ind": {
+          "xpath": "DGNS_PRCDR_ICD_IND",
+          "template": "remove_special_char"
+        },
+        "clm_blg_prvdr_oscar_num": {
+          "xpath": "CLM_BLG_PRVDR_OSCAR_NUM",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

@@ -1,0 +1,58 @@
+[
+  {%- if data.practitioner_id or data.practitioner_role_id -%}
+  {
+    {%- if data.participant_type_code or data.participant_type_text -%}
+    "type": [{
+      {% if data.participant_type_code %}
+      "coding": [
+        {
+          "system": "{{ data.participant_type_system }}",
+          "code": "{{ data.participant_type_code }}",
+          "display": "{{ data.participant_type_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ data.participant_type_text }}"
+    }],
+    {%- endif %}
+    "individual": {
+      {%- if data.practitioner_id -%}
+      "reference": "Practitioner/{{ data.practitioner_id }}"
+      {%- endif %}
+      {%- if data.practitioner_role_id -%}
+      "reference": "PractitionerRole/{{ data.practitioner_role_id }}"
+      {%- endif %}
+    }
+  }
+  {% elif data.participants %}
+  {% for entry in data.participants %}
+  {
+    {%- if entry.type_code or entry.type_text -%}
+    "type": [{
+      {% if entry.type_code %}
+      "coding": [
+        {
+          "system": "{{ entry.type_system }}",
+          "code": "{{ entry.type_code }}",
+          "display": "{{ entry.type_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ entry.type_text }}"
+    }],
+    {%- endif %}
+    {%- if entry.practitioner_id or entry.practitioner_role_id -%}
+    "individual": {
+      {%- if entry.practitioner_id -%}
+      "reference": "Practitioner/{{ entry.practitioner_id }}"
+      {%- endif %}
+      {%- if entry.practitioner_role_id -%}
+      "reference": "PractitionerRole/{{ entry.practitioner_role_id }}"
+      {%- endif %}
+    }
+    {%- endif %}
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+  {%- endif %}
+]

@@ -1,0 +1,81 @@
+[
+  {% for component in data.components %}
+  {
+    "code": {
+      {% if component.code %}
+      "coding": [
+        {
+          "system": "{{ component.code_system }}",
+          "code": "{{ component.code }}",
+          "display": "{{ component.code_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ component.code_text }}"
+    },
+    {% if component.quantity_value %}
+    "valueQuantity": {
+      "value": {{ component.quantity_value }},
+      "unit": "{{ component.quantity_unit }}",
+      "system": "{{ component.quantity_system }}",
+      "code": "{{ component.quantity_code }}"
+    },
+    {%- endif %}
+    "valueString": "{{ component.value_string }}",
+    "valueCodeableConcept": {
+      {% if component.value_code %}
+      "coding": [
+        {
+          "system": "{{ component.value_code_system }}",
+          "code": "{{ component.value_code }}",
+          "display": "{{ component.value_code_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ component.value_code_text }}"
+    },
+    "interpretation": [
+      {%- if component.interpretation_code or component.interpretation_text -%}
+      {
+        {% if component.interpretation_code %}
+        "coding": [
+          {
+            "system": "{{ component.interpretation_system }}",
+            "code": "{{ component.interpretation_code }}",
+            "display": "{{ component.interpretation_display }}"
+          } 
+        ],
+        {%- endif %}
+        "text": "{{ component.interpretation_text }}"
+      }
+      {%- endif %}
+    ],
+    "referenceRange": [
+      {%- if component.reference_range_low_value or component.reference_range_high_value -%}
+      {
+        {% if component.reference_range_low_value %}
+        "low": {
+            "value": {{ component.reference_range_low_value }},
+            "unit": "{{ component.reference_range_low_unit }}",
+            "system": "{{ component.reference_range_low_system }}",
+            "code": "{{ component.reference_range_low_code }}"
+        }
+        {%- endif %}
+        {% if component.reference_range_low_value and component.reference_range_high_value %}
+        ,
+        {%- endif %}
+        {% if component.reference_range_high_value %}
+        "high": {
+            "value": {{ component.reference_range_high_value }},
+            "unit": "{{ component.reference_range_high_unit }}",
+            "system": "{{ component.reference_range_high_system }}",
+            "code": "{{ component.reference_range_high_code }}"
+        }
+        {%- endif %}
+      }
+      {%- endif %}
+    ]
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

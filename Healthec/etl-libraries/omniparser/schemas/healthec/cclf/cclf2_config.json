@@ -1,0 +1,173 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          { "name": "CUR_CLM_UNIQ_ID", "start_pos": 1, "length": 13 },
+          { "name": "CLM_LINE_NUM", "start_pos": 14, "length": 10 },
+          { "name": "BENE_MBI_ID", "start_pos": 24, "length": 11 },
+          { "name": "BENE_HIC_NUM", "start_pos": 35, "length": 11 },
+          { "name": "CLM_TYPE_CD", "start_pos": 46, "length": 2 },
+          { "name": "CLM_LINE_FROM_DT", "start_pos": 48, "length": 10 },
+          { "name": "CLM_LINE_THRU_DT", "start_pos": 58, "length": 10 },
+          { "name": "CLM_LINE_PROD_REV_CTR_CD", "start_pos": 68, "length": 4 },
+          {
+            "name": "CLM_LINE_INSTNL_REV_CTR_DT",
+            "start_pos": 72,
+            "length": 10
+          },
+          { "name": "CLM_LINE_HCPCS_CD", "start_pos": 82, "length": 5 },
+          { "name": "BENE_EQTBL_BIC_HICN_NUM", "start_pos": 87, "length": 11 },
+          { "name": "PRVDR_OSCAR_NUM", "start_pos": 98, "length": 6 },
+          { "name": "CLM_FROM_DT", "start_pos": 104, "length": 10 },
+          { "name": "CLM_THRU_DT", "start_pos": 114, "length": 10 },
+          { "name": "CLM_LINE_SRVC_UNIT_QTY", "start_pos": 124, "length": 24 },
+          { "name": "CLM_LINE_CVRD_PD_AMT", "start_pos": 148, "length": 17 },
+          { "name": "HCPCS_1_MDFR_CD", "start_pos": 165, "length": 2 },
+          { "name": "HCPCS_2_MDFR_CD", "start_pos": 167, "length": 2 },
+          { "name": "HCPCS_3_MDFR_CD", "start_pos": 169, "length": 2 },
+          { "name": "HCPCS_4_MDFR_CD", "start_pos": 171, "length": 2 },
+          { "name": "HCPCS_5_MDFR_CD", "start_pos": 173, "length": 2 },
+          { "name": "CLM_REV_APC_HIPPS_CD", "start_pos": 175, "length": 5 },
+          { "name": "CLM_FAC_PRVDR_OSCAR_NUM", "start_pos": 180, "length": 20 }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "cur_clm_uniq_id": { "xpath": "CUR_CLM_UNIQ_ID", "type": "int" },
+        "clm_line_num": { "xpath": "CLM_LINE_NUM", "type": "int" },
+        "bene_mbi_id": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_MBI_ID",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_hic_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_HIC_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_type_cd": { "xpath": "CLM_TYPE_CD", "type": "int" },
+        "clm_line_from_dt": {
+          "xpath": "CLM_LINE_FROM_DT",
+          "template": "remove_special_char"
+        },
+        "clm_line_thru_dt": {
+          "xpath": "CLM_LINE_THRU_DT",
+          "template": "remove_special_char"
+        },
+        "clm_line_prod_rev_ctr_cd": {
+          "xpath": "CLM_LINE_PROD_REV_CTR_CD",
+          "template": "remove_special_char"
+        },
+        "clm_line_instnl_rev_ctr_dt": {
+          "xpath": "CLM_LINE_INSTNL_REV_CTR_DT",
+          "template": "remove_special_char"
+        },
+        "clm_line_hcpcs_cd": {
+          "xpath": "CLM_LINE_HCPCS_CD",
+          "template": "remove_special_char"
+        },
+        "bene_eqtbl_bic_hicn_num": {
+          "xpath": "BENE_EQTBL_BIC_HICN_NUM",
+          "template": "remove_special_char"
+        },
+        "prvdr_oscar_num": {
+          "xpath": "PRVDR_OSCAR_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_from_dt": {
+          "xpath": "CLM_FROM_DT",
+          "template": "remove_special_char"
+        },
+        "clm_thru_dt": {
+          "xpath": "CLM_THRU_DT",
+          "template": "remove_special_char"
+        },
+        "clm_line_srvc_unit_qty": {
+          "xpath": "CLM_LINE_SRVC_UNIT_QTY",
+          "type": "float"
+        },
+        "clm_line_cvrd_pd_amt": {
+          "xpath": "CLM_LINE_CVRD_PD_AMT",
+          "type": "float"
+        },
+        "hcpcs_1_mdfr_cd": {
+          "xpath": "HCPCS_1_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_2_mdfr_cd": {
+          "xpath": "HCPCS_2_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_3_mdfr_cd": {
+          "xpath": "HCPCS_3_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_4_mdfr_cd": {
+          "xpath": "HCPCS_4_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_5_mdfr_cd": {
+          "xpath": "HCPCS_5_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "clm_rev_apc_hipps_cd": {
+          "xpath": "CLM_REV_APC_HIPPS_CD",
+          "template": "remove_special_char"
+        },
+        "clm_fac_prvdr_oscar_num": {
+          "xpath": "CLM_FAC_PRVDR_OSCAR_NUM",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

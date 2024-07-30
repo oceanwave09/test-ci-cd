@@ -1,0 +1,16 @@
+[
+  {%- if data.interpretation_code or data.interpretation_text -%}
+  {
+    {% if data.interpretation_code %}
+    "coding": [
+      {
+        "system": "{{ data.interpretation_system }}",
+        "code": "{{ data.interpretation_code }}",
+        "display": "{{ data.interpretation_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.interpretation_text }}"
+  }
+  {%- endif %}
+]

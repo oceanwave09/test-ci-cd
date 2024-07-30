@@ -1,0 +1,132 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": ",",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "BENE_MBI_ID",
+            "index": 1
+          },
+          {
+            "name": "BENE_HIC_NUM",
+            "index": 2
+          },
+          {
+            "name": "BENE_1ST_NAME",
+            "index": 3
+          },
+          {
+            "name": "BENE_LAST_NAME",
+            "index": 4
+          },
+          {
+            "name": "BENE_SEX_CD",
+            "index": 5
+          },
+          {
+            "name": "BENE_BRTH_DT",
+            "index": 6
+          },
+          {
+            "name": "BENE_DEATH_DT",
+            "index": 7
+          },
+          {
+            "name": "PLUR_R05",
+            "index": 8
+          },
+          {
+            "name": "AB_R01",
+            "index": 9
+          },
+          {
+            "name": "HMO_R03",
+            "index": 10
+          },
+          {
+            "name": "NO_US_R02",
+            "index": 11
+          },
+          {
+            "name": "MDM_R04",
+            "index": 12
+          },
+          {
+            "name": "NOFND_R06",
+            "index": 13
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "template": "uuidv4"
+        },
+        "bene_mbi_id": {
+          "xpath": "BENE_MBI_ID"
+        },
+        "bene_hic_num": {
+          "xpath": "BENE_HIC_NUM"
+        },
+        "bene_1st_name": {
+          "xpath": "BENE_1ST_NAME"
+        },
+        "bene_last_name": {
+          "xpath": "BENE_LAST_NAME"
+        },
+        "bene_sex_cd": {
+          "xpath": "BENE_SEX_CD"
+        },
+        "bene_brth_dt": {
+          "xpath": "BENE_BRTH_DT"
+        },
+        "bene_death_dt": {
+          "xpath": "BENE_DEATH_DT"
+        },
+        "plur_r05": {
+          "xpath": "PLUR_R05"
+        },
+        "ab_r01": {
+          "xpath": "AB_R01"
+        },
+        "hmo_r03": {
+          "xpath": "HMO_R03"
+        },
+        "no_us_r02": {
+          "xpath": "NO_US_R02"
+        },
+        "mdm_r04": {
+          "xpath": "MDM_R04"
+        },
+        "nofnd_r06": {
+          "xpath": "NOFND_R06"
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

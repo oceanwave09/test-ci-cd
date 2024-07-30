@@ -1,0 +1,16 @@
+[
+  {%- if data.participant_participant_type_code or data.participant_type_text -%}
+  {
+    {% if data.participant_type_code %}
+    "coding": [
+      {
+        "system": "{{ data.participant_type_system }}",
+        "code": "{{ data.participant_type_code }}",
+        "display": "{{ data.participant_type_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.participant_type_text }}"
+  }
+  {%- endif %}
+]

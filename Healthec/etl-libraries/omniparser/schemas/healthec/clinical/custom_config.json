@@ -1,0 +1,252 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "admit_date",
+            "index": 6
+          },
+          {
+            "name": "discharge_date",
+            "index": 7
+          },
+          {
+            "name": "principal_diagnosis",
+            "index": 8
+          },
+          {
+            "name": "admit_reason",
+            "index": 9
+          },
+          {
+            "name": "attending_doctor_npi",
+            "index": 10
+          },
+          {
+            "name": "hospital",
+            "index": 11
+          },
+          {
+            "name": "flow_up_visit_date",
+            "index": 12
+          },
+          {
+            "name": "rendering_doctor_npi",
+            "index": 13
+          },
+          {
+            "name": "rendering_doctor_last_name",
+            "index": 14
+          },
+          {
+            "name": "rendering_doctor_first_name",
+            "index": 15
+          },
+          {
+            "name": "place_of_service_code",
+            "index": 16
+          },
+          {
+            "name": "visit_code",
+            "index": 17
+          },
+          {
+            "name": "visit_code_system",
+            "index": 18
+          },
+          {
+            "name": "seven_day_follow_up",
+            "index": 19
+          },
+          {
+            "name": "thirty_day_follow_up",
+            "index": 20
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "admit_date": {
+          "xpath": "admit_date"
+        },
+        "discharge_date": {
+          "xpath": "discharge_date"
+        },
+        "principal_diagnosis": {
+          "xpath": "principal_diagnosis"
+        },
+        "admit_reason": {
+          "xpath": "admit_reason"
+        },
+        "attending_doctor_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_doctor_npi"
+              }
+            ]
+          }
+        },
+        "hospital": {
+          "xpath": "hospital"
+        },
+        "flow_up_visit_date": {
+          "xpath": "flow_up_visit_date"
+        },
+        "rendering_doctor_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_npi"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_last_name"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_first_name"
+              }
+            ]
+          }
+        },
+        "place_of_service_code": {
+          "xpath": "place_of_service_code"
+        },
+        "visit_code": {
+          "xpath": "visit_code"
+        },
+        "visit_code_system": {
+          "xpath": "visit_code_system"
+        },
+        "seven_day_follow_up": {
+          "xpath": "seven_day_follow_up"
+        },
+        "thirty_day_follow_up": {
+          "xpath": "thirty_day_follow_up"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,470 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "last_name",
+            "index": 6
+          },
+          {
+            "name": "first_name",
+            "index": 7
+          },
+          {
+            "name": "dob",
+            "index": 8
+          },
+          {
+            "name": "gender",
+            "index": 9
+          },
+          {
+            "name": "mother_maiden",
+            "index": 10
+          },
+          {
+            "name": "address_1",
+            "index": 11
+          },
+          {
+            "name": "address_2",
+            "index": 12
+          },
+          {
+            "name": "city",
+            "index": 13
+          },
+          {
+            "name": "state",
+            "index": 14
+          },
+          {
+            "name": "zip",
+            "index": 15
+          },
+          {
+            "name": "country",
+            "index": 16
+          },
+          {
+            "name": "phone_home",
+            "index": 17
+          },
+          {
+            "name": "phone_work",
+            "index": 18
+          },
+          {
+            "name": "phone_mobile",
+            "index": 19
+          },
+          {
+            "name": "email",
+            "index": 20
+          },
+          {
+            "name": "moved_to_hospice_date",
+            "index": 21
+          },
+          {
+            "name": "moved_out_of_country_date",
+            "index": 22
+          },
+          {
+            "name": "deceased_date",
+            "index": 23
+          },
+          {
+            "name": "npi",
+            "index": 24
+          },
+          {
+            "name": "language",
+            "index": 25
+          },
+          {
+            "name": "race",
+            "index": 26
+          },
+          {
+            "name": "marital_status",
+            "index": 27
+          },
+          {
+            "name": "middle_name",
+            "index": 28
+          },
+          {
+            "name": "previous_name",
+            "index": 29
+          },
+          {
+            "name": "prefix_name",
+            "index": 30
+          },
+          {
+            "name": "suffix_name",
+            "index": 31
+          },
+          {
+            "name": "patient_account_no",
+            "index": 32
+          },
+          {
+            "name": "ethnic_group",
+            "index": 33
+          },
+          {
+            "name": "patient_death_indicator",
+            "index": 34
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "first_name"
+              }
+            ]
+          }
+        },
+        "last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "last_name"
+              }
+            ]
+          }
+        },
+        "dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "dob"
+              }
+            ]
+          }
+        },
+        "gender": {
+          "xpath": "gender"
+        },
+        "mother_maiden": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mother_maiden"
+              }
+            ]
+          }
+        },
+        "address_1": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "address_1"
+              }
+            ]
+          }
+        },
+        "address_2": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "address_2"
+              }
+            ]
+          }
+        },
+        "city": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "city"
+              }
+            ]
+          }
+        },
+        "state": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "state"
+              }
+            ]
+          }
+        },
+        "zip": {
+          "xpath": "zip"
+        },
+        "country": {
+          "xpath": "country"
+        },
+        "phone_home": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "phone_home"
+              }
+            ]
+          }
+        },
+        "phone_work": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "phone_work"
+              }
+            ]
+          }
+        },
+        "phone_mobile": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "phone_mobile"
+              }
+            ]
+          }
+        },
+        "email": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "email"
+              }
+            ]
+          }
+        },
+        "moved_to_hospice_date": {
+          "xpath": "moved_to_hospice_date"
+        },
+        "moved_out_of_country_date": {
+          "xpath": "moved_out_of_country_date"
+        },
+        "deceased_date": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "deceased_date"
+              }
+            ]
+          }
+        },
+        "npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "npi"
+              }
+            ]
+          }
+        },
+        "language": {
+          "xpath": "language"
+        },
+        "race": {
+          "xpath": "race"
+        },
+        "marital_status": {
+          "xpath": "marital_status"
+        },
+        "middle_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "middle_name"
+              }
+            ]
+          }
+        },
+        "previous_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "previous_name"
+              }
+            ]
+          }
+        },
+        "prefix_name": {
+          "xpath": "prefix_name"
+        },
+        "suffix_name": {
+          "xpath": "suffix_name"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "ethnic_group": {
+          "xpath": "ethnic_group"
+        },
+        "patient_death_indicator": {
+          "xpath": "patient_death_indicator"
+        }
+      }
+    }
+  }
+}

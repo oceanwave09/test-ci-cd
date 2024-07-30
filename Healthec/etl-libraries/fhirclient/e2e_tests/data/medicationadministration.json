@@ -1,0 +1,45 @@
+{
+  "resourceType": "MedicationAdministration",
+  "status": "in-progress",
+  "medicationReference": {
+    "reference": "Medication/${medi_id}"
+  },
+  "subject": {
+    "reference": "Patient/${pat_id}"
+  },
+  "effectivePeriod": {
+    "start": "2015-01-15T14:30:00+01:00"
+  },
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/reason-medication-given",
+          "code": "b",
+          "display": "Given as Ordered"
+        }
+      ]
+    }
+  ],
+  "dosage": {
+    "text": "500mg IV q6h x 3 days",
+    "route": {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "47625008",
+          "display": "Intravenous route (qualifier value)"
+        }
+      ]
+    },
+    "method": {
+      "text": "IV Push"
+    },
+    "dose": {
+      "value": 500,
+      "unit": "mg",
+      "system": "http://unitsofmeasure.org",
+      "code": "mg"
+    }
+  }
+}

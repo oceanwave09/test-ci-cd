@@ -1,0 +1,7 @@
+BEGIN;
+
+ALTER TABLE IF EXISTS organization
+    DROP COLUMN IF EXISTS part_of,
+    DROP COLUMN IF EXISTS highest_part_of;
+
+COMMIT;

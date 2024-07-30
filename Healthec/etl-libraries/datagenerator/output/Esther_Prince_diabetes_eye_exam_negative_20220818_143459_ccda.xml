@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd">
+   <realmCode code="US" />
+   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+   <templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01" />
+   <id root="2.16.840.1.113883.19.5" extension="4f6e2811-722f-474e-afb7-5694d224f72e" />
+   <code code="34133-9" displayName="Summarization of episode note" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+   <title>Transition of Care Document</title>
+   <effectiveTime value="20210922160649" />
+   <confidentialityCode code="N" />
+   <languageCode code="en-US" />
+   <recordTarget>
+      <patientRole>
+         <id extension="391324596" root="2.16.840.1.113883.4.1" />
+         <addr use="HP">
+            <streetAddressLine>65 Steet</streetAddressLine>
+            <city>New Jersey</city>
+            <state>NJ</state>
+            <postalCode>72389</postalCode>
+         </addr>
+         <telecom nullFlavor="NI" />
+         <patient>
+            <name>
+               <given>Esther</given>
+               <family>Prince</family>
+            </name>
+            <administrativeGenderCode code="F" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" />
+            <birthTime value="19860101000000" />
+            <raceCode code="2106-3" displayName="white" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+            <ethnicGroupCode code="2186-5" displayName="non-hispanic" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+            <languageCommunication>
+               <languageCode code="en-US" />
+            </languageCommunication>
+         </patient>
+      </patientRole>
+   </recordTarget>
+   <author>
+      <time value="20210922160649" />
+      <assignedAuthor>
+         <id nullFlavor="NA" />
+         <addr nullFlavor="NA" />
+         <telecom nullFlavor="NA" />
+      </assignedAuthor>
+   </author>
+   <custodian>
+      <assignedCustodian>
+         <representedCustodianOrganization>
+            <id extension="063288840" root="2.16.840.1.113883.4.4" />
+            <name>Test Health Care 6</name>
+            <telecom nullFlavor="NA" />
+            <addr>
+               <streetAddressLine>46 Street</streetAddressLine>
+               <city>New York</city>
+               <state>NY</state>
+               <postalCode>39080</postalCode>
+            </addr>
+         </representedCustodianOrganization>
+      </assignedCustodian>
+   </custodian>
+   <documentationOf>
+      <serviceEvent classCode="PCPR">
+         <effectiveTime>
+            <low value="20210922160649" />
+            <high value="20210922160649" />
+         </effectiveTime>
+      </serviceEvent>
+   </documentationOf>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <templateId root="2.16.840.1.113883.10.20.22.2.22" extension="2015-08-01" />
+               <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+               <title>Encounters</title>
+               <text>
+                  <table border="1" width="100%">
+                     <thead>
+                        <tr>
+                           <th>Description</th>
+                           <th>Code</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td ID="encounters-desc-1">Office visit for pediatric care and assessment</td>
+                           <td ID="encounters-code-1">http://snomed.info/sct 3391000175108</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <entry typeCode="DRIV">
+                  <encounter classCode="ENC" moodCode="EVN">
+                     <templateId root="2.16.840.1.113883.10.20.22.4.49" />
+                     <id root="65d4b49d-e7d1-48f7-b761-b5de9934f78c" />
+                     <code code="3391000175108" codeSystem="2.16.840.1.113883.6.96" displayName="Office visit for pediatric care and assessment">
+                        <originalText>
+                           <reference value="#encounters-desc-1" />
+                        </originalText>
+                     </code>
+                     <text>
+                        <reference value="#encounters-desc-1" />
+                     </text>
+                     <effectiveTime>
+                        <low value="20210922160649" />
+                        <high value="20210922160649" />
+                     </effectiveTime>
+                  </encounter>
+               </entry>
+            </section>
+         </component>
+         <component>
+            <section>
+               <templateId root="2.16.840.1.113883.10.20.22.2.5.1" />
+               <templateId root="2.16.840.1.113883.10.20.22.2.5.1" extension="2015-08-01" />
+               <code code="11450-4" displayName="Problem List" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+               <title>Problems</title>
+               <text>
+                  <table>
+                     <thead>
+                        <tr>
+                           <th>Problem</th>
+                           <th>Code</th>
+                           <th>Type</th>
+                           <th>Status</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <content ID="PROBLEM1">Preproliferative retinopathy due to diabetes mellitus (disorder)</content>
+                           </td>
+                           <td>193349004(SNOMED)</td>
+                           <td>Diagnosis</td>
+                           <td>active</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <entry typeCode="DRIV">
+                  <act classCode="ACT" moodCode="EVN">
+                     <templateId root="2.16.840.1.113883.10.20.22.4.3" />
+                     <templateId root="2.16.840.1.113883.10.20.22.4.3" extension="2015-08-01" />
+                     <id root="9773dc05-ac4a-47d5-9084-b70735c833f6" />
+                     <code code="CONC" displayName="Concern" codeSystem="2.16.840.1.113883.5.6" codeSystemName="HL7ActCode" />
+                     <statusCode code="active" />
+                     <effectiveTime>
+                        <low value="20210922160649" />
+                     </effectiveTime>
+                     <entryRelationship typeCode="SUBJ">
+                        <observation classCode="OBS" moodCode="EVN">
+                           <templateId root="2.16.840.1.113883.10.20.22.4.4" />
+                           <templateId root="2.16.840.1.113883.10.20.22.4.4" extension="2015-08-01" />
+                           <id root="9773dc05-ac4a-47d5-9084-b70735c833f6" />
+                           <code code="282291009" displayName="Diagnosis" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED-CT">
+                              <translation code="75323-6" displayName="Condition" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+                           </code>
+                           <statusCode code="completed" />
+                           <effectiveTime>
+                              <low value="20210922160649" />
+                           </effectiveTime>
+                           <value code="250.00" displayName="Diabetes mellitus without mention of complication, type II or unspecified type, not stated as uncontrolled" codeSystem="http://hl7.org/fhir/sid/icd-9-cm" xsi:type="CD">
+                           </value>
+                        </observation>
+                     </entryRelationship>
+                  </act>
+               </entry>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</ClinicalDocument>

@@ -1,0 +1,137 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "start_date",
+            "start_pos": 17,
+            "length": 8
+          },
+          {
+            "name": "disenrollment_date",
+            "start_pos": 25,
+            "length": 8
+          },
+          {
+            "name": "dental_benefit",
+            "start_pos": 33,
+            "length": 1
+          },
+          {
+            "name": "drug_benefit",
+            "start_pos": 34,
+            "length": 1
+          },
+          {
+            "name": "mental_health_benefit_inpatient",
+            "start_pos": 35,
+            "length": 1
+          },
+          {
+            "name": "mental_health_benefit_intensive_outpatient",
+            "start_pos": 36,
+            "length": 1
+          },
+          {
+            "name": "mental_health_benefit_outpatient_ed",
+            "start_pos": 37,
+            "length": 1
+          },
+          {
+            "name": "chemdep_benefit_inpatient",
+            "start_pos": 38,
+            "length": 1
+          },
+          {
+            "name": "chemdep_benefit_intensive_outpatient",
+            "start_pos": 39,
+            "length": 1
+          },
+          {
+            "name": "chemdep_benefit_outpatient_ed",
+            "start_pos": 40,
+            "length": 1
+          },
+          {
+            "name": "payer",
+            "start_pos": 41,
+            "length": 3
+          },
+          {
+            "name": "health_plan_employee_flag",
+            "start_pos": 44,
+            "length": 1
+          },
+          {
+            "name": "indicator",
+            "start_pos": 45,
+            "length": 10
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "start_date": {
+          "xpath": "start_date"
+        },
+        "disenrollment_date": {
+          "xpath": "disenrollment_date"
+        },
+        "dental_benefit": {
+          "xpath": "dental_benefit"
+        },
+        "drug_benefit": {
+          "xpath": "drug_benefit"
+        },
+        "mental_health_benefit_inpatient": {
+          "xpath": "mental_health_benefit_inpatient"
+        },
+        "mental_health_benefit_intensive_outpatient": {
+          "xpath": "mental_health_benefit_intensive_outpatient"
+        },
+        "mental_health_benefit_outpatient_ed": {
+          "xpath": "mental_health_benefit_outpatient_ed"
+        },
+        "chemdep_benefit_inpatient": {
+          "xpath": "chemdep_benefit_inpatient"
+        },
+        "chemdep_benefit_intensive_outpatient": {
+          "xpath": "chemdep_benefit_intensive_outpatient"
+        },
+        "chemdep_benefit_outpatient_ed": {
+          "xpath": "chemdep_benefit_outpatient_ed"
+        },
+        "payer": {
+          "xpath": "payer"
+        },
+        "health_plan_employee_flag": {
+          "xpath": "health_plan_employee_flag"
+        },
+        "indicator": {
+          "xpath": "indicator"
+        }
+      }
+    }
+  }
+}

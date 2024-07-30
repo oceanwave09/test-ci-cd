@@ -1,0 +1,1402 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "member_id",
+            "index": 1
+          },
+          {
+            "name": "member_mbi",
+            "index": 2
+          },
+          {
+            "name": "member_medicaid_id",
+            "index": 3
+          },
+          {
+            "name": "member_mrn",
+            "index": 4
+          },
+          {
+            "name": "member_ssn",
+            "index": 5
+          },
+          {
+            "name": "member_relationship_code",
+            "index": 6
+          },
+          {
+            "name": "member_last_name",
+            "index": 7
+          },
+          {
+            "name": "member_first_name",
+            "index": 8
+          },
+          {
+            "name": "member_middle_name",
+            "index": 9
+          },
+          {
+            "name": "member_gender",
+            "index": 10
+          },
+          {
+            "name": "member_dob",
+            "index": 11
+          },
+          {
+            "name": "member_deceased_date",
+            "index": 12
+          },
+          {
+            "name": "member_address_line_1",
+            "index": 13
+          },
+          {
+            "name": "member_address_line_2",
+            "index": 14
+          },
+          {
+            "name": "member_city",
+            "index": 15
+          },
+          {
+            "name": "member_state",
+            "index": 16
+          },
+          {
+            "name": "member_zip",
+            "index": 17
+          },
+          {
+            "name": "member_phone_home",
+            "index": 18
+          },
+          {
+            "name": "member_email",
+            "index": 19
+          },
+          {
+            "name": "attributed_last_name",
+            "index": 20
+          },
+          {
+            "name": "attributed_first_name",
+            "index": 21
+          },
+          {
+            "name": "attributed_npi",
+            "index": 22
+          },
+          {
+            "name": "provider_org_name",
+            "index": 23
+          },
+          {
+            "name": "facility_name",
+            "index": 24
+          },
+          {
+            "name": "pharmacy_name",
+            "index": 25
+          },
+          {
+            "name": "provider_org_taxid",
+            "index": 26
+          },
+          {
+            "name": "facility_taxid",
+            "index": 27
+          },
+          {
+            "name": "pharmacy_taxid",
+            "index": 28
+          },
+          {
+            "name": "provider_org_group_npi",
+            "index": 29
+          },
+          {
+            "name": "facility_group_npi",
+            "index": 30
+          },
+          {
+            "name": "pharmacy_group_npi",
+            "index": 31
+          },
+          {
+            "name": "provider_org_internal_id",
+            "index": 32
+          },
+          {
+            "name": "facility_internal_id",
+            "index": 33
+          },
+          {
+            "name": "pharmacy_internal_id",
+            "index": 34
+          },
+          {
+            "name": "provider_org_taxonomy_code",
+            "index": 35
+          },
+          {
+            "name": "facility_taxonomy_code",
+            "index": 36
+          },
+          {
+            "name": "pharmacy_taxonomy_code",
+            "index": 37
+          },
+          {
+            "name": "claim_type",
+            "index": 38
+          },
+          {
+            "name": "claim_id",
+            "index": 39
+          },
+          {
+            "name": "previous_claim_id",
+            "index": 40
+          },
+          {
+            "name": "insurance_company_name",
+            "index": 41
+          },
+          {
+            "name": "insurance_company_id",
+            "index": 42
+          },
+          {
+            "name": "insurance_group_id",
+            "index": 43
+          },
+          {
+            "name": "insurance_group_plan_id",
+            "index": 44
+          },
+          {
+            "name": "payer_lob",
+            "index": 45
+          },
+          {
+            "name": "claim_tob",
+            "index": 46
+          },
+          {
+            "name": "admission_source",
+            "index": 47
+          },
+          {
+            "name": "admission_type",
+            "index": 48
+          },
+          {
+            "name": "admission_date",
+            "index": 49
+          },
+          {
+            "name": "discharge_date",
+            "index": 50
+          },
+          {
+            "name": "discharge_status",
+            "index": 51
+          },
+          {
+            "name": "claim_billed_date",
+            "index": 52
+          },
+          {
+            "name": "claim_start_date",
+            "index": 53
+          },
+          {
+            "name": "claim_end_date",
+            "index": 54
+          },
+          {
+            "name": "claim_disposition",
+            "index": 55
+          },
+          {
+            "name": "claim_copay_amount",
+            "index": 56
+          },
+          {
+            "name": "claim_coinsurance_amount",
+            "index": 57
+          },
+          {
+            "name": "claim_deduct_amount",
+            "index": 58
+          },
+          {
+            "name": "claim_total_charges",
+            "index": 59
+          },
+          {
+            "name": "claim_total_units",
+            "index": 60
+          },
+          {
+            "name": "claim_paid_date",
+            "index": 61
+          },
+          {
+            "name": "claim_total_paid",
+            "index": 61
+          },
+          {
+            "name": "claim_paid_total_units",
+            "index": 62
+          },
+          {
+            "name": "claim_network_paid_ind",
+            "index": 63
+          },
+          {
+            "name": "claim_allowed_amount",
+            "index": 64
+          },
+          {
+            "name": "claim_payment_indicator",
+            "index": 65
+          },
+          {
+            "name": "claim_adjudication_status",
+            "index": 66
+          },
+          {
+            "name": "attending_last_name",
+            "index": 67
+          },
+          {
+            "name": "attending_first_name",
+            "index": 68
+          },
+          {
+            "name": "attending_middle_name",
+            "index": 69
+          },
+          {
+            "name": "attending_npi",
+            "index": 70
+          },
+          {
+            "name": "attending_taxonomy_code",
+            "index": 71
+          },
+          {
+            "name": "rendering_last_name",
+            "index": 72
+          },
+          {
+            "name": "rendering_first_name",
+            "index": 73
+          },
+          {
+            "name": "rendering_middle_name",
+            "index": 74
+          },
+          {
+            "name": "rendering_npi",
+            "index": 75
+          },
+          {
+            "name": "rendering_taxonomy_code",
+            "index": 76
+          },
+          {
+            "name": "svc_facility_name",
+            "index": 77
+          },
+          {
+            "name": "svc_facility_group_npi",
+            "index": 78
+          },
+          {
+            "name": "svc_facility_taxonomy_code",
+            "index": 79
+          },
+          {
+            "name": "icd_Version",
+            "index": 80
+          },
+          {
+            "name": "principal_icd_proc_code",
+            "index": 81
+          },
+          {
+            "name": "principal_icd_proc_description",
+            "index": 82
+          },
+          {
+            "name": "principal_icd_proc_date",
+            "index": 83
+          },
+          {
+            "name": "icd_proc_code_1",
+            "index": 84
+          },
+          {
+            "name": "icd_proc_code_1_descrip",
+            "index": 85
+          },
+          {
+            "name": "icd_proc_code_1_date",
+            "index": 86
+          },
+          {
+            "name": "icd_proc_code_2",
+            "index": 87
+          },
+          {
+            "name": "icd_proc_code_2_descrip",
+            "index": 88
+          },
+          {
+            "name": "icd_proc_code_2_date",
+            "index": 89
+          },
+          {
+            "name": "icd_proc_code_3",
+            "index": 90
+          },
+          {
+            "name": "icd_proc_code_3_descrip",
+            "index": 91
+          },
+          {
+            "name": "icd_proc_code_3_date",
+            "index": 92
+          },
+          {
+            "name": "icd_proc_code_4",
+            "index": 93
+          },
+          {
+            "name": "icd_proc_code_4_descrip",
+            "index": 94
+          },
+          {
+            "name": "icd_proc_code_4_date",
+            "index": 95
+          },
+          {
+            "name": "icd_proc_code_5",
+            "index": 96
+          },
+          {
+            "name": "icd_proc_code_5_descrip",
+            "index": 97
+          },
+          {
+            "name": "icd_proc_code_5_date",
+            "index": 98
+          },
+          {
+            "name": "icd_proc_code_6",
+            "index": 99
+          },
+          {
+            "name": "icd_proc_code_6_descrip",
+            "index": 100
+          },
+          {
+            "name": "icd_proc_code_6_date",
+            "index": 101
+          },
+          {
+            "name": "icd_proc_code_7",
+            "index": 102
+          },
+          {
+            "name": "icd_proc_code_7_descrip",
+            "index": 103
+          },
+          {
+            "name": "icd_proc_code_7_date",
+            "index": 104
+          },
+          {
+            "name": "icd_proc_code_8",
+            "index": 105
+          },
+          {
+            "name": "icd_proc_code_8_descrip",
+            "index": 106
+          },
+          {
+            "name": "icd_proc_code_8_date",
+            "index": 107
+          },
+          {
+            "name": "icd_proc_code_9",
+            "index": 108
+          },
+          {
+            "name": "icd_proc_code_9_descrip",
+            "index": 109
+          },
+          {
+            "name": "icd_proc_code_9_date",
+            "index": 110
+          },
+          {
+            "name": "icd_proc_code_10",
+            "index": 111
+          },
+          {
+            "name": "icd_proc_code_10_descrip",
+            "index": 112
+          },
+          {
+            "name": "icd_proc_code_10_date",
+            "index": 113
+          },
+          {
+            "name": "icd_proc_code_11",
+            "index": 114
+          },
+          {
+            "name": "icd_proc_code_11_descrip",
+            "index": 115
+          },
+          {
+            "name": "icd_proc_code_11_date",
+            "index": 116
+          },
+          {
+            "name": "icd_proc_code_12",
+            "index": 117
+          },
+          {
+            "name": "icd_proc_code_12_descrip",
+            "index": 118
+          },
+          {
+            "name": "icd_proc_code_12_date",
+            "index": 119
+          },
+          {
+            "name": "ms_drg_code",
+            "index": 120
+          },
+          {
+            "name": "ap_drg_code",
+            "index": 121
+          },
+          {
+            "name": "apr_drg_code",
+            "index": 122
+          }, 
+          {
+            "name": "admitting_diagnosis",
+            "index": 123
+          },  
+          {
+            "name": "admitting_diagnosis_description",
+            "index": 124
+          }, 
+          {
+            "name": "primary_diagnosis",
+            "index": 125
+          }, 
+          {
+            "name": "primary_diagnosis_description",
+            "index": 126
+          }, 
+          {
+            "name": "diagnosis_code_1",
+            "index": 127
+          }, 
+          {
+            "name": "diagnosis_code_1_description",
+            "index": 128
+          }, 
+          {
+            "name": "diagnosis_code_2",
+            "index": 129
+          }, 
+          {
+            "name": "diagnosis_code_2_description",
+            "index": 130
+          }, 
+          {
+            "name": "diagnosis_code_3",
+            "index": 131
+          }, 
+          {
+            "name": "diagnosis_code_3_description",
+            "index": 132
+          },
+          {
+            "name": "diagnosis_code_4",
+            "index": 133
+          },
+          {
+            "name": "diagnosis_code_4_description",
+            "index": 134
+          },
+          {
+            "name": "diagnosis_code_5",
+            "index": 135
+          },
+          {
+            "name": "diagnosis_code_5_description",
+            "index": 136
+          },
+          {
+            "name": "diagnosis_code_6",
+            "index": 137
+          },
+          {
+            "name": "diagnosis_code_6_description",
+            "index": 138
+          },
+          {
+            "name": "diagnosis_code_7",
+            "index": 139
+          },
+          {
+            "name": "diagnosis_code_7_description",
+            "index": 140
+          },
+          {
+            "name": "diagnosis_code_8",
+            "index": 141
+          },
+          {
+            "name": "diagnosis_code_8_description",
+            "index": 142
+          },
+          {
+            "name": "diagnosis_code_9",
+            "index": 143
+          },
+          {
+            "name": "diagnosis_code_9_description",
+            "index": 144
+          },
+          {
+            "name": "diagnosis_code_10",
+            "index": 145
+          },
+          {
+            "name": "diagnosis_code_10_description",
+            "index": 146
+          },
+          {
+            "name": "diagnosis_code_11",
+            "index": 147
+          },
+          {
+            "name": "diagnosis_code_11_description",
+            "index": 148
+          },
+          {
+            "name": "diagnosis_code_12",
+            "index": 149
+          },
+          {
+            "name": "diagnosis_code_12_description",
+            "index": 150
+          },
+          {
+            "name": "line_number",
+            "index": 151
+          },
+          {
+            "name": "line_item_Control_Number",
+            "index": 152
+          },
+          {
+            "name": "revenue_code",
+            "index": 153
+          },
+          {
+            "name": "cpt_code",
+            "index": 154
+          },
+          {
+            "name": "hcpsc_code",
+            "index": 155
+          },
+          {
+            "name": "cpt_code_description",
+            "index": 156
+          },
+          {
+            "name": "hcpsc_code_description",
+            "index": 157
+          },
+          {
+            "name": "svc_modifier_1",
+            "index": 158
+          },
+          {
+            "name": "svc_modifier_1_descrip",
+            "index": 159
+          },
+          {
+            "name": "svc_modifier_2",
+            "index": 160
+          },
+          {
+            "name": "svc_modifier_2_descrip",
+            "index": 161
+          },
+          {
+            "name": "svc_modifier_3",
+            "index": 162
+          },
+          {
+            "name": "svc_modifier_3_descrip",
+            "index": 163
+          },
+          {
+            "name": "svc_modifier_4",
+            "index": 164
+          },
+          {
+            "name": "svc_modifier_4_descrip",
+            "index": 165
+          },
+          {
+            "name": "place_of_service",
+            "index": 166
+          },
+          {
+            "name": "place_of_service_descrip",
+            "index": 167
+          },
+          {
+            "name": "svc_line_billed_date",
+            "index": 168
+          },
+          {
+            "name": "svc_line_start_date",
+            "index": 169
+          },
+          {
+            "name": "svc_line_end_date",
+            "index": 170
+          },
+          {
+            "name": "service_line_disposition",
+            "index": 171
+          },
+          {
+            "name": "svc_line_copay_amount",
+            "index": 172
+          },
+          {
+            "name": "svc_line_coinsurance_amount",
+            "index": 173
+          },
+          {
+            "name": "svc_line_deduct_amount",
+            "index": 174
+          },
+          {
+            "name": "svc_line_charges",
+            "index": 175
+          },
+          {
+            "name": "svc_line_units",
+            "index": 176
+          },
+          {
+            "name": "svc_line_paid_date",
+            "index": 177
+          },
+          {
+            "name": "svc_line_amount_paid",
+            "index": 178
+          },
+          {
+            "name": "service_paid_units",
+            "index": 179
+          },
+          {
+            "name": "svc_line_network_paid_ind",
+            "index": 180
+          },
+          {
+            "name": "svc_line_allowed_amount",
+            "index": 181
+          },
+          {
+            "name": "service_line_payment_indicator",
+            "index": 182
+          },
+          {
+            "name": "svc_line_adjudication_status",
+            "index": 183
+          },
+          {
+            "name": "svc_rendering_last_name",
+            "index": 184
+          },
+          {
+            "name": "svc_rendering_first_name",
+            "index": 185
+          },
+          {
+            "name": "svc_rendering_middle_name",
+            "index": 186
+          },
+          {
+            "name": "svc_rendering_npi",
+            "index": 187
+          },
+          {
+            "name": "prescribing_npi",
+            "index": 188
+          },
+          {
+            "name": "svc_rendering_taxonomy_code",
+            "index": 189
+          },
+          {
+            "name": "prescribing_taxonomy_code",
+            "index": 190
+          },
+          {
+            "name": "prescription_number",
+            "index": 191
+          },
+          {
+            "name": "dispense_date",
+            "index": 192
+          },
+          {
+            "name": "daw_code",
+            "index": 193
+          },
+          {
+            "name": "drug_ndc",
+            "index": 194
+          },
+          {
+            "name": "days_supply",
+            "index": 195
+          },
+          {
+            "name": "drug_quantity",
+            "index": 196
+          },
+          {
+            "name": "drug_strength",
+            "index": 197
+          },
+          {
+            "name": "rx_norm_drug_name",
+            "index": 198
+          },
+          {
+            "name": "gpi",
+            "index": 199
+          },
+          {
+            "name": "ahfs_drug_class",
+            "index": 200
+          },
+          {
+            "name": "generic_branded_ind",
+            "index": 201
+          },
+          {
+            "name": "mail_order_flag",
+            "index": 202
+          }                                                                        
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": { "xpath": "member_id" },
+        "member_mbi": { "xpath": "member_mbi" },
+        "member_medicaid_id": { "xpath": "member_medicaid_id" },
+        "member_mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_mrn"
+              }
+            ]
+          }
+        },
+        "member_ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_ssn"
+              }
+            ]
+          }
+        },
+        "member_relationship_code": { "xpath": "member_relationship_code" },
+        "member_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_last_name"
+              }
+            ]
+          }
+        },
+        "member_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_first_name"
+              }
+            ]
+          }
+        },
+        "member_middle_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_middle_name"
+              }
+            ]
+          }
+        },
+        "member_gender": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_gender"
+              }
+            ]
+          }
+        },
+        "member_dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_dob"
+              }
+            ]
+          }
+        },
+        "member_deceased_date": { "xpath": "member_deceased_date" },
+        "member_address_line_1": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_address_line_1"
+              }
+            ]
+          }
+        },
+        "member_address_line_2": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_address_line_2"
+              }
+            ]
+          }
+        },
+        "member_city": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_city"
+              }
+            ]
+          }
+        },
+        "member_state": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_state"
+              }
+            ]
+          }
+        },
+        "member_zip": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_zip"
+              }
+            ]
+          }
+        },
+        "member_phone_home": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_phone_home"
+              }
+            ]
+          }
+        },
+        "member_email": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "member_email"
+              }
+            ]
+          }
+        },
+        "attributed_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attributed_last_name"
+              }
+            ]
+          }
+        },
+        "attributed_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attributed_first_name"
+              }
+            ]
+          }
+        },
+        "attributed_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "provider_org_name": { "xpath": "provider_org_name" },
+        "facility_name": { "xpath": "facility_name" },
+        "pharmacy_name": { "xpath": "pharmacy_name" },
+        "provider_org_taxid": { "xpath": "provider_org_taxid" },
+        "facility_taxid": { "xpath": "facility_taxid" },
+        "pharmacy_taxid": { "xpath": "pharmacy_taxid" },
+        "provider_org_group_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_org_group_npi"
+              }
+            ]
+          }
+        },
+        "facility_group_npi": { "xpath": "facility_group_npi" },
+        "pharmacy_group_npi": { "xpath": "pharmacy_group_npi" },
+        "provider_org_internal_id": { "xpath": "provider_org_internal_id" },
+        "facility_internal_id": { "xpath": "facility_internal_id" },
+        "pharmacy_internal_id": { "xpath": "pharmacy_internal_id" },
+        "provider_org_taxonomy_code": { "xpath": "provider_org_taxonomy_code" },
+        "facility_taxonomy_code": { "xpath": "facility_taxonomy_code" },
+        "pharmacy_taxonomy_code": { "xpath": "pharmacy_taxonomy_code" },
+        "claim_type": { "xpath": "claim_type" },
+        "claim_id": { "xpath": "claim_id" },
+        "previous_claim_id": { "xpath": "previous_claim_id" },
+        "insurance_company_name": { "xpath": "insurance_company_name" },
+        "insurance_company_id": { "xpath": "insurance_company_id" },
+        "insurance_group_id": { "xpath": "insurance_group_id" },
+        "insurance_group_plan_id": { "xpath": "insurance_group_plan_id" },
+        "payer_lob": { "xpath": "payer_lob" },
+        "claim_tob": { "xpath": "claim_tob" },
+        "admission_source": { "xpath": "admission_source" },
+        "admission_type": { "xpath": "admission_type" },
+        "admission_date": { "xpath": "admission_date" },
+        "discharge_date": { "xpath": "discharge_date" },
+        "discharge_status": { "xpath": "discharge_status" },
+        "claim_billed_date": { "xpath": "claim_billed_date" },
+        "claim_start_date": { "xpath": "claim_start_date" },
+        "claim_end_date": { "xpath": "claim_end_date" },
+        "claim_disposition": { "xpath": "claim_disposition" },
+        "claim_copay_amount": { "xpath": "claim_copay_amount" },
+        "claim_coinsurance_amount": { "xpath": "claim_coinsurance_amount" },
+        "claim_deduct_amount": { "xpath": "claim_deduct_amount" },
+        "claim_total_charges": { "xpath": "claim_total_charges" },
+        "claim_total_units": { "xpath": "claim_total_units" },
+        "claim_paid_date": { "xpath": "claim_paid_date" },
+        "claim_paid_total_units": { "xpath": "claim_paid_total_units" },
+        "claim_network_paid_ind": { "xpath": "claim_network_paid_ind" },
+        "claim_allowed_amount": { "xpath": "claim_allowed_amount" },
+        "claim_payment_indicator": { "xpath": "claim_payment_indicator" },
+        "claim_adjudication_status": { "xpath": "claim_adjudication_status" },
+        "attending_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_last_name"
+              }
+            ]
+          }
+        },
+        "attending_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_first_name"
+              }
+            ]
+          }
+        },
+        "attending_middle_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_middle_name"
+              }
+            ]
+          }
+        },
+        "attending_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_npi"
+              }
+            ]
+          }
+        },
+        "attending_taxonomy_code": { "xpath": "attending_taxonomy_code" },
+        "rendering_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_last_name"
+              }
+            ]
+          }
+        },
+        "rendering_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_first_name"
+              }
+            ]
+          }
+        },
+        "rendering_middle_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_middle_name"
+              }
+            ]
+          }
+        },
+        "rendering_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_npi"
+              }
+            ]
+          }
+        },
+        "rendering_taxonomy_code": { "xpath": "rendering_taxonomy_code" },
+        "svc_facility_name": { "xpath": "svc_facility_name" },
+        "svc_facility_group_npi": { "xpath": "svc_facility_group_npi" },
+        "svc_facility_taxonomy_code": { "xpath": "svc_facility_taxonomy_code" },
+        "icd_Version": { "xpath": "icd_Version" },
+        "principal_icd_proc_code": { "xpath": "principal_icd_proc_code" },
+        "principal_icd_proc_description": { "xpath": "principal_icd_proc_description" },
+        "principal_icd_proc_date": { "xpath": "principal_icd_proc_date" },
+        "icd_proc_code_1": { "xpath": "icd_proc_code_1" },
+        "icd_proc_code_1_descrip": { "xpath": "icd_proc_code_1_descrip" },
+        "icd_proc_code_1_date": { "xpath": "icd_proc_code_1_date" },
+        "icd_proc_code_2": { "xpath": "icd_proc_code_2" },
+        "icd_proc_code_2_descrip": { "xpath": "icd_proc_code_2_descrip" },
+        "icd_proc_code_2_date": { "xpath": "icd_proc_code_2_date" },
+        "icd_proc_code_3": { "xpath": "icd_proc_code_3" },
+        "icd_proc_code_3_descrip": { "xpath": "icd_proc_code_3_descrip" },
+        "icd_proc_code_3_date": { "xpath": "icd_proc_code_3_date" },
+        "icd_proc_code_4": { "xpath": "icd_proc_code_4" },
+        "icd_proc_code_4_descrip": { "xpath": "icd_proc_code_4_descrip" },
+        "icd_proc_code_4_date": { "xpath": "icd_proc_code_4_date" },
+        "icd_proc_code_5": { "xpath": "icd_proc_code_5" },
+        "icd_proc_code_5_descrip": { "xpath": "icd_proc_code_5_descrip" },
+        "icd_proc_code_5_date": { "xpath": "icd_proc_code_5_date" },
+        "icd_proc_code_6": { "xpath": "icd_proc_code_6" },
+        "icd_proc_code_6_descrip": { "xpath": "icd_proc_code_6_descrip" },
+        "icd_proc_code_6_date": { "xpath": "icd_proc_code_6_date" },
+        "icd_proc_code_7": { "xpath": "icd_proc_code_7" },
+        "icd_proc_code_7_descrip": { "xpath": "icd_proc_code_7_descrip" },
+        "icd_proc_code_7_date": { "xpath": "icd_proc_code_7_date" },
+        "icd_proc_code_8": { "xpath": "icd_proc_code_8" },
+        "icd_proc_code_8_descrip": { "xpath": "icd_proc_code_8_descrip" },
+        "icd_proc_code_8_date": { "xpath": "icd_proc_code_8_date" },
+        "icd_proc_code_9": { "xpath": "icd_proc_code_9" },
+        "icd_proc_code_9_descrip": { "xpath": "icd_proc_code_9_descrip" },
+        "icd_proc_code_9_date": { "xpath": "icd_proc_code_9_date" },
+        "icd_proc_code_10": { "xpath": "icd_proc_code_10" },
+        "icd_proc_code_10_descrip": { "xpath": "icd_proc_code_10_descrip" },
+        "icd_proc_code_10_date": { "xpath": "icd_proc_code_10_date" },
+        "icd_proc_code_11": { "xpath": "icd_proc_code_11" },
+        "icd_proc_code_11_descrip": { "xpath": "icd_proc_code_11_descrip" },
+        "icd_proc_code_11_date": { "xpath": "icd_proc_code_11_date" },
+        "icd_proc_code_12": { "xpath": "icd_proc_code_12" },
+        "icd_proc_code_12_descrip": { "xpath": "icd_proc_code_12_descrip" },
+        "icd_proc_code_12_date": { "xpath": "icd_proc_code_12_date" },
+        "ms_drg_code": { "xpath": "ms_drg_code" },
+        "ap_drg_code": { "xpath": "ap_drg_code" },
+        "apr_drg_code": { "xpath": "apr_drg_code" },
+        "admitting_diagnosis": { "xpath": "admitting_diagnosis" },
+        "admitting_diagnosis_description": { "xpath": "admitting_diagnosis_description" },
+        "primary_diagnosis": { "xpath": "primary_diagnosis" },
+        "primary_diagnosis_description": { "xpath": "primary_diagnosis_description" },
+        "diagnosis_code_1": { "xpath": "diagnosis_code_1" },
+        "diagnosis_code_1_description": { "xpath": "diagnosis_code_1_description" },
+        "diagnosis_code_2": { "xpath": "diagnosis_code_2" },
+        "diagnosis_code_2_description": { "xpath": "diagnosis_code_2_description" },
+        "diagnosis_code_3": { "xpath": "diagnosis_code_3" },
+        "diagnosis_code_3_description": { "xpath": "diagnosis_code_3_description" },
+        "diagnosis_code_4": { "xpath": "diagnosis_code_4" },
+        "diagnosis_code_4_description": { "xpath": "diagnosis_code_4_description" },
+        "diagnosis_code_5": { "xpath": "diagnosis_code_5" },
+        "diagnosis_code_5_description": { "xpath": "diagnosis_code_5_description" },
+        "diagnosis_code_6": { "xpath": "diagnosis_code_6" },
+        "diagnosis_code_6_description": { "xpath": "diagnosis_code_6_description" },
+        "diagnosis_code_7": { "xpath": "diagnosis_code_7" },
+        "diagnosis_code_7_description": { "xpath": "diagnosis_code_7_description" },
+        "diagnosis_code_8": { "xpath": "diagnosis_code_8" },
+        "diagnosis_code_8_description": { "xpath": "diagnosis_code_8_description" },
+        "diagnosis_code_9": { "xpath": "diagnosis_code_9" },
+        "diagnosis_code_9_description": { "xpath": "diagnosis_code_9_description" },
+        "diagnosis_code_10": { "xpath": "diagnosis_code_10" },
+        "diagnosis_code_10_description": { "xpath": "diagnosis_code_10_description" },
+        "diagnosis_code_11": { "xpath": "diagnosis_code_11" },
+        "diagnosis_code_11_description": { "xpath": "diagnosis_code_11_description" },
+        "diagnosis_code_12": { "xpath": "diagnosis_code_12" },
+        "diagnosis_code_12_description": { "xpath": "diagnosis_code_12_description" },
+        "line_number": { "xpath": "line_number" },
+        "line_item_Control_Number": { "xpath": "line_item_Control_Number" },
+        "revenue_code": { "xpath": "revenue_code" },
+        "cpt_code": { "xpath": "cpt_code" },
+        "hcpsc_code": { "xpath": "hcpsc_code" },
+        "cpt_code_description": { "xpath": "cpt_code_description" },
+        "hcpsc_code_description": { "xpath": "hcpsc_code_description" },
+        "svc_modifier_1": { "xpath": "svc_modifier_1" },
+        "svc_modifier_1_descrip": { "xpath": "svc_modifier_1_descrip" },
+        "svc_modifier_2": { "xpath": "svc_modifier_2" },
+        "svc_modifier_2_descrip": { "xpath": "svc_modifier_2_descrip" },
+        "svc_modifier_3": { "xpath": "svc_modifier_3" },
+        "svc_modifier_3_descrip": { "xpath": "svc_modifier_3_descrip" },
+        "svc_modifier_4": { "xpath": "svc_modifier_4" },
+        "svc_modifier_4_descrip": { "xpath": "svc_modifier_4_descrip" },
+        "place_of_service": { "xpath": "place_of_service" },
+        "place_of_service_descrip": { "xpath": "place_of_service_descrip" },
+        "svc_line_billed_date": { "xpath": "svc_line_billed_date" },
+        "svc_line_start_date": { "xpath": "svc_line_start_date" },
+        "svc_line_end_date": { "xpath": "svc_line_end_date" },
+        "service_line_disposition": { "xpath": "service_line_disposition" },
+        "svc_line_copay_amount": { "xpath": "svc_line_copay_amount" },
+        "svc_line_coinsurance_amount": { "xpath": "svc_line_coinsurance_amount" },
+        "svc_line_deduct_amount": { "xpath": "svc_line_deduct_amount" },
+        "svc_line_charges": { "xpath": "svc_line_charges" },
+        "svc_line_units": { "xpath": "svc_line_units" },
+        "svc_line_paid_date": { "xpath": "svc_line_paid_date" },
+        "svc_line_amount_paid": { "xpath": "svc_line_amount_paid" },
+        "service_paid_units": { "xpath": "service_paid_units" },
+        "svc_line_network_paid_ind": { "xpath": "svc_line_network_paid_ind" },
+        "svc_line_allowed_amount": { "xpath": "svc_line_allowed_amount" },
+        "service_line_payment_indicator": { "xpath": "service_line_payment_indicator" },
+        "svc_line_adjudication_status": { "xpath": "svc_line_adjudication_status" },
+        "svc_rendering_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "svc_rendering_last_name"
+              }
+            ]
+          }
+        },
+        "svc_rendering_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "svc_rendering_first_name"
+              }
+            ]
+          }
+        },
+        "svc_rendering_middle_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "svc_rendering_middle_name"
+              }
+            ]
+          }
+        },
+        "svc_rendering_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "svc_rendering_npi"
+              }
+            ]
+          }
+        },
+        "prescribing_npi": { "xpath": "prescribing_npi" },
+        "svc_rendering_taxonomy_code": { "xpath": "svc_rendering_taxonomy_code" },
+        "prescribing_taxonomy_code": { "xpath": "prescribing_taxonomy_code" },
+        "prescription_number": { "xpath": "prescription_number" },
+        "dispense_date": { "xpath": "dispense_date" },
+        "daw_code": { "xpath": "daw_code" },
+        "drug_ndc": { "xpath": "drug_ndc" },
+        "days_supply": { "xpath": "days_supply" },
+        "drug_quantity": { "xpath": "drug_quantity" },
+        "drug_strength": { "xpath": "drug_strength" },
+        "rx_norm_drug_name": { "xpath": "rx_norm_drug_name" },
+        "gpi": { "xpath": "gpi" },
+        "ahfs_drug_class": { "xpath": "ahfs_drug_class" },
+        "generic_branded_ind": { "xpath": "generic_branded_ind" },
+        "mail_order_flag": { "xpath": "mail_order_flag" }                                                         
+      }  
+    }  
+  }
+}

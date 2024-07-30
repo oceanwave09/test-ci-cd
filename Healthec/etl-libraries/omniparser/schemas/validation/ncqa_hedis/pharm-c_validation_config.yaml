@@ -1,0 +1,8 @@
+ncqa_hedis_ordered_date:
+  key_path: ordered_date
+  type: string
+
+ncqa_hedis_member_id:
+  key_path: member_id
+  min_length: 1
+  required: True

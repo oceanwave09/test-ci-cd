@@ -1,0 +1,35 @@
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
+branch = "main"
+build_command = "poetry build"
+commit_author = "semantic-release-bot <semantic-release-bot@healthec.com>"
+commit_subject = "chore(release): jsonvalidator {version}"
+commit_message = "chore(release): jsonvalidator {version} [skip ci]"
+hvcs = "gitlab"
+pre_commit_command = "git pull origin main"
+tag_format="jsonvalidator/v{version}"
+upload_to_release = false
+
+[tool.poetry]
+name = "jsonvalidator"
+version = "0.0.0"
+description = "A python library to validate JSON fields with provided rules in the config file"
+authors = ["Valen Jefri <Valanjefri.Jeeva@healthec.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyyaml = ">=6.0"
+smart-open = {version = ">=6.0.0", extras = ["all"]}
+python-benedict = ">=0.28.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.2"
+mypy = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,103 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          { "name": "HICN_MBI_XREF_IND", "start_pos": 1, "length": 1 },
+          { "name": "CRNT_NUM", "start_pos": 2, "length": 11 },
+          { "name": "PRVS_NUM", "start_pos": 13, "length": 11 },
+          { "name": "PRVS_ID_EFCTV_DT", "start_pos": 24, "length": 10 },
+          { "name": "PRVS_ID_OBSLT_DT", "start_pos": 34, "length": 10 },
+          { "name": "BENE_RRB_NUM", "start_pos": 44, "length": 12 }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "hicn_mbi_xref_ind": {
+          "xpath": "HICN_MBI_XREF_IND",
+          "template": "remove_special_char"
+        },
+        "crnt_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "CRNT_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "prvs_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "PRVS_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "prvs_id_efctv_dt": {
+          "xpath": "PRVS_ID_EFCTV_DT",
+          "template": "remove_special_char"
+        },
+        "prvs_id_obslt_dt": {
+          "xpath": "PRVS_ID_OBSLT_DT",
+          "template": "remove_special_char"
+        },
+        "bene_rrb_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_RRB_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

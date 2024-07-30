@@ -1,0 +1,295 @@
+[
+	{
+		"apuid": "280807",
+		"encounter_id": "2419095",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Paternal Grand Father",
+		"row_id": "26a443ea-b17d-4705-a8f4-cc1b3ee59e6c",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2419095",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "3fbf08ff-d2eb-4da5-8298-5d6e16a9906e",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2419095",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "2c68fbcc-a792-409d-a097-5006252390e9",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2517824",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "13d66141-0263-4907-ac5f-fc49500321ca",
+		"status": "unknown"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2517824",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "ea83a56a-046f-4e77-b82f-f3d4f1b1fec6",
+		"status": "deceased"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2537450",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "9e9935fb-35cc-4b6e-8364-d99b67e17e75",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2537450",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "34904d88-b8ca-4fdf-9c26-e2ad3470633a",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2540717",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "eb0f5767-c25c-4e2f-8b7e-5b75b5d418db",
+		"status": "unknown"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2540717",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "0f1236f0-faac-476b-b8c3-7350258f1c6f",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2546108",
+		"icd_code": "429.9",
+		"icd_desc": "Cardiopathy",
+		"icd_item_id": "110448",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "f3405c76-3574-49f2-9af6-34d3b3620774",
+		"status": "deceased"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2546108",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "bd97ae41-f4c3-4db2-8aa4-6f4796baae6a",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2551331",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "b74b38b3-0758-412f-a26d-6428e601aea6",
+		"status": "unknown"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2551331",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "dc25890f-087c-47e5-b68e-99505a519338",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2510419",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "5d8c2a1d-44ab-485f-a41d-957241c3c51e",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2510419",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "4671ca59-94e9-4344-b285-92d48c8e234a",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2527186",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "624d109c-e02a-4903-9446-cd27f6253f98",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2527186",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "b9e4f942-092b-4798-9a34-f660405e99dc",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2531535",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "c1a68e02-d48d-49ec-898b-f1b2703ace23",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2531535",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "f329e4ec-4f69-4c11-b9d9-03e43c3203c1",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2544650",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "5d7481b3-9d20-4470-852b-b44072339f6d",
+		"status": "deceased"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2544650",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "d0ef45c8-4f21-41e3-a48b-14b3fb27766f",
+		"status": "deceased"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2517560",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "a3060fde-3960-42f6-b694-b3dc11dddaab",
+		"status": "deceased"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2517560",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "a2c9b951-5bab-465c-b3bd-4707cb6a253d",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2542571",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Siblings",
+		"row_id": "e27f4de7-ee55-4658-9aa8-5ea5dd8abdc5",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2542571",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "bfd848ca-3d6f-459f-837c-6217347e5fae",
+		"status": "deceased"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2542571",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "ce1315a9-fe9c-4222-ab30-744d69300e58",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2547790",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Children",
+		"row_id": "2b9f478c-0b48-4c12-bc6d-eed87c6cb6c0",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2547790",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Father",
+		"row_id": "9badefaa-9098-436b-bdee-0dc2e799bb3b",
+		"status": "alive"
+	},
+	{
+		"apuid": "280807",
+		"encounter_id": "2547790",
+		"patient_account_no": "17502",
+		"patient_id": "17502",
+		"provider_npi": "985695c27e2cf3eea231a68c888cee60",
+		"relationship": "Mother",
+		"row_id": "b8752772-8b64-4dd3-9d88-7a8531ea867c",
+		"status": "deceased"
+	}
+]

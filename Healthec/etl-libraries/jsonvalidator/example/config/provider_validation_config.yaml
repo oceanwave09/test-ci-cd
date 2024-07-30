@@ -1,0 +1,65 @@
+
+firstname:
+    key_path: provider.first_name
+    type: string
+    max_length: 40
+    pattern: '[A-Za-z0-9]'
+    
+lastname:
+    key_path: provider.last_name
+    type: string
+    max_length: 40
+    pattern: '[A-Za-z0-9]'
+
+practice_npi:
+    key_path: provider.practice.group_npi
+    mandatoty: true
+    type: string
+    fromat: '^[0-9]*$'
+    length: 10
+
+provider_npi:
+    key_path: provider.npi
+    mandatoty: true
+    type: string
+    pattern: '^[0-9]*$'
+    length: 10
+
+tin:
+    key_path: provider.practice.tin
+    mandatoty: true
+    type: string
+    length: 9
+    pattern: '^[0-9]*$'
+
+taxnomy:
+    key_path: provider.taxonomy
+    mandatoty: true
+    type: string
+    length: 10
+
+pcpType:
+    key_path: provider.pcp_type
+    type: string
+    choices: 
+        - PCP
+        - SCP
+
+affiliationStatus:
+    key_path: provider.plan.affiliation_status
+    type: string
+    choices: 
+        - Inactive
+        - Active
+        - InActive
+
+email:
+    key_path: provider.email
+    type: string
+    pattern: '[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}'
+
+workPhoneNumber: 
+    key_path: provider.work_phone
+    type: string
+    length: 12
+    fromat: '^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$'

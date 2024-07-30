@@ -1,0 +1,12 @@
+{
+  {% if data.value_code %}
+  "coding": [
+    {
+      "system": "{{ data.value_system }}",
+      "code": "{{ data.value_code }}",
+      "display": "{{ data.value_display }}"
+    }
+  ],
+  {%- endif %}
+  "text": "{{ data.value_text }}"
+}

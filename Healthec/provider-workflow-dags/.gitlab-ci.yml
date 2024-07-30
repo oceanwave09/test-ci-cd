@@ -1,0 +1,115 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
+stages:
+  - lint
+  - test
+  - s3Sync
+
+.except-changes: &except-changes
+  changes:
+    - "**/*.{md}"
+    - ".gitignore"
+
+include:
+  - project: "health-ec/platform/core/templates/ci-templates"
+    file: "python/s3-sync.yaml"
+    ref: "v2.4.0"
+  - template: Security/SAST.gitlab-ci.yml
+
+variables:
+  SRC_PATH: providerdags/
+  ADHOC_PATH: dags/adhoc
+  ENVS_IN_ADHOC:
+    sandbox
+    development
+    production
+    cynchealth-uat
+    cynchealth-prod
+    qa
+
+flake8:
+  stage: lint
+  image: registry.gitlab.com/pipeline-components/flake8:latest
+  script:
+    - flake8 --verbose .
+
+sast:
+  stage: test
+
+s3Sync:
+  stage: s3Sync
+  image:
+    name: registry.gitlab.com/health-ec/infrastructure/utility-docker/tgdeployment:0.0.2
+    entrypoint:
+      - "/usr/bin/env"
+      - "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+  before_script:
+    - |
+      ADHOC_ENVS=(${ENVS_IN_ADHOC//" "/ })
+      function get_exclude_paths() {
+        local current_env="$1"
+        local exclude_paths=""
+        for adhoc_env in "${ADHOC_ENVS[@]}"; do
+          if [ "$adhoc_env" != "$current_env" ]; then
+            exclude_paths="$exclude_paths \"$ADHOC_PATH/$adhoc_env/*\""
+          fi
+        done
+        echo "${exclude_paths}"
+      }
+
+      if [ "$CI_COMMIT_BRANCH" == "main" ] || [ "$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" == "main" ]
+      then
+        AWS_SECRET_ACCESS_KEY="${HEC_AWS_SECRET_ACCESS_KEY}"
+        AWS_ACCESS_KEY_ID="${HEC_AWS_ACCESS_KEY_ID}"
+        AWS_DEFAULT_REGION="${HEC_AWS_DEFAULT_REGION}"
+        DEST_S3_PATH=s3://phm-development-datapipeline-bucket/airflow-workflow/dags/providerdags
+        TARGET_ENV="development"
+        AWS_ACCOUNT_ID="717301278693"
+        EXCLUDE=$(get_exclude_paths "$TARGET_ENV")
+      elif [ "$CI_COMMIT_BRANCH" == "production" ] || [ "$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" == "production" ]
+      then
+        AWS_SECRET_ACCESS_KEY="${HEC_PRODUCTION_AWS_SECRET_ACCESS_KEY}"
+        AWS_ACCESS_KEY_ID="${HEC_PRODUCTION_AWS_ACCESS_KEY_ID}"
+        AWS_DEFAULT_REGION="${HEC_PRODUCTION_AWS_DEFAULT_REGION}"
+        DEST_S3_PATH=s3://phm-prod-datapipeline-bucket/airflow-workflow/dags/providerdags
+        TARGET_ENV="production"
+        AWS_ACCOUNT_ID="079764343373"
+        EXCLUDE=$(get_exclude_paths "$TARGET_ENV")
+      elif [ "$CI_COMMIT_BRANCH" == "cynchealth-uat" ] || [ "$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" == "cynchealth-uat" ]
+      then
+        AWS_SECRET_ACCESS_KEY="${CYNCHEALTH_AWS_SECRET_ACCESS_KEY}"
+        AWS_ACCESS_KEY_ID="${CYNCHEALTH_AWS_ACCESS_KEY_ID}"
+        AWS_DEFAULT_REGION="${CYNCHEALTH_AWS_DEFAULT_REGION}"
+        DEST_S3_PATH=s3://phm-cynchealth-uat-datapipeline-bucket/airflow-workflow/dags/providerdags
+        TARGET_ENV="cynchealth-uat"
+        AWS_ACCOUNT_ID="258454955011"
+        EXCLUDE=$(get_exclude_paths "$TARGET_ENV")
+      elif [ "$CI_COMMIT_BRANCH" == "cynchealth-prod" ] || [ "$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" == "cynchealth-prod" ]
+      then
+        AWS_SECRET_ACCESS_KEY="${CYNCHEALTH_PRODUCTION_AWS_SECRET_ACCESS_KEY}"
+        AWS_ACCESS_KEY_ID="${CYNCHEALTH_PRODUCTION_AWS_ACCESS_KEY_ID}"
+        AWS_DEFAULT_REGION="${CYNCHEALTH_PRODUCTION_AWS_DEFAULT_REGION}"
+        DEST_S3_PATH=s3://phm-cynchealth-prod-datapipeline-bucket/airflow-workflow/dags/providerdags
+        TARGET_ENV="cynchealth-prod"
+        AWS_ACCOUNT_ID="032945864494"
+        EXCLUDE=$(get_exclude_paths "$TARGET_ENV")
+      elif [ "$CI_COMMIT_BRANCH" == "qa" ] || [ "$CI_MERGE_REQUEST_TARGET_BRANCH_NAME" == "qa" ]
+      then
+        AWS_SECRET_ACCESS_KEY="${HEC_AWS_SECRET_ACCESS_KEY}"
+        AWS_ACCESS_KEY_ID="${HEC_AWS_ACCESS_KEY_ID}"
+        AWS_DEFAULT_REGION="${HEC_AWS_DEFAULT_REGION}"
+        DEST_S3_PATH=s3://phm-qa-datapipeline-bucket/airflow-workflow/dags/providerdags
+        TARGET_ENV="qa"
+        AWS_ACCOUNT_ID="261480417223"
+        EXCLUDE=$(get_exclude_paths "$TARGET_ENV")
+      fi
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "push" && $CI_COMMIT_REF_PROTECTED == "true"
+      when: always
+    - <<: *except-changes
+      when: never

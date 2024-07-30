@@ -1,0 +1,15 @@
+problem_list_patient_id:
+  key_path: patient_id
+  min_length: 1
+  required: True
+
+problem_list_practice_apuid:
+  key_path: apuid
+  type: string
+  required: True
+
+problem_list_encounter_id:
+  key_path: encounter_id
+  type: string
+  required: True
+  min_length: 1

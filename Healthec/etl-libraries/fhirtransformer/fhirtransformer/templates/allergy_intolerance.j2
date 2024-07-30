@@ -1,0 +1,36 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "clinicalStatus": {% include "attributes/allergy_intolerance/clinical_status.j2" %},
+  "verificationStatus": {% include "attributes/allergy_intolerance/verification_status.j2" %},
+  "type": "{{ data.type }}",
+  {%- if data.category -%}
+  "category": ["{{ data.category }}"],
+  {%- endif %}
+  "criticality": "{{ data.criticality }}",
+  "code": {% include "attributes/allergy_intolerance/code.j2" %},
+  "patient": {% include "attributes/patient_reference.j2" %},
+  "encounter": {% include "attributes/encounter_reference.j2" %},
+  {%- if data.onset_date_time -%}
+  "onsetDateTime": "{{ data.onset_date_time }}",
+  {%- endif %}
+  "onsetPeriod": {% include "attributes/allergy_intolerance/onset_period.j2" %},
+  "recordedDate": "{{ data.recorded_date_time }}",
+  "recorder": {% include "attributes/practitioner_reference.j2" %},
+  "lastOccurrence": "{{ data.last_occurrence_date_time }}",
+  "reaction": [
+    {
+      "manifestation": {% include "attributes/allergy_intolerance/manifestation.j2" %},
+      "description": "{{ data.reaction_description }}",
+      "onset" : "{{ data.reaction_onset_date_time }}",
+      "severity": "{{ data.severity_code }}"
+    }
+  ]
+{% endblock %}

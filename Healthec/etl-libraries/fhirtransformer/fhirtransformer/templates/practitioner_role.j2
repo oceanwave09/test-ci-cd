@@ -1,0 +1,26 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "active": {% include "attributes/active.j2" %},
+  "period": {% include "attributes/period.j2" %},
+  "practitioner": {% include "attributes/practitioner_reference.j2" %},
+  "organization": {% include "attributes/organization_reference.j2" %},
+  "location": [ {% include "attributes/location_reference.j2" %} ],
+  "specialty": {% include "attributes/practitioner_role/specialty.j2" %},
+  "code": {% include "attributes/practitioner_role/role.j2" %},
+  "contact": {% include "attributes/contact.j2" %},
+  "availability": {% include "attributes/practitioner_role/availability.j2" %}
+{% endblock %}

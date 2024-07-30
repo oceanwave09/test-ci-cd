@@ -1,0 +1,12 @@
+{
+  {% if data.physical_type_code %}
+  "coding": [
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+      "code": "{{ data.physical_type_code }}",
+      "display": "{{ data.physical_type_display }}"
+    }
+  ],
+  {%- endif %}
+  "text": "{{ data.physical_type_text }}"
+}

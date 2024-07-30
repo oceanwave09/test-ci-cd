@@ -1,0 +1,222 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "MSH",
+            "min": 1,
+            "max": 1,
+            "elements": [
+              {
+                "name": "patient_sequence",
+                "index": 1
+              },
+              {
+                "name": "encoding_characters",
+                "index": 2,
+                "default": ""
+              },
+              {
+                "name": "sending_application",
+                "index": 3,
+                "default": ""
+              },
+              {
+                "name": "sending_facility_name",
+                "index": 4,
+                "default": ""
+              },
+              {
+                "name": "receiving_application",
+                "index": 5,
+                "default": ""
+              },
+              {
+                "name": "receiving_facility_name",
+                "index": 6,
+                "default": ""
+              },
+              {
+                "name": "date_time_of_message",
+                "index": 7,
+                "default": ""
+              },
+              {
+                "name": "security",
+                "index": 8,
+                "default": ""
+              },
+              {
+                "name": "message_type",
+                "index": 9,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "message_trigger_event",
+                "index": 9,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "message_control_id",
+                "index": 10,
+                "default": ""
+              },
+              {
+                "name": "processing_id",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "version_id",
+                "index": 12,
+                "default": ""
+              },
+              {
+                "name": "sequence_number",
+                "index": 13,
+                "default": ""
+              },
+              {
+                "name": "continuation_pointer",
+                "index": 14,
+                "default": ""
+              },
+              {
+                "name": "accept_acknowledgment_type",
+                "index": 15,
+                "default": ""
+              },
+              {
+                "name": "application_acknowledgment_type",
+                "index": 16,
+                "default": ""
+              },
+              {
+                "name": "country_code",
+                "index": 17,
+                "default": ""
+              },
+              {
+                "name": "character_set",
+                "index": 18,
+                "default": ""
+              },
+              {
+                "name": "principal_language_of_message",
+                "index": 19,
+                "default": ""
+              },
+              {
+                "name": "alternate_character_set_handling_scheme",
+                "index": 20,
+                "default": ""
+              },
+              {
+                "name": "message_profile_identifier",
+                "index": 21,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "MSH": {
+          "array":[{
+          "xpath": "MSH",
+          "object": {
+            "patient_sequence":{
+              "xpath": "patient_sequence"
+            },
+            "encoding_characters": {
+              "xpath": "encoding_characters"
+            },
+            "sending_application": {
+              "xpath": "sending_application"
+            },
+            "sending_facility_name": {
+              "xpath": "sending_facility_name"
+            },
+            "receiving_application": {
+              "xpath": "receiving_application"
+            },
+            "receiving_facility_name": {
+              "xpath": "receiving_facility_name"
+            },
+            "date_time_of_message": {
+              "xpath": "date_time_of_message"
+            },
+            "security": {
+              "xpath": "security"
+            },
+            "message_type": {
+              "xpath": "message_type"
+            },
+            "message_trigger_event": {
+              "xpath": "message_trigger_event"
+            },
+            "message_control_id": {
+              "xpath": "message_control_id"
+            },
+            "processing_id": {
+              "xpath": "processing_id"
+            },
+            "version_id": {
+              "xpath": "version_id"
+            },
+            "sequence_number": {
+              "xpath": "sequence_number"
+            },
+            "continuation_pointer": {
+              "xpath": "continuation_pointer"
+            },
+            "accept_acknowledgment_type": {
+              "xpath": "accept_acknowledgment_type"
+            },
+            "application_acknowledgment_type": {
+              "xpath": "application_acknowledgment_type"
+            },
+            "country_code": {
+              "xpath": "country_code"
+            },
+            "character_set": {
+              "xpath": "character_set"
+            },
+            "principal_language_of_message": {
+              "xpath": "principal_language_of_message"
+            },
+            "alternate_character_set_handling_scheme": {
+              "xpath": "charalternate_character_set_handling_schemeacter_set"
+            },
+            "message_profile_identifier": {
+              "xpath": "message_profile_identifier"
+            }
+          }
+        
+          }
+      ]}
+      }
+    }
+  }
+}
+
+

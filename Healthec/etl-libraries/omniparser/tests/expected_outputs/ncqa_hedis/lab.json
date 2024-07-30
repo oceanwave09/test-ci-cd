@@ -1,0 +1,42 @@
+[
+	{
+		"date_of_service": "20221201",
+		"loinc_code": "4549-2",
+		"member_id": "95056",
+		"row_id": "f909f966-8c9d-4365-b44a-3359d44c3db8",
+		"supplemental_data": "Y",
+		"value": "007.00"
+	},
+	{
+		"cpt_code": "83037",
+		"date_of_service": "20221205",
+		"member_id": "95056",
+		"row_id": "7cf1a85f-ba98-4468-84c5-e4e1f13a34eb",
+		"supplemental_data": "Y",
+		"value": "009.00"
+	},
+	{
+		"cpt_code": "83037",
+		"date_of_service": "20221012",
+		"member_id": "95059",
+		"row_id": "a5887942-8fff-45bb-9a8c-62fe5ba1a953",
+		"supplemental_data": "Y",
+		"value": "004.00"
+	},
+	{
+		"cpt_code": "83036",
+		"date_of_service": "20220719",
+		"member_id": "95059",
+		"row_id": "0d9cb3ba-10ab-4d0b-a796-000e98de790d",
+		"supplemental_data": "Y",
+		"value": "009.00"
+	},
+	{
+		"cpt_code": "83037",
+		"date_of_service": "20220413",
+		"member_id": "95059",
+		"row_id": "06942c04-f7d4-4c25-93a7-1069e99687fc",
+		"supplemental_data": "Y",
+		"value": "008.35"
+	}
+]

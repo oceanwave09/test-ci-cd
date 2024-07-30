@@ -1,0 +1,14 @@
+{
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "(03) 5555 6473",
+      "use": "work"
+    },
+    {
+      "system": "email",
+      "value": "adam.southern@example.org",
+      "use": "work"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  {% for practitioner in data.practitioners %}
+  {
+    "reference": "Practitioner/{{ practitioner.id }}"
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

@@ -1,0 +1,9 @@
+ncqa_hedis_claim_id:
+  key_path: claim_id
+  type: string
+  required: True
+
+ncqa_hedis_member_id:
+  key_path: member_id
+  min_length: 1
+  required: True

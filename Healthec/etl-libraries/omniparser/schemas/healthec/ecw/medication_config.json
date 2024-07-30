@@ -1,0 +1,211 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "item_id",
+            "index": 3
+          },
+          {
+            "name": "patient_id",
+            "index": 4
+          },
+          {
+            "name": "patient_account_no",
+            "index": 5
+          },
+          {
+            "name": "encounter_id",
+            "index": 6
+          },
+          {
+            "name": "provider_id",
+            "index": 7
+          },
+          {
+            "name": "provider_npi",
+            "index": 8
+          },
+          {
+            "name": "medication_origin_id",
+            "index": 9
+          },
+          {
+            "name": "medication_code_system",
+            "index": 10
+          },
+          {
+            "name": "medication_code",
+            "index": 11
+          },
+          {
+            "name": "medication_description",
+            "index": 12
+          },
+          {
+            "name": "prescription_date",
+            "index": 13
+          },
+          {
+            "name": "prescription_begin_date",
+            "index": 14
+          },
+          {
+            "name": "prescription_end_date",
+            "index": 15
+          },
+          {
+            "name": "days_supply",
+            "index": 16
+          },
+          {
+            "name": "quantity",
+            "index": 17
+          },
+          {
+            "name": "refills",
+            "index": 18
+          },
+          {
+            "name": "strength",
+            "index": 19
+          },
+          {
+            "name": "formulation",
+            "index": 20
+          },
+          {
+            "name": "route",
+            "index": 21
+          },
+          {
+            "name": "frequency",
+            "index": 22
+          },
+          {
+            "name": "take",
+            "index": 23
+          },
+          {
+            "name": "med_status",
+            "index": 24
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "item_id": {
+          "xpath": "item_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "provider_id": {
+          "xpath": "provider_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "medication_origin_id": {
+          "xpath": "medication_origin_id"
+        },
+        "medication_code_system": {
+          "xpath": "medication_code_system"
+        },
+        "medication_code": {
+          "xpath": "medication_code"
+        },
+        "medication_description": {
+          "xpath": "medication_description"
+        },
+        "prescription_date": {
+          "xpath": "prescription_date"
+        },
+        "prescription_begin_date": {
+          "xpath": "prescription_begin_date"
+        },
+        "prescription_end_date": {
+          "xpath": "prescription_end_date"
+        },
+        "days_supply": {
+          "xpath": "days_supply"
+        },
+        "quantity": {
+          "xpath": "quantity"
+        },
+        "refills": {
+          "xpath": "refills"
+        },
+        "strength": {
+          "xpath": "strength"
+        },
+        "formulation": {
+          "xpath": "formulation"
+        },
+        "route": {
+          "xpath": "route"
+        },
+        "frequency": {
+          "xpath": "frequency"
+        },
+        "take": {
+          "xpath": "take"
+        },
+        "med_status": {
+          "xpath": "med_status"
+        }
+      }
+    }
+  }
+}

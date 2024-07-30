@@ -1,0 +1,325 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      { "rows": 1, "min": 1, "max": 1 },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "provider_org_name",
+            "index": 1
+          },
+          {
+            "name": "provider_org_dba_name",
+            "index": 2
+          },
+          {
+            "name": "provider_org_type",
+            "index": 3
+          },
+          {
+            "name": "provider_org_location_rank",
+            "index": 4
+          },
+          {
+            "name": "provider_org_taxonomy_code",
+            "index": 5
+          },
+          {
+            "name": "provider_org_ssn",
+            "index": 6
+          },
+          {
+            "name": "provider_org_tin",
+            "index": 7
+          },
+          {
+            "name": "provider_org_group_npi",
+            "index": 8
+          },
+          {
+            "name": "provider_org_internal_id",
+            "index": 9
+          },
+          {
+            "name": "provider_org_nabp_id",
+            "index": 10
+          },
+          {
+            "name": "provider_org_address_line_1",
+            "index": 11
+          },
+          {
+            "name": "provider_org_address_line_2",
+            "index": 12
+          },
+          {
+            "name": "provider_org_city",
+            "index": 13
+          },
+          {
+            "name": "provider_org_county",
+            "index": 14
+          },
+          {
+            "name": "provider_org_state",
+            "index": 15
+          },
+          {
+            "name": "provider_org_zip",
+            "index": 16
+          },
+          {
+            "name": "provider_org_country",
+            "index": 17
+          },
+          {
+            "name": "provider_org_phone_work",
+            "index": 18
+          },
+          {
+            "name": "provider_org_email",
+            "index": 19
+          },
+          {
+            "name": "provider_org_fax",
+            "index": 20
+          },
+          {
+            "name": "provider_org_lab_id",
+            "index": 21
+          },
+          {
+            "name": "provider_org_lab_name",
+            "index": 22
+          },
+          {
+            "name": "provider_org_contact_title",
+            "index": 23
+          },
+          {
+            "name": "provider_org_contact_first_name",
+            "index": 24
+          },
+          {
+            "name": "provider_org_contact_last_name",
+            "index": 25
+          },
+          {
+            "name": "provider_org_contact_middle_name",
+            "index": 26
+          },
+          {
+            "name": "provider_org_contact_phone",
+            "index": 27
+          },
+          {
+            "name": "provider_org_contact_email",
+            "index": 28
+          },
+          {
+            "name": "insurance_company_name",
+            "index": 29
+          },
+          {
+            "name": "insurance_company_id",
+            "index": 30
+          },
+          {
+            "name": "provider_org_effective_date",
+            "index": 31
+          },
+          {
+            "name": "provider_org_termination_date",
+            "index": 32
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "provider_org_name": { "xpath": "provider_org_name" },
+        "provider_org_dba_name": { "xpath": "provider_org_dba_name" },
+        "provider_org_type": { "xpath": "provider_org_type" },
+        "provider_org_location_rank": { "xpath": "provider_org_location_rank" },
+        "provider_org_taxonomy_code": { "xpath": "provider_org_taxonomy_code" },
+        "provider_org_ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_ssn" }
+            ]
+          }
+        },
+        "provider_org_tin": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_tin" }
+            ]
+          }
+        },
+        "provider_org_group_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_group_npi" }
+            ]
+          }
+        },
+        "provider_org_internal_id": { "xpath": "provider_org_internal_id" },
+        "provider_org_nabp_id": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_nabp_id" }
+            ]
+          }
+        },
+        "provider_org_address_line_1": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_address_line_1" }
+            ]
+          }
+        },
+        "provider_org_address_line_2": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_address_line_2" }
+            ]
+          }
+        },
+        "provider_org_city": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_city" }
+            ]
+          }
+        },
+        "provider_org_county": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_county" }
+            ]
+          }
+        },
+        "provider_org_state": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_state" }
+            ]
+          }
+        },
+        "provider_org_zip": { "xpath": "provider_org_zip" },
+        "provider_org_country": { "xpath": "provider_org_country" },
+        "provider_org_phone_work": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_phone_work" }
+            ]
+          }
+        },
+        "provider_org_email": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_email" }
+            ]
+          }
+        },
+        "provider_org_fax": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_fax" }
+            ]
+          }
+        },
+        "provider_org_lab_id": { "xpath": "provider_org_lab_id" },
+        "provider_org_lab_name": { "xpath": "provider_org_lab_name" },
+        "provider_org_contact_title": { "xpath": "provider_org_contact_title" },
+        "provider_org_contact_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_contact_first_name" }
+            ]
+          }
+        },
+        "provider_org_contact_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_contact_last_name" }
+            ]
+          }
+        },
+        "provider_org_contact_middle_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_contact_middle_name" }
+            ]
+          }
+        },
+        "provider_org_contact_phone": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_contact_phone" }
+            ]
+          }
+        },
+        "provider_org_contact_email": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              { "external": "data_key" },
+              { "xpath": "provider_org_contact_email" }
+            ]
+          }
+        },
+        "insurance_company_name": { "xpath": "insurance_company_name" },
+        "insurance_company_id": { "xpath": "insurance_company_id" },
+        "provider_org_effective_date": { "xpath": "provider_org_effective_date" },
+        "provider_org_termination_date": { "xpath": "provider_org_termination_date" }
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": ",",
+    "replace_double_quotes": false,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "row",
+            "index": 1
+          },
+          {
+            "name": "domain",
+            "index": 2
+          },
+          {
+            "name": "patient_first_name",
+            "index": 3
+          },
+          {
+            "name": "patient_last_name",
+            "index": 4
+          },
+          {
+            "name": "patient_dob",
+            "index": 5
+          },
+          {
+            "name": "external_patient_id",
+            "index": 6
+          },
+          {
+            "name": "external_practice_id",
+            "index": 7
+          },
+          {
+            "name": "smoking_status_code",
+            "index": 8
+          },
+          {
+            "name": "smoking_status_name",
+            "index": 9
+          },
+          {
+            "name": "smoking_dictionary_name",
+            "index": 10
+          },
+          {
+            "name": "start_date",
+            "index": 11
+          },
+          {
+            "name": "end_date",
+            "index": 12
+          },
+          {
+            "name": "last_confirmed_date",
+            "index": 13
+          },
+          {
+            "name": "vendor",
+            "index": 14
+          },
+          {
+            "name": "source_type",
+            "index": 15
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "row": {
+          "xpath": "row",
+          "template": "remove_special_char"
+        },
+        "domain": {
+          "xpath": "domain",
+          "template": "remove_special_char"
+        },
+        "patient_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_dob",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "external_patient_id": {
+          "xpath": "external_patient_id",
+          "template": "remove_special_char"
+        },
+        "external_practice_id": {
+          "xpath": "external_practice_id",
+          "template": "remove_special_char"
+        },
+        "smoking_status_code": {
+          "xpath": "smoking_status_code",
+          "template": "remove_special_char"
+        },
+        "smoking_status_name": {
+          "xpath": "smoking_status_name",
+          "template": "remove_special_char"
+        },
+        "smoking_dictionary_name": {
+          "xpath": "smoking_dictionary_name",
+          "template": "remove_special_char"
+        },
+        "start_date": {
+          "xpath": "start_date",
+          "template": "remove_special_char"
+        },
+        "end_date": {
+          "xpath": "end_date",
+          "template": "remove_special_char"
+        },
+        "last_confirmed_date": {
+          "xpath": "last_confirmed_date",
+          "template": "remove_special_char"
+        },
+        "vendor": {
+          "xpath": "vendor",
+          "template": "remove_special_char"
+        },
+        "source_type": {
+          "xpath": "source_type",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

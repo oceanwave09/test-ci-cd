@@ -1,0 +1,182 @@
+{
+    "parser_settings": {
+      "version": "omni.2.1",
+      "file_format_type": "csv2"
+    },
+    "file_declaration": {
+      "delimiter": ",",
+      "replace_double_quotes": false,
+      "records": [
+        {
+          "rows": 1,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "is_target": true,
+          "columns": [
+            {
+              "name": "batch_type",
+              "index": 1
+            },
+            {
+              "name": "first_name",
+              "index": 2
+            },
+            {
+              "name": "last_name",
+              "index": 3
+            },
+            {
+              "name": "mrn",
+              "index": 4
+            },
+            {
+              "name": "year_of_birth",
+              "index": 5
+            },
+            {
+              "name": "race",
+              "index": 6
+            },
+            {
+              "name": "ethnicity",
+              "index": 7
+            },
+            {
+              "name": "language",
+              "index": 8
+            },
+            {
+              "name": "years_in_us",
+              "index": 9
+            },
+            {
+              "name": "total_income",
+              "index": 10
+            },
+            {
+              "name": "insurance_type",
+              "index": 11
+            },
+            {
+              "name": "high_deductible_insurance",
+              "index": 12
+            },
+            {
+              "name": "marital_status",
+              "index": 13
+            },
+            {
+              "name": "family_size",
+              "index": 14
+            },
+            {
+              "name": "family_brca_history",
+              "index": 15
+            },
+            {
+              "name": "history_brca",
+              "index": 16
+            },
+            {
+              "name": "brca",
+              "index": 17
+            }
+          ]
+        }
+      ]
+    },
+    "transform_declarations": {
+      "FINAL_OUTPUT": {
+        "object": {
+          "row_id": {
+            "custom_func": {
+              "name": "uuidv4"
+            }
+          },
+          "batch_type": {
+            "xpath": "batch_type"
+          },
+          "first_name": {
+            "custom_func": {
+              "name": "encryptAesEcb",
+              "args": [
+                {
+                  "external": "data_key"
+                },
+                {
+                  "xpath": "first_name"
+                }
+              ]
+            }
+          },
+          "last_name": {
+            "custom_func": {
+              "name": "encryptAesEcb",
+              "args": [
+                {
+                  "external": "data_key"
+                },
+                {
+                  "xpath": "last_name"
+                }
+              ]
+            }
+          },
+          "mrn": {
+            "custom_func": {
+              "name": "encryptAesEcb",
+              "args": [
+                {
+                  "external": "data_key"
+                },
+                {
+                  "xpath": "mrn"
+                }
+              ]
+            }
+          },
+          "year_of_birth": {
+            "xpath": "year_of_birth"
+          },
+          "race": {
+            "xpath": "race"
+          },
+          "ethnicity": {
+            "xpath": "ethnicity"
+          },
+          "language": {
+            "xpath": "language"
+          },
+          "years_in_us": {
+            "xpath": "years_in_us"
+          },
+          "total_income": {
+            "xpath": "total_income"
+          },
+          "insurance_type": {
+            "xpath": "insurance_type"
+          },
+          "high_deductible_insurance": {
+            "xpath": "high_deductible_insurance"
+          },
+          "marital_status": {
+            "xpath": "marital_status"
+          },
+          "family_size": {
+            "xpath": "family_size"
+          },
+          "family_brca_history": {
+            "xpath": "family_brca_history"
+          },
+          "history_brca": {
+            "xpath": "history_brca"
+          },
+          "brca": {
+            "xpath": "brca"
+          }
+        }
+      }
+    }
+  }

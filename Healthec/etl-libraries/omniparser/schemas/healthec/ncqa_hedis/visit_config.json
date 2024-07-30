@@ -1,0 +1,385 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "date_of_service",
+            "start_pos": 17,
+            "length": 8
+          },
+          {
+            "name": "admission_date",
+            "start_pos": 25,
+            "length": 8
+          },
+          {
+            "name": "discharge_date",
+            "start_pos": 33,
+            "length": 8
+          },
+          {
+            "name": "cpt",
+            "start_pos": 41,
+            "length": 5
+          },
+          {
+            "name": "cpt_modifier_1",
+            "start_pos": 46,
+            "length": 2
+          },
+          {
+            "name": "cpt_modifier_2",
+            "start_pos": 48,
+            "length": 2
+          },
+          {
+            "name": "hcpcs",
+            "start_pos": 50,
+            "length": 5
+          },
+          {
+            "name": "cpt_ii",
+            "start_pos": 55,
+            "length": 5
+          },
+          {
+            "name": "cpt_ii_modifier",
+            "start_pos": 60,
+            "length": 2
+          },
+          {
+            "name": "principal_icd_diagnosis",
+            "start_pos": 62,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_2",
+            "start_pos": 71,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_3",
+            "start_pos": 80,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_4",
+            "start_pos": 89,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_5",
+            "start_pos": 98,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_6",
+            "start_pos": 107,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_7",
+            "start_pos": 116,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_8",
+            "start_pos": 125,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_9",
+            "start_pos": 134,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_10",
+            "start_pos": 143,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_11",
+            "start_pos": 152,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_12",
+            "start_pos": 161,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_13",
+            "start_pos": 170,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_14",
+            "start_pos": 179,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_15",
+            "start_pos": 188,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_16",
+            "start_pos": 197,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_17",
+            "start_pos": 206,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_18",
+            "start_pos": 215,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_19",
+            "start_pos": 224,
+            "length": 9
+          },
+          {
+            "name": "icd_diagnosis_20",
+            "start_pos": 233,
+            "length": 9
+          },
+          {
+            "name": "principal_icd_procedure",
+            "start_pos": 242,
+            "length": 8
+          },
+          {
+            "name": "icd_procedure_2",
+            "start_pos": 250,
+            "length": 8
+          },
+          {
+            "name": "icd_procedure_3",
+            "start_pos": 258,
+            "length": 8
+          },
+          {
+            "name": "icd_procedure_4",
+            "start_pos": 266,
+            "length": 8
+          },
+          {
+            "name": "icd_procedure_5",
+            "start_pos": 274,
+            "length": 8
+          },
+          {
+            "name": "icd_procedure_6",
+            "start_pos": 282,
+            "length": 8
+          },
+          {
+            "name": "icd_identifier",
+            "start_pos": 290,
+            "length": 1
+          },
+          {
+            "name": "discharge_status",
+            "start_pos": 291,
+            "length": 2
+          },
+          {
+            "name": "ub_revenue",
+            "start_pos": 293,
+            "length": 4
+          },
+          {
+            "name": "ub_type_of_bill",
+            "start_pos": 297,
+            "length": 4
+          },
+          {
+            "name": "cms_place_of_service",
+            "start_pos": 301,
+            "length": 2
+          },
+          {
+            "name": "claim_status",
+            "start_pos": 303,
+            "length": 1
+          },
+          {
+            "name": "provider_id",
+            "start_pos": 304,
+            "length": 10
+          },
+          {
+            "name": "supplemental_data",
+            "start_pos": 314,
+            "length": 1
+          },
+          {
+            "name": "claim_id",
+            "start_pos": 315,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "date_of_service": {
+          "xpath": "date_of_service"
+        },
+        "admission_date": {
+          "xpath": "admission_date"
+        },
+        "discharge_date": {
+          "xpath": "discharge_date"
+        },
+        "cpt": {
+          "xpath": "cpt"
+        },
+        "cpt_modifier_1": {
+          "xpath": "cpt_modifier_1"
+        },
+        "cpt_modifier_2": {
+          "xpath": "cpt_modifier_2"
+        },
+        "hcpcs": {
+          "xpath": "hcpcs"
+        },
+        "cpt_ii": {
+          "xpath": "cpt_ii"
+        },
+        "cpt_ii_modifier": {
+          "xpath": "cpt_ii_modifier"
+        },
+        "principal_icd_diagnosis": {
+          "xpath": "principal_icd_diagnosis"
+        },
+        "icd_diagnosis_2": {
+          "xpath": "icd_diagnosis_2"
+        },
+        "icd_diagnosis_3": {
+          "xpath": "icd_diagnosis_3"
+        },
+        "icd_diagnosis_4": {
+          "xpath": "icd_diagnosis_4"
+        },
+        "icd_diagnosis_5": {
+          "xpath": "icd_diagnosis_5"
+        },
+        "icd_diagnosis_6": {
+          "xpath": "icd_diagnosis_6"
+        },
+        "icd_diagnosis_7": {
+          "xpath": "icd_diagnosis_7"
+        },
+        "icd_diagnosis_8": {
+          "xpath": "icd_diagnosis_8"
+        },
+        "icd_diagnosis_9": {
+          "xpath": "icd_diagnosis_9"
+        },
+        "icd_diagnosis_10": {
+          "xpath": "icd_diagnosis_10"
+        },
+        "icd_diagnosis_11": {
+          "xpath": "icd_diagnosis_11"
+        },
+        "icd_diagnosis_12": {
+          "xpath": "icd_diagnosis_12"
+        },
+        "icd_diagnosis_13": {
+          "xpath": "icd_diagnosis_13"
+        },
+        "icd_diagnosis_14": {
+          "xpath": "icd_diagnosis_14"
+        },
+        "icd_diagnosis_15": {
+          "xpath": "icd_diagnosis_15"
+        },
+        "icd_diagnosis_16": {
+          "xpath": "icd_diagnosis_16"
+        },
+        "icd_diagnosis_17": {
+          "xpath": "icd_diagnosis_17"
+        },
+        "icd_diagnosis_18": {
+          "xpath": "icd_diagnosis_18"
+        },
+        "icd_diagnosis_19": {
+          "xpath": "icd_diagnosis_19"
+        },
+        "icd_diagnosis_20": {
+          "xpath": "icd_diagnosis_20"
+        },
+        "principal_icd_procedure": {
+          "xpath": "principal_icd_procedure"
+        },
+        "icd_procedure_2": {
+          "xpath": "icd_procedure_2"
+        },
+        "icd_procedure_3": {
+          "xpath": "icd_procedure_3"
+        },
+        "icd_procedure_4": {
+          "xpath": "icd_procedure_4"
+        },
+        "icd_procedure_5": {
+          "xpath": "icd_procedure_5"
+        },
+        "icd_procedure_6": {
+          "xpath": "icd_procedure_6"
+        },
+        "icd_identifier": {
+          "xpath": "icd_identifier"
+        },
+        "discharge_status": {
+          "xpath": "discharge_status"
+        },
+        "ub_revenue": {
+          "xpath": "ub_revenue"
+        },
+        "ub_type_of_bill": {
+          "xpath": "ub_type_of_bill"
+        },
+        "cms_place_of_service": {
+          "xpath": "cms_place_of_service"
+        },
+        "claim_status": {
+          "xpath": "claim_status"
+        },
+        "provider_id": {
+          "xpath": "provider_id"
+        },
+        "supplemental_data": {
+          "xpath": "supplemental_data"
+        },
+        "claim_id": {
+          "xpath": "claim_id"
+        }
+      }
+    }
+  }
+}

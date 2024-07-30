@@ -1,0 +1,10 @@
+{
+  {%- if data.outcome_code -%}
+    "coding" : [{
+      "system" : "{{ data.outcome_system }}",
+      "code" : "{{ data.outcome_code }}",
+      "display": "{{ data.outcome_display }}"
+    }],
+  {%- endif %}
+  "text": "{{ data.outcome_text }}"
+}

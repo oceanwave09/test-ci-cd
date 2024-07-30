@@ -1,0 +1,21 @@
+{
+  {%- if data.site_code -%}
+    "coding" : [{
+      "system" : "{{ data.site_system }}",
+      "code" : "{{ data.site_code }}",
+      "display": "{{ data.site_display }}"
+    }],
+  {% elif data.sites %}
+    "coding" : [
+      {% for entry in data.sites %}
+      {
+        "system" : "{{ entry.site_system }}",
+        "code" : "{{ entry.site_code }}",
+        "display": "{{ entry.site_display }}"
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+  {%- endif %}
+  "text": "{{ data.site_text }}"
+}

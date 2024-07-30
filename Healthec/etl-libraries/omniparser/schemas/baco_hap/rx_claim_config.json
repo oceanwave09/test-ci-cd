@@ -1,0 +1,251 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      { "rows": 1, "min": 1, "max": 1 },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "claim_id",
+            "index": 1
+          },
+          {
+            "name": "member_id",
+            "index": 90
+          },
+          {
+            "name": "member_last_name",
+            "index": 103
+          },
+          {
+            "name": "member_first_name",
+            "index": 101
+          },
+          {
+            "name": "member_middle_initial",
+            "index": 102
+          },
+          {
+            "name": "member_gender",
+            "index": 104
+          },
+          {
+            "name": "member_dob",
+            "index": 105
+          },
+          {
+            "name": "member_relationship_code",
+            "index": 107
+          },
+          {
+            "name": "member_line_1",
+            "index": 112
+          },
+          {
+            "name": "member_line_2",
+            "index": 113
+          },
+          {
+            "name": "member_city",
+            "index": 114
+          },
+          {
+            "name": "member_state",
+            "index": 115
+          },
+          {
+            "name": "member_zip",
+            "index": 116
+          },
+          {
+            "name": "member_country",
+            "index": 117
+          },
+          {
+            "name": "member_phone_work",
+            "index": 118
+          },
+          {
+            "name": "claim_status",
+            "index": 3
+          },
+          {
+            "name": "claim_dispense_date",
+            "index": 5
+          },
+          {
+            "name": "claim_billed_date",
+            "index": 6
+          },
+          {
+            "name": "claim_prescription_date",
+            "index": 8
+          },
+          {
+            "name": "claim_copay_amount",
+            "index": 10
+          },
+          {
+            "name": "claim_billed_amount",
+            "index": 15
+          },
+          {
+            "name": "claim_paid_date",
+            "index": 31
+          },
+          {
+            "name": "claim_paid_amount",
+            "index": 20
+          },
+          {
+            "name": "claim_dispense_as_written_code",
+            "index": 134
+          },
+          {
+            "name": "drug_name",
+            "index": 47
+          },
+          {
+            "name": "drug_ndc",
+            "index": 50
+          },
+          {
+            "name": "drug_strength",
+            "index": 53
+          },
+          {
+            "name": "drug_quantity",
+            "index": 137
+          },
+          {
+            "name": "drug_supply",
+            "index": 135
+          },
+          {
+            "name": "claim_prescription_number",
+            "index": 148
+          },
+          {
+            "name": "prescriber_npi",
+            "index": 127
+          },
+          {
+            "name": "prescriber_first_name",
+            "index": 125
+          },
+          {
+            "name": "prescriber_last_name",
+            "index": 126
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "id": { "xpath": "claim_id" },
+        "row_id": { "template": "uuidv4" },
+        "patient": {
+          "object": {
+            "subscriber_id": { "xpath": "subscriber_id" },
+            "member_suffix": { "xpath": "member_suffix" },
+            "member_id": { "xpath": "member_id" },
+            "mrn": { "xpath": "member_mrn" },
+            "ssn": { "xpath": "member_ssn" },
+            "external_id": { "xpath": "member_external_id" },
+            "last_name": { "xpath": "member_last_name" },
+            "first_name": { "xpath": "member_first_name" },
+            "middle_initial": { "xpath": "member_middle_initial" },
+            "gender": { "xpath": "member_gender" },
+            "dob": { "xpath": "member_dob" },
+            "relationship_code": { "xpath": "member_relationship_code" },
+            "address": {
+              "object": {
+                "line1": { "xpath": "member_line_1" },
+                "line2": { "xpath": "member_line_2" },
+                "city": { "xpath": "member_city" },
+                "state": { "xpath": "member_state" },
+                "zip": { "xpath": "member_zip" },
+                "country": { "xpath": "member_country" }
+              }
+            },
+            "phone_work": { "xpath": "member_phone_work" },
+            "phone_mobile": { "xpath": "member_phone_mobile" },
+            "email": { "xpath": "member_email" }
+          }
+        },
+        "claim_status": { "xpath": "claim_status" },
+        "dispense_date": { "xpath": "claim_dispense_date" },
+        "billed_date": { "xpath": "claim_billed_date" },
+        "prescription_date": { "xpath": "claim_prescription_date" },
+        "copay_amount": { "xpath": "claim_copay_amount" },
+        "billed_amount": { "xpath": "claim_billed_amount" },
+        "paid_date": { "xpath": "claim_paid_date" },
+        "paid_amount": { "xpath": "claim_paid_amount" },
+        "dispense_as_written_code": {
+          "xpath": "claim_dispense_as_written_code"
+        },
+        "mail_order_flag": { "xpath": "claim_mail_order_flag" },
+        "drug": {
+          "object": {
+            "name": { "xpath": "drug_name" },
+            "ndc": { "xpath": "drug_ndc" },
+            "strength": { "xpath": "drug_strength" },
+            "quantity": { "xpath": "drug_quantity" },
+            "supply": { "xpath": "drug_supply" }
+          }
+        },
+        "prescriber": {
+          "object": {
+            "npi": { "xpath": "prescriber_npi" },
+            "external_id": { "xpath": "prescriber_external_id" },
+            "first_name": { "xpath": "prescriber_first_name" },
+            "last_name": { "xpath": "prescriber_last_name" },
+            "address": {
+              "object": {
+                "line1": { "xpath": "prescriber_line_1" },
+                "line2": { "xpath": "prescriber_line_2" },
+                "city": { "xpath": "prescriber_city" },
+                "state": { "xpath": "prescriber_state" },
+                "zip": { "xpath": "prescriber_zip" },
+                "country": { "xpath": "prescriber_country" }
+              }
+            }
+          }
+        },
+        "insurance_plan": {
+          "object": {
+            "plan_id": { "xpath": "insurance_plan_id" },
+            "plan_name": { "xpath": "insurance_plan_name" },
+            "plan_type": { "xpath": "insurance_plan_type" },
+            "company_name": { "xpath": "insurance_company_name" },
+            "company_external_id": {
+              "xpath": "insurance_company_external_id"
+            },
+            "policy_number": { "xpath": "insurance_policy_number" },
+            "effectice_date": { "xpath": "insurance_effective_date" },
+            "end_date": { "xpath": "insurance_end_date" }
+          }
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  {%- if data.occurrence_period_start -%}
+  "start": "{{ data.occurrence_period_start }}"
+  {%- endif %}
+  {%- if data.occurrence_period_start and data.occurrence_period_end -%}
+  ,
+  {%- endif -%}
+  {%- if data.occurrence_period_end -%}
+  "end": "{{ data.occurrence_period_end }}"
+  {%- endif %}
+}

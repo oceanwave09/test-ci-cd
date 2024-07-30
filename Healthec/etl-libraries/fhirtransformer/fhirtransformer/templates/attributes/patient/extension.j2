@@ -1,0 +1,7 @@
+{% for extension in data.extensions %}
+{
+  "url": "{{ extension.url }}",
+  "valueString": "{{ extension.value }}"
+}
+{% if not loop.last %},{% endif %}
+{% endfor %}

@@ -1,0 +1,15 @@
+vital_first_name:
+  key_path: first_name
+  type: string
+  min_length: 1
+
+clinical_practice_tin:
+  key_path: practice.tin
+  required: True
+  type: string
+  min_length: 9
+
+clinical_zip_code:
+  key_path: address.zip
+  length: 10
+  type: string

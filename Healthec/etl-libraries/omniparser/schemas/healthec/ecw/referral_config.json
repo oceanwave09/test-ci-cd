@@ -1,0 +1,145 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "referral_id",
+            "index": 3
+          },
+          {
+            "name": "patient_id",
+            "index": 4
+          },
+          {
+            "name": "patient_account_no",
+            "index": 5
+          },
+          {
+            "name": "speciality_code",
+            "index": 6
+          },
+          {
+            "name": "speciality",
+            "index": 7
+          },
+          {
+            "name": "referral_type",
+            "index": 8
+          },
+          {
+            "name": "referral_status",
+            "index": 9
+          },
+          {
+            "name": "referral_from_name",
+            "index": 10
+          },
+          {
+            "name": "referral_from_npi",
+            "index": 11
+          },
+          {
+            "name": "referral_to_name",
+            "index": 12
+          },
+          {
+            "name": "referral_to_npi",
+            "index": 13
+          },
+          {
+            "name": "facility_from",
+            "index": 14
+          },
+          {
+            "name": "facility_to",
+            "index": 15
+          },
+          {
+            "name": "referral_date",
+            "index": 16
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "referral_id": {
+          "xpath": "referral_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "speciality_code": {
+          "xpath": "speciality_code"
+        },
+        "speciality": {
+          "xpath": "speciality"
+        },
+        "referral_type": {
+          "xpath": "referral_type"
+        },
+        "referral_status": {
+          "xpath": "referral_status"
+        },
+        "referral_from_name": {
+          "xpath": "referral_from_name"
+        },
+        "referral_from_npi": {
+          "xpath": "referral_from_npi"
+        },
+        "referral_to_name": {
+          "xpath": "referral_to_name"
+        },
+        "referral_to_npi": {
+          "xpath": "referral_to_npi"
+        },
+        "facility_from": {
+          "xpath": "facility_from"
+        },
+        "facility_to": {
+          "xpath": "facility_to"
+        },
+        "referral_date": {
+          "xpath": "referral_date"
+        }
+      }
+    }
+  }
+}

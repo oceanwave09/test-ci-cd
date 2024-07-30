@@ -1,0 +1,40 @@
+[
+  {
+    "name": {
+      "family": "{{ data.contact_lastname }}",
+      "given": [
+        {% if data.contact_firstname -%}
+        "{{ data.contact_firstname }}"
+        {%- endif %}
+        {%- if data.contact_firstname and data.contact_middlename -%}
+        ,
+        {%- endif %}
+        {% if data.contact_middlename -%}
+        "{{ data.contact_middlename }}"
+        {%- endif %}
+      ],
+      "perfix": [
+        {% if data.contact_prefix -%}
+        "{{ data.contact_prefix }}"
+        {%- endif %}
+      ]
+    },
+    "telecom": [
+      {%- if data.contact_phone -%}
+      {
+        "system": "phone",
+        "value": "{{ data.contact_phone }}"
+      }
+      {%- endif %}
+      {%- if data.contact_phone and data.contact_email -%}
+      ,
+      {%- endif -%}
+      {%- if data.contact_email -%}
+      {
+        "system": "email",
+        "value": "{{ data.contact_email }}"
+      }
+      {%- endif %}
+    ]
+  }
+]

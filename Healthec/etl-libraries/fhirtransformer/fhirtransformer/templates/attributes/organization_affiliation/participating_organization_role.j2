@@ -1,0 +1,18 @@
+{# participating organization role #}
+{# http://build.fhir.org/valueset-organization-role.html #}
+[
+  {%- if data.role_code or data.role_text -%}
+  {
+    {%- if data.role_code -%}
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/organization-role",
+        "code": "{{ data.role_code }}",
+        "display": "{{ data.role_display }}"
+      }
+    ],
+    {%- endif %}
+    "text": "{{ data.role_text }}"
+  }
+  {%- endif %}
+]

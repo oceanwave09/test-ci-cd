@@ -1,0 +1,16 @@
+[
+  {%- if data.category_code or data.category_text -%}
+  {
+    {% if data.category_code %}
+    "coding": [
+      {
+        "system": "{{ data.category_system }}",
+        "code": "{{ data.category_code }}",
+        "display": "{{ data.category_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.category_text }}"
+  }
+  {%- endif %}
+]

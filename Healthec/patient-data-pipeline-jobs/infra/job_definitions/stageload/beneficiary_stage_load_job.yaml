@@ -1,0 +1,207 @@
+apiVersion: "sparkoperator.k8s.io/v1beta2"
+kind: SparkApplication
+metadata:
+  name: beneficiary-stage-load-job-$RANDOM_ID
+  namespace: data-pipeline
+spec:
+  type: Python
+  pythonVersion: "3"
+  mode: cluster
+  image: "registry.gitlab.com/health-ec/platform/domain/member/etl/patient-data-pipeline-jobs/patient-data-pipeline:latest"
+  imagePullPolicy: Always
+  imagePullSecrets:
+    - gitlab-patient-datapipeline-regcred
+  mainApplicationFile: local:///app/jobs/stageload/beneficiary_stage_load_job.py
+  deps:
+    pyFiles:
+      - local:///app/python-deps.zip
+  sparkVersion: "3.4.1"
+  timeToLiveSeconds: 3600
+  nodeSelector:
+    role: pyspark_jobs
+  restartPolicy:
+    type: Never
+  driver:
+    cores: 1
+    memory: "4096m"
+    labels:
+      version: 3.4.1
+      auto_scaling_groups: pyspark_jobs
+    serviceAccount: spark-operator-spark
+    env:
+      - name: DELTA_SCHEMA_LOCATION
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.delta_schema_location
+      - name: DELTA_TABLE_NAME
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.beneficiary_table_name
+            optional: true
+      - name: OPSGENIE_API_KEY
+        valueFrom:
+          secretKeyRef:
+            name: opsgenie-api-credentials
+            key: api_key
+            optional: true
+      - name: EVENT_SERVICE_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_protocol
+      - name: EVENT_SERVICE_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_host
+      - name: EVENT_SERVICE_TENANT_ID
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_tenant_id
+      - name: EVENT_SERVICE_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_tenant_subdomain
+      - name: EVENT_SERVICE_AUTH_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_protocol     
+      - name: EVENT_SERVICE_AUTH_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_host
+      - name: EVENT_SERVICE_AUTH_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_subdomain 
+      - name: EVENT_SERVICE_AUTH_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_tenant_subdomain
+      - name: EVENT_SERVICE_AUTH_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            name: event-service-auth-credentials
+            key: service_auth_client_id
+      - name: EVENT_SERVICE_AUTH_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: event-service-auth-credentials
+            key: service_auth_client_secret   
+      - name: CANONICAL_FILE_PATH
+        value: $CANONICAL_FILE_PATH
+      - name: FILE_BATCH_ID
+        value: $FILE_BATCH_ID
+      - name: FILE_SOURCE
+        value: $FILE_SOURCE
+      - name: FILE_NAME
+        value: $FILE_NAME
+      - name: RESOURCE_TYPE
+        value: $RESOURCE_TYPE
+      - name: FILE_TENANT
+        value: $FILE_TENANT 
+    tolerations:
+      - key: dedicated
+        operator: "Equal"
+        value: pyspark_jobs
+        effect: NoSchedule
+  executor:
+    cores: 1
+    instances: 1
+    memory: "4096m"
+    labels:
+      version: 3.4.1
+      auto_scaling_groups: pyspark_jobs
+    env:
+      - name: DELTA_SCHEMA_LOCATION
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.delta_schema_location
+      - name: DELTA_TABLE_NAME
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.beneficiary_table_name
+            optional: true
+      - name: OPSGENIE_API_KEY
+        valueFrom:
+          secretKeyRef:
+            name: opsgenie-api-credentials
+            key: api_key
+            optional: true
+      - name: EVENT_SERVICE_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_protocol
+      - name: EVENT_SERVICE_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_host
+      - name: EVENT_SERVICE_TENANT_ID
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_tenant_id
+      - name: EVENT_SERVICE_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_tenant_subdomain
+      - name: EVENT_SERVICE_AUTH_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_protocol     
+      - name: EVENT_SERVICE_AUTH_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_host
+      - name: EVENT_SERVICE_AUTH_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_subdomain 
+      - name: EVENT_SERVICE_AUTH_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: event-service-config
+            key: service_auth_tenant_subdomain
+      - name: EVENT_SERVICE_AUTH_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            name: event-service-auth-credentials
+            key: service_auth_client_id
+      - name: EVENT_SERVICE_AUTH_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: event-service-auth-credentials
+            key: service_auth_client_secret   
+      - name: CANONICAL_FILE_PATH
+        value: $CANONICAL_FILE_PATH
+      - name: FILE_BATCH_ID
+        value: $FILE_BATCH_ID
+      - name: FILE_SOURCE
+        value: $FILE_SOURCE
+      - name: FILE_NAME
+        value: $FILE_NAME
+      - name: RESOURCE_TYPE
+        value: $RESOURCE_TYPE
+      - name: FILE_TENANT
+        value: $FILE_TENANT 
+    tolerations:
+      - key: dedicated
+        operator: "Equal"
+        value: pyspark_jobs
+        effect: NoSchedule

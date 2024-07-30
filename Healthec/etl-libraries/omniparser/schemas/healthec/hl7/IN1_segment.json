@@ -1,0 +1,1309 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "IN1",
+            "min": 1,
+            "max": -1,
+            "elements": [
+              {
+                "name": "set_id",
+                "index": 1
+              },
+              {
+                "name": "health_plan_identifier",
+                "index": 2,
+                "component_index": 1
+              },
+              {
+                "name": "health_plan_text",
+                "index": 2,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "health_plan_coding_system",
+                "index": 2,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "health_plan_alternate_identifier",
+                "index": 2,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "health_plan_alternate_text",
+                "index": 2,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "health_plan_alternate_coding_system",
+                "index": 2,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_identifier",
+                "index": 3,
+                "component_index": 1
+              },
+              {
+                "name": "insurance_company_check_digit",
+                "index": 3,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_check_digit_scheme",
+                "index": 3,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_assigning_authority",
+                "index": 3,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_identifier_type_code",
+                "index": 3,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_assigning_facility",
+                "index": 3,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_effective_date",
+                "index": 3,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_expiration_date",
+                "index": 3,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_assigning_jurisdiction",
+                "index": 3,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_assigning_agency_or_department",
+                "index": 3,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name",
+                "index": 4,
+                "component_index": 1
+              },
+              {
+                "name": "insurance_company_name_type_code",
+                "index": 4,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_identifier",
+                "index": 4,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_check_digit",
+                "index": 4,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_check_digit_scheme",
+                "index": 4,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_assigning_authority",
+                "index": 4,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_identifier_type_code",
+                "index": 4,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_assigning_facility",
+                "index": 4,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_representation_code",
+                "index": 4,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_name_organization_identifier",
+                "index": 4,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_street_address",
+                "index": 5,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_other_destination",
+                "index": 5,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_city",
+                "index": 5,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_state",
+                "index": 5,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_zip",
+                "index": 5,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_country",
+                "index": 5,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_address_type",
+                "index": 5,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_other_geographic_designation",
+                "index": 5,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_county_or_parish_code",
+                "index": 5,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_census_tract",
+                "index": 5,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_address_representation_code",
+                "index": 5,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_address_validity_range",
+                "index": 5,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_address_effective_date",
+                "index": 5,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "insurance_company_address_expiration_date",
+                "index": 5,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_family_name",
+                "index": 6,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_given_name",
+                "index": 6,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_initials",
+                "index": 6,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_suffix",
+                "index": 6,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_prefix",
+                "index": 6,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_degree",
+                "index": 6,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_name_type_code",
+                "index": 6,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_name_representation_code",
+                "index": 6,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_name_context",
+                "index": 6,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_validity_range",
+                "index": 6,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_assembly_order",
+                "index": 6,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_effective_date",
+                "index": 6,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_expiration_date",
+                "index": 6,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_contact_person_professional_suffix",
+                "index": 6,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_telephone_number",
+                "index": 7,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_telecommunication_use_code",
+                "index": 7,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_telecommunication_equipment_type",
+                "index": 7,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_email_address",
+                "index": 7,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_country_code",
+                "index": 7,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_area_or_city_code",
+                "index": 7,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_local_number",
+                "index": 7,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_extention",
+                "index": 7,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_any_text",
+                "index": 7,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_extention_prefix",
+                "index": 7,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_speed_dial_code",
+                "index": 7,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "insurance_co_unformatted_telephone_number",
+                "index": 7,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "group_number",
+                "index": 8,
+                "default": ""
+              },
+              {
+                "name": "group_name",
+                "index": 9,
+                "default": ""
+              },
+              {
+                "name": "insureds_group_emp_id",
+                "index": 10,
+                "default": ""
+              },
+              {
+                "name": "insureds_group_emp_name",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "plan_effective_date",
+                "index": 12,
+                "default": ""
+              },
+              {
+                "name": "plan_expiration_date",
+                "index": 13,
+                "default": ""
+              },
+              {
+                "name": "authorization_information",
+                "index": 14,
+                "default": ""
+              },
+              {
+                "name": "plan_type",
+                "index": 15,
+                "default": ""
+              },
+              {
+                "name": "insured_family_name",
+                "index": 16,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "insured_given_name",
+                "index": 16,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insured_initial",
+                "index": 16,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insured_suffix",
+                "index": 16,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insured_prefix",
+                "index": 16,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insured_degree",
+                "index": 16,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insured_name_type_code",
+                "index": 16,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insured_name_representation_code",
+                "index": 16,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "insured_name_context",
+                "index": 16,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "insured_name_validity_range",
+                "index": 16,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "insured_name_assembly_order",
+                "index": 16,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "insured_effective_date",
+                "index": 16,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "insured_expiration_date",
+                "index": 16,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "insured_professional_suffix",
+                "index": 16,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "insureds_relationship_identifier",
+                "index": 17,
+                "component_index": 1
+              },
+              {
+                "name": "insureds_relationship_text",
+                "index": 17,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insureds_relationship_code_system",
+                "index": 17,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insureds_relationship_alternate_identifier",
+                "index": 17,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insureds_relationship_alternate_text",
+                "index": 17,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insureds_relationship_alternate_coding_system",
+                "index": 17,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insureds_date_of_birth",
+                "index": 18,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "insureds_degree_of_precision",
+                "index": 18,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insured_street_address",
+                "index": 19,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "insured_other_destination",
+                "index": 19,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "insured_city",
+                "index": 19,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "insured_state",
+                "index": 19,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "insured_zip",
+                "index": 19,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "insured_country",
+                "index": 19,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "insured_address_type",
+                "index": 19,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "insured_other_geographic_destination",
+                "index": 19,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "insured_county",
+                "index": 19,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "insured_cesus_tract",
+                "index": 19,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "insured_address_representation_code",
+                "index": 19,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "insured_address_validity_range",
+                "index": 19,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "insured_address_effective_date",
+                "index": 19,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "insured_address_expiration_date",
+                "index": 19,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "assignment_of_benefits",
+                "index": 20,
+                "default": ""
+              },
+              {
+                "name": "coordination_of_benefits",
+                "index": 21,
+                "default": ""
+              },
+              {
+                "name": "coord_of_ben_priority",
+                "index": 22,
+                "default": ""
+              },
+              {
+                "name": "notice_of_admission_flag",
+                "index": 23,
+                "default": ""
+              },
+              {
+                "name": "notice_of_admission_date",
+                "index": 24,
+                "default": ""
+              },
+              {
+                "name": "report_of_eligibility_flag",
+                "index": 25,
+                "default": ""
+              },
+              {
+                "name": "report_of_eligibility_date",
+                "index": 26,
+                "default": ""
+              },
+              {
+                "name": "release_information_code",
+                "index": 27,
+                "default": ""
+              },
+              {
+                "name": "preadmit_cert",
+                "index": 28,
+                "default": ""
+              },
+              {
+                "name": "verification_date_time",
+                "index": 29,
+                "default": ""
+              },
+              {
+                "name": "verification_by",
+                "index": 30,
+                "default": ""
+              },
+              {
+                "name": "type_of_agreement_code",
+                "index": 31,
+                "default": ""
+              },
+              {
+                "name": "billing_status",
+                "index": 32,
+                "default": ""
+              },
+              {
+                "name": "lifetime_reserve_days",
+                "index": 33,
+                "default": ""
+              },
+              {
+                "name": "delay_before_lr_day",
+                "index": 34,
+                "default": ""
+              },
+              {
+                "name": "company_plan_code",
+                "index": 35,
+                "default": ""
+              },
+              {
+                "name": "policy_number",
+                "index": 36,
+                "default": ""
+              },
+              {
+                "name": "policy_deductible",
+                "index": 37,
+                "default": ""
+              },
+              {
+                "name": "policy_limit_amount",
+                "index": 38,
+                "default": ""
+              },
+              {
+                "name": "policy_limit_days",
+                "index": 39,
+                "default": ""
+              },
+              {
+                "name": "room_rate_semi_private",
+                "index": 40,
+                "default": ""
+              },
+              {
+                "name": "room_rate_private",
+                "index": 41,
+                "default": ""
+              },
+              {
+                "name": "insureds_employment_status",
+                "index": 42,
+                "default": ""
+              },
+              {
+                "name": "insureds_administrative_sex",
+                "index": 43,
+                "default": ""
+              },
+              {
+                "name": "insureds_employers_address",
+                "index": 44,
+                "default": ""
+              },
+              {
+                "name": "verification_status",
+                "index": 45,
+                "default": ""
+              },
+              {
+                "name": "prior_insurance_plan_id",
+                "index": 46,
+                "default": ""
+              },
+              {
+                "name": "coverage_type",
+                "index": 47,
+                "default": ""
+              },
+              {
+                "name": "handicap",
+                "index": 48,
+                "default": ""
+              },
+              {
+                "name": "insureds_id_number",
+                "index": 49,
+                "default": ""
+              },
+              {
+                "name": "signature_code",
+                "index": 50,
+                "default": ""
+              },
+              {
+                "name": "signature_code_date",
+                "index": 51,
+                "default": ""
+              },
+              {
+                "name": "insureds_birth_place",
+                "index": 52,
+                "default": ""
+              },
+              {
+                "name": "vip_indicator",
+                "index": 53,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "IN1": {
+          "array":[
+            {
+              "xpath": "IN1",
+              "object": {
+                "set_id": {
+                  "xpath": "set_id"
+                },
+                "health_plan_identifier": {
+                  "xpath": "health_plan_identifier"
+                },
+                "health_plan_text": {
+                  "xpath": "health_plan_text"
+                },
+                "health_plan_coding_system": {
+                  "xpath": "health_plan_coding_system"
+                },
+                "health_plan_alternate_identifier": {
+                  "xpath": "health_plan_alternate_identifier"
+                },
+                "health_plan_alternate_text": {
+                  "xpath": "health_plan_alternate_text"
+                },
+                "health_plan_alternate_coding_system": {
+                  "xpath": "health_plan_alternate_coding_system"
+                },
+                "health_system_version_id": {
+                  "xpath": "health_system_version_id"
+                },
+                "health_alternate_system_version_id": {
+                  "xpath": "health_alternate_system_version_id"
+                },
+                "health_plan_original_text": {
+                  "xpath": "health_plan_original_text"
+                },
+                "insurance_company_identifier": {
+                  "xpath": "insurance_company_identifier"
+                },
+                "insurance_company_check_digit": {
+                  "xpath": "insurance_company_check_digit"
+                },
+                "insurance_company_check_digit_scheme": {
+                  "xpath": "insurance_company_check_digit_scheme"
+                },
+                "insurance_company_assigning_authority": {
+                  "xpath": "insurance_company_assigning_authority"
+                },
+                "insuranceinsurance_company_identifier_type_code_company_id": {
+                  "xpath": "insurance_company_identifier_type_code"
+                },
+                "insurance_company_assigning_facility": {
+                  "xpath": "insurance_company_assigning_facility"
+                },
+                "insurance_company_effective_date": {
+                  "xpath": "insurance_company_effective_date"
+                },
+                "insurance_company_expiration_date": {
+                  "xpath": "insurance_company_expiration_date"
+                },
+                "insurance_company_assigning_jurisdiction": {
+                  "xpath": "insurance_company_assigning_jurisdiction"
+                },
+                "insurance_company_assigning_agency_or_department": {
+                  "xpath": "insurance_company_assigning_agency_or_department"
+                },
+                "insurance_company_name": {
+                  "xpath": "insurance_company_name"
+                },
+                "insurance_company_name_type_code": {
+                  "xpath": "insurance_company_name_type_code"
+                },
+                "insurance_company_name_identifier": {
+                  "xpath": "insurance_company_name_identifier"
+                },
+                "insurance_company_name_check_digit": {
+                  "xpath": "insurance_company_name_check_digit"
+                },
+                "insurance_company_name_check_digit_scheme": {
+                  "xpath": "insurance_company_name_check_digit_scheme"
+                },
+                "insurance_cominsurance_company_name_assigning_authoritypany_name": {
+                  "xpath": "insurance_cinsurance_company_name_assigning_authorityompany_name"
+                },
+                "insurance_company_name_identifier_type_code": {
+                  "xpath": "insurance_company_name_identifier_type_code"
+                },
+                "insurance_company_name_assigning_facility": {
+                  "xpath": "insurance_company_name_assigning_facility"
+                },
+                "insurance_company_name_representation_code": {
+                  "xpath": "insurance_company_name_representation_code"
+                },
+                "insurance_company_name_organization_identifier": {
+                  "xpath": "insurance_company_name_organization_identifier"
+                },
+                "insurance_company_street_address": {
+                  "xpath": "insurance_company_street_address"
+                },
+                "insurance_company_other_destination": {
+                  "xpath": "insurance_company_other_destination"
+                },
+                "insurance_company_city": {
+                  "xpath": "insurance_company_city"
+                },
+                "insurance_company_state": {
+                  "xpath": "insurance_company_state"
+                },
+                "insurance_company_zip": {
+                  "xpath": "insurance_company_zip"
+                },
+                "insurance_company_country": {
+                  "xpath": "insurance_company_country"
+                },
+                "insurance_company_address_type": {
+                  "xpath": "insurance_company_address_type"
+                },
+                "insurance_company_other_geographic_designation": {
+                  "xpath": "insurance_company_other_geographic_designation"
+                },
+                "insurance_company_county_or_parish_code": {
+                  "xpath": "insurance_company_county_or_parish_code"
+                },
+                "insurance_company_census_tract": {
+                  "xpath": "insurance_company_census_tract"
+                },
+                "insurance_company_address_representation_code": {
+                  "xpath": "insurance_company_address_representation_code"
+                },
+                "insurance_company_address_validity_range": {
+                  "xpath": "insurance_company_address_validity_range"
+                },
+                "insurance_company_address_effective_date": {
+                  "xpath": "insurance_company_address_effective_date"
+                },
+                "insurance_company_address_expiration_date": {
+                  "xpath": "insurance_company_address_expiration_date"
+                },
+                "insurance_co_contact_person_family_name": {
+                  "xpath": "insurance_co_contact_person_family_name"
+                },
+                "insurance_co_contact_person_given_name": {
+                  "xpath": "insurance_co_contact_person_given_name"
+                },
+                "insurance_co_contact_person_initials": {
+                  "xpath": "insurance_co_contact_person_initials"
+                },
+                "insurance_co_contact_person_suffix": {
+                  "xpath": "insurance_co_contact_person_suffix"
+                },
+                "insurance_co_contact_person_prefix": {
+                  "xpath": "insurance_co_contact_person_prefix"
+                },
+                "insurance_co_contact_person_degree": {
+                  "xpath": "insurance_co_contact_person_degree"
+                },
+                "insurance_co_contact_person_name_type_code": {
+                  "xpath": "insurance_co_contact_person_name_type_code"
+                },
+                "insurance_co_contact_person_name_representation_code": {
+                  "xpath": "insurance_co_contact_person_name_representation_code"
+                },
+                "insurance_co_contact_person_name_context": {
+                  "xpath": "insurance_co_contact_person_name_context"
+                },
+                "insurance_co_contact_person_validity_range": {
+                  "xpath": "insurance_co_contact_person_validity_range"
+                },
+                "insurance_co_contact_person_assembly_order": {
+                  "xpath": "insurance_co_contact_person_assembly_order"
+                },
+                "insurance_co_contact_person_effective_date": {
+                  "xpath": "insurance_co_contact_person_effective_date"
+                },
+                "insurance_co_contact_person_expiration_date": {
+                  "xpath": "insurance_co_contact_person_expiration_date"
+                },
+                "insurance_co_contact_person_professional_suffix": {
+                  "xpath": "insurance_co_contact_person_professional_suffix"
+                },
+                "insurance_co_telephone_number": {
+                  "xpath": "insurance_co_telephone_number"
+                },
+                "insurance_co_telecommunication_use_code": {
+                  "xpath": "insurance_co_telecommunication_use_code"
+                },
+                "insurance_co_telecommunication_equipment_type": {
+                  "xpath": "insurance_co_telecommunication_equipment_type"
+                },
+                "insurance_co_email_address": {
+                  "xpath": "insurance_co_email_address"
+                },
+                "insurance_co_country_code": {
+                  "xpath": "insurance_co_country_code"
+                },
+                "insurance_co_area_or_city_code": {
+                  "xpath": "insurance_co_area_or_city_code"
+                },
+                "insurance_co_local_number": {
+                  "xpath": "insurance_co_local_number"
+                },
+                "insurance_co_extention": {
+                  "xpath": "insurance_co_extention"
+                },
+                "insurance_co_any_text": {
+                  "xpath": "insurance_co_any_text"
+                },
+                "insurance_co_extention_prefix": {
+                  "xpath": "insurance_co_extention_prefix"
+                },
+                "insurance_co_speed_dial_code": {
+                  "xpath": "insurance_co_speed_dial_code"
+                },
+                "insurance_co_unformatted_telephone_number": {
+                  "xpath": "insuinsurance_co_unformatted_telephone_numberrance_co_phone_number"
+                },
+                "group_number": {
+                  "xpath": "group_number"
+                },
+                "group_name": {
+                  "xpath": "group_name"
+                },
+                "insureds_group_emp_id": {
+                  "xpath": "insureds_group_emp_id"
+                },
+                "insureds_group_emp_name": {
+                  "xpath": "insureds_group_emp_name"
+                },
+                "plan_effective_date": {
+                  "xpath": "plan_effective_date"
+                },
+                "plan_expiration_date": {
+                  "xpath": "plan_expiration_date"
+                },
+                "authorization_information": {
+                  "xpath": "authorization_information"
+                },
+                "plan_type": {
+                  "xpath": "plan_type"
+                },
+                "insured_family_name": {
+                  "xpath": "insured_family_name"
+                },
+                "insured_given_name": {
+                  "xpath": "insured_given_name"
+                },
+                "insured_initial": {
+                  "xpath": "insured_initial"
+                },
+                "insured_suffix": {
+                  "xpath": "insured_suffix"
+                },
+                "insured_prefix": {
+                  "xpath": "insured_prefix"
+                },
+                "insured_degree": {
+                  "xpath": "insured_degree"
+                },
+                "insured_name_type_code": {
+                  "xpath": "insured_name_type_code"
+                },
+                "insured_name_representation_code": {
+                  "xpath": "insured_name_representation_code"
+                },
+                "insured_name_context": {
+                  "xpath": "insured_name_context"
+                },
+                "insured_name_validity_range": {
+                  "xpath": "insured_name_validity_range"
+                },
+                "insured_name_assembly_order": {
+                  "xpath": "insured_name_assembly_order"
+                },
+                "insured_effective_date": {
+                  "xpath": "insured_effective_date"
+                },
+                "insured_expiration_date": {
+                  "xpath": "insured_expiration_date"
+                },
+                "insured_professional_suffix": {
+                  "xpath": "insured_professional_suffix"
+                },
+                "insureds_relationship_identifier": {
+                  "xpath": "insureds_relationship_identifier"
+                },
+                "insureds_relationship_text": {
+                  "xpath": "insureds_relationship_text"
+                },
+                "insureds_relationship_code_system": {
+                  "xpath": "insureds_relationship_code_system"
+                },
+                "insureds_relationship_alternate_identifier": {
+                  "xpath": "insureds_relationship_alternate_identifier"
+                },
+                "insuinsureds_relationship_alternate_textreds_relationship_to_patient": {
+                  "xpath": "insureds_relationship_alternate_text"
+                },
+                "insureds_relationship_alternate_coding_system": {
+                  "xpath": "insureds_relationship_alternate_coding_system"
+                },
+                "insureds_date_of_birth": {
+                  "xpath": "insureds_date_of_birth"
+                },
+                "insureds_degree_of_precision": {
+                  "xpath": "insureds_degree_of_precision"
+                },
+                "insured_street_address": {
+                  "xpath": "insured_street_address"
+                },
+                "insured_other_destination": {
+                  "xpath": "insured_other_destination"
+                },
+                "insured_city": {
+                  "xpath": "insured_city"
+                },
+                "insured_state": {
+                  "xpath": "insured_state"
+                },
+                "insured_zip": {
+                  "xpath": "insured_zip"
+                },
+                "insured_country": {
+                  "xpath": "insured_country"
+                },
+                "insured_address_type": {
+                  "xpath": "insured_address_type"
+                },
+                "insured_other_geographic_destination": {
+                  "xpath": "insured_other_geographic_destination"
+                },
+                "insured_county": {
+                  "xpath": "insured_county"
+                },
+                "insured_cesus_tract": {
+                  "xpath": "insured_cesus_tract"
+                },
+                "insured_address_representation_code": {
+                  "xpath": "insured_address_representation_code"
+                },
+                "insured_address_validity_range": {
+                  "xpath": "insured_address_validity_range"
+                },
+                "insured_address_effective_date": {
+                  "xpath": "insured_address_effective_date"
+                },
+                "insured_address_expiration_date": {
+                  "xpath": "insured_address_expiration_date"
+                },
+                "assignment_of_benefits": {
+                  "xpath": "assignment_of_benefits"
+                },
+                "coordination_of_benefits": {
+                  "xpath": "coordination_of_benefits"
+                },
+                "coord_of_ben_priority": {
+                  "xpath": "coord_of_ben_priority"
+                },
+                "notice_of_admission_flag": {
+                  "xpath": "notice_of_admission_flag"
+                },
+                "notice_of_admission_date": {
+                  "xpath": "notice_of_admission_date"
+                },
+                "report_of_eligibility_flag": {
+                  "xpath": "report_of_eligibility_flag"
+                },
+                "report_of_eligibility_date": {
+                  "xpath": "report_of_eligibility_date"
+                },
+                "release_information_code": {
+                  "xpath": "release_information_code"
+                },
+                "preadmit_cert": {
+                  "xpath": "preadmit_cert"
+                },
+                "verification_date_time": {
+                  "xpath": "verification_date_time"
+                },
+                "verification_by": {
+                  "xpath": "verification_by"
+                },
+                "type_of_agreement_code": {
+                  "xpath": "type_of_agreement_code"
+                },
+                "billing_status": {
+                  "xpath": "billing_status"
+                },
+                "lifetime_reserve_days": {
+                  "xpath": "lifetime_reserve_days"
+                },
+                "delay_before_lr_day": {
+                  "xpath": "delay_before_lr_day"
+                },
+                "company_plan_code": {
+                  "xpath": "company_plan_code"
+                },
+                "policy_number": {
+                  "xpath": "policy_number"
+                },
+                "policy_deductible": {
+                  "xpath": "policy_deductible"
+                },
+                "policy_limit_amount": {
+                  "xpath": "policy_limit_amount"
+                },
+                "policy_limit_days": {
+                  "xpath": "policy_limit_days"
+                },
+                "room_rate_semi_private": {
+                  "xpath": "room_rate_semi_private"
+                },
+                "room_rate_private": {
+                  "xpath": "room_rate_private"
+                },
+                "insureds_employment_status": {
+                  "xpath": "insureds_employment_status"
+                },
+                "insureds_administrative_sex": {
+                  "xpath": "insureds_administrative_sex"
+                },
+                "insureds_employers_address": {
+                  "xpath": "insureds_employers_address"
+                },
+                "verification_status": {
+                  "xpath": "verification_status"
+                },
+                "prior_insurance_plan_id": {
+                  "xpath": "prior_insurance_plan_id"
+                },
+                "coverage_type": {
+                  "xpath": "coverage_type"
+                },
+                "handicap": {
+                  "xpath": "handicap"
+                },
+                "insureds_id_number": {
+                  "xpath": "insureds_id_number"
+                },
+                "signature_code": {
+                  "xpath": "signature_code"
+                },
+                "signature_code_date": {
+                  "xpath": "signature_code_date"
+                },
+                "insureds_birth_place": {
+                  "xpath": "insureds_birth_place"
+                },
+                "vip_indicator": {
+                  "xpath": "vip_indicator"
+                }
+              }
+            }
+      ]}
+      }
+    }
+  }
+}

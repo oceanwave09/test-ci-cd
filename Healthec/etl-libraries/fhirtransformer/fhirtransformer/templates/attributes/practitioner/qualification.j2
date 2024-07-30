@@ -1,0 +1,22 @@
+[
+    {%- if data.qualification_code or data.qualification_text -%}
+    {
+        {%- if data.qualification_code -%}
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0360/2.7",
+            "code": "{{ data.qualification_code }}",
+            "display": "{{ data.qualification_display }}"
+          }
+        ],
+        {%- endif %}
+        "text": "{{ data.qualification_text }}"
+    }
+    {%- endif %}
+    {%- if (data.qualification_code or data.qualification_text) and data.organization_id -%}
+    ,
+    {%- endif %}
+    {%- if data.organization_id -%}
+    "issuer": "Organization/{{ data.organization_id }}"
+    {%- endif %}
+]

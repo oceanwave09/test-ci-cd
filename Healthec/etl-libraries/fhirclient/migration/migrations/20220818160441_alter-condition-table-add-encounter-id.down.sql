@@ -1,0 +1,8 @@
+BEGIN;
+
+ALTER TABLE IF EXISTS condition DROP COLUMN IF EXISTS encounter_id;
+ALTER TABLE IF EXISTS condition DROP CONSTRAINT IF EXISTS encounter_id_fkey;
+
+COMMIT;
+
+END;

@@ -1,0 +1,17 @@
+[
+  {% for reason in data.reasons %}
+  {
+    {%- if reason.code -%}
+    "coding": [
+      {
+        "system": "{{ reason.code_system }}",
+        "code": "{{ reason.code }}",
+        "display": "{{ reason.code_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ reason.code_text }}"
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

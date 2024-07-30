@@ -1,0 +1,98 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "patient_id",
+            "index": 3
+          },
+          {
+            "name": "patient_account_no",
+            "index": 4
+          },
+          {
+            "name": "encounter_id",
+            "index": 5
+          },
+          {
+            "name": "provider_npi",
+            "index": 6
+          },
+          {
+            "name": "reason",
+            "index": 7
+          },
+          {
+            "name": "hospitalization_date",
+            "index": 8
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "reason": {
+          "xpath": "reason"
+        },
+        "hospitalization_date": {
+          "xpath": "hospitalization_date"
+        }
+      }
+    }
+  }
+}

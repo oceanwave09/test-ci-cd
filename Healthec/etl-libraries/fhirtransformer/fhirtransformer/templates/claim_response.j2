@@ -1,0 +1,32 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "type": {% include "attributes/claim_response/type.j2" %},
+  "use": "{{ data.use }}",
+  "outcome": "{{ data.outcome }}",
+  "patient": {% include "attributes/patient_reference.j2" %},
+  "request": {% include "attributes/claim_reference.j2" %},
+  "insurer": {% include "attributes/organization_reference.j2" %},
+  "requestor": {% include "attributes/claim_response/requestor_reference.j2" %},
+  "disposition": "{{ data.disposition }}",
+  "adjudication": {% include "attributes/claim_response/adjudication.j2" %},
+  "diagnosisRelatedGroup": {% include "attributes/claim_response/diag_related_group.j2" %},
+  "payment": {% include "attributes/claim_response/payment.j2" %},
+  "total": {% include "attributes/claim_response/total.j2" %},
+  "item": {% include "attributes/claim_response/item.j2" %},
+  "created": "{{ data.created_date_time }}"
+{% endblock %}

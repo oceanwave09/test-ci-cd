@@ -1,0 +1,172 @@
+{
+  "resourceType": "ClaimResponse",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "RI",
+            "display": "Resource Identifier"
+          }
+        ]
+      },
+      "system": "http://www.BenefitsInc.com/fhir/remittance",
+      "value": "R3500"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+        "code": "oral"
+      }
+    ]
+  },
+  "use": "claim",
+  "outcome": "completed",
+  "patient": {
+    "reference": "Patient/f41ba4cf-a1d4-4735-b23a-b017d7d0dc75"
+  },
+  "request": {
+    "reference": "Claim/f2b8db7e-c0a4-40d2-a245-93ea68699394"
+  },
+  "insurer": {
+    "reference": "Organization/f2e8db7e-c0a4-40d2-a245-93ea68699394"
+  },
+  "adjudication": [
+    {
+      "amount": {
+        "value": 135.57
+      },
+      "quantity": {
+        "value": 210
+      },
+      "category": {
+        "coding": [
+          {
+            "code": "copay"
+          }
+        ]
+      },
+      "reason": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+            "code": "ar002",
+            "display": "Plan Limit Reached"
+          }
+        ]
+      }
+    },
+    {
+      "amount": {
+        "value": 90.47,
+        "currency": "USD"
+      },
+      "quantity": {
+        "value": 19
+      },
+      "category": {
+        "coding": [
+          {
+            "code": "benefit"
+          }
+        ]
+      },
+      "reason": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+            "code": "ar002",
+            "display": "Plan Limit Reached"
+          }
+        ]
+      }
+    }
+  ],
+  "payment": {
+    "amount": {
+      "value": 230,
+      "currency": "USD"
+    },
+    "date": "2014-08-16"
+  },
+  "total": [
+    {
+      "category": {
+        "coding": [
+          {
+            "code": "benefit"
+          }
+        ]
+      }
+    },
+    {
+      "category": {
+        "coding": [
+          {
+            "code": "copay"
+          }
+        ]
+      }
+    }
+  ],
+  "item": [
+    {
+      "adjudication": [
+        {
+          "amount": {
+            "value": 135.57
+          },
+          "quantity": {
+            "value": 210
+          },
+          "category": {
+            "coding": [
+              {
+                "code": "copay"
+              }
+            ]
+          },
+          "reason": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+                "code": "ar002",
+                "display": "Plan Limit Reached"
+              }
+            ]
+          }
+        },
+        {
+          "amount": {
+            "value": 90.47,
+            "currency": "USD"
+          },
+          "quantity": {
+            "value": 19
+          },
+          "category": {
+            "coding": [
+              {
+                "code": "benefit"
+              }
+            ]
+          },
+          "reason": {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/adjudication-reason",
+                "code": "ar002",
+                "display": "Plan Limit Reached"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "created": "2014-08-16"
+}

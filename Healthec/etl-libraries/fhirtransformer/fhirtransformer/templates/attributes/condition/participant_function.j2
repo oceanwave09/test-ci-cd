@@ -1,0 +1,12 @@
+{
+  {% if data.participant_function_code %}
+  "coding": [
+    {
+      "system": "{{ data.participant_function_system }}",
+      "code": "{{ data.participant_function_code }}",
+      "display": "{{ data.participant_function_display }}"
+    }
+  ],
+  {%- endif %}
+  "text": "{{ data.participant_function_text }}"
+}

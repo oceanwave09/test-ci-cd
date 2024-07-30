@@ -1,0 +1,74 @@
+{
+    "parser_settings": {
+      "version": "omni.2.1",
+      "file_format_type": "csv2"
+    },
+    "file_declaration": {
+      "delimiter": ",",
+      "records": [
+        {
+          "rows": 1,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "is_target": true,
+          "columns": [
+            {
+              "name": "PARTICIPANT_TIN",
+              "index": 1
+            },
+            {
+              "name": "CCN",
+              "index": 2
+            },
+            {
+              "name": "CCN_TYPE",
+              "index": 3
+            },
+            {
+              "name": "DEACTIVATED",
+              "index": 4
+            },
+            {
+              "name": "NEWLY_ENROLLED",
+              "index": 5
+            }
+          ]
+        }
+      ]
+    },
+    "transform_declarations": {
+      "FINAL_OUTPUT": {
+        "object": {
+          "row_id": { "template": "uuidv4" },
+          "participant_tin": {
+            "xpath": "PARTICIPANT_TIN"
+          },
+          "ccn": {
+            "xpath": "CCN"
+          },
+          "ccn_type": {
+            "xpath": "CCN_TYPE"
+          },
+          "deactivated": {
+            "xpath": "DEACTIVATED"
+          },
+          "newly_enrolled": {
+            "xpath": "NEWLY_ENROLLED"
+          }
+        }
+      },
+      "uuidv4": {
+        "custom_func": {
+          "name": "javascript_with_context",
+          "args": [
+            {
+              "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+            }
+          ],
+          "ignore_error": true
+        }
+      }
+    }
+  }

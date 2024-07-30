@@ -1,0 +1,123 @@
+{
+    "data_asset_type": null,
+    "expectation_suite_name": "provider_roaster",
+    "expectations": [
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "row_id"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'row_id' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_match_regex",
+            "kwargs": {
+                "column": "row_id",
+                "regex": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'row_id' column follow the regex pattern."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "physician_npi"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'physician_npi' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "physician_first_name"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'physician_first_name' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_match_regex",
+            "kwargs": {
+                "column": "physician_first_name",
+                "regex": "^[a-zA-Z]+$"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'physician_first_name' column follow the regex pattern."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "physician_last_name"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'physician_last_name' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_match_regex",
+            "kwargs": {
+                "column": "physician_last_name",
+                "regex": "^[a-zA-Z]+$"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'physician_last_name' column follow the regex pattern."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "physician_taxonomy_code"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'physician_taxonomy_code' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "insurance_company_name"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'insurance_company_name' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_match_regex",
+            "kwargs": {
+                "column": "insurance_company_name",
+                "regex": "^[a-zA-Z]+$"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'insurance_company_name' column follow the regex pattern."
+            }
+        },
+        {
+            "expectation_type": "expect_column_values_to_not_be_null",
+            "kwargs": {
+                "column": "insurance_company_id"
+            },
+            "meta": {
+                "description": "Ensure that values in the 'insurance_company_id' column are not null."
+            }
+        },
+        {
+            "expectation_type": "expect_table_row_count_to_be_between",
+            "kwargs": {
+                "min_value": 1,
+                "max_value": 1000000
+            },
+            "meta": {
+                "description": "Ensure that the total row count in the file is between 1 and 1000000."
+            }
+        }
+    ],
+    "ge_cloud_id": null,
+    "meta": {
+        "great_expectations_version": "0.17.15"
+    }
+}

@@ -1,0 +1,11 @@
+{
+  {%- if data.performed_period_start -%}
+  "start": "{{ data.performed_period_start }}"
+  {%- endif %}
+  {%- if data.performed_period_start and data.performed_period_end -%}
+  ,
+  {%- endif -%}
+  {%- if data.performed_period_end -%}
+  "end": "{{ data.performed_period_end }}"
+  {%- endif %}
+}

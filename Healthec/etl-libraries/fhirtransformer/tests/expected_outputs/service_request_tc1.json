@@ -1,0 +1,71 @@
+{
+  "resourceType": "ServiceRequest",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "RI",
+            "display": "Resource Identifier"
+          }
+        ]
+      },
+      "system": "http://orionhealth.com/fhir/apps/referralids",
+      "value": "45678"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "category": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "103696004",
+          "display": "Patient referral to specialist"
+        }
+      ]
+    }
+  ],
+  "priority": "routine",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "172676009",
+        "display": "Myringotomy and insertion of tympanic ventilation tube"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/f2b8db7e-c0a4-40d2-a245-93ea68699394"
+  },
+  "encounter": {
+    "reference": "Encounter/7533a02e-37ca-4ac1-bddd-d1e2c0c7df01"
+  },
+  "occurrenceDateTime": "2023-01-01",
+  "authoredOn": "2023-01-01",
+  "requester": {
+    "reference": "Practitioner/fc07d5d3-5d28-4ec9-a72b-5d59fe1c7cc2"
+  },
+  "performerType": {
+    "coding": [
+      {
+        "system": "http://orionhealth.com/fhir/apps/specialties",
+        "code": "ent",
+        "display": "ENT"
+      }
+    ]
+  },
+  "performer": [
+    {
+      "reference": "Practitioner/c0a8cd44-f9cb-420f-acce-28834d941d12"
+    }
+  ],
+  "reasonCode": [
+    {
+      "text": "For consideration of Grommets"
+    }
+  ]
+}

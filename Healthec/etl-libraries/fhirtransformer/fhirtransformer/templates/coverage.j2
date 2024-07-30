@@ -1,0 +1,65 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.mrn -%}
+    {% include "attributes/medical_record.j2" %}
+    {%- endif %}
+    {%- if data.mrn and data.member_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.member_id -%}
+    {% include "attributes/member_id.j2" %}
+    {%- endif %}
+    {%- if (data.mrn or data.member_id) and data.medicare_number -%}
+    ,
+    {%- endif %}
+    {% if data.medicare_number -%}
+    {% include "attributes/medicare_number.j2" %}
+    {%- endif %}
+    {%- if (data.mrn or data.member_id or data.medicare_number) and data.medicaid_id -%}
+    ,
+    {%- endif %}
+    {%- if data.medicaid_id -%}
+    {% include "attributes/medicaid_id.j2" %}
+    {%- endif %}
+    {%- if (data.mrn or data.member_id or data.medicare_number or data.medicaid_id) and data.source_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if (data.mrn or data.member_id or data.medicare_number or data.medicaid_id or data.source_id) and data.subscriber_id -%}
+    ,
+    {%- endif %}
+    {%- if data.subscriber_id -%}
+    {% include "attributes/subscriber_id.j2" %}
+    {%- endif %}
+    {%- if (data.mrn or data.member_id or data.medicare_number or data.medicaid_id or data.source_id or data.subscriber_id ) and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+
+  ],
+  "status": "{{ data.status }}",
+  "kind": "{{ data.kind }}",
+  "type": {% include "attributes/coverage/type.j2" %},
+  "dependent": "{{ data.dependent }}",
+  "extension": {% include "attributes/extension.j2" %},
+  "policyHolder": {% include "attributes/coverage/policy_holder_reference.j2" %},
+  "subscriber": {% include "attributes/coverage/subscriber_patient_reference.j2" %},
+  "beneficiary": {% include "attributes/coverage/beneficiary_patient_reference.j2" %},
+  "relationship": {% include "attributes/relationship.j2" %},
+  "period": {% include "attributes/period.j2" %},
+  "insurer": {% include "attributes/coverage/insurer_organization_reference.j2" %},
+  "class": {% include "attributes/coverage/class.j2" %},
+  {% if data.order -%}
+  "order": {{ data.order }},
+  {%- endif %}
+  "network": "{{ data.network }}",
+  "costToBeneficiary": {% include "attributes/coverage/cost_to_beneficiary.j2" %}
+{% endblock %}

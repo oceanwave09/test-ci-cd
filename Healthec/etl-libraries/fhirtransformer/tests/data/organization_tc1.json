@@ -1,0 +1,15 @@
+{
+  "sub_group_id": "NECQ1032",
+  "tax_id": "983748232",
+  "active": "true",
+  "name": "Good Health Clinic",
+  "type_code": "prov",
+  "type_display": "Healthcare Provider",
+  "street_address_1": "132, Erewhon St",
+  "city": "Kingston",
+  "state": "New York",
+  "zip": "12401",
+  "phone_mobile": "(03) 3410 5613",
+  "email": "michael.jackson@gmail.com",
+  "parent_organization_id": "bb7a0594-6be2-44e9-a1d4-dab0c74f91aa"
+}

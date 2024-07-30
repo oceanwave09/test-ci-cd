@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS TENANT_staging.cclf7 (
+    row_id VARCHAR,
+    cur_clm_uniq_id INTEGER,
+    bene_mbi_id VARCHAR,
+    bene_hic_num VARCHAR,
+    clm_line_ndc_cd VARCHAR,
+    clm_type_cd INTEGER,
+    clm_line_from_dt DATE,
+    prvdr_srvc_id_qlfyr_cd VARCHAR,
+    clm_srvc_prvdr_gnrc_id_num VARCHAR,
+    clm_dspnsng_stus_cd VARCHAR,
+    clm_daw_prod_slctn_cd VARCHAR,
+    clm_line_srvc_unit_qty DOUBLE,
+    clm_line_days_suply_qty INTEGER,
+    prvdr_prsbng_id_qlfyr_cd VARCHAR,
+    clm_prsbng_prvdr_gnrc_id_num VARCHAR,
+    clm_line_bene_pmt_amt DOUBLE,
+    clm_adjsmt_type_cd VARCHAR,
+    clm_efctv_dt DATE,
+    clm_idr_ld_dt DATE,
+    clm_line_rx_srvc_rfrnc_num INTEGER,
+    clm_line_rx_fill_num VARCHAR,
+    clm_phrmcy_srvc_type_cd VARCHAR,
+    file_batch_id VARCHAR,
+    file_name VARCHAR,
+    file_source_name VARCHAR,
+    file_status VARCHAR,
+    created_user VARCHAR,
+    created_ts TIMESTAMP(3) WITH TIME ZONE,
+    updated_user VARCHAR,
+    updated_ts TIMESTAMP(3) WITH TIME ZONE
+)
+WITH (
+    LOCATION = 's3a://DATA_S3_BUCKET/delta-tables/TENANT/staging/cclf7',
+    PARTITIONED_BY = ARRAY['file_batch_id'],
+    CHECKPOINT_INTERVAL = 5
+);

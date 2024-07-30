@@ -1,0 +1,33 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.subscriber_id -%}
+    {% include "attributes/subscriber_id.j2" %}
+    {%- endif %}
+    {%- if data.subscriber_id and data.ssn -%}
+    ,
+    {%- endif %}
+    {% if data.ssn -%}
+    {% include "attributes/ssn.j2" %}
+    {%- endif %}
+    {%- if (data.subscriber_id or data.ssn) and data.source_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "name": {% include "attributes/name.j2" %},
+  "active": {% include "attributes/active.j2" %},
+  "patient": {% include "attributes/related_person/patient_reference.j2" %},
+  "relationship": {% include "attributes/relationship.j2" %},
+  "telecom": {% include "attributes/telecom.j2" %},
+  "gender": "{{ data.gender }}",
+  "birthDate": "{{ data.dob }}",
+  "address": {% include "attributes/address.j2" %},
+  "period": {% include "attributes/period.j2" %},
+  "communication": {% include "attributes/related_person/communication.j2" %}
+{% endblock %}

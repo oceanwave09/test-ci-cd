@@ -1,0 +1,12 @@
+{
+  {% if data.status_reason_code %}
+  "coding": [
+    {
+      "system": "{{ data.status_reason_system }}",
+      "code": "{{ data.status_reason_code }}",
+      "display": "{{ data.status_reason_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.status_reason_text }}"
+}

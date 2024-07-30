@@ -1,0 +1,12 @@
+{
+  {% if data.medication_code %}
+  "coding": [
+    {
+      "system": "{{ data.medication_system }}",
+      "code": "{{ data.medication_code }}",
+      "display": "{{ data.medication_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.medication_text }}"
+}

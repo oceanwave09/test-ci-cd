@@ -1,0 +1,452 @@
+[
+	{
+		"address": {
+			"city": "Edison",
+			"country": "US",
+			"line1": "343 Thornall Street",
+			"state": "NJ",
+			"zip": "08837"
+		},
+		"birth_date": "19850101",
+		"diagnosis": [
+			{
+				"code": "29308-4",
+				"code_name": "diagnosis",
+				"effective_period_start": "201901010900",
+				"value": "Diabetic gangrene (disorder)",
+				"value_code": "25907005"
+			},
+			{
+				"code": "29308-4",
+				"code_name": "diagnosis",
+				"value": "Cerebral hemorrhage (disorder)",
+				"value_code": "274100004"
+			}
+		],
+		"encounter": [
+			{
+				"code": "32485007",
+				"code_name": "Hospital admission (procedure)",
+				"type": "2.16.840.1.113883.6.96",
+				"type_name": "SNOMED CT"
+			},
+			{
+				"code": "32485007",
+				"code_name": "Hospital admission (procedure)",
+				"end_date": "202202041530",
+				"start_date": "202202011030",
+				"type": "2.16.840.1.113883.6.96",
+				"type_name": "SNOMED CT"
+			},
+			{
+				"code": "185349003",
+				"code_name": "encounter for check-up (procedure)",
+				"type": "2.16.840.1.113883.6.96",
+				"type_name": "SNOMED CT"
+			}
+		],
+		"ethnicity": "Not Hispanic or Latino",
+		"ethnicity_code": "2186-5",
+		"facility": [
+			{
+				"city": "Edison",
+				"country": "US",
+				"line1": "1020 Healthcare Drive",
+				"line2": "Suite 500",
+				"state": "NJ",
+				"zip": "08837"
+			},
+			{
+				"city": "Edison",
+				"country": "US",
+				"line1": "21 North Ave.",
+				"state": "NJ",
+				"zip": "08837"
+			}
+		],
+		"first_name": "First01",
+		"gender": "F",
+		"last_name": "Last01",
+		"observation": [
+			{
+				"code": "ASSERTION",
+				"code_name": "Assertion",
+				"effective_date_time": "202202011030",
+				"value": "Adverse reaction",
+				"value_code": "281647001"
+			},
+			{
+				"code": "ASSERTION",
+				"code_name": "Assertion",
+				"value": "Insertion of dual chamber pacemaker pulse generator (procedure)",
+				"value_code": "444179007"
+			},
+			{
+				"code": "ASSERTION",
+				"code_name": "Assertion",
+				"value": "Nausea",
+				"value_code": "404684003"
+			},
+			{
+				"code": "ASSERTION",
+				"effective_period_start": "202202011030",
+				"value": "Allergy to substance",
+				"value_code": "419199007"
+			},
+			{
+				"code": "35088-4",
+				"code_name": "Glasgow Coma Scale",
+				"effective_date_time": "202202011030"
+			},
+			{
+				"code": "9267-6",
+				"code_name": "Glasgow Coma score eye opening",
+				"value": "No eye opening",
+				"value_code": "LA6553-7"
+			},
+			{
+				"code": "9268-4",
+				"code_name": "Glasgow Coma score motor",
+				"value": "Flexion to pain",
+				"value_code": "LA6564-4"
+			},
+			{
+				"code": "9270-0",
+				"code_name": "Glasgow Coma score verbal",
+				"value": "Confused",
+				"value_code": "LA6560-2"
+			},
+			{
+				"code": "9270-0",
+				"code_name": "Glasgow Coma score total"
+			},
+			{
+				"code": "35088-4",
+				"code_name": "Glasgow Coma Scale"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Not indicated (qualifier value)",
+				"value_code": "410534003"
+			},
+			{
+				"code": "72195-1",
+				"code_name": "Physical limitation score [KCCQ]"
+			},
+			{
+				"code": "72195-1",
+				"code_name": "Physical limitation score [KCCQ]"
+			},
+			{
+				"code": "77218-6",
+				"code_name": "Patient satisfaction with healthcare delivery",
+				"value": "Dissatisfied with doctor (finding)",
+				"value_code": "185481008"
+			},
+			{
+				"code": "77219-4",
+				"code_name": "Provider satisfaction with healthcare delivery",
+				"value": "Left against medical advice (finding)",
+				"value_code": "445060000"
+			},
+			{
+				"code": "44616-1",
+				"code_name": "Pulse oximetry panel",
+				"effective_period_end": "20220215",
+				"effective_period_start": "202202010"
+			},
+			{
+				"code": "29463-7",
+				"code_name": "Body weight"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "E-mail received from patient (event)",
+				"value_code": "401270003"
+			},
+			{
+				"code": "29308-4",
+				"code_name": "diagnosis",
+				"effective_period_start": "201901010900",
+				"value": "Diabetic gangrene (disorder)",
+				"value_code": "25907005"
+			},
+			{
+				"code": "SEV",
+				"code_name": "Severity Observation",
+				"value": "Severe",
+				"value_code": "24484000"
+			},
+			{
+				"code": "75323-6",
+				"code_name": "Condition",
+				"value": "Myocardial infarction",
+				"value_code": "22298006"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Procedure contraindicated (situation)",
+				"value_code": "183932001"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Procedure contraindicated (situation)",
+				"value_code": "183932001"
+			},
+			{
+				"code": "24605-8",
+				"code_name": "Breast Mammogram diagnostic"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Carcinoma of breast",
+				"value_code": "254838004"
+			},
+			{
+				"code": "24605-8",
+				"code_name": "Breast Mammogram diagnostic",
+				"effective_period_end": "202202011100",
+				"effective_period_start": "202202011030"
+			},
+			{
+				"code": "36625-2",
+				"code_name": "Breast Mammogram",
+				"effective_date_time": "202202011800",
+				"value": "T1: Breast tumor < 2 cm in greatest dimension",
+				"value_code": "369895002"
+			},
+			{
+				"code": "24605-8",
+				"code_name": "Breast Mammogram diagnostic"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Treatment not indicated (situation)",
+				"value_code": "183964008"
+			},
+			{
+				"code": "29308-4",
+				"code_name": "diagnosis",
+				"value": "Cerebral hemorrhage (disorder)",
+				"value_code": "274100004"
+			},
+			{
+				"code": "263486008",
+				"code_name": "Rank"
+			},
+			{
+				"code": "78026-2",
+				"code_name": "Present on admission",
+				"value": "Diagnosis was present at the time of admission",
+				"value_code": "Y"
+			},
+			{
+				"code": "ASSERTION",
+				"effective_period_end": "20220201",
+				"effective_period_start": "20201215",
+				"value": "clinical trial participant",
+				"value_code": "428024001"
+			},
+			{
+				"code": "ASSERTION",
+				"effective_period_start": "202202012305",
+				"value": "Dead",
+				"value_code": "419099009"
+			},
+			{
+				"code": "64572001",
+				"code_name": "Condition",
+				"effective_period_start": "202201302305",
+				"value": "Tuberculosis",
+				"value_code": "56717001"
+			},
+			{
+				"code": "48768-6",
+				"code_name": "Payment source",
+				"effective_period_end": "20221231",
+				"effective_period_start": "20220101",
+				"value": "Medicare",
+				"value_code": "1"
+			},
+			{
+				"code": "ASSERTION",
+				"value": "Eastern Cooperative Oncology Group performance status - grade 2 (finding)",
+				"value_code": "422894000"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Carcinoma of breast",
+				"value_code": "254838004"
+			},
+			{
+				"code": "225323000",
+				"code_name": "Smoking cessation education (procedure)",
+				"effective_date_time": "202202011030",
+				"value": "Ready to stop smoking (finding)",
+				"value_code": "394872000"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Refusal of treatment by patient (situation)",
+				"value_code": "105480006"
+			},
+			{
+				"code": "4544-3",
+				"code_name": "Hematocrit"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Carcinoma of breast",
+				"value_code": "254838004"
+			},
+			{
+				"code": "4544-3",
+				"code_name": "Hematocrit [Volume Fraction] of Blood by Automated count",
+				"effective_date_time": "202202011030"
+			},
+			{
+				"code": "4544-3",
+				"code_name": "Hematocrit",
+				"effective_date_time": "202202012030"
+			},
+			{
+				"code": "4544-3",
+				"code_name": "Hematocrit"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Drug declined by patient - reason unknown (situation)",
+				"value_code": "182903008"
+			},
+			{
+				"code": "29545-1",
+				"code_name": "physical examination",
+				"value_code": "29463-7"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Overweight (finding)",
+				"value_code": "238131007"
+			},
+			{
+				"code": "29463-7",
+				"code_name": "Body weight",
+				"effective_date_time": "202202011030"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Overweight (finding)",
+				"value_code": "238131007"
+			},
+			{
+				"code": "29545-1",
+				"code_name": "physical examination",
+				"value": "Body weight",
+				"value_code": "29463-7"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Injury of colon",
+				"value_code": "125629006"
+			},
+			{
+				"code": "77301-0",
+				"code_name": "Reason care action performed or not",
+				"value": "Injury of colon",
+				"value_code": "125629006"
+			},
+			{
+				"code": "75325-1",
+				"code_name": "Symptom",
+				"effective_period_end": "20220129",
+				"effective_period_start": "20220115",
+				"value": "Shortness of breath",
+				"value_code": "233604007"
+			},
+			{
+				"code": "ASSERTION",
+				"effective_period_end": "20220201",
+				"effective_period_start": "20220101",
+				"value": "Mental Health Program",
+				"value_code": "MENTPRG"
+			},
+			{
+				"code": "444018008",
+				"code_name": "Person with characteristic related to subject of record",
+				"value": "Mother",
+				"value_code": "MTH"
+			}
+		],
+		"practice": {
+			"address": {
+				"city": "Blue Bell",
+				"country": "US",
+				"line1": "17 Daws Rd.",
+				"state": "NJ",
+				"zip": "08837"
+			},
+			"name": "Good Health Hospital",
+			"tin": "800890"
+		},
+		"procedure": [
+			{
+				"code": "360030002",
+				"code_name": "application of device",
+				"performed_period_end": "202202011130",
+				"performed_period_start": "202202011030"
+			},
+			{
+				"code": "360030002",
+				"code_name": "application of device"
+			},
+			{
+				"code": "235326000",
+				"code_name": "Right hemicolectomy",
+				"name": "Procedure, Order: Right hemicolectomy"
+			},
+			{
+				"code": "235326000",
+				"code_name": "Right hemicolectomy",
+				"name": "Procedure, Performed: Right hemicolectomy",
+				"performed_period_end": "202202011230",
+				"performed_period_start": "202202011030"
+			},
+			{
+				"code": "34896006",
+				"code_name": "incision",
+				"performed_date_time": "202202011215"
+			},
+			{
+				"code": "235326000",
+				"code_name": "Right hemicolectomy",
+				"name": "Procedure, Recommended: Right hemicolectomy"
+			}
+		],
+		"provider": [
+			{
+				"first_name": "Ann",
+				"last_name": "Quality",
+				"npi": "1234567893",
+				"qualification_code": "2.16.840.1.113883.6.101",
+				"qualification_display": "Allopathic & Osteopathic Physicians",
+				"work_phone": "tel:(555)555-1003"
+			}
+		],
+		"race": "White",
+		"race_code": "2106-3",
+		"row_id": "886fc7b2-ec9d-4365-b44a-3359d44c3db8"
+	}
+]

@@ -1,0 +1,12 @@
+{
+  {% if data.admit_source_code %}
+  "coding": [
+    {
+      "system": "{{ data.admit_source_system }}",
+      "code": "{{ data.admit_source_code }}",
+      "display": "{{ data.admit_source_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.admit_source_text }}"
+}

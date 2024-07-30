@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:hl7-org:v3 http://xreg2.nist.gov:8080/hitspValidation/schema/cdar2c32/infrastructure/cda/C32_CDA.xsd">
+   <realmCode code="US" />
+   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040" />
+   <templateId root="2.16.840.1.113883.10.20.22.1.1" extension="2015-08-01" />
+   <templateId root="2.16.840.1.113883.10.20.22.1.2" extension="2015-08-01" />
+   <id root="2.16.840.1.113883.19.5" extension="${uuid_1}" />
+   <code code="34133-9" displayName="Summarization of episode note" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" />
+   <title>Transition of Care Document</title>
+   <effectiveTime value="${activity_datetime}" />
+   <confidentialityCode code="N" />
+   <languageCode code="en-US" />
+   <recordTarget>
+      <patientRole>
+         <id extension="${ssn}" root="2.16.840.1.113883.4.1" />
+         <addr use="HP">
+            <streetAddressLine>${street_line_1}</streetAddressLine>
+            <city>${city}</city>
+            <state>${state}</state>
+            <postalCode>${zip}</postalCode>
+         </addr>
+         <telecom nullFlavor="NI" />
+         <patient>
+            <name>
+               <given>${firstname}</given>
+               <family>${lastname}</family>
+            </name>
+            <administrativeGenderCode code="${gender}" codeSystem="2.16.840.1.113883.5.1" codeSystemName="HL7 AdministrativeGender" />
+            <birthTime value="${birth_datetime}" />
+            <raceCode code="2106-3" displayName="white" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+            <ethnicGroupCode code="2186-5" displayName="non-hispanic" codeSystemName="CDC Race and Ethnicity" codeSystem="2.16.840.1.113883.6.238" />
+            <languageCommunication>
+               <languageCode code="en-US" />
+            </languageCommunication>
+         </patient>
+      </patientRole>
+   </recordTarget>
+   <author>
+      <time value="${activity_datetime}" />
+      <assignedAuthor>
+         <id nullFlavor="NA" />
+         <addr nullFlavor="NA" />
+         <telecom nullFlavor="NA" />
+      </assignedAuthor>
+   </author>
+   <custodian>
+      <assignedCustodian>
+         <representedCustodianOrganization>
+            <id extension="${org_ein}" root="2.16.840.1.113883.4.4" />
+            <name>${org_name}</name>
+            <telecom nullFlavor="NA" />
+            <addr>
+               <streetAddressLine>${org_street_line_1}</streetAddressLine>
+               <city>${org_city}</city>
+               <state>${org_state}</state>
+               <postalCode>${org_zip}</postalCode>
+            </addr>
+         </representedCustodianOrganization>
+      </assignedCustodian>
+   </custodian>
+   <documentationOf>
+      <serviceEvent classCode="PCPR">
+         <effectiveTime>
+            <low value="${activity_datetime}" />
+            <high value="${activity_datetime}" />
+         </effectiveTime>
+      </serviceEvent>
+   </documentationOf>
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <templateId root="2.16.840.1.113883.10.20.22.2.22" extension="2015-08-01" />
+               <code code="46240-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="History of encounters" />
+               <title>Encounters</title>
+               <text>
+                  <table border="1" width="100%">
+                     <thead>
+                        <tr>
+                           <th>Description</th>
+                           <th>Code</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td ID="encounters-desc-1">Office visit for pediatric care and assessment</td>
+                           <td ID="encounters-code-1">http://snomed.info/sct 3391000175108</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <entry typeCode="DRIV">
+                  <encounter classCode="ENC" moodCode="EVN">
+                     <templateId root="2.16.840.1.113883.10.20.22.4.49" />
+                     <id root="${uuid_2}" />
+                     <code code="3391000175108" codeSystem="2.16.840.1.113883.6.96" displayName="Office visit for pediatric care and assessment">
+                        <originalText>
+                           <reference value="#encounters-desc-1" />
+                        </originalText>
+                     </code>
+                     <text>
+                        <reference value="#encounters-desc-1" />
+                     </text>
+                     <effectiveTime>
+                        <low value="${activity_datetime}" />
+                        <high value="${activity_datetime}" />
+                     </effectiveTime>
+                  </encounter>
+               </entry>
+            </section>
+         </component>
+         <component>
+            <section>
+               <templateId root="2.16.840.1.113883.10.20.22.2.3.1" />
+               <templateId root="2.16.840.1.113883.10.20.22.2.3.1" extension="2015-08-01" />
+               <code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Relevant diagnostic tests and/or laboratory data" />
+               <title>Results</title>
+               <text>
+                  <table border="1">
+                     <thead>
+                        <tr>
+                           <th>Description</th>
+                           <th>Value / Unit</th>
+                           <th>Interpretation</th>
+                           <th>Reference Range</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <th colspan="4">Cervical Cancer Screening</th>
+                        </tr>
+                        <tr ID="LabResult1">
+                           <td>Cervical Cancer Screening</td>
+                           <td>Positive</td>
+                           <td>Abnormal</td>
+                           <td>Negative</td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </text>
+               <entry typeCode="DRIV">
+                  <organizer classCode="BATTERY" moodCode="EVN">
+                     <templateId root="2.16.840.1.113883.10.20.22.4.1" />
+                     <templateId root="2.16.840.1.113883.10.20.22.4.1" extension="2015-08-01" />
+                     <id root="${uuid_3}" />
+                     <code code="10524-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microscopic observation [Identifier] in Cervix by Cyto stain" />
+                     <statusCode code="completed" />
+                     <component>
+                        <observation classCode="OBS" moodCode="EVN">
+                           <templateId root="2.16.840.1.113883.10.20.22.4.2" />
+                           <templateId root="2.16.840.1.113883.10.20.22.4.2" extension="2015-08-01" />
+                           <id root="${uuid_3}" />
+                           <code code="10524-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Microscopic observation [Identifier] in Cervix by Cyto stain" />
+                           <text>
+                              <reference value="LabResult1" />
+                           </text>
+                           <statusCode code="completed" />
+                           <effectiveTime value="${activity_datetime}" />
+                           <value xsi:type="CD" code="10828004" codeSystemName="SNOMED-CT" displayName="Positive" codeSystem="2.16.840.1.113883.6.96" />
+                           <interpretationCode code="A" codeSystem="2.16.840.1.113883.5.83" />
+                           <referenceRange>
+                              <observationRange>
+                                 <text>A negative value is a normal result</text>
+                                 <value xsi:type="CD" code="260385009" codeSystemName="SNOMED-CT" displayName="Negative" codeSystem="2.16.840.1.113883.6.96" />
+                                 <interpretationCode code="N" codeSystem="2.16.840.1.113883.5.83" />
+                              </observationRange>
+                           </referenceRange>
+                        </observation>
+                     </component>
+                  </organizer>
+               </entry>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</ClinicalDocument>

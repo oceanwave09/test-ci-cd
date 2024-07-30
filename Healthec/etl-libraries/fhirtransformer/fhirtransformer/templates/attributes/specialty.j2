@@ -1,0 +1,30 @@
+[
+  {%- if data.specialty_code or data.specialty_display -%}
+  {
+    {%- if data.specialty_code -%}
+    "coding": [
+      {
+        "system": "http://nucc.org/provider-taxonomy",
+        "code": "{{ data.specialty_code }}",
+        "display": "{{ data.specialty_display }}"
+      } 
+    ],
+  {%- endif %}
+  "text": "{{ data.specialty_display }}"
+  }
+  {%- endif %}
+  {%- if (data.specialty_code or data.specialty_display) and (data.secondary_specialty_code or data.secondary_specialty_display) -%}
+  ,
+  {%- endif %}
+  {%- if data.secondary_specialty_code or data.secondary_specialty_display -%}
+  {
+    "coding": [
+      {
+        "system": "http://nucc.org/provider-taxonomy",
+        "code": "{{ data.secondary_specialty_code }}",
+        "display": "{{ data.secondary_specialty_display }}"
+      }
+    ]
+  }
+  {%- endif %}
+]

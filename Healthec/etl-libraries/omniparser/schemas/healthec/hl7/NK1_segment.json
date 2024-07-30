@@ -1,0 +1,992 @@
+{
+    "parser_settings": {
+      "version": "omni.2.1",
+      "file_format_type": "edi"
+    },
+    "file_declaration": {
+      "segment_delimiter": "\n",
+      "element_delimiter": "|",
+      "component_delimiter": "^",
+      "segment_declarations": [
+        {
+          "min": 1,
+          "max": 1,
+          "is_target": true,
+          "name": "Message-header",
+          "type": "segment_group",
+          "child_segments": [
+            {
+              "name": "NK1",
+              "min": 0,
+              "max": -1,
+              "elements": [
+                {
+                  "name": "set_id",
+                  "index": 1
+                },
+                {
+                  "name": "family_name",
+                  "index": 2,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "given_name",
+                  "index": 2,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "middle_initials",
+                  "index": 2,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "suffix_name",
+                  "index": 2,
+                  "component_index": 4,
+                  "default": ""
+                },
+                {
+                  "name": "preffix_name",
+                  "index": 2,
+                  "component_index": 5,
+                  "default": ""
+                },
+                {
+                  "name": "degree",
+                  "index": 2,
+                  "component_index": 6,
+                  "default": ""
+                },
+                {
+                  "name": "name_type_code",
+                  "index": 2,
+                  "component_index": 7,
+                  "default": ""
+                },
+                {
+                  "name": "name_representation_code",
+                  "index": 2,
+                  "component_index": 8,
+                  "default": ""
+                },
+                {
+                  "name": "name_context",
+                  "index": 2,
+                  "component_index": 9,
+                  "default": ""
+                },
+                {
+                  "name": "name_validity_range",
+                  "index": 2,
+                  "component_index": 10,
+                  "default": ""
+                },
+                {
+                  "name": "name_assembly_order",
+                  "index": 2,
+                  "component_index": 11,
+                  "default": ""
+                },
+                {
+                  "name": "effective_date",
+                  "index": 2,
+                  "component_index": 12,
+                  "default": ""
+                },
+                {
+                  "name": "expiration_date",
+                  "index": 2,
+                  "component_index": 13,
+                  "default": ""
+                },
+                {
+                  "name": "professional_suffix",
+                  "index": 2,
+                  "component_index": 14,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_identifier",
+                  "index": 3,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_text",
+                  "index": 3,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_coding_system",
+                  "index": 3,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_alternate_identifier",
+                  "index": 3,
+                  "component_index": 4,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_alternate_text",
+                  "index": 3,
+                  "component_index": 5,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_alternate_coding_system",
+                  "index": 3,
+                  "component_index": 6,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_coding_system_version_id",
+                  "index": 3,
+                  "component_index": 7,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_alternate_coding_system_version_id",
+                  "index": 3,
+                  "component_index": 8,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_original_text",
+                  "index": 3,
+                  "component_index": 9,
+                  "default": ""
+                },
+                {
+                  "name": "relationship_second_alternate_identifier",
+                  "index": 3,
+                  "component_index": 10,
+                  "default": ""
+                },
+                {
+                  "name": "street_address",
+                  "index": 4,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "other_designation",
+                  "index": 4,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "city",
+                  "index": 4,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "state",
+                  "index": 4,
+                  "component_index": 4,
+                  "default": ""
+                },
+                {
+                  "name": "zip",
+                  "index": 4,
+                  "component_index": 5,
+                  "default": ""
+                },
+                {
+                  "name": "country",
+                  "index": 4,
+                  "component_index": 6,
+                  "default": ""
+                },
+                {
+                  "name": "address_type",
+                  "index": 4,
+                  "component_index": 7,
+                  "default": ""
+                },
+                {
+                  "name": "other_geographic_destination",
+                  "index": 4,
+                  "component_index": 8,
+                  "default": ""
+                },
+                {
+                  "name": "country_code",
+                  "index": 4,
+                  "component_index": 9,
+                  "default": ""
+                },
+                {
+                  "name": "census_tract",
+                  "index": 4,
+                  "component_index": 10,
+                  "default": ""
+                },
+                {
+                  "name": "address_representation_code",
+                  "index": 4,
+                  "component_index": 11,
+                  "default": ""
+                },
+                {
+                  "name": "address_validity_range",
+                  "index": 4,
+                  "component_index": 12,
+                  "default": ""
+                },
+                {
+                  "name": "address_effective_code",
+                  "index": 4,
+                  "component_index": 13,
+                  "default": ""
+                },
+                {
+                  "name": "address_expiration_code",
+                  "index": 4,
+                  "component_index": 14,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home",
+                  "index": 5,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_code",
+                  "index": 5,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_equipment_type",
+                  "index": 5,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_email_address",
+                  "index": 5,
+                  "component_index": 4,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_country_code",
+                  "index": 5,
+                  "component_index": 5,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_city_code",
+                  "index": 5,
+                  "component_index": 6,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_local_number",
+                  "index": 5,
+                  "component_index": 7,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_extension",
+                  "index": 5,
+                  "component_index": 8,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_any_text",
+                  "index": 5,
+                  "component_index": 9,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_extension_prefix",
+                  "index": 5,
+                  "component_index": 10,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_speed_dial_code",
+                  "index": 5,
+                  "component_index": 11,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_home_unformated_number",
+                  "index": 5,
+                  "component_index": 12,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_business",
+                  "index": 6,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_business_code",
+                  "index": 6,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_business_equipment_type",
+                  "index": 6,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_email_address",
+                  "index": 6,
+                  "component_index": 4,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_country_code",
+                  "index": 6,
+                  "component_index": 5,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_city_code",
+                  "index": 6,
+                  "component_index": 6,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_local_number",
+                  "index": 6,
+                  "component_index": 7,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_extension",
+                  "index": 6,
+                  "component_index": 8,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_any_text",
+                  "index": 6,
+                  "component_index": 9,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_extension_prefix",
+                  "index": 6,
+                  "component_index": 10,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_speed_dial_code",
+                  "index": 6,
+                  "component_index": 11,
+                  "default": ""
+                },
+                {
+                  "name": "phone_number_bussiness_unformated_number",
+                  "index": 6,
+                  "component_index": 12,
+                  "default": ""
+                },
+                {
+                  "name": "contact_role_identifier",
+                  "index": 7,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "contact_role_text",
+                  "index": 7,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "contact_role_coding_system",
+                  "index": 7,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "contact_role_alternate_identifier",
+                  "index": 7,
+                  "component_index": 4,
+                  "default": ""
+                },
+                {
+                  "name": "contact_role_alternate_text",
+                  "index": 7,
+                  "component_index": 5,
+                  "default": ""
+                },
+                {
+                  "name": "contact_role_alternate_coding_system",
+                  "index": 7,
+                  "component_index": 6,
+                  "default": ""
+                },
+                {
+                  "name": "start_date",
+                  "index": 8,
+                  "default": ""
+                },
+                {
+                  "name": "end_date",
+                  "index": 9,
+                  "default": ""
+                },
+                {
+                  "name": "next_of_kin_associated_parties_job_title",
+                  "index": 10,
+                  "default": ""
+                },
+                {
+                  "name": "next_of_kin_associated_parties_job_code",
+                  "index": 11,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "next_of_kin_associated_parties_job_class",
+                  "index": 11,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "next_of_kin_associated_parties_job_description",
+                  "index": 11,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "next_of_kin_associated_parties_employee_number",
+                  "index": 12,
+                  "default": ""
+                },
+                {
+                  "name": "organization_name",
+                  "index": 13,
+                  "default": ""
+                },
+                {
+                  "name": "marital_status",
+                  "index": 14,
+                  "default": ""
+                },
+                {
+                  "name": "administrative_sex",
+                  "index": 15,
+                  "default": ""
+                },
+                {
+                  "name": "date_time_of_birth",
+                  "index": 16,
+                  "default": ""
+                },
+                {
+                  "name": "living_dependency",
+                  "index": 17,
+                  "default": ""
+                },
+                {
+                  "name": "ambulatory_status",
+                  "index": 18,
+                  "default": ""
+                },
+                {
+                  "name": "citizenship",
+                  "index": 19,
+                  "default": ""
+                },
+                {
+                  "name": "primary_language",
+                  "index": 20,
+                  "default": ""
+                },
+                {
+                  "name": "living_arrangement",
+                  "index": 21,
+                  "default": ""
+                },
+                {
+                  "name": "publicity_identifier",
+                  "index": 22,
+                  "component_index": 1,
+                  "default": ""
+                },
+                {
+                  "name": "publicity_text",
+                  "index": 22,
+                  "component_index": 2,
+                  "default": ""
+                },
+                {
+                  "name": "publicity_coding_system",
+                  "index": 22,
+                  "component_index": 3,
+                  "default": ""
+                },
+                {
+                  "name": "publicity_alternate_identifier",
+                  "index": 22,
+                  "component_index": 4,
+                  "default": ""
+                },
+                {
+                  "name": "publicity_alternate_text",
+                  "index": 22,
+                  "component_index": 5,
+                  "default": ""
+                },
+                {
+                  "name": "publicity_alternate_coding_system",
+                  "index": 22,
+                  "component_index": 6,
+                  "default": ""
+                },
+                {
+                  "name": "publicity_system_version_id",
+                  "index": 22,
+                  "component_index": 7,
+                  "default": ""
+                },
+                {
+                  "name": "protection_indicator",
+                  "index": 23,
+                  "default": ""
+                },
+                {
+                  "name": "student_indicator",
+                  "index": 24,
+                  "default": ""
+                },
+                {
+                  "name": "religion_identifier",
+                  "index": 25,
+                  "default": ""
+                },
+                {
+                  "name": "mothers_maiden_name",
+                  "index": 26,
+                  "default": ""
+                },
+                {
+                  "name": "nationality_identifier",
+                  "index": 27,
+                  "default": ""
+                },
+                {
+                  "name": "ethnic_group_identifier",
+                  "index": 28,
+                  "default": ""
+                },
+                {
+                  "name": "contact_reason_identifier",
+                  "index": 29,
+                  "default": ""
+                },
+                {
+                  "name": "contact_persons_name",
+                  "index": 30,
+                  "default": ""
+                },
+                {
+                  "name": "contact_persons_telephone_number",
+                  "index": 31,
+                  "default": ""
+                },
+                {
+                  "name": "contact_persons_street_address",
+                  "index": 32,
+                  "default": ""
+                },
+                {
+                  "name": "next_of_kin_associated_parties_identifiers",
+                  "index": 33,
+                  "default": ""
+                },
+                {
+                  "name": "job_status",
+                  "index": 34,
+                  "default": ""
+                },
+                {
+                  "name": "race_identifier",
+                  "index": 35,
+                  "default": ""
+                },
+                {
+                  "name": "handicap",
+                  "index": 36,
+                  "default": ""
+                },
+                {
+                  "name": "contact_person_social_security_number",
+                  "index": 37,
+                  "default": ""
+                },
+                {
+                  "name": "next_of_kin_birth_place",
+                  "index": 38,
+                  "default": ""
+                },
+                {
+                  "name": "vip_indicator",
+                  "index": 39,
+                  "default": ""
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "transform_declarations": {
+      "FINAL_OUTPUT": {
+        "object": {
+          "NK1": {
+            "array":[
+              {
+                "xpath": "NK1",
+                "object": {
+                  "set_id": {
+                    "xpath": "set_id"
+                  },
+                  "family_name": {
+                    "xpath": "family_name"
+                  },
+                  "given_name": {
+                    "xpath": "given_name"
+                  },
+                  "middle_initials": {
+                    "xpath": "middle_initials"
+                  },
+                  "preffix_name": {
+                    "xpath": "preffix_name"
+                  },
+                  "suffix_name": {
+                    "xpath": "suffix_name"
+                  },
+                  "degree": {
+                    "xpath": "degree"
+                  },
+                  "name_type_code": {
+                    "xpath": "name_type_code"
+                  },
+                  "name_representation_code": {
+                    "xpath": "name_representation_code"
+                  },
+                  "name_context": {
+                    "xpath": "name_context"
+                  },
+                  "name_validity_range": {
+                    "xpath": "name_validity_range"
+                  },
+                  "name_assembly_order": {
+                    "xpath": "name_assembly_order"
+                  },
+                  "effective_date": {
+                    "xpath": "effective_date"
+                  },
+                  "expiration_date": {
+                    "xpath": "expiration_date"
+                  },
+                  "professional_suffix": {
+                    "xpath": "professional_suffix"
+                  },
+                  "relationship_identifier": {
+                    "xpath": "relationship_identifier"
+                  },
+                  "relationship_text": {
+                    "xpath": "relationship_text"
+                  },
+                  "relationship_coding_system": {
+                    "xpath": "relationship_coding_system"
+                  },
+                  "relationship_alternate_identifier": {
+                    "xpath": "relationship_alternate_identifier"
+                  },
+                  "relationship_alternate_text": {
+                    "xpath": "relationship_alternate_text"
+                  },
+                  "relationship_alternate_coding_system": {
+                    "xpath": "relationship_alternate_coding_system"
+                  },
+                  "relationship_coding_system_version_id": {
+                    "xpath": "relationship_coding_system_version_id"
+                  },
+                  "relationship_alternate_coding_system_version_id": {
+                    "xpath": "relationship_alternate_coding_system_version_id"
+                  },
+                  "relationship_original_text": {
+                    "xpath": "relationship_original_text"
+                  },
+                  "relationship_second_alternate_identifier": {
+                    "xpath": "relationship_second_alternate_identifier"
+                  },
+                  "street_address": {
+                    "xpath": "street_address"
+                  },
+                  "other_designation": {
+                    "xpath": "other_designation"
+                  },
+                  "city": {
+                    "xpath": "city"
+                  },
+                  "state": {
+                    "xpath": "state"
+                  },
+                  "zip": {
+                    "xpath": "zip"
+                  },
+                  "country": {
+                    "xpath": "country"
+                  },
+                  "address_type": {
+                    "xpath": "address_type"
+                  },
+                  "other_geographic_destination": {
+                    "xpath": "other_geographic_destination"
+                  },
+                  "country_code": {
+                    "xpath": "country_code"
+                  },
+                  "census_tract": {
+                    "xpath": "census_tract"
+                  },
+                  "address_representation_code": {
+                    "xpath": "address_representation_code"
+                  },
+                  "address_validity_range": {
+                    "xpath": "address_validity_range"
+                  },
+                  "address_effective_code": {
+                    "xpath": "address_effective_code"
+                  },
+                  "address_expiration_code": {
+                    "xpath": "address_expiration_code"
+                  },
+                  "phone_number_home": {
+                    "xpath": "phone_number_home"
+                  },
+                  "phone_number_home_code": {
+                    "xpath": "phone_number_home_code"
+                  },
+                  "phone_number_home_email_address": {
+                    "xpath": "phone_number_home_email_address"
+                  },
+                  "phone_number_home_country_code": {
+                    "xpath": "phone_number_home_country_code"
+                  },
+                  "phone_number_home_city_code": {
+                    "xpath": "phone_number_home_city_code"
+                  },
+                  "phone_number_home_local_number": {
+                    "xpath": "phone_number_home_local_number"
+                  },
+                  "phone_number_home_extension": {
+                    "xpath": "phone_number_home_extension"
+                  },
+                  "phone_number_home_any_text": {
+                    "xpath": "phone_number_home_any_text"
+                  },
+                  "phone_number_home_extension_prefix": {
+                    "xpath": "phone_number_home_extension_prefix"
+                  },
+                  "phone_number_home_speed_dial_code": {
+                    "xpath": "phone_number_home_speed_dial_code"
+                  },
+                  "phone_number_home_unformated_number": {
+                    "xpath": "phone_number_home_unformated_number"
+                  },
+                  "phone_number_business": {
+                    "xpath": "phone_number_business"
+                  },
+                  "phone_number_home_equipment_type": {
+                    "xpath": "phone_number_home_equipment_type"
+                  },
+                  "phone_number_business_code": {
+                    "xpath": "phone_number_business_code"
+                  },
+                  "phone_number_business_equipment_type": {
+                    "xpath": "phone_number_business_equipment_type"
+                  },
+                  "phone_number_bussiness_email_address": {
+                    "xpath": "phone_number_bussiness_email_address"
+                  },
+                  "phone_number_bussiness_country_code": {
+                    "xpath": "phone_number_bussiness_country_code"
+                  },
+                  "phone_number_bussiness_city_code": {
+                    "xpath": "phone_number_bussiness_city_code"
+                  },
+                  "phone_number_bussiness_local_number": {
+                    "xpath": "phone_number_bussiness_local_number"
+                  },
+                  "phone_number_bussiness_extension": {
+                    "xpath": "phone_number_bussiness_extension"
+                  },
+                  "phone_number_bussiness_any_text": {
+                    "xpath": "phone_number_bussiness_any_text"
+                  },
+                  "phone_number_bussiness_extension_prefix": {
+                    "xpath": "phone_number_bussiness_extension_prefix"
+                  },
+                  "phone_number_bussiness_speed_dial_code": {
+                    "xpath": "phone_number_bussiness_speed_dial_code"
+                  },
+                  "phone_number_bussiness_unformated_number": {
+                    "xpath": "phone_number_bussiness_unformated_number"
+                  },
+                  "contact_role_identifier": {
+                    "xpath": "contact_role_identifier"
+                  },
+                  "contact_role_text": {
+                    "xpath": "contact_role_text"
+                  },
+                  "contact_role_coding_system": {
+                    "xpath": "contact_role_coding_system"
+                  },
+                  "contact_role_alternate_identifier": {
+                    "xpath": "contact_role_alternate_identifier"
+                  },
+                  "contact_role_alternate_text": {
+                    "xpath": "contact_role_alternate_text"
+                  },
+                  "contact_role_alternate_coding_system": {
+                    "xpath": "contact_role_alternate_coding_system"
+                  },
+                  "start_date": {
+                    "xpath": "start_date"
+                  },
+                  "end_date": {
+                    "xpath": "end_date"
+                  },
+                  "next_of_kin_associated_parties_job_title": {
+                    "xpath": "next_of_kin_associated_parties_job_title"
+                  },
+                  "next_of_kin_associated_parties_job_code": {
+                    "xpath": "next_of_kin_associated_parties_job_code"
+                  },
+                  "next_of_kin_associated_parties_job_class": {
+                    "xpath": "next_of_kin_associated_parties_job_class"
+                  },
+                  "next_of_kin_associated_parties_job_description": {
+                    "xpath": "next_of_kin_associated_parties_job_description"
+                  },
+                  "next_of_kin_associated_parties_employee_number": {
+                    "xpath": "next_of_kin_associated_parties_employee_number"
+                  },
+                  "organization_name": {
+                    "xpath": "organization_name"
+                  },
+                  "marital_status": {
+                    "xpath": "marital_status"
+                  },
+                  "administrative_sex": {
+                    "xpath": "administrative_sex"
+                  },
+                  "date_time_of_birth": {
+                    "xpath": "date_time_of_birth"
+                  },
+                  "living_dependency": {
+                    "xpath": "living_dependency"
+                  },
+                  "ambulatory_status": {
+                    "xpath": "ambulatory_status"
+                  },
+                  "citizenship": {
+                    "xpath": "citizenship"
+                  },
+                  "primary_language": {
+                    "xpath": "primary_language"
+                  },
+                  "living_arrangement": {
+                    "xpath": "living_arrangement"
+                  },
+                  "publicity_identifier": {
+                    "xpath": "publicity_identifier"
+                  },
+                  "publicity_text": {
+                    "xpath": "publicity_text"
+                  },
+                  "publicity_coding_system": {
+                    "xpath": "publicity_coding_system"
+                  },
+                  "publicity_alternate_identifier": {
+                    "xpath": "publicity_alternate_identifier"
+                  },
+                  "publicity_alternate_text": {
+                    "xpath": "publicity_alternate_text"
+                  },
+                  "publicity_alternate_coding_system": {
+                    "xpath": "publicity_alternate_coding_system"
+                  },
+                  "publicity_system_version_id": {
+                    "xpath": "publicity_system_version_id"
+                  },
+                  "protection_indicator": {
+                    "xpath": "protection_indicator"
+                  },
+                  "student_indicator": {
+                    "xpath": "student_indicator"
+                  },
+                  "religion_identifier": {
+                    "xpath": "religion_identifier"
+                  },
+                  "mothers_maiden_name": {
+                    "xpath": "mothers_maiden_name"
+                  },
+                  "nationality_identifier": {
+                    "xpath": "nationality_identifier"
+                  },
+                  "ethnic_group_identifier": {
+                    "xpath": "ethnic_group_identifier"
+                  },
+                  "contact_reason_identifier": {
+                    "xpath": "contact_reason_identifier"
+                  },
+                  "contact_persons_name": {
+                    "xpath": "contact_persons_name"
+                  },
+                  "contact_persons_telephone_number": {
+                    "xpath": "contact_persons_telephone_number"
+                  },
+                  "contact_persons_street_address": {
+                    "xpath": "contact_persons_street_address"
+                  },
+                  "next_of_kin_associated_parties_identifiers": {
+                    "xpath": "next_of_kin_associated_parties_identifiers"
+                  },
+                  "job_status": {
+                    "xpath": "job_status"
+                  },
+                  "race_identifier": {
+                    "xpath": "race_identifier"
+                  },
+                  "handicap": {
+                    "xpath": "handicap"
+                  },
+                  "contact_person_social_security_number": {
+                    "xpath": "contact_person_social_security_number"
+                  },
+                  "next_of_kin_birth_place": {
+                    "xpath": "next_of_kin_birth_place"
+                  },
+                  "vip_indicator": {
+                    "xpath": "vip_indicator"
+                  }
+                }
+              }
+        ]}
+        }
+      }
+    }
+  }

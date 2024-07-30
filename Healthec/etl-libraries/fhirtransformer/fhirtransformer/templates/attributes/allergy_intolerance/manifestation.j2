@@ -1,0 +1,16 @@
+[
+  {%- if data.manifestation_code or data.manifestation_text -%}
+  {
+    {% if data.manifestation_code %}
+    "coding": [
+      {
+        "system": "{{ data.manifestation_system }}",
+        "code": "{{ data.manifestation_code }}",
+        "display": "{{ data.manifestation_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.manifestation_text }}"
+  }
+  {%- endif %}
+]

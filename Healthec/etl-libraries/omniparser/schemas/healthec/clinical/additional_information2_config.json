@@ -1,0 +1,326 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "medication_reconciliation_date",
+            "index": 8
+          },
+          {
+            "name": "medication_reconciliation_type",
+            "index": 9
+          },
+          {
+            "name": "bp_screen_exclusion",
+            "index": 10
+          },
+          {
+            "name": "bp_follow_up_plan",
+            "index": 11
+          },
+          {
+            "name": "bmi_screen_exclusion",
+            "index": 12
+          },
+          {
+            "name": "bmi_follow_plan",
+            "index": 13
+          },
+          {
+            "name": "hf_blocker_theraphy_exclusion",
+            "index": 14
+          },
+          {
+            "name": "cad_ldl_c_exclusion",
+            "index": 15
+          },
+          {
+            "name": "cad_ace_arb_exclusion",
+            "index": 16
+          },
+          {
+            "name": "attestation_pat_cur_medications",
+            "index": 17
+          },
+          {
+            "name": "medication_document_exception",
+            "index": 18
+          },
+          {
+            "name": "mental_health_exclusion",
+            "index": 19
+          },
+          {
+            "name": "phq_9_score",
+            "index": 20
+          },
+          {
+            "name": "phq_9_date",
+            "index": 21
+          },
+          {
+            "name": "eye_exam_result",
+            "index": 22
+          },
+          {
+            "name": "eye_exam_date",
+            "index": 23
+          },
+          {
+            "name": "rendering_doctor_npi",
+            "index": 24
+          },
+          {
+            "name": "rendering_doctor_lastname",
+            "index": 25
+          },
+          {
+            "name": "rendering_doctor_firstname",
+            "index": 26
+          },
+          {
+            "name": "code",
+            "index": 27
+          },
+          {
+            "name": "code_system",
+            "index": 28
+          },
+          {
+            "name": "suicide_risk_assessment_date",
+            "index": 29
+          },
+          {
+            "name": "alcohol_use_screening_date",
+            "index": 30
+          },
+          {
+            "name": "alcohol_use_screening_result",
+            "index": 31
+          },
+          {
+            "name": "alcohol_counsiling_followup_date",
+            "index": 32
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "medication_reconciliation_date": {
+          "xpath": "medication_reconciliation_date"
+        },
+        "medication_reconciliation_type": {
+          "xpath": "medication_reconciliation_type"
+        },
+        "bp_screen_exclusion": {
+          "xpath": "bp_screen_exclusion"
+        },
+        "bp_follow_up_plan": {
+          "xpath": "bp_follow_up_plan"
+        },
+        "bmi_screen_exclusion": {
+          "xpath": "bmi_screen_exclusion"
+        },
+        "bmi_follow_plan": {
+          "xpath": "bmi_follow_plan"
+        },
+        "hf_blocker_theraphy_exclusion": {
+          "xpath": "hf_blocker_theraphy_exclusion"
+        },
+        "cad_ldl_c_exclusion": {
+          "xpath": "cad_ldl_c_exclusion"
+        },
+        "cad_ace_arb_exclusion": {
+          "xpath": "cad_ace_arb_exclusion"
+        },
+        "attestation_pat_cur_medications": {
+          "xpath": "attestation_pat_cur_medications"
+        },
+        "medication_document_exception": {
+          "xpath": "medication_document_exception"
+        },
+        "mental_health_exclusion": {
+          "xpath": "mental_health_exclusion"
+        },
+        "phq_9_score": {
+          "xpath": "phq_9_score"
+        },
+        "phq_9_date": {
+          "xpath": "phq_9_date"
+        },
+        "eye_exam_result": {
+          "xpath": "eye_exam_result"
+        },
+        "eye_exam_date": {
+          "xpath": "eye_exam_date"
+        },
+        "rendering_doctor_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_npi"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_lastname": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_lastname"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_firstname": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_firstname"
+              }
+            ]
+          }
+        },
+        "code": {
+          "xpath": "code"
+        },
+        "code_system": {
+          "xpath": "code_system"
+        },
+        "suicide_risk_assessment_date": {
+          "xpath": "suicide_risk_assessment_date"
+        },
+        "alcohol_use_screening_date": {
+          "xpath": "alcohol_use_screening_date"
+        },
+        "alcohol_use_screening_result": {
+          "xpath": "alcohol_use_screening_result"
+        },
+        "alcohol_counsiling_followup_date": {
+          "xpath": "alcohol_counsiling_followup_date"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+batch_type,First Name,Last Name,MRN/ID,YEAR of Birth,Race,Ethnicity,Language,years_US,total_income,Insurance,ins_high_det,Maritial,Family_size,Family_BChistory(1-3),HX_Breast_Cancer,BRCA
+1,First26351,Last26351,26351,1990,4,2,3,6,3,7,1,2,2,1,1,1
+1,First26352,Last26352,26352,1978,3,1,1,3,5,6,1,4,2,1,1,1
+1,First26353,Last26353,26353,1957,5,2,4,5,2,7,1,2,2,1,1,1

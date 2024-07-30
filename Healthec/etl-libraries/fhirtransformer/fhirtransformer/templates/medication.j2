@@ -1,0 +1,16 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "status":"{{ data.status }}",
+  "code": {% include "attributes/medication/code.j2" %},
+  "form": {% include "attributes/medication/form.j2" %},
+  "ingredient": {% include "attributes/medication/ingredient.j2" %},
+  "batch": {% include "attributes/medication/batch.j2" %}
+{% endblock %}

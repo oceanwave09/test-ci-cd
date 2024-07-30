@@ -1,0 +1,32 @@
+{
+  "status": "active",
+  "statusHistory": [
+    {
+      "status": "planned",
+      "period": {
+        "start": "2014-09-01",
+        "end": "2014-09-14"
+      }
+    },
+    {
+      "status": "active",
+      "period": {
+        "start": "2014-09-15",
+        "end": "2014-09-21"
+      }
+    },
+    {
+      "status": "onhold",
+      "period": {
+        "start": "2014-09-22",
+        "end": "2014-09-24"
+      }
+    },
+    {
+      "status": "active",
+      "period": {
+        "start": "2014-09-25"
+      }
+    }
+  ]
+}

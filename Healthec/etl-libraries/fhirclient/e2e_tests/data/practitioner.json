@@ -1,0 +1,47 @@
+{
+    "resourceType": "Practitioner",
+    "identifier": [
+      {
+        "type": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+              "code": "NPI"
+            }
+          ]
+        },
+        "system": "http://hl7.org/fhir/sid/us-npi",
+        "value": "${npi}"
+      }
+    ],
+    "name": [
+      {
+        "given": [
+          "Adam"
+        ],
+        "family": "Careful",
+        "prefix": [
+          "Dr"
+        ]
+      }
+    ],
+    "active": true,
+    "address": [
+      {
+        "use": "home",
+        "city": "PleasantVille",
+        "line": [
+          "534 Erewhon St"
+        ],
+        "state": "WI",
+        "postalCode": "3999"
+      }
+    ],
+    "telecom": [
+      {
+        "system": "email",
+        "value": "${emailuser}@mail.com",
+        "use": "work"
+      }
+    ]
+  }

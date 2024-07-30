@@ -1,0 +1,11 @@
+{
+  {%- if data.effective_period_start -%}
+  "start": "{{ data.effective_period_start }}"
+  {%- endif %}
+  {%- if data.effective_period_start and data.effective_period_end -%}
+  ,
+  {%- endif -%}
+  {%- if data.effective_period_end -%}
+  "end": "{{ data.effective_period_end }}"
+  {%- endif %}
+}

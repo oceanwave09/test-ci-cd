@@ -1,0 +1,22 @@
+{
+  "type": {
+    {% if data.payee_type_code %}
+    "coding": [
+      {
+        "system": "{{ data.payee_type_system }}",
+        "code": "{{ data.payee_type_code }}",
+        "display": "{{ data.payee_type_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.payee_type_text }}"
+  },
+  "party": {
+    {% if data.payee_practitioner_id %}
+    "reference": "Practitioner/{{ data.payee_practitioner_id }}"
+    {%- endif %}
+    {% if data.payee_organization_id %}
+    "reference": "Organization/{{ data.payee_organization_id }}"
+    {%- endif %}
+  } 
+}

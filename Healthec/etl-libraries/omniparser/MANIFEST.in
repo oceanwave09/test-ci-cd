@@ -1,0 +1,2 @@
+include omniparser bin/op
+recursive-include omniparser schemas/*.json

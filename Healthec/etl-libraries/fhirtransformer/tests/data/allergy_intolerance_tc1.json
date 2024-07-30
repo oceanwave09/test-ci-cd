@@ -1,0 +1,18 @@
+{
+  "source_id": "8576713",
+  "clinical_status": "active",
+  "verification_status": "confirmed",
+  "category": "medication",
+  "criticality": "high",
+  "code": "7980",
+  "code_display": "Penicillin G",
+  "code_system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "recorded_date_time": "2010-03-01",
+  "practitioner_id": "2bb088a4-5259-47b2-8d0b-8d67d4af8fca",
+  "patient_id": "dda84174-22dc-4af5-a5f0-2e9f828365c8",
+  "onset_start_date": "2015-01-17T16:00:00+10:00",
+  "onset_end_date": "2015-01-17T16:30:00+10:00",
+  "manifestation_code": "247472004",
+  "manifestation_display": "Hives",
+  "manifestation_system": "http://snomed.info/sct"
+}

@@ -1,0 +1,20 @@
+{% if data.value_boolean %}
+"valueBoolean": {{ data.value_boolean }}
+{% elif data.value_code %}
+"valueCode": "{{ data.value_code }}"
+{% elif data.value_coding %}
+"valueCoding": {
+    "system": "{{ data.value_coding_system }}",
+    "code": "{{ data.value_coding }}",
+    "display": "{{ data.value_coding_display }}"
+}
+{% elif data.value_integer %}
+"valueInteger": {{ data.value_integer }}
+{% elif data.value_period_start or data.value_period_end %}
+"valuePeriod": {
+    "start": "{{ data.value_period_start }}",
+    "end": "{{ data.value_period_end }}"
+}
+{% else %}
+"valueString": "{{ data.value }}"
+{%- endif %}

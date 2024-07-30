@@ -1,0 +1,81 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "run_date",
+            "start_pos": 6,
+            "length": 8
+          },
+          {
+            "name": "payment_date",
+            "start_pos": 14,
+            "length": 6
+          },
+          {
+            "name": "beneficiary_id",
+            "start_pos": 20,
+            "length": 41
+          },
+          {
+            "name": "hospice",
+            "start_pos": 61,
+            "length": 6
+          },
+          {
+            "name": "long_term_institutionalized_flag",
+            "start_pos": 67,
+            "length": 77
+          },
+          {
+            "name": "unknown_field_1",
+            "start_pos": 144,
+            "length": 48
+          },
+          {
+            "name": "original_reason_for_entitlement_code",
+            "start_pos": 192,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "run_date": {
+          "xpath": "run_date"
+        },
+        "payment_date": {
+          "xpath": "payment_date"
+        },
+        "beneficiary_id": {
+          "xpath": "beneficiary_id"
+        },
+        "hospice": {
+          "xpath": "hospice"
+        },
+        "long_term_institutionalized_flag": {
+          "xpath": "long_term_institutionalized_flag"
+        },
+        "unknown_field_1": {
+          "xpath": "unknown_field_1"
+        },
+        "original_reason_for_entitlement_code": {
+          "xpath": "original_reason_for_entitlement_code"
+        }
+      }
+    }
+  }
+}

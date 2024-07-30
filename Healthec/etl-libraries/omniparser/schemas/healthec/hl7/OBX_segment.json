@@ -1,0 +1,541 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "OBX",
+            "min": 1,
+            "max": -1,
+            "elements": [
+              {
+                "name": "set_id",
+                "index": 1
+              },
+              {
+                "name": "value_type",
+                "index": 2
+              },
+              {
+                "name": "observation_identifier",
+                "index": 3,
+                "component_index": 1
+              },
+              {
+                "name": "observation_identifier_text",
+                "index": 3,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "observation_identifier_system",
+                "index": 3,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "observation_alternate_identifier",
+                "index": 3,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "observation_alternate_text",
+                "index": 3,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "observation_alternate_coding_system",
+                "index": 3,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "observation_sub_identifier",
+                "index": 4
+              },
+              {
+                "name": "observation_value",
+                "index": 5
+              },
+              {
+                "name": "units",
+                "index": 6
+              },
+              {
+                "name": "reference_range",
+                "index": 7
+              },
+              {
+                "name": "abnormal_flags",
+                "index": 8
+              },
+              {
+                "name": "probability",
+                "index": 9
+              },
+              {
+                "name": "nature_of_abnormal_test",
+                "index": 10
+              },
+              {
+                "name": "observation_result_status",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "effective_date_of_reference_range",
+                "index": 12,
+                "default": ""
+              },
+              {
+                "name": "user_defined_access_checks",
+                "index": 13,
+                "default": ""
+              },
+              {
+                "name": "date_time_of_the_observation",
+                "index": 14,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "observation_degree_of_precision",
+                "index": 14,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "producers_identifier",
+                "index": 15,
+                "component_index": 1
+              },
+              {
+                "name": "producers_identifier_text",
+                "index": 15,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "producers_identifier_system",
+                "index": 15,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "producers_alternate_identifier",
+                "index": 15,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "producers_alternate_text",
+                "index": 15,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "producers_alternate_coding_system",
+                "index": 15,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_identifier",
+                "index": 16,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_family_name",
+                "index": 16,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_given_name",
+                "index": 16,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_initial",
+                "index": 16,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_suffix",
+                "index": 16,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_prefix",
+                "index": 16,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_degree",
+                "index": 16,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_source_table",
+                "index": 16,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_assigning_authority",
+                "index": 16,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_type_code",
+                "index": 16,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_identifier_digit",
+                "index": 16,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_digit_scheme",
+                "index": 16,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_identidier_type_code",
+                "index": 16,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_assigning_facility",
+                "index": 16,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_representation_code",
+                "index": 16,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_name_context",
+                "index": 16,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_name_validity_range",
+                "index": 16,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_name_assembly_order",
+                "index": 16,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_effective_date",
+                "index": 16,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_expiration_date",
+                "index": 16,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_professional_suffix",
+                "index": 16,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_assigning_jurisdiction",
+                "index": 16,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "responsible_observer_Assigning_agency_or_department",
+                "index": 16,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "observation_method_identifier",
+                "index": 17,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "observation_method_text",
+                "index": 17,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "observation_method_system",
+                "index": 17,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "observation_alternate_identifier_method",
+                "index": 17,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "observation_alternate_method_text",
+                "index": 17,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "observation_alternate_method_coding_system",
+                "index": 17,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "equipment_instance_identifier",
+                "index": 18,
+                "default": ""
+              },
+              {
+                "name": "date_time_of_the_analysis",
+                "index": 19,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "analysis_degree_of_precision",
+                "index": 19,
+                "component_index": 2,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "OBX": {
+          "array":[
+            {
+              "xpath": "OBX",
+              "object": {
+                "set_id": {
+                  "xpath": "set_id"
+                },
+                "value_type": {
+                  "xpath": "value_type"
+                },
+                "observation_identifier": {
+                  "xpath": "observation_identifier"
+                },
+                "observation_identifier_text": {
+                  "xpath": "observation_identifier_text"
+                },
+                "observation_identifier_system": {
+                  "xpath": "observation_identifier_system"
+                },
+                "observation_alternate_identifier": {
+                  "xpath": "observation_alternate_identifier"
+                },
+                "observation_alternate_text": {
+                  "xpath": "observation_alternate_text"
+                },
+                "observation_alternate_coding_system": {
+                  "xpath": "observation_alternate_coding_system"
+                },
+                "observation_sub_identifier": {
+                  "xpath": "observation_sub_identifier"
+                },
+                "observation_value": {
+                  "xpath": "observation_value"
+                },
+                "units": {
+                  "xpath": "units"
+                },
+                "reference_range": {
+                  "xpath": "reference_range"
+                },
+                "abnormal_flags": {
+                  "xpath": "abnormal_flags"
+                },
+                "probability": {
+                  "xpath": "probability"
+                },
+                "nature_of_abnormal_test": {
+                  "xpath": "nature_of_abnormal_test"
+                },
+                "observation_result_status": {
+                  "xpath": "observation_result_status"
+                },
+                "effective_date_of_reference_range": {
+                  "xpath": "effective_date_of_reference_range"
+                },
+                "user_defined_access_checks": {
+                  "xpath": "user_defined_access_checks"
+                },
+                "date_time_of_the_observation": {
+                  "xpath": "date_time_of_the_observation"
+                },
+                "observation_degree_of_precision": {
+                  "xpath": "observation_degree_of_precision"
+                },
+                "producers_identifier": {
+                  "xpath": "producers_identifier"
+                },
+                "producers_identifier_text": {
+                  "xpath": "producers_identifier_text"
+                },
+                "producers_identifier_system": {
+                  "xpath": "producers_identifier_system"
+                },
+                "producers_alternate_identifier": {
+                  "xpath": "producers_alternate_identifier"
+                },
+                "producers_alternate_text": {
+                  "xpath": "producers_alternate_text"
+                },
+                "producers_alternate_coding_system": {
+                  "xpath": "producers_alternate_coding_system"
+                },
+                "responsible_observer_identifier": {
+                  "xpath": "responsible_observer_identifier"
+                },
+                "responsible_observer_family_name": {
+                  "xpath": "responsible_observer_family_name"
+                },
+                "responsible_observer_given_name": {
+                  "xpath": "responsible_observer_given_name"
+                },
+                "responsible_observer_initial": {
+                  "xpath": "responsible_observer_initial"
+                },
+                "responsible_observer_suffix": {
+                  "xpath": "responsible_observer_suffix"
+                },
+                "responsible_observer_prefix": {
+                  "xpath": "responsible_observer_prefix"
+                },
+                "responsible_observer_degree": {
+                  "xpath": "responsible_observer_degree"
+                },
+                "responsible_observer_source_table": {
+                  "xpath": "responsible_observer_source_table"
+                },
+                "responsible_observer_assigning_authority": {
+                  "xpath": "responsible_observer_assigning_authority"
+                },
+                "responsible_observer_type_code": {
+                  "xpath": "responsible_observer_type_code"
+                },
+                "responsible_observer_identifier_digit": {
+                  "xpath": "responsible_observer_identifier_digit"
+                },
+                "responsible_observer_digit_scheme": {
+                  "xpath": "responsible_observer_digit_scheme"
+                },
+                "responsible_observer_identidier_type_code": {
+                  "xpath": "responsible_observer_identidier_type_code"
+                },
+                "responsible_observer_assigning_facility": {
+                  "xpath": "responsible_observer_assigning_facility"
+                },
+                "responsible_observer_representation_code": {
+                  "xpath": "responsible_observer_representation_code"
+                },
+                "responsible_observer_name_context": {
+                  "xpath": "responsible_observer_name_context"
+                },
+                "responsible_observer_name_validity_range": {
+                  "xpath": "responsible_observer_name_validity_range"
+                },
+                "responsible_observer_name_assembly_order": {
+                  "xpath": "responsible_observer_name_assembly_order"
+                },
+                "responsible_observer_effective_date": {
+                  "xpath": "responsible_observer_effective_date"
+                },
+                "responsible_observer_expiration_date": {
+                  "xpath": "responsible_observer_expiration_date"
+                },
+                "responsible_observer_professional_suffix": {
+                  "xpath": "responsible_observer_professional_suffix"
+                },
+                "responsible_observer_assigning_jurisdiction": {
+                  "xpath": "responsible_observer_assigning_jurisdiction"
+                },
+                "responsible_observer_Assigning_agency_or_department": {
+                  "xpath": "responsible_observer_Assigning_agency_or_department"
+                },
+                "observation_method_identifier": {
+                  "xpath": "observation_method_identifier"
+                },
+                "observation_method_text": {
+                  "xpath": "observation_method_text"
+                },
+                "observation_method_system": {
+                  "xpath": "observation_method_system"
+                },
+                "observation_alternate_identifier_method": {
+                  "xpath": "observation_alternate_identifier_method"
+                },
+                "observation_alternate_method_text": {
+                  "xpath": "observation_alternate_method_text"
+                },
+                "observation_alternate_method_coding_system": {
+                  "xpath": "observation_alternate_method_coding_system"
+                },
+                "equipment_instance_identifier": {
+                  "xpath": "equipment_instance_identifier"
+                },
+                "date_time_of_the_analysis": {
+                  "xpath": "date_time_of_the_analysis"
+                },
+                "analysis_degree_of_precision": {
+                  "xpath": "analysis_degree_of_precision"
+                }
+              }
+            }
+      ]}
+      }
+    }
+  }
+}

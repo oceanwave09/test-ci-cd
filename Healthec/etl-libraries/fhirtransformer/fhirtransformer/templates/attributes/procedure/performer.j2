@@ -1,0 +1,29 @@
+[
+  {%- if data.practitioner_id -%}
+  {
+    "actor": {
+      "reference": "Practitioner/{{ data.practitioner_id }}"
+    }
+  }
+  {%- endif %}
+  {% for ent in data.performer %}
+  {
+    "function":{
+      {% if ent.function_code %}
+        "coding": [
+          {
+            "system": "{{ ent.function_system }}",
+            "code": "{{ ent.function_code }}",
+            "display": "{{ ent.function_display }}"
+          }
+        ],
+      {%- endif %}
+      "text": "{{ ent.function_text }}"
+    },
+    "actor": {
+      "reference": "Practitioner/{{ ent.practitioner_id }}"
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

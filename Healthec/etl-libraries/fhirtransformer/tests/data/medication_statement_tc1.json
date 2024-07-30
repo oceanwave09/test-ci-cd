@@ -1,0 +1,16 @@
+{
+  "source_id": "12345689",
+  "source_system": "http://www.bmc.nl/portal/prescriptions",
+  "status": "active",
+  "medication_code": "27658006",
+  "medication_display": "Amoxicillin (product)",
+  "medication_system": "http://snomed.info/sct",
+  "patient_id": "69f946cb-a475-429d-ba9f-9ce0751a1904",
+  "effective_period_start": "2015-01-17T16:00:00+10:00",
+  "effective_period_end": "2015-01-17T16:30:00+10:00",
+  "asserted_date_time": "2015-01-17",
+  "reason_code": "65363002",
+  "reason_display": "Otitis Media",
+  "reason_system": "http://snomed.info/sct",
+  "note": "Patient indicates they miss the occasional dose"
+}

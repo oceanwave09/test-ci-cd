@@ -1,0 +1,190 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "patient_id",
+            "index": 3
+          },
+          {
+            "name": "patient_account_no",
+            "index": 4
+          },
+          {
+            "name": "encounter_id",
+            "index": 5
+          },
+          {
+            "name": "provider_id",
+            "index": 6
+          },
+          {
+            "name": "provider_npi",
+            "index": 7
+          },
+          {
+            "name": "facility_id",
+            "index": 8
+          },
+          {
+            "name": "service_date",
+            "index": 9
+          },
+          {
+            "name": "cpt_code",
+            "index": 10
+          },
+          {
+            "name": "cpt_code_type",
+            "index": 11
+          },
+          {
+            "name": "modifier_1",
+            "index": 12
+          },
+          {
+            "name": "modifier_2",
+            "index": 13
+          },
+          {
+            "name": "modifier_3",
+            "index": 14
+          },
+          {
+            "name": "modifier_4",
+            "index": 15
+          },
+          {
+            "name": "icd_code_1",
+            "index": 16
+          },
+          {
+            "name": "icd_code_2",
+            "index": 17
+          },
+          {
+            "name": "icd_code_3",
+            "index": 18
+          },
+          {
+            "name": "icd_code_4",
+            "index": 19
+          },
+          {
+            "name": "place_of_service",
+            "index": 20
+          },
+          {
+            "name": "pos_code_description",
+            "index": 21
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "provider_id": {
+          "xpath": "provider_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "facility_id": {
+          "xpath": "facility_id"
+        },
+        "service_date": {
+          "xpath": "service_date"
+        },
+        "cpt_code": {
+          "xpath": "cpt_code"
+        },
+        "cpt_code_type": {
+          "xpath": "cpt_code_type"
+        },
+        "modifier_1": {
+          "xpath": "modifier_1"
+        },
+        "modifier_2": {
+          "xpath": "modifier_2"
+        },
+        "modifier_3": {
+          "xpath": "modifier_3"
+        },
+        "modifier_4": {
+          "xpath": "modifier_4"
+        },
+        "icd_code_1": {
+          "xpath": "icd_code_1"
+        },
+        "icd_code_2": {
+          "xpath": "icd_code_2"
+        },
+        "icd_code_3": {
+          "xpath": "icd_code_3"
+        },
+        "icd_code_4": {
+          "xpath": "icd_code_4"
+        },
+        "place_of_service": {
+          "xpath": "place_of_service"
+        },
+        "pos_code_description": {
+          "xpath": "pos_code_description"
+        }
+      }
+    }
+  }
+}

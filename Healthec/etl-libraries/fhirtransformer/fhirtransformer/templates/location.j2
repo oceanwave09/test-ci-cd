@@ -1,0 +1,37 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.group_npi -%}
+    {% include "attributes/group_npi.j2" %}
+    {%- endif %}
+    {%- if data.group_npi and data.source_id -%}
+    ,
+    {%- endif -%}
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  {%- if data.operational_status_code or data.operational_status_display -%}
+  "operationalStatus": {% include "attributes/location/operational_status.j2" %},
+  {%- endif -%}
+  "name": "{{ data.name }}",
+  "alias": [
+    {% if data.alias %}
+    "{{ data.alias }}"
+    {% endif %}
+  ],
+  "description": "{{ data.description }}",
+  "mode": "{{ data.mode }}",
+  "type": {% include "attributes/location/type.j2" %},
+  "telecom": {% include "attributes/telecom.j2" %},
+  "address": {% include "attributes/location/address.j2" %},
+  {% if data.physical_type_code or data.physical_type_display %}
+  "physicalType": {% include "attributes/location/physical_type.j2" %},
+  {% endif %}
+  "availabilityExceptions": "{{ data.availability_exceptions }}",
+  "managingOrganization": {% include "attributes/organization_reference.j2" %}
+{% endblock %}

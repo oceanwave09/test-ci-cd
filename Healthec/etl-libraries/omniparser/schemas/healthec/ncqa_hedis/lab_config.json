@@ -1,0 +1,73 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "cpt_code",
+            "start_pos": 17,
+            "length": 5
+          },
+          {
+            "name": "loinc_code",
+            "start_pos": 22,
+            "length": 7
+          },
+          {
+            "name": "value",
+            "start_pos": 29,
+            "length": 6
+          },
+          {
+            "name": "date_of_service",
+            "start_pos": 35,
+            "length": 8
+          },
+          {
+            "name": "supplemental_data",
+            "start_pos": 43,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "cpt_code": {
+          "xpath": "cpt_code"
+        },
+        "loinc_code": {
+          "xpath": "loinc_code"
+        },
+        "value": {
+          "xpath": "value"
+        },
+        "date_of_service": {
+          "xpath": "date_of_service"
+        },
+        "supplemental_data": {
+          "xpath": "supplemental_data"
+        }
+      }
+    }
+  }
+}

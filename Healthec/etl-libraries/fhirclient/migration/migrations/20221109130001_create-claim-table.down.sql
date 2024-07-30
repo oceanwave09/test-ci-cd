@@ -1,0 +1,8 @@
+BEGIN;
+
+DROP TABLE IF EXISTS claim_history;
+DROP TABLE IF EXISTS claim;
+
+COMMIT;
+
+END;

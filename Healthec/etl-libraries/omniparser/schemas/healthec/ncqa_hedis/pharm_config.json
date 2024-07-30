@@ -1,0 +1,97 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "days_supply",
+            "start_pos": 17,
+            "length": 3
+          },
+          {
+            "name": "service_date",
+            "start_pos": 20,
+            "length": 8
+          },
+          {
+            "name": "ndc_drug_code",
+            "start_pos": 28,
+            "length": 11
+          },
+          {
+            "name": "claim_status",
+            "start_pos": 39,
+            "length": 1
+          },
+          {
+            "name": "quantity_dispensed",
+            "start_pos": 40,
+            "length": 7
+          },
+          {
+            "name": "supplemental_data",
+            "start_pos": 47,
+            "length": 1
+          },
+          {
+            "name": "provider_npi",
+            "start_pos": 48,
+            "length": 10
+          },
+          {
+            "name": "pharmacy_npi",
+            "start_pos": 58,
+            "length": 10
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "days_supply": {
+          "xpath": "days_supply"
+        },
+        "service_date": {
+          "xpath": "service_date"
+        },
+        "ndc_drug_code": {
+          "xpath": "ndc_drug_code"
+        },
+        "claim_status": {
+          "xpath": "claim_status"
+        },
+        "quantity_dispensed": {
+          "xpath": "quantity_dispensed"
+        },
+        "supplemental_data": {
+          "xpath": "supplemental_data"
+        },
+        "provider_npi": {
+          "xpath": "provider_npi"
+        },
+        "pharmacy_npi": {
+          "xpath": "pharmacy_npi"
+        }
+      }
+    }
+  }
+}

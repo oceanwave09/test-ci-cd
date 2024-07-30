@@ -1,0 +1,45 @@
+[
+  {% for info in data.support_info %}
+  {
+    {%- if info.sequence -%}
+    "sequence": {{info.sequence}},
+    {%- endif %}
+    "category":{
+      {%- if info.category_code -%}
+      "coding": [
+        {
+          "system": "{{ info.category_system }}",
+          "code": "{{ info.category_code }}",
+          "display": "{{ info.category_display }}"
+        }
+      ],
+      {%- endif %}
+      "text": "{{ info.category_text }}"
+    },
+    {%- if info.value_string -%}
+    "valueString": "{{ info.value_string }}",
+    {%- endif %}
+    {%- if info.quantity_value -%}
+    "valueQuantity": {
+      "value": {{ info.quantity_value }},
+      "unit": "{{ info.quantity_unit }}",
+      "system": "{{ info.quantity_system }}",
+      "code": "{{ info.quantity_code }}"
+    },
+    {%- endif %}
+    "code": {
+      {%- if info.code -%}
+      "coding": [
+        {
+          "system": "{{ info.code_system }}",
+          "code": "{{ info.code }}",
+          "display": "{{ info.code_display }}"
+        }
+      ],
+      {%- endif %}
+      "text": "{{ info.code_text }}"
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

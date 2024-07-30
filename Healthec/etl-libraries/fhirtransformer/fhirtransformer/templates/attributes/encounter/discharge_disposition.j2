@@ -1,0 +1,12 @@
+{
+  {% if data.discharge_disposition_code %}
+  "coding": [
+    {
+      "system": "{{ data.discharge_disposition_system }}",
+      "code": "{{ data.discharge_disposition_code }}",
+      "display": "{{ data.discharge_disposition_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.discharge_disposition_text }}"
+}

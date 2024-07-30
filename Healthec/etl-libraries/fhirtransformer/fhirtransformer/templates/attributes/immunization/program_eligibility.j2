@@ -1,0 +1,16 @@
+[
+  {%- if data.program_eligibility_code or data.program_eligibility_text -%}
+  {
+    {% if data.program_eligibility_code %}
+    "coding": [
+      {
+        "system": "{{ data.program_eligibility_system }}",
+        "code": "{{ data.program_eligibility_code }}",
+        "display": "{{ data.program_eligibility_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.program_eligibility_text }}"
+  }
+  {%- endif %}
+]

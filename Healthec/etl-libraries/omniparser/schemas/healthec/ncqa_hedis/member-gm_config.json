@@ -1,0 +1,233 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "gender",
+            "start_pos": 17,
+            "length": 1
+          },
+          {
+            "name": "date_of_birth",
+            "start_pos": 18,
+            "length": 8
+          },
+          {
+            "name": "member_last_name",
+            "start_pos": 26,
+            "length": 20
+          },
+          {
+            "name": "member_first_name",
+            "start_pos": 46,
+            "length": 20
+          },
+          {
+            "name": "member_middle_initial",
+            "start_pos": 66,
+            "length": 1
+          },
+          {
+            "name": "subscriber_or_family_id_number",
+            "start_pos": 67,
+            "length": 16
+          },
+          {
+            "name": "mailing_address_1",
+            "start_pos": 83,
+            "length": 50
+          },
+          {
+            "name": "mailing_address_2",
+            "start_pos": 133,
+            "length": 50
+          },
+          {
+            "name": "city",
+            "start_pos": 183,
+            "length": 30
+          },
+          {
+            "name": "state",
+            "start_pos": 213,
+            "length": 2
+          },
+          {
+            "name": "zip",
+            "start_pos": 215,
+            "length": 5
+          },
+          {
+            "name": "telephone_number",
+            "start_pos": 220,
+            "length": 10
+          },
+          {
+            "name": "parent_caretaker_first_name",
+            "start_pos": 230,
+            "length": 25
+          },
+          {
+            "name": "parent_caretaker_middle_initial",
+            "start_pos": 255,
+            "length": 1
+          },
+          {
+            "name": "parent_caretaker_last_name",
+            "start_pos": 256,
+            "length": 25
+          },
+          {
+            "name": "race",
+            "start_pos": 281,
+            "length": 2
+          },
+          {
+            "name": "ethnicity",
+            "start_pos": 283,
+            "length": 2
+          },
+          {
+            "name": "race_data_source",
+            "start_pos": 285,
+            "length": 2
+          },
+          {
+            "name": "ethnicity_data_source",
+            "start_pos": 287,
+            "length": 2
+          },
+          {
+            "name": "spoken_language",
+            "start_pos": 289,
+            "length": 2
+          },
+          {
+            "name": "spoken_language_source",
+            "start_pos": 291,
+            "length": 2
+          },
+          {
+            "name": "written_language",
+            "start_pos": 293,
+            "length": 2
+          },
+          {
+            "name": "written_language_source",
+            "start_pos": 295,
+            "length": 2
+          },
+          {
+            "name": "other_language",
+            "start_pos": 297,
+            "length": 2
+          },
+          {
+            "name": "other_language_source",
+            "start_pos": 299,
+            "length": 2
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "gender": {
+          "xpath": "gender"
+        },
+        "date_of_birth": {
+          "xpath": "date_of_birth"
+        },
+        "member_last_name": {
+          "xpath": "member_last_name"
+        },
+        "member_first_name": {
+          "xpath": "member_first_name"
+        },
+        "member_middle_initial": {
+          "xpath": "member_middle_initial"
+        },
+        "subscriber_or_family_id_number": {
+          "xpath": "subscriber_or_family_id_number"
+        },
+        "mailing_address_1": {
+          "xpath": "mailing_address_1"
+        },
+        "mailing_address_2": {
+          "xpath": "mailing_address_2"
+        },
+        "city": {
+          "xpath": "city"
+        },
+        "state": {
+          "xpath": "state"
+        },
+        "zip": {
+          "xpath": "zip"
+        },
+        "telephone_number": {
+          "xpath": "telephone_number"
+        },
+        "parent_caretaker_first_name": {
+          "xpath": "parent_caretaker_first_name"
+        },
+        "parent_caretaker_middle_initial": {
+          "xpath": "parent_caretaker_middle_initial"
+        },
+        "parent_caretaker_last_name": {
+          "xpath": "parent_caretaker_last_name"
+        },
+        "race": {
+          "xpath": "race"
+        },
+        "ethnicity": {
+          "xpath": "ethnicity"
+        },
+        "race_data_source": {
+          "xpath": "race_data_source"
+        },
+        "ethnicity_data_source": {
+          "xpath": "ethnicity_data_source"
+        },
+        "spoken_language": {
+          "xpath": "spoken_language"
+        },
+        "spoken_language_source": {
+          "xpath": "spoken_language_source"
+        },
+        "written_language": {
+          "xpath": "written_language"
+        },
+        "written_language_source": {
+          "xpath": "written_language_source"
+        },
+        "other_language": {
+          "xpath": "other_language"
+        },
+        "other_language_source": {
+          "xpath": "other_language_source"
+        }
+      }
+    }
+  }
+}

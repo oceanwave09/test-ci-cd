@@ -1,0 +1,32 @@
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
+branch = "main"
+build_command = "poetry build"
+commit_author = "semantic-release-bot <semantic-release-bot@healthec.com>"
+commit_subject = "chore(release): smartmapper {version}"
+commit_message = "chore(release): smartmapper {version} [skip ci]"
+hvcs = "gitlab"
+pre_commit_command = "git pull origin main"
+tag_format="smartmapper/v{version}"
+upload_to_release = false
+
+[tool.poetry]
+name = "smartmapper"
+version = "0.2.1"
+description = "SmartMapper is used to transform the incoming data into structure or fields defined in the schema."
+authors = ["The HealthEC Authors"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pyspark = "3.2.1"
+py4j = "0.10.9.3"
+PyYAML = "6.0"
+smart-open = "6.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

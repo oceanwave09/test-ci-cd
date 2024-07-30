@@ -1,0 +1,21 @@
+social_history_patient_id:
+  key_path: patient_id
+  min_length: 1
+  required: True
+
+social_history_provider_npi:
+  key_path: provider_npi
+  required: True
+  type: string
+  min_length: 10
+
+social_history_practice_apuid:
+  key_path: apuid
+  type: string
+  required: True
+
+social_history_encounter_id:
+  key_path: encounter_id
+  type: string
+  required: True
+  min_length: 1

@@ -1,0 +1,17 @@
+{
+  "evidence": [
+    {
+      "code": [
+        {
+          "coding": [
+            {
+              "system": "http://snomed.info/sct",
+              "code": "169068008",
+              "display": "CT of neck"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

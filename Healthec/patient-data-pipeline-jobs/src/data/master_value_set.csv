@@ -1,0 +1,531 @@
+code,display,system
+99381,Under New Patient,http://www.ama-assn.org/go/cpt
+99382,Under New Patient,http://www.ama-assn.org/go/cpt
+99383,Under New Patient,http://www.ama-assn.org/go/cpt
+99384,Under New Patient,http://www.ama-assn.org/go/cpt
+99385,Under New Patient,http://www.ama-assn.org/go/cpt
+99386,Under New Patient,http://www.ama-assn.org/go/cpt
+99387,Under New Patient,http://www.ama-assn.org/go/cpt
+99388,Under New Patient,http://www.ama-assn.org/go/cpt
+99389,Under New Patient,http://www.ama-assn.org/go/cpt
+99390,Under New Patient,http://www.ama-assn.org/go/cpt
+99391,Under Established Patient,http://www.ama-assn.org/go/cpt
+99392,Under Established Patient,http://www.ama-assn.org/go/cpt
+99393,Under Established Patient,http://www.ama-assn.org/go/cpt
+99394,Under Established Patient,http://www.ama-assn.org/go/cpt
+99395,Under Established Patient,http://www.ama-assn.org/go/cpt
+99396,Under Established Patient,http://www.ama-assn.org/go/cpt
+99397,Under Established Patient,http://www.ama-assn.org/go/cpt
+Q0091,"Screening Papanicolaou smear; obtaining, preparing and conveyance of cervical or vaginal smear to laboratory",urn:oid:2.16.840.1.113883.6.285
+G0101,Cervical or vaginal cancer screening; pelvic and clinical breast examination,urn:oid:2.16.840.1.113883.6.285
+88150,Under Cytopathology Screening Procedures,http://www.ama-assn.org/go/cpt
+88152,Under Cytopathology Screening Procedures,http://www.ama-assn.org/go/cpt
+88153,Under Cytopathology Screening Procedures,http://www.ama-assn.org/go/cpt
+88164,Under Cytopathology Screening Procedures,http://www.ama-assn.org/go/cpt
+88165,Under Cytopathology Screening Procedures,http://www.ama-assn.org/go/cpt
+88166,Under Cytopathology Screening Procedures,http://www.ama-assn.org/go/cpt
+88167,Under Cytopathology Screening Procedures,http://www.ama-assn.org/go/cpt
+171149006,Screening for malignant neoplasm of cervix (procedure),urn:oid:2.16.840.1.113883.6.96
+417036008,Liquid based cervical cytology screening (procedure),urn:oid:2.16.840.1.113883.6.97
+88175,Under FNA Cytopathology Procedures,http://www.ama-assn.org/go/cpt
+87624,Under Infectious Agent Antigen Detection,http://www.ama-assn.org/go/cpt
+87625,Under Infectious Agent Antigen Detection,http://www.ama-assn.org/go/cpt
+G0476,"Infectious agent detection by nucleic acid (dna or rna); human papillomavirus (hpv), high-risk types (eg, 16, 18, 31, 33, 35, 39, 45, 51, 52, 56, 58, 59, 68) for cervical cancer screening, must be performed in addition to pap test G0476",urn:oid:2.16.840.1.113883.6.285
+21440-3,Human papilloma virus 16+18+31+33+35+45+51+52+56 DNA [Presence] in Cervix by Probe,urn:oid:2.16.840.1.113883.6.1
+30167-1,Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+68 DNA [Presence] in Cervix by Probe with signal amplification,urn:oid:2.16.840.1.113883.6.1
+39272-9,,urn:oid:2.16.840.1.113883.6.1
+59263-4,Human papilloma virus 16 DNA [Presence] in Cervix by Probe with signal amplification,urn:oid:2.16.840.1.113883.6.1
+59264-2,Human papilloma virus 18 DNA [Presence] in Cervix by Probe with signal amplification,urn:oid:2.16.840.1.113883.6.1
+59420-0,Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by Probe with signal amplification,urn:oid:2.16.840.1.113883.6.1
+69002-4,Human papilloma virus E6+E7 mRNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+71431-1,Human papilloma virus 31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+75694-0,Human papilloma virus 18+45 E6+E7 mRNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+77379-6,Human papilloma virus 16 and 18 and 31+33+35+39+45+51+52+56+58+59+66+68 DNA [Interpretation] in Cervix,urn:oid:2.16.840.1.113883.6.1
+77399-4,Human papilloma virus 16 DNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+77400-0,Human papilloma virus 18 DNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+82354-2,Human papilloma virus 16 and 18+45 E6+E7 mRNA [Identifier] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+82456-5,Human papilloma virus 16 E6+E7 mRNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+82675-0,Human papilloma virus 16+18+31+33+35+39+45+51+52+56+58+59+66+68 DNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+95539-3,Human papilloma virus 31 DNA [Presence] in Cervix by NAA with probe detection,urn:oid:2.16.840.1.113883.6.1
+35904009,Human papillomavirus deoxyribonucleic acid detection (procedure),urn:oid:2.16.840.1.113883.6.1
+448651000124104,Microscopic examination of cervical Papanicolaou smear and Human papillomavirus deoxyribonucleic acid detection cotesting (procedure),urn:oid:2.16.840.1.113883.6.1
+56820,"Under Endoscopy Procedures on the Vulva, Perineum, and Introitus or Colposcopy",http://www.ama-assn.org/go/cpt
+57452,Under Endoscopy Procedures on the Cervix Uteri or Colposcopy,http://www.ama-assn.org/go/cpt
+57420,Under Endoscopy/Laparoscopy Procedures on the Vagina or Colposcopy,http://www.ama-assn.org/go/cpt
+57505,Under Excision Procedures on the Cervix Uteri or Endocervical Sampling,http://www.ama-assn.org/go/cpt
+57460,Under Endoscopy Procedures on the Cervix Uteri or Loop Electrosurgical Excision Procedure,http://www.ama-assn.org/go/cpt
+57461,Under Endoscopy Procedures on the Cervix Uteri or Loop Electrosurgical Excision Procedure,http://www.ama-assn.org/go/cpt
+57513,Under Excision Procedures on the Cervix Uteri or Ablations,http://www.ama-assn.org/go/cpt
+168406009,Severe dyskaryosis on cervical smear cannot exclude invasive carcinoma (finding),urn:oid:2.16.840.1.113883.6.96
+168407000,Cannot exclude glandular neoplasia on cervical smear (finding),urn:oid:2.16.840.1.113883.6.96
+168408005,Cervical smear - atrophic changes (finding),urn:oid:2.16.840.1.113883.6.96
+168410007,Cervical smear - borderline changes (finding),urn:oid:2.16.840.1.113883.6.96
+168414003,Cervical smear - inflammatory change (finding),urn:oid:2.16.840.1.113883.6.96
+168415002,Cervical smear - no inflammation (finding),urn:oid:2.16.840.1.113883.6.96
+168416001,Cervical smear - severe inflammation (finding),urn:oid:2.16.840.1.113883.6.96
+168424006,Cervical smear - koilocytosis (finding),urn:oid:2.16.840.1.113883.6.96
+250538001,Dyskaryosis on cervical smear (finding),urn:oid:2.16.840.1.113883.6.96
+268543007,Cancer cervix - screening done (finding),urn:oid:2.16.840.1.113883.6.96
+269957009,Cervical smear result (finding),urn:oid:2.16.840.1.113883.6.96
+269958004,Cervical smear - negative (finding),urn:oid:2.16.840.1.113883.6.96
+269959007,Cervical smear - mild dyskaryosis (finding),urn:oid:2.16.840.1.113883.6.96
+269960002,Cervical smear - severe dyskaryosis (finding),urn:oid:2.16.840.1.113883.6.96
+269961003,Cervical smear - moderate dyskaryosis (finding),urn:oid:2.16.840.1.113883.6.96
+269963000,Cervical smear - viral inflammation unspecified (finding),urn:oid:2.16.840.1.113883.6.96
+275805003,Viral changes on cervical smear (finding),urn:oid:2.16.840.1.113883.6.96
+281101005,Smear: no abnormality detected - no endocervical cells (finding),urn:oid:2.16.840.1.113883.6.96
+309081009,Abnormal cervical smear (finding),urn:oid:2.16.840.1.113883.6.96
+310841002,Cervical smear - mild inflammation (finding),urn:oid:2.16.840.1.113883.6.96
+310842009,Cervical smear - moderate inflammation (finding),urn:oid:2.16.840.1.113883.6.96
+416030007,Cervicovaginal cytology: Low grade squamous intraepithelial lesion (finding),urn:oid:2.16.840.1.113883.6.96
+416032004,Cervicovaginal cytology normal or benign (finding),urn:oid:2.16.840.1.113883.6.96
+416033009,Cervicovaginal cytology: High grade squamous intraepithelial lesion or carcinoma (finding),urn:oid:2.16.840.1.113883.6.96
+439074000,Dysplasia on cervical smear (finding),urn:oid:2.16.840.1.113883.6.96
+439776006,Cervical Papanicolaou smear positive for malignant neoplasm (finding),urn:oid:2.16.840.1.113883.6.96
+439888000,Abnormal cervical Papanicolaou smear (finding),urn:oid:2.16.840.1.113883.6.96
+441087007,Atypical squamous cells of undetermined significance on cervical Papanicolaou smear (finding),urn:oid:2.16.840.1.113883.6.96
+441088002,Atypical squamous cells on cervical Papanicolaou smear cannot exclude high grade squamous intraepithelial lesion (finding),urn:oid:2.16.840.1.113883.6.96
+441094005,Atypical endocervical cells on cervical Papanicolaou smear (finding),urn:oid:2.16.840.1.113883.6.96
+441219009,Atypical glandular cells on cervical Papanicolaou smear (finding),urn:oid:2.16.840.1.113883.6.96
+441667007,Abnormal cervical Papanicolaou smear with positive human papillomavirus deoxyribonucleic acid test (finding),urn:oid:2.16.840.1.113883.6.96
+700399008,Cervical smear - borderline change in squamous cells (finding),urn:oid:2.16.840.1.113883.6.96
+700400001,Cervical smear - borderline change in endocervical cells (finding),urn:oid:2.16.840.1.113883.6.96
+1155766001,Nuclear abnormality in cervical smear (finding),urn:oid:2.16.840.1.113883.6.96
+62051000119105,Low grade squamous intraepithelial lesion on cervical Papanicolaou smear (finding),urn:oid:2.16.840.1.113883.6.96
+62061000119107,High grade squamous intraepithelial lesion on cervical Papanicolaou smear (finding),urn:oid:2.16.840.1.113883.6.96
+98791000119102,Cytological evidence of malignancy on cervical Papanicolaou smear (finding),urn:oid:2.16.840.1.113883.6.96
+58150,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58151,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58152,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58153,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58154,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58155,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58156,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58157,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58158,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58159,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58160,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58161,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58162,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58163,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58164,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58165,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58166,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58167,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58168,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58169,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58170,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58171,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58172,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58173,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58174,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58175,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58176,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58177,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58178,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58179,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58180,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58181,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58182,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58183,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58184,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58185,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58186,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58187,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58188,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58189,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58190,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58191,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58192,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58193,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58194,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58195,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58196,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58197,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58198,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58199,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58200,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58201,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58202,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58203,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58204,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58205,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58206,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58207,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58208,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58209,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58210,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58211,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58212,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58213,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58214,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58215,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58216,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58217,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58218,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58219,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58220,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58221,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58222,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58223,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58224,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58225,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58226,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58227,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58228,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58229,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58230,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58231,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58232,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58233,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58234,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58235,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58236,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58237,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58238,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58239,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58240,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58241,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58242,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58243,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58244,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58245,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58246,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58247,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58248,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58249,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58250,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58251,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58252,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58253,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58254,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58255,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58256,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58257,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58258,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58259,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58260,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58261,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58262,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58263,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58264,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58265,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58266,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58267,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58268,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58269,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58270,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58271,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58272,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58273,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58274,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58275,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58276,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58277,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58278,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58279,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58280,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58281,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58282,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58283,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58284,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58285,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58286,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58287,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58288,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58289,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58290,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58291,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58292,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58293,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58294,Under Hysterectomy Procedures,http://www.ama-assn.org/go/cpt
+58950,Under Excision Procedures on the Ovary,http://www.ama-assn.org/go/cpt
+58951,Under Excision Procedures on the Ovary,http://www.ama-assn.org/go/cpt
+58952,Under Excision Procedures on the Ovary,http://www.ama-assn.org/go/cpt
+38562,Under Limited Lymphadenectomy for Staging Procedures,http://www.ama-assn.org/go/cpt
+38770,Under Radical Lymphadenectomy (Radical Resection of Lymph Nodes),http://www.ama-assn.org/go/cpt
+38780,Under Radical Lymphadenectomy (Radical Resection of Lymph Nodes),http://www.ama-assn.org/go/cpt
+38570,Under Laparoscopic Procedures on the Lymph Nodes and Lymphatic Channels,http://www.ama-assn.org/go/cpt
+38571,Under Laparoscopic Procedures on the Lymph Nodes and Lymphatic Channels,http://www.ama-assn.org/go/cpt
+38572,Under Laparoscopic Procedures on the Lymph Nodes and Lymphatic Channels,http://www.ama-assn.org/go/cpt
+38573,Under Laparoscopic Procedures on the Lymph Nodes and Lymphatic Channels,http://www.ama-assn.org/go/cpt
+58661,Under Laparoscopic Procedures on the Oviduct/Ovary,http://www.ama-assn.org/go/cpt
+58571,Under Laparoscopic/Hysteroscopic Procedures on the Corpus Uteri,http://www.ama-assn.org/go/cpt
+58573,Under Laparoscopic/Hysteroscopic Procedures on the Corpus Uteri,http://www.ama-assn.org/go/cpt
+58575,Under Laparoscopic/Hysteroscopic Procedures on the Corpus Uteri,http://www.ama-assn.org/go/cpt
+58953,Under Excision Procedures on the Ovary,http://www.ama-assn.org/go/cpt
+58954,Under Excision Procedures on the Ovary,http://www.ama-assn.org/go/cpt
+58957,Under Excision Procedures on the Ovary,http://www.ama-assn.org/go/cpt
+58825,Under Incision Procedures on the Ovary,http://www.ama-assn.org/go/cpt
+55848,,http://www.ama-assn.org/go/cpt
+428078001,History of total hysterectomy (situation),urn:oid:2.16.840.1.113883.6.96
+429290001,History of radical hysterectomy (situation),urn:oid:2.16.840.1.113883.6.96
+429763009,History of total hysterectomy with bilateral salpingo-oophorectomy (situation),urn:oid:2.16.840.1.113883.6.96
+473171009,History of vaginal hysterectomy (situation),urn:oid:2.16.840.1.113883.6.96
+1.07388910001191E+016,History of total hysterectomy without abnormal cervical Papanicolaou smear (situation),urn:oid:2.16.840.1.113883.6.96
+116140006,Total hysterectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+116142003,Radical hysterectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+236888001,Laparoscopic total hysterectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+236891001,Laparoscopic radical hysterectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+708877008,Laparoscopic total hysterectomy using robotic assistance (procedure),urn:oid:2.16.840.1.113883.6.96
+708878003,Laparoscopic radical hysterectomy using robotic assistance (procedure),urn:oid:2.16.840.1.113883.6.96
+739671004,Total hysterectomy with left oophorectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+739672006,Total hysterectomy with right oophorectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+739673001,Total hysterectomy with left salpingo-oophorectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+739674007,Total hysterectomy with right salpingo-oophorectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+740514001,Total hysterectomy with right salpingectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+740515000,Total hysterectomy with left salpingectomy (procedure),urn:oid:2.16.840.1.113883.6.96
+767610009,Total hysterectomy via vaginal approach (procedure),urn:oid:2.16.840.1.113883.6.96
+767612001,Total hysterectomy via vaginal approach using intrafascial technique (procedure),urn:oid:2.16.840.1.113883.6.96
+1163275000,,
+57155,Under Introduction Procedures on the Vagina,http://www.ama-assn.org/go/cpt
+57156,Under Introduction Procedures on the Vagina,http://www.ama-assn.org/go/cpt
+57800,Under Manipulation Procedures on the Cervix Uteri,http://www.ama-assn.org/go/cpt
+99214,Under Established Patient,http://www.ama-assn.org/go/cpt
+99215,Under Established Patient,http://www.ama-assn.org/go/cpt
+96446,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+77067,"Under Breast, Mammography",http://www.ama-assn.org/go/cpt
+77063,"Under Breast, Mammography",http://www.ama-assn.org/go/cpt
+76641,Under Diagnostic Ultrasound Procedures of the Chest,http://www.ama-assn.org/go/cpt
+24606-6,MG Breast Screening,http://www.ama-assn.org/go/cpt
+26175-0,MG Breast - bilateral Screening,http://www.ama-assn.org/go/cpt
+26176-8,MG Breast - left Screening,http://www.ama-assn.org/go/cpt
+26177-6,MG Breast - right Screening,http://www.ama-assn.org/go/cpt
+39153-2,FFD mammogram Breast Screening,http://www.ama-assn.org/go/cpt
+42174-3,FFD mammogram Breast - bilateral Screening,http://www.ama-assn.org/go/cpt
+46354-7,FFD mammogram Breast - right Screening,http://www.ama-assn.org/go/cpt
+46355-4,FFD mammogram Breast - left Screening,http://www.ama-assn.org/go/cpt
+45356-2,,http://www.ama-assn.org/go/cpt
+48492-3,MG Breast - bilateral Screening for implant,http://www.ama-assn.org/go/cpt
+72140-7,DBT Breast - right screening,http://www.ama-assn.org/go/cpt
+72141-5,DBT Breast - left screening,http://www.ama-assn.org/go/cpt
+72141-3,,http://www.ama-assn.org/go/cpt
+24623002,Screening mammography (procedure),http://www.ama-assn.org/go/cpt
+384151000119104,Screening mammography of bilateral breasts (procedure),http://www.ama-assn.org/go/cpt
+392521000119107,Screening mammography of right breast (procedure),http://www.ama-assn.org/go/cpt
+392531000119105,Screening mammography of left breast (procedure),http://www.ama-assn.org/go/cpt
+77062,"Under Breast, Mammography",http://www.ama-assn.org/go/cpt
+77065,"Under Breast, Mammography",http://www.ama-assn.org/go/cpt
+77066,"Under Breast, Mammography",http://www.ama-assn.org/go/cpt
+76642,Under Diagnostic Ultrasound Procedures of the Chest,http://www.ama-assn.org/go/cpt
+76882,Under Diagnostic Ultrasound Procedures of the Extremities,http://www.ama-assn.org/go/cpt
+G0279,"Diagnostic digital breast tomosynthesis, unilateral or bilateral",urn:oid:2.16.840.1.113883.6.12
+24604-1,MG Breast Diagnostic Limited Views,http://www.ama-assn.org/go/cpt
+24605-8,,http://www.ama-assn.org/go/cpt
+26346-7,MG Breast - bilateral Diagnostic,http://www.ama-assn.org/go/cpt
+26347-5,MG Breast - left Diagnostic,http://www.ama-assn.org/go/cpt
+26348-3,MG Breast - right Diagnostic,http://www.ama-assn.org/go/cpt
+26349-1,MG Breast - bilateral Diagnostic Limited Views,http://www.ama-assn.org/go/cpt
+26350-9,MG Breast - left Diagnostic Limited Views,http://www.ama-assn.org/go/cpt
+26351-1,,http://www.ama-assn.org/go/cpt
+39152-4,FFD mammogram Breast Diagnostic,http://www.ama-assn.org/go/cpt
+39154-0,FFD mammogram Breast - bilateral Diagnostic,http://www.ama-assn.org/go/cpt
+42168-5,FFD mammogram Breast - right Diagnostic,http://www.ama-assn.org/go/cpt
+42169-3,FFD mammogram Breast - left Diagnostic,http://www.ama-assn.org/go/cpt
+46350-5,MG Breast - unilateral Diagnostic,http://www.ama-assn.org/go/cpt
+48475-8,MG Breast - bilateral Diagnostic for implant,http://www.ama-assn.org/go/cpt
+69150-1,MG Breast - left Diagnostic for implant,http://www.ama-assn.org/go/cpt
+69259-0,MG Breast - right Diagnostic for implant,http://www.ama-assn.org/go/cpt
+72137-3,DBT Breast - right diagnostic,http://www.ama-assn.org/go/cpt
+72138-1,DBT Breast - left diagnostic,http://www.ama-assn.org/go/cpt
+72139-9,DBT Breast - bilateral diagnostic,http://www.ama-assn.org/go/cpt
+91517-3,DBT Breast - right diagnostic for implant,http://www.ama-assn.org/go/cpt
+91518-1,DBT Breast - left diagnostic for implant,http://www.ama-assn.org/go/cpt
+91519-9,DBT Breast - bilateral diagnostic for implant,http://www.ama-assn.org/go/cpt
+10005,Under Fine Needle Aspiration Biopsy Procedures,http://www.ama-assn.org/go/cpt
+19081,nder Breast Biopsy Procedures,http://www.ama-assn.org/go/cpt
+19000,"Under Aspiration, Injestion, and Drainage Procedures of Breast",http://www.ama-assn.org/go/cpt
+76942,Under Ultrasonic Guidance Procedures,http://www.ama-assn.org/go/cpt
+19083,Under Breast Biopsy Procedures,http://www.ama-assn.org/go/cpt
+19020,"Under Aspiration, Injestion, and Drainage Procedures of Breast",http://www.ama-assn.org/go/cpt
+258172002,Stereotactic mammography (procedure),http://www.ama-assn.org/go/cpt
+19120,"Under Ablation, Exploration and Excision Procedures",http://www.ama-assn.org/go/cpt
+19125,"Under Ablation, Exploration and Excision Procedures",http://www.ama-assn.org/go/cpt
+14714006,Bilateral mastectomy with excision of bilateral regional lymph nodes (procedure),http://www.ama-assn.org/go/cpt
+27865001,Bilateral mastectomy (procedure),http://www.ama-assn.org/go/cpt
+19301,Under Lumpectomy Procedures,http://www.ama-assn.org/go/cpt
+19302,Under Lumpectomy Procedures,http://www.ama-assn.org/go/cpt
+19303,Under Lumpectomy Procedures,http://www.ama-assn.org/go/cpt
+19305,Under Lumpectomy Procedures,http://www.ama-assn.org/go/cpt
+19307,Under Lumpectomy Procedures,http://www.ama-assn.org/go/cpt
+429009003,History of left mastectomy (situation),http://www.ama-assn.org/go/cpt
+137671000119105,History of prophylactic mastectomy of left breast (situation),http://www.ama-assn.org/go/cpt
+137681000119108,History of prophylactic mastectomy of right breast (situation),http://www.ama-assn.org/go/cpt
+14693006,Bilateral subcutaneous mammectomy (procedure),http://www.ama-assn.org/go/cpt
+17086001,"Modified radical mastectomy, bilateral (procedure)",http://www.ama-assn.org/go/cpt
+22418005,Bilateral simple mastectomy (procedure),http://www.ama-assn.org/go/cpt
+52314009,Bilateral mastectomy extended simple (procedure),http://www.ama-assn.org/go/cpt
+60633004,Bilateral subcutaneous mammectomy with synchronous implant (procedure),http://www.ama-assn.org/go/cpt
+76468001,Bilateral radical mastectomy (procedure),http://www.ama-assn.org/go/cpt
+456903003,Bilateral extended radical mastectomy (procedure),http://www.ama-assn.org/go/cpt
+726636007,Prophylactic bilateral mastectomy (procedure),http://www.ama-assn.org/go/cpt
+836436008,Simple mastectomy of bilateral breasts using robotic assistance (procedure),http://www.ama-assn.org/go/cpt
+66398006,Mastectomy with excision of regional lymph nodes (procedure),http://www.ama-assn.org/go/cpt
+70183006,Subcutaneous mastectomy (procedure),http://www.ama-assn.org/go/cpt
+172043006,Simple mastectomy (procedure),http://www.ama-assn.org/go/cpt
+274957008,Radical mastectomy including axillary lymph nodes (procedure),http://www.ama-assn.org/go/cpt
+318190001,Mastectomy with preservation of skin and nipple with synchronous implant (procedure),http://www.ama-assn.org/go/cpt
+359740003,Extended radical mastectomy (procedure),http://www.ama-assn.org/go/cpt
+384723003,Radical mastectomy (procedure),http://www.ama-assn.org/go/cpt
+406505007,Modified radical mastectomy (procedure),http://www.ama-assn.org/go/cpt
+428564008,Skin sparing mastectomy (procedure),http://www.ama-assn.org/go/cpt
+446109005,Simple mastectomy with excision of axillary lymph nodes (procedure),http://www.ama-assn.org/go/cpt
+446420001,Simple mastectomy with complete axillary lymphadenectomy (procedure),http://www.ama-assn.org/go/cpt
+447135002,Simple mastectomy with axillary lymph node sampling (procedure),http://www.ama-assn.org/go/cpt
+447421006,Prophylactic mastectomy (procedure),http://www.ama-assn.org/go/cpt
+428529004,History of bilateral mastectomy (situation),http://www.ama-assn.org/go/cpt
+136071000119101,History of bilateral prophylactic mastectomy (situation),http://www.ama-assn.org/go/cpt
+428571003,Mastectomy of left breast (procedure),http://www.ama-assn.org/go/cpt
+726429001,Radical mastectomy of left breast (procedure),http://www.ama-assn.org/go/cpt
+726435001,Subcutaneous mastectomy of left breast (procedure),http://www.ama-assn.org/go/cpt
+726437009,Modified radical mastectomy of left breast (procedure),http://www.ama-assn.org/go/cpt
+741009001,Simple mastectomy of left breast (procedure),http://www.ama-assn.org/go/cpt
+741018004,Subcutaneous mastectomy of left breast with prosthetic implant (procedure),http://www.ama-assn.org/go/cpt
+836437004,Simple mastectomy of left breast using robotic assistance (procedure),http://www.ama-assn.org/go/cpt
+429400009,Mastectomy of right breast (procedure),http://www.ama-assn.org/go/cpt
+726430006,Radical mastectomy of right breast (procedure),http://www.ama-assn.org/go/cpt
+726434002,Subcutaneous mastectomy of right breast (procedure),http://www.ama-assn.org/go/cpt
+726436000,Modified radical mastectomy of right breast (procedure),http://www.ama-assn.org/go/cpt
+741010006,Simple mastectomy of right breast (procedure),http://www.ama-assn.org/go/cpt
+741019007,Subcutaneous mastectomy of right breast with prosthetic implant (procedure),http://www.ama-assn.org/go/cpt
+836435007,Simple mastectomy of right breast using robotic assistance (procedure),http://www.ama-assn.org/go/cpt
+451201000124106,Prophylactic mastectomy of right breast (procedure),http://www.ama-assn.org/go/cpt
+19294,Radiant Therapy,http://www.ama-assn.org/go/cpt
+76145,Under Other Diagnostic Radiology (Diagnostic Imaging) Related Procedures or Radiant Therapy,http://www.ama-assn.org/go/cpt
+77424,Under Radiation Treatment Delivery or Radiant Therapy,http://www.ama-assn.org/go/cpt
+77425,Under Radiation Treatment Delivery or Radiant Therapy,http://www.ama-assn.org/go/cpt
+77469,Under Radiation Treatment Management or Radiant Therapy,http://www.ama-assn.org/go/cpt
+C9726,"Placement and removal (if performed) of applicator into breast for intraoperative radiation therapy, add-on to primary breast procedure",urn:oid:2.16.840.1.113883.6.12
+96401,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96402,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96403,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96404,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96405,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96406,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96407,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96408,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96409,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96410,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96411,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96412,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96413,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96414,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96415,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96416,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96417,Under Injection and Intravenous Infusion Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96420,Under Intra-Arterial Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96421,Under Intra-Arterial Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96422,Under Intra-Arterial Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96423,Under Intra-Arterial Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96424,Under Intra-Arterial Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96425,Under Intra-Arterial Chemotherapy and Other Highly Complex Drug or Highly Complex Biologic Agent Administration,http://www.ama-assn.org/go/cpt
+96440,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96441,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96442,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96443,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96444,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96445,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96446,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96447,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96448,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96449,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96450,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96451,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96452,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96453,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96454,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96455,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96456,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96457,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96458,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96459,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96460,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96461,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96462,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96463,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96464,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96465,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96466,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96467,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96468,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96469,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96470,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96471,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96472,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96473,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96474,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96475,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96476,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96477,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96478,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96479,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96480,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96481,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96482,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96483,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96484,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96485,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96486,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96487,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96488,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96489,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96490,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96491,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96492,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96493,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96494,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96495,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96496,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96497,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96498,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96499,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96500,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96501,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96502,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96503,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96504,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96505,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96506,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96507,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96508,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96509,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96510,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96511,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96512,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96513,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96514,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96515,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96516,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96517,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96518,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96519,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96520,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96521,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96522,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96523,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96524,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96525,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96526,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96527,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96528,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96529,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96530,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96531,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96532,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96533,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96534,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96535,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96536,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96537,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96538,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96539,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96540,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96541,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96542,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96543,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96544,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96545,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96546,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96547,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96548,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt
+96549,Under Other Injection and Infusion Services,http://www.ama-assn.org/go/cpt

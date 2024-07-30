@@ -1,0 +1,40 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.order_placer -%}
+    ,
+    {%- endif %}
+    {%- if data.order_placer -%}
+    {% include "attributes/service_request/order_placer.j2" %}
+    {%- endif %}
+    {%- if (data.source_id or data.order_placer) and data.order_filler -%}
+    ,
+    {%- endif %}
+    {%- if data.order_filler -%}
+    {% include "attributes/service_request/order_filler.j2" %}
+    {%- endif %}
+  ],
+  "status" : "{{ data.status }}",
+  "intent": "{{ data.intent }}",
+  "category": {% include "attributes/service_request/category.j2" %},
+  "priority": "{{ data.priority }}",
+  "code": {% include "attributes/service_request/code.j2" %},
+  "subject" : {% include "attributes/patient_reference.j2" %},
+  "encounter" : {% include "attributes/encounter_reference.j2" %},
+  {%- if data.occurrence_date_time -%}
+  "occurrenceDateTime": "{{ data.occurrence_date_time }}",
+  {%- endif %}
+  "occurrencePeriod": {% include "attributes/service_request/occurrence_period.j2" %},
+  "locationReference": {% include "attributes/service_request/requested_location_reference.j2" %},
+  "authoredOn" : "{{ data.authored_date_time }}",
+  "requester" : {% include "attributes/practitioner_reference.j2" %},
+  "performerType": {% include "attributes/service_request/performer_type.j2" %},
+  "performer": {% include "attributes/service_request/performer_reference.j2" %},
+  "reasonCode": {% include "attributes/service_request/reason_code.j2" %}
+{% endblock %}

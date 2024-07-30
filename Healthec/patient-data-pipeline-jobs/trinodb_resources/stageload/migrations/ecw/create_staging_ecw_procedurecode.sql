@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS cynchealth_staging.ecw_procedurecode (
+    row_id VARCHAR,
+    apuid VARCHAR,
+    record_id VARCHAR,
+    patient_id VARCHAR,
+    patient_account_no VARCHAR,
+    encounter_id VARCHAR,
+    provider_id VARCHAR,
+    provider_npi VARCHAR,
+    facility_id VARCHAR,
+    service_date VARCHAR,
+    cpt_code VARCHAR,
+    cpt_code_type VARCHAR,
+    modifier_1 VARCHAR,
+    modifier_2 VARCHAR,
+    modifier_3 VARCHAR,
+    modifier_4 VARCHAR,
+    icd_code_1 VARCHAR,
+    icd_code_2 VARCHAR,
+    icd_code_3 VARCHAR,
+    icd_code_4 VARCHAR,
+    place_of_service VARCHAR,
+    pos_code_description VARCHAR,
+    file_batch_id VARCHAR,
+    file_name VARCHAR,
+    file_source_name VARCHAR,
+    file_status VARCHAR,
+    created_user VARCHAR,
+    created_ts TIMESTAMP(3) WITH TIME ZONE,
+    updated_user VARCHAR,
+    updated_ts TIMESTAMP(3) WITH TIME ZONE
+)
+WITH (
+    LOCATION = 's3a://phm-development-datapipeline-bucket/delta-tables/cynchealth/staging/ecw_procedurecode',
+    PARTITIONED_BY = ARRAY['file_batch_id'],
+    CHECKPOINT_INTERVAL = 5
+);

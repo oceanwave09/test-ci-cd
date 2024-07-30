@@ -1,0 +1,29 @@
+provider_org_name:
+  key_path: provider_org_name
+  type: string
+  min_length: 1
+
+provider_org_phone_work:
+  key_path: provider_org_phone_work
+  type: string
+
+provider_org_tin:
+  key_path: provider_org_tin
+  required: True
+  type: string
+  min_length: 9
+
+provider_org_group_npi:
+  key_path: provider_org_group_npi
+  required: True
+  type: string
+  min_length: 9
+
+provider_org_zip:
+  key_path: provider_org_zip
+  length: 10
+  type: string
+
+provider_org_contact_phone:
+  key_path: provider_org_contact_phone
+  type: string

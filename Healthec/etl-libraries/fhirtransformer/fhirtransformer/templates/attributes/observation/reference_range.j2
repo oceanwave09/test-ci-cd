@@ -1,0 +1,25 @@
+[
+  {%- if data.reference_range_low_value or data.reference_range_high_value -%}
+  {
+    {% if data.reference_range_low_value %}
+    "low": {
+        "value": {{ data.reference_range_low_value }},
+        "unit": "{{ data.reference_range_low_unit }}",
+        "system": "{{ data.reference_range_low_system }}",
+        "code": "{{ data.reference_range_low_code }}"
+    }
+    {%- endif %}
+    {% if data.reference_range_low_value and data.reference_range_high_value %}
+    ,
+    {%- endif %}
+    {% if data.reference_range_high_value %}
+    "high": {
+        "value": {{ data.reference_range_high_value }},
+        "unit": "{{ data.reference_range_high_unit }}",
+        "system": "{{ data.reference_range_high_system }}",
+        "code": "{{ data.reference_range_high_code }}"
+    }
+    {%- endif %}
+  }
+  {%- endif %}
+]

@@ -1,0 +1,21 @@
+{
+  "source_id": "12345689",
+  "source_system": "http://www.bmc.nl/portal/prescriptions",
+  "status": "active",
+  "intent": "order",
+  "medication_id": "e74abfd4-d039-451d-b949-690464e9a1ca",
+  "patient_id": "69f946cb-a475-429d-ba9f-9ce0751a1904",
+  "authored_date_time": "2015-01-15",
+  "practitioner_id": "a10b4988-8e0d-4f9c-8af6-8a351f5afc5a",
+  "reason_code": "92818009",
+  "reason_display": "Chronic myeloid Leukemia (disorder)",
+  "reason_system": "http://snomed.info/sct",
+  "dosages": [
+    {
+      "sequence": "1",
+      "text": "1 tablet every morning, 2 tablets everyday at 3:00"
+    }
+  ],
+  "days_supply": "30",
+  "quantity": "90"
+}

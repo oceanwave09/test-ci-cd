@@ -1,0 +1,195 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "csv2"
+    },
+    "file_declaration": {
+        "delimiter": "|",
+        "replace_double_quotes": false,
+        "records": [
+            {
+                "rows": 1,
+                "min": 1,
+                "max": 1
+            },
+            {
+                "is_target": true,
+                "columns": [
+                    {
+                        "name": "row",
+                        "index": 1
+                    },
+                    {
+                        "name": "domain",
+                        "index": 2
+                    },
+                    {
+                        "name": "patient_first_name",
+                        "index": 3
+                    },
+                    {
+                        "name": "patient_last_name",
+                        "index": 4
+                    },
+                    {
+                        "name": "patient_date_of_birth",
+                        "index": 5
+                    },
+                    {
+                        "name": "external_patient_id",
+                        "index": 6
+                    },
+                    {
+                        "name": "source_name",
+                        "index": 7
+                    },
+                    {
+                        "name": "screen_date",
+                        "index": 8
+                    },
+                    {
+                        "name": "external_practice_id",
+                        "index": 9
+                    },
+                    {
+                        "name": "screening_practice_name",
+                        "index": 10
+                    },
+                    {
+                        "name": "question_group",
+                        "index": 11
+                    },
+                    {
+                        "name": "question",
+                        "index": 12
+                    },
+                    {
+                        "name": "answer",
+                        "index": 13
+                    },
+                    {
+                        "name": "mihin_common_key",
+                        "index": 14
+                    },
+                    {
+                        "name": "provider_name",
+                        "index": 15
+                    },
+                    {
+                        "name": "provider_npi",
+                        "index": 16
+                    }
+                ]
+            }
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": {
+            "object": {
+                "row_id": {
+                    "custom_func": {
+                        "name": "uuidv4"
+                    }
+                },
+                "row": {
+                    "xpath": "row"
+                },
+                "domain": {
+                    "xpath": "domain"
+                },
+                "patient_first_name": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_first_name"
+                            }
+                        ]
+                    }
+                },
+                "patient_last_name": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_last_name"
+                            }
+                        ]
+                    }
+                },
+                "patient_date_of_birth": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_date_of_birth"
+                            }
+                        ]
+                    }
+                },
+                "external_patient_id": {
+                    "xpath": "external_patient_id"
+                },
+                "source_name": {
+                    "xpath": "source_name"
+                },
+                "screen_date": {
+                    "xpath": "screen_date"
+                },
+                "external_practice_id": {
+                    "xpath": "external_practice_id"
+                },
+                "screening_practice_name": {
+                    "xpath": "screening_practice_name"
+                },
+                "question_group": {
+                    "xpath": "question_group"
+                },
+                "question": {
+                    "xpath": "question"
+                },
+                "answer": {
+                    "xpath": "answer"
+                },
+                "mihin_common_key": {
+                    "xpath": "mihin_common_key"
+                },
+                "provider_name": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "provider_name"
+                            }
+                        ]
+                    }
+                },
+                "provider_npi": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "provider_npi"
+                            }
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

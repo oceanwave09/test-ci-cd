@@ -1,0 +1,1757 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "PV1",
+            "min": 1,
+            "max": -1,
+            "elements": [
+              {
+                "name": "patient_sequence",
+                "index": 1
+              },              
+              {
+                "name": "set_id",
+                "index": 2,
+                "default": ""
+              },
+              {
+                "name": "patient_class",
+                "index": 3,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_point_of_care",
+                "index": 4,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_room_location",
+                "index": 4,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_bed_location",
+                "index": 4,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_facility",
+                "index": 4,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_location_status",
+                "index": 4,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_location_type",
+                "index": 4,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_location_building",
+                "index": 4,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_location_floor",
+                "index": 4,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_location_description",
+                "index": 4,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_location_identifier",
+                "index": 4,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "assigned_patient_location_authority",
+                "index": 4,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "admission_type",
+                "index": 5,
+                "default": ""
+              },
+              {
+                "name": "preadmit_identifier",
+                "index": 6,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "preadmit_check_type",
+                "index": 6,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "preadmit_scheme",
+                "index": 6,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "preadmit_authority",
+                "index": 6,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "preadmit_type_code",
+                "index": 6,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "preadmit_facility",
+                "index": 6,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "preadmit_effective_date",
+                "index": 6,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "preadmit_expiration_date",
+                "index": 6,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "preadmit_assigning_jurisdiction",
+                "index": 6,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "preadmit_assigning_agency",
+                "index": 6,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_point_of_care",
+                "index": 7,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_room",
+                "index": 7,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_bed",
+                "index": 7,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_facility",
+                "index": 7,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_location_status",
+                "index": 7,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_location_type",
+                "index": 7,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_location_building",
+                "index": 7,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_location_floor",
+                "index": 7,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_location_description",
+                "index": 7,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_location_identifier",
+                "index": 7,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "prior_patient_location_authority",
+                "index": 7,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_identifier",
+                "index": 8,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_family_name",
+                "index": 8,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_given_name",
+                "index": 8,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_middle_name",
+                "index": 8,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_suffix",
+                "index": 8,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_preffix",
+                "index": 8,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_degree",
+                "index": 8,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_source_table",
+                "index": 8,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_assigning_authority",
+                "index": 8,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_type_code",
+                "index": 8,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_identifier_check_digit",
+                "index": 8,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_check_digit_scheme",
+                "index": 8,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_identifier_type_code",
+                "index": 8,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_assigning_facility",
+                "index": 8,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_representation_code",
+                "index": 8,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_name_context",
+                "index": 8,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_name_validity_range",
+                "index": 8,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_name_assembly_order",
+                "index": 8,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_effective_date",
+                "index": 8,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_expiration_date",
+                "index": 8,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_professional_suffix",
+                "index": 8,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_assigning_jurisdiction",
+                "index": 8,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "attending_doctor_assigning_agency",
+                "index": 8,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_identifier",
+                "index": 9,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_family_name",
+                "index": 9,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_given_name",
+                "index": 9,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_middle_name",
+                "index": 9,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_preffix",
+                "index": 9,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_suffix",
+                "index": 9,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_degree",
+                "index": 9,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_source_table",
+                "index": 9,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_assigning_authority",
+                "index": 9,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_type_code",
+                "index": 9,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_identifier_check_digit",
+                "index": 9,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_check_digit_scheme",
+                "index": 9,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_identifier_type_code",
+                "index": 9,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_assigning_facility",
+                "index": 9,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_representation_code",
+                "index": 9,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_name_context",
+                "index": 9,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_name_validity_range",
+                "index": 9,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_name_assembly_order",
+                "index": 9,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_effective_date",
+                "index": 9,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_expiration_date",
+                "index": 9,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_professional_suffix",
+                "index": 9,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_assigning_jurisdiction",
+                "index": 9,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "referring_doctor_assigning_agency",
+                "index": 9,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_identifier",
+                "index": 10,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_family_name",
+                "index": 10,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_given_name",
+                "index": 10,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_middle_name",
+                "index": 10,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_preffix",
+                "index": 10,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_suffix",
+                "index": 10,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_degree",
+                "index": 10,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_source_table",
+                "index": 10,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_assigning_authority",
+                "index": 10,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_type_code",
+                "index": 10,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_identifier_check_digit",
+                "index": 10,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_check_digit_scheme",
+                "index": 10,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_identifier_type_code",
+                "index": 10,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_assigning_facility",
+                "index": 10,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_representation_code",
+                "index": 10,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_name_context",
+                "index": 10,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_name_validity_range",
+                "index": 10,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_name_assembly_order",
+                "index": 10,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_effective_date",
+                "index": 10,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_expiration_date",
+                "index": 10,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_professional_suffix",
+                "index": 10,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_assigning_jurisdiction",
+                "index": 10,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "consulting_doctor_assigning_agency",
+                "index": 10,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "hospital_service",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_point_of_care",
+                "index": 12,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_room",
+                "index": 12,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_bed",
+                "index": 12,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_facility",
+                "index": 12,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_status",
+                "index": 12,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_type",
+                "index": 12,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_building",
+                "index": 12,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_floor",
+                "index": 12,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_description",
+                "index": 12,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_identifier",
+                "index": 12,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "temporary_location_authority",
+                "index": 12,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "preadmit_test_indicator",
+                "index": 13,
+                "default": ""
+              },
+              {
+                "name": "re_admission_indicator",
+                "index": 14,
+                "default": ""
+              },
+              {
+                "name": "admit_source",
+                "index": 15,
+                "default": ""
+              },
+              {
+                "name": "ambulatory_status",
+                "index": 16,
+                "default": ""
+              },
+              {
+                "name": "vip_indicator",
+                "index": 17,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_identifier",
+                "index": 18,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_family_name",
+                "index": 18,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_given_name",
+                "index": 18,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_middle_name",
+                "index": 18,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_suffix",
+                "index": 18,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_preffix",
+                "index": 18,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_degree",
+                "index": 18,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_source_table",
+                "index": 18,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_assigning_authority",
+                "index": 18,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_type_code",
+                "index": 18,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_identifier_check_digit",
+                "index": 18,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_check_digit_scheme",
+                "index": 18,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_identifier_type_code",
+                "index": 18,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_assigning_facility",
+                "index": 18,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_representation_code",
+                "index": 18,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_name_context",
+                "index": 18,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_name_validity_range",
+                "index": 18,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_name_assembly_order",
+                "index": 18,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_effective_date",
+                "index": 18,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_expiration_date",
+                "index": 18,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_professional_suffix",
+                "index": 18,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_assigning_jurisdiction",
+                "index": 18,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "admitting_doctor_assigning_agency",
+                "index": 18,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "patient_type",
+                "index": 19,
+                "default": ""
+              },
+              {
+                "name": "visit_id_number",
+                "index": 20,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "visit_number_identifier",
+                "index": 20,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "visit_number_scheme",
+                "index": 20,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "visit_number_authority",
+                "index": 20,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "visit_number_type_code",
+                "index": 20,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "visit_number_facility",
+                "index": 20,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "visit_number_effective_date",
+                "index": 20,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "visit_number_expiration_date",
+                "index": 20,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "visit_number_assigning_jurisdiction",
+                "index": 20,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "visit_number_assigning_agency",
+                "index": 20,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "financial_class_code",
+                "index": 21,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "financial_class_date",
+                "index": 21,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "charge_price_indicator",
+                "index": 22,
+                "default": ""
+              },
+              {
+                "name": "courtesy_code",
+                "index": 23,
+                "default": ""
+              },
+              {
+                "name": "credit_rating",
+                "index": 24,
+                "default": ""
+              },
+              {
+                "name": "contract_code",
+                "index": 25,
+                "default": ""
+              },
+              {
+                "name": "contract_effective_date",
+                "index": 26,
+                "default": ""
+              },
+              {
+                "name": "contract_amount",
+                "index": 27,
+                "default": ""
+              },
+              {
+                "name": "contract_period",
+                "index": 28,
+                "default": ""
+              },
+              {
+                "name": "interest_code",
+                "index": 29,
+                "default": ""
+              },
+              {
+                "name": "transfer_to_bad_debt_code",
+                "index": 30,
+                "default": ""
+              },
+              {
+                "name": "transfer_to_bad_debt_date",
+                "index": 31,
+                "default": ""
+              },
+              {
+                "name": "bad_debt_agency_code",
+                "index": 32,
+                "default": ""
+              },
+              {
+                "name": "bad_debt_transfer_amount",
+                "index": 33,
+                "default": ""
+              },
+              {
+                "name": "bad_debt_recovery_amount",
+                "index": 34,
+                "default": ""
+              },
+              {
+                "name": "delete_account_indicator",
+                "index": 35,
+                "default": ""
+              },
+              {
+                "name": "delete_account_date",
+                "index": 36,
+                "default": ""
+              },
+              {
+                "name": "discharge_disposition",
+                "index": 37,
+                "default": ""
+              },
+              {
+                "name": "discharged_to_location",
+                "index": 38,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "discharged_to_location_date",
+                "index": 38,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "diet_type",
+                "index": 39,
+                "default": ""
+              },
+              {
+                "name": "servicing_facility",
+                "index": 40,
+                "default": ""
+              },
+              {
+                "name": "bed_status",
+                "index": 41,
+                "default": ""
+              },
+              {
+                "name": "account_status",
+                "index": 42,
+                "default": ""
+              },
+              {
+                "name": "pending_location",
+                "index": 43,
+                "default": ""
+              },
+              {
+                "name": "prior_temporary_location_point_of_care",
+                "index": 44,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "prior_temporary_location_room",
+                "index": 44,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "prior_temporary_location_bed",
+                "index": 44,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "prior_temporary_location_facility",
+                "index": 44,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "prior_temporary_location_status",
+                "index": 44,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "admit_date_time",
+                "index": 45,
+                "default": ""
+              },
+              {
+                "name": "discharge_date_time",
+                "index": 46,
+                "default": ""
+              },
+              {
+                "name": "current_patient_balance",
+                "index": 47,
+                "default": ""
+              },
+              {
+                "name": "total_charges",
+                "index": 48,
+                "default": ""
+              },
+              {
+                "name": "total_adjustments",
+                "index": 49,
+                "default": ""
+              },
+              {
+                "name": "total_payments",
+                "index": 50,
+                "default": ""
+              },
+              {
+                "name": "alternate_visit_id",
+                "index": 51,
+                "default": ""
+              },
+              {
+                "name": "visit_indicator",
+                "index": 52,
+                "default": ""
+              },
+              {
+                "name": "other_healthcare_provider",
+                "index": 53,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "PV1": {
+          "array":[
+            {
+              "xpath": "PV1",
+              "object": {
+                "patient_sequence":{
+                  "xpath": "patient_sequence"
+                },                
+                "set_id": {
+                  "xpath": "set_id"
+                },
+                "patient_class": {
+                  "xpath": "patient_class"
+                },
+                "assigned_patient_point_of_care": {
+                  "xpath": "assigned_patient_point_of_care"
+                },
+                "assigned_patient_room_location": {
+                  "xpath": "assigned_patient_room_location"
+                },
+                "assigned_patient_bed_location": {
+                  "xpath": "assigned_patient_bed_location"
+                },
+                "assigned_patient_facility": {
+                  "xpath": "assigned_patient_facility"
+                },
+                "assigned_patient_location_status": {
+                  "xpath": "assigned_patient_location_status"
+                },
+                "assigned_patient_location_type": {
+                  "xpath": "assigned_patient_location_type"
+                },
+                "assigned_patient_location_building": {
+                  "xpath": "assigned_patient_location_building"
+                },
+                "assigned_patient_location_floor": {
+                  "xpath": "assigned_patient_location_floor"
+                },
+                "assigned_patient_location_description": {
+                  "xpath": "assigned_patient_location_description"
+                },
+                "assigned_patient_location_identifier": {
+                  "xpath": "assigned_patient_location_identifier"
+                },
+                "assigned_patient_location_authority": {
+                  "xpath": "assigned_patient_location_authority"
+                },
+                "admission_type": {
+                  "xpath": "admission_type"
+                },
+                "visit_id_number": {
+                  "xpath": "visit_id_number"
+                },
+                "visit_number_identifier": {
+                  "xpath": "visit_number_identifier"
+                },
+                "visit_number_scheme": {
+                  "xpath": "visit_number_scheme"
+                },
+                "visit_number_authority": {
+                  "xpath": "visit_number_authority"
+                },
+                "visit_number_type_code": {
+                  "xpath": "visit_number_type_code"
+                },
+                "visit_number_facility": {
+                  "xpath": "visit_number_facility"
+                },
+                "visit_number_effective_date": {
+                  "xpath": "visit_number_effective_date"
+                },
+                "visit_number_expiration_date": {
+                  "xpath": "visit_number_expiration_date"
+                },
+                "visit_number_assigning_jurisdiction": {
+                  "xpath": "visit_number_assigning_jurisdiction"
+                },
+                "visit_number_assigning_agency": {
+                  "xpath": "visit_number_assigning_agency"
+                },
+                "prior_patient_point_of_care": {
+                  "xpath": "prior_patient_point_of_care"
+                },
+                "prior_patient_room": {
+                  "xpath": "prior_patient_room"
+                },
+                "prior_patient_bed": {
+                  "xpath": "prior_patient_bed"
+                },
+                "prior_patient_facility": {
+                  "xpath": "prior_patient_facility"
+                },
+                "prior_patient_location_status": {
+                  "xpath": "prior_patient_location_status"
+                },
+                "prior_patient_location_type": {
+                  "xpath": "prior_patient_location_type"
+                },
+                "prior_patient_location_building": {
+                  "xpath": "prior_patient_location_building"
+                },
+                "prior_patient_location_floor": {
+                  "xpath": "prior_patient_location_floor"
+                },
+                "prior_patient_location_description": {
+                  "xpath": "prior_patient_location_description"
+                },
+                "prior_patient_location_identifier": {
+                  "xpath": "prior_patient_location_identifier"
+                },
+                "prior_patient_location_authority": {
+                  "xpath": "prior_patient_location_authority"
+                },
+                "attending_doctor_identifier": {
+                  "xpath": "attending_doctor_identifier"
+                },
+                "attending_doctor_family_name": {
+                  "xpath": "attending_doctor_family_name"
+                },
+                "attending_doctor_given_name": {
+                  "xpath": "attending_doctor_given_name"
+                },
+                "attending_doctor_middle_name": {
+                  "xpath": "attending_doctor_middle_name"
+                },
+                "attending_doctor_suffix": {
+                  "xpath": "attending_doctor_suffix"
+                },
+                "attending_doctor_preffix": {
+                  "xpath": "attending_doctor_preffix"
+                },
+                "attending_doctor_degree": {
+                  "xpath": "attending_doctor_degree"
+                },
+                "attending_doctor_source_table": {
+                  "xpath": "attending_doctor_source_table"
+                },
+                "attending_doctor_assigning_authority": {
+                  "xpath": "attending_doctor_assigning_authority"
+                },
+                "attending_doctor_type_code": {
+                  "xpath": "attending_doctor_type_code"
+                },
+                "attending_doctor_identifier_check_digit": {
+                  "xpath": "attending_doctor_identifier_check_digit"
+                },
+                "attending_doctor_check_digit_scheme": {
+                  "xpath": "attending_doctor_check_digit_scheme"
+                },
+                "attending_doctor_identifier_type_code": {
+                  "xpath": "attending_doctor_identifier_type_code"
+                },
+                "attending_doctor_assigning_facility": {
+                  "xpath": "attending_doctor_assigning_facility"
+                },
+                "attending_doctor_representation_code": {
+                  "xpath": "attending_doctor_representation_code"
+                },
+                "attending_doctor_name_context": {
+                  "xpath": "attending_doctor_name_context"
+                },
+                "attending_doctor_name_validity_range": {
+                  "xpath": "attending_doctor_name_validity_range"
+                },
+                "attending_doctor_name_assembly_order": {
+                  "xpath": "attending_doctor_name_assembly_order"
+                },
+                "attending_doctor_effective_date": {
+                  "xpath": "attending_doctor_effective_date"
+                },
+                "attending_doctor_expiration_date": {
+                  "xpath": "attending_doctor_expiration_date"
+                },
+                "attending_doctor_professional_suffix": {
+                  "xpath": "attending_doctor_professional_suffix"
+                },
+                "attending_doctor_assigning_jurisdiction": {
+                  "xpath": "attending_doctor_assigning_jurisdiction"
+                },
+                "attending_doctor_assigning_agency": {
+                  "xpath": "attending_doctor_assigning_agency"
+                },
+                "referring_doctor_identifier": {
+                  "xpath": "referring_doctor_identifier"
+                },
+                "referring_doctor_family_name": {
+                  "xpath": "referring_doctor_family_name"
+                },
+                "referring_doctor_given_name": {
+                  "xpath": "referring_doctor_given_name"
+                },
+                "referring_doctor_middle_name": {
+                  "xpath": "referring_doctor_middle_name"
+                },
+                "referring_doctor_preffix": {
+                  "xpath": "referring_doctor_preffix"
+                },
+                "referring_doctor_suffix": {
+                  "xpath": "referring_doctor_suffix"
+                },
+                "referring_doctor_degree": {
+                  "xpath": "referring_doctor_degree"
+                },
+                "referring_doctor_source_table": {
+                  "xpath": "referring_doctor_source_table"
+                },
+                "referring_doctor_assigning_authority": {
+                  "xpath": "referring_doctor_assigning_authority"
+                },
+                "referring_doctor_type_code": {
+                  "xpath": "referring_doctor_type_code"
+                },
+                "referring_doctor_identifier_check_digit": {
+                  "xpath": "referring_doctor_identifier_check_digit"
+                },
+                "referring_doctor_check_digit_scheme": {
+                  "xpath": "referring_doctor_check_digit_scheme"
+                },
+                "referring_doctor_identifier_type_code": {
+                  "xpath": "referring_doctor_identifier_type_code"
+                },
+                "referring_doctor_assigning_facility": {
+                  "xpath": "referring_doctor_assigning_facility"
+                },
+                "referring_doctor_representation_code": {
+                  "xpath": "referring_doctor_representation_code"
+                },
+                "referring_doctor_name_context": {
+                  "xpath": "referring_doctor_name_context"
+                },
+                "referring_doctor_name_validity_range": {
+                  "xpath": "referring_doctor_name_validity_range"
+                },
+                "referring_doctor_name_assembly_order": {
+                  "xpath": "referring_doctor_name_assembly_order"
+                },
+                "referring_doctor_effective_date": {
+                  "xpath": "referring_doctor_effective_date"
+                },
+                "referring_doctor_expiration_date": {
+                  "xpath": "referring_doctor_expiration_date"
+                },
+                "referring_doctor_professional_suffix": {
+                  "xpath": "referring_doctor_professional_suffix"
+                },
+                "referring_doctor_assigning_jurisdiction": {
+                  "xpath": "referring_doctor_assigning_jurisdiction"
+                },
+                "referring_doctor_assigning_agency": {
+                  "xpath": "referring_doctor_assigning_agency"
+                },
+                "consulting_doctor_identifier": {
+                  "xpath": "consulting_doctor_identifier"
+                },
+                "consulting_doctor_family_name": {
+                  "xpath": "consulting_doctor_family_name"
+                },
+                "consulting_doctor_given_name": {
+                  "xpath": "consulting_doctor_given_name"
+                },
+                "consulting_doctor_middle_name": {
+                  "xpath": "consulting_doctor_middle_name"
+                },
+                "consulting_doctor_preffix": {
+                  "xpath": "consulting_doctor_preffix"
+                },
+                "consulting_doctor_suffix": {
+                  "xpath": "consulting_doctor_suffix"
+                },
+                "consulting_doctor_degree": {
+                  "xpath": "consulting_doctor_degree"
+                },
+                "consulting_doctor_source_table": {
+                  "xpath": "consulting_doctor_source_table"
+                },
+                "consulting_doctor_assigning_authority": {
+                  "xpath": "consulting_doctor_assigning_authority"
+                },
+                "consulting_doctor_type_code": {
+                  "xpath": "consulting_doctor_type_code"
+                },
+                "consulting_doctor_identifier_check_digit": {
+                  "xpath": "consulting_doctor_identifier_check_digit"
+                },
+                "consulting_doctor_check_digit_scheme": {
+                  "xpath": "consulting_doctor_check_digit_scheme"
+                },
+                "consulting_doctor_identifier_type_code": {
+                  "xpath": "consulting_doctor_identifier_type_code"
+                },
+                "consulting_doctor_assigning_facility": {
+                  "xpath": "consulting_doctor_assigning_facility"
+                },
+                "consulting_doctor_representation_code": {
+                  "xpath": "consulting_doctor_representation_code"
+                },
+                "consulting_doctor_name_context": {
+                  "xpath": "consulting_doctor_name_context"
+                },
+                "consulting_doctor_name_validity_range": {
+                  "xpath": "consulting_doctor_name_validity_range"
+                },
+                "consulting_doctor_name_assembly_order": {
+                  "xpath": "consulting_doctor_name_assembly_order"
+                },
+                "consulting_doctor_effective_date": {
+                  "xpath": "consulting_doctor_effective_date"
+                },
+                "consulting_doctor_expiration_date": {
+                  "xpath": "consulting_doctor_expiration_date"
+                },
+                "consulting_doctor_professional_suffix": {
+                  "xpath": "consulting_doctor_professional_suffix"
+                },
+                "consulting_doctor_assigning_jurisdiction": {
+                  "xpath": "consulting_doctor_assigning_jurisdiction"
+                },
+                "consulting_doctor_assigning_agency": {
+                  "xpath": "consulting_doctor_assigning_agency"
+                },
+                "hospital_service": {
+                  "xpath": "hospital_service"
+                },
+                "temporary_location_point_of_care": {
+                  "xpath": "temporary_location_point_of_care"
+                },
+                "temporary_location_room": {
+                  "xpath": "temporary_location_room"
+                },
+                "temporary_location_bed": {
+                  "xpath": "temporary_location_bed"
+                },
+                "temporary_location_facility": {
+                  "xpath": "temporary_location_facility"
+                },
+                "temporary_location_status": {
+                  "xpath": "temporary_location_status"
+                },
+                "temporary_location_type": {
+                  "xpath": "temporary_location_type"
+                },
+                "temporary_location_building": {
+                  "xpath": "temporary_location_building"
+                },
+                "temporary_location_floor": {
+                  "xpath": "temporary_location_floor"
+                },
+                "temporary_location_description": {
+                  "xpath": "temporary_location_description"
+                },
+                "temporary_location_identifier": {
+                  "xpath": "temporary_location_identifier"
+                },
+                "temporary_location_authority": {
+                  "xpath": "temporary_location_authority"
+                },
+                "preadmit_test_indicator": {
+                  "xpath": "preadmit_test_indicator"
+                },
+                "re_admission_indicator": {
+                  "xpath": "re_admission_indicator"
+                },
+                "admit_source": {
+                  "xpath": "admit_source"
+                },
+                "ambulatory_status": {
+                  "xpath": "ambulatory_status"
+                },
+                "vip_indicator": {
+                  "xpath": "vip_indicator"
+                },
+                "admitting_doctor_identifier": {
+                  "xpath": "admitting_doctor_identifier"
+                },
+                "admitting_doctor_family_name": {
+                  "xpath": "admitting_doctor_family_name"
+                },
+                "admitting_doctor_given_name": {
+                  "xpath": "admitting_doctor_given_name"
+                },
+                "admitting_doctor_middle_name": {
+                  "xpath": "admitting_doctor_middle_name"
+                },
+                "admitting_doctor_suffix": {
+                  "xpath": "admitting_doctor_suffix"
+                },
+                "admitting_doctor_preffix": {
+                  "xpath": "admitting_doctor_preffix"
+                },
+                "admitting_doctor_degree": {
+                  "xpath": "admitting_doctor_degree"
+                },
+                "admitting_doctor_source_table": {
+                  "xpath": "admitting_doctor_source_table"
+                },
+                "admitting_doctor_assigning_authority": {
+                  "xpath": "admitting_doctor_assigning_authority"
+                },
+                "admitting_doctor_type_code": {
+                  "xpath": "admitting_doctor_type_code"
+                },
+                "admitting_doctor_identifier_check_digit": {
+                  "xpath": "admitting_doctor_identifier_check_digit"
+                },
+                "admitting_doctor_check_digit_scheme": {
+                  "xpath": "admitting_doctor_check_digit_scheme"
+                },
+                "admitting_doctor_identifier_type_code": {
+                  "xpath": "admitting_doctor_identifier_type_code"
+                },
+                "admitting_doctor_assigning_facility": {
+                  "xpath": "admitting_doctor_assigning_facility"
+                },
+                "admitting_doctor_representation_code": {
+                  "xpath": "admitting_doctor_representation_code"
+                },
+                "admitting_doctor_name_context": {
+                  "xpath": "admitting_doctor_name_context"
+                },
+                "admitting_doctor_name_validity_range": {
+                  "xpath": "admitting_doctor_name_validity_range"
+                },
+                "admitting_doctor_name_assembly_order": {
+                  "xpath": "admitting_doctor_name_assembly_order"
+                },
+                "admitting_doctor_effective_date": {
+                  "xpath": "admitting_doctor_effective_date"
+                },
+                "admitting_doctor_expiration_date": {
+                  "xpath": "admitting_doctor_expiration_date"
+                },
+                "admitting_doctor_professional_suffix": {
+                  "xpath": "admitting_doctor_professional_suffix"
+                },
+                "admitting_doctor_assigning_jurisdiction": {
+                  "xpath": "admitting_doctor_assigning_jurisdiction"
+                },
+                "admitting_doctor_assigning_agency": {
+                  "xpath": "admitting_doctor_assigning_agency"
+                },
+                "patient_type": {
+                  "xpath": "patient_type"
+                },
+                "preadmit_check_type": {
+                  "xpath": "preadmit_check_type"
+                },
+                "preadmit_identifier": {
+                  "xpath": "preadmit_identifier"
+                },
+                "preadmit_scheme": {
+                  "xpath": "preadmit_scheme"
+                },
+                "preadmit_authority": {
+                  "xpath": "preadmit_authority"
+                },
+                "preadmit_type_code": {
+                  "xpath": "preadmit_type_code"
+                },
+                "preadmit_facility": {
+                  "xpath": "preadmit_facility"
+                },
+                "preadmit_effective_date": {
+                  "xpath": "preadmit_effective_date"
+                },
+                "preadmit_expiration_date": {
+                  "xpath": "preadmit_expiration_date"
+                },
+                "preadmit_assigning_jurisdiction": {
+                  "xpath": "preadmit_assigning_jurisdiction"
+                },
+                "preadmit_assigning_agency": {
+                  "xpath": "preadmit_assigning_agency"
+                },
+                "financial_class_code": {
+                  "xpath": "financial_class_code"
+                },
+                "financial_class_date": {
+                  "xpath": "financial_class_date"
+                },
+                "charge_price_indicator": {
+                  "xpath": "charge_price_indicator"
+                },
+                "courtesy_code": {
+                  "xpath": "courtesy_code"
+                },
+                "credit_rating": {
+                  "xpath": "credit_rating"
+                },
+                "contract_code": {
+                  "xpath": "contract_code"
+                },
+                "contract_effective_date": {
+                  "xpath": "contract_effective_date"
+                },
+                "contract_amount": {
+                  "xpath": "contract_amount"
+                },
+                "contract_period": {
+                  "xpath": "contract_period"
+                },
+                "interest_code": {
+                  "xpath": "interest_code"
+                },
+                "transfer_to_bad_debt_code": {
+                  "xpath": "transfer_to_bad_debt_code"
+                },
+                "transfer_to_bad_debt_date": {
+                  "xpath": "transfer_to_bad_debt_date"
+                },
+                "bad_debt_agency_code": {
+                  "xpath": "bad_debt_agency_code"
+                },
+                "bad_debt_transfer_amount": {
+                  "xpath": "bad_debt_transfer_amount"
+                },
+                "bad_debt_recovery_amount": {
+                  "xpath": "bad_debt_recovery_amount"
+                },
+                "delete_account_indicator": {
+                  "xpath": "delete_account_indicator"
+                },
+                "delete_account_date": {
+                  "xpath": "delete_account_date"
+                },
+                "discharge_disposition": {
+                  "xpath": "discharge_disposition"
+                },
+                "discharged_to_location": {
+                  "xpath": "discharged_to_location"
+                },
+                "discharged_to_location_date": {
+                  "xpath": "discharged_to_location_date"
+                },
+                "diet_type": {
+                  "xpath": "diet_type"
+                },
+                "servicing_facility": {
+                  "xpath": "servicing_facility"
+                },
+                "bed_status": {
+                  "xpath": "bed_status"
+                },
+                "account_status": {
+                  "xpath": "account_status"
+                },
+                "pending_location": {
+                  "xpath": "pending_location"
+                },
+                "prior_temporary_location_point_of_care": {
+                  "xpath": "prior_temporary_location_point_of_care"
+                },
+                "prior_temporary_location_room": {
+                  "xpath": "prior_temporary_location_room"
+                },
+                "prior_temporary_location_bed": {
+                  "xpath": "prior_temporary_location_bed"
+                },
+                "prior_temporary_location_facility": {
+                  "xpath": "prior_temporary_location_facility"
+                },
+                "prior_temporary_location_status": {
+                  "xpath": "prior_temporary_location_status"
+                },
+                "admit_date_time": {
+                  "xpath": "admit_date_time"
+                },
+                "discharge_date_time": {
+                  "xpath": "discharge_date_time"
+                },
+                "current_patient_balance": {
+                  "xpath": "current_patient_balance"
+                },
+                "total_charges": {
+                  "xpath": "total_charges"
+                },
+                "total_adjustments": {
+                  "xpath": "total_adjustments"
+                },
+                "total_payments": {
+                  "xpath": "total_payments"
+                },
+                "alternate_visit_id": {
+                  "xpath": "alternate_visit_id"
+                },
+                "visit_indicator": {
+                  "xpath": "visit_indicator"
+                },
+                "other_healthcare_provider": {
+                  "xpath": "other_healthcare_provider"
+                }
+              }
+            }
+            
+      ]}
+      }
+    }
+  }
+}

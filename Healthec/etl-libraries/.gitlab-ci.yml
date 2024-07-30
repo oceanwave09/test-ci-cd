@@ -1,0 +1,109 @@
+image: python:3.8.16
+
+include:
+  - local: 'build_template.yml'
+  - template: Security/SAST.gitlab-ci.yml
+
+stages:
+  - test
+  - static analysis
+  - build
+
+variables:
+  REPOSITORY_USERNAME: __token__
+  REPOSITORY_PASSWORD: ${PYTHON_TOKEN}
+  REPOSITORY_URL: ${CI_API_V4_URL}/projects/${PYTHON_PROJECT_ID}/packages/pypi
+  PIP_CACHE_DIR: "${CI_PROJECT_DIR}/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+    - venv/
+
+before_script:
+  - python --version  # For debugging
+  - pip install virtualenv
+  - virtualenv venv
+  - source venv/bin/activate
+
+sast:
+  stage: test
+
+linting_fhirclient:
+  extends: .linting
+  stage: static analysis
+  variables:
+    PROJECT_ROOT: "fhirclient"
+
+release_fhirclient:
+  extends: .release
+  stage: build
+  variables:
+    PROJECT_ROOT: "fhirclient"
+  needs: ["linting_fhirclient"]
+
+linting_fhirtransformer:
+  extends: .linting
+  stage: static analysis
+  variables:
+    PROJECT_ROOT: "fhirtransformer"
+
+testing_fhirtransformer:
+  extends: .test
+  stage: static analysis
+  variables:
+    PROJECT_ROOT: "fhirtransformer"
+  needs: ["linting_fhirtransformer"]
+
+release_fhirtransformer:
+  extends: .release
+  stage: build
+  variables:
+    PROJECT_ROOT: "fhirtransformer"
+  needs: ["linting_fhirtransformer", "testing_fhirtransformer"]
+
+linting_smartmapper:
+  extends: .linting
+  stage: static analysis
+  variables:
+    PROJECT_ROOT: "smartmapper"
+
+release_smartmapper:
+  extends: .release
+  stage: build
+  variables:
+    PROJECT_ROOT: "smartmapper"
+  needs: ["linting_smartmapper"]
+
+linting_omniparser:
+  extends: .linting
+  stage: static analysis
+  variables:
+    PROJECT_ROOT: "omniparser"
+
+testing_omniparser:
+  extends: .test
+  stage: static analysis
+  variables:
+    PROJECT_ROOT: "omniparser"
+  needs: ["linting_omniparser"]
+
+release_omniparser:
+  extends: .release
+  stage: build
+  variables:
+    PROJECT_ROOT: "omniparser"
+  needs: ["testing_omniparser", "linting_omniparser"]
+
+linting_deidentifier:
+  extends: .linting
+  stage: static analysis
+  variables:
+    PROJECT_ROOT: "deidentifier"
+
+release_deidentifier:
+  extends: .release
+  stage: build
+  variables:
+    PROJECT_ROOT: "deidentifier"
+  needs: ["linting_deidentifier"]

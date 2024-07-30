@@ -1,0 +1,8 @@
+ncqa_hedis_telephone_number:
+  key_path: telephone_number
+  type: string
+
+ncqa_hedis_member_id:
+  key_path: member_id
+  min_length: 1
+  required: True

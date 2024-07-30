@@ -1,0 +1,52 @@
+[
+	{
+		"claim_status": "2",
+		"days_supply": "59",
+		"member_id": "95025",
+		"ndc_drug_code": "00002822201",
+		"quantity_dispensed": "0000000",
+		"row_id": "34581966-8c9d-4365-b44a-3359d44c3db8",
+		"service_date": "20220408",
+		"supplemental_data": "Y"
+	},
+	{
+		"claim_status": "2",
+		"days_supply": "41",
+		"member_id": "95049",
+		"ndc_drug_code": "52125012702",
+		"quantity_dispensed": "0000000",
+		"row_id": "a740c85f-ba98-4468-84c5-e4e1f13a34eb",
+		"service_date": "20240612",
+		"supplemental_data": "N"
+	},
+	{
+		"claim_status": "2",
+		"days_supply": "95",
+		"member_id": "95051",
+		"ndc_drug_code": "63187081160",
+		"quantity_dispensed": "0000000",
+		"row_id": "60d79942-8fff-45bb-9a8c-62fe5ba1a953",
+		"service_date": "20220210",
+		"supplemental_data": "N"
+	},
+	{
+		"claim_status": "2",
+		"days_supply": "65",
+		"member_id": "95052",
+		"ndc_drug_code": "50090557400",
+		"quantity_dispensed": "0000000",
+		"row_id": "37ebd3ba-10ab-4d0b-a796-000e98de790d",
+		"service_date": "20220526",
+		"supplemental_data": "N"
+	},
+	{
+		"claim_status": "2",
+		"days_supply": "17",
+		"member_id": "95053",
+		"ndc_drug_code": "00247229330",
+		"quantity_dispensed": "0000000",
+		"row_id": "31e34c04-f7d4-4c25-93a7-1069e99687fc",
+		"service_date": "20210517",
+		"supplemental_data": "N"
+	}
+]

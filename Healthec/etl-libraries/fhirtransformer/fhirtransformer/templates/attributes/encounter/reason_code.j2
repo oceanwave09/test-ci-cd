@@ -1,0 +1,16 @@
+[
+  {%- if data.reason_code or data.reason_text -%}
+  {
+    {% if data.reason_code %}
+    "coding": [
+      {
+        "system": "{{ data.reason_system }}",
+        "code": "{{ data.reason_code }}",
+        "display": "{{ data.reason_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.reason_text }}"
+  }
+  {%- endif %}
+]

@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "patient-data-pipeline-jobs"
+version = "0.0.0"
+description = ""
+authors = ["Suresh Nakkeran <suresh.nakkeran@healthec.com>"]
+readme = "README.md"
+
+
+[tool.black]
+line-length = 121
+
+
+[tool.isort]
+profile = "black"
+line_length = 121
+
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
+branch = "main"
+upload_to_pypi = false
+upload_to_release = true
+build_command = ""
+commit_author = "semantic-release-bot <semantic-release-bot@healthec.com>"
+commit_subject = "chore(release): {version} [skip ci]"
+commit_message = "chore(release): {version}"
+hvcs = "gitlab"
+
+
+[tool.poetry.dependencies]
+python = "^3.8.10"
+
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.1.0"
+flake8 = "^6.0.0"
+isort = "^5.12.0"
+pre-commit = "^3.0.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

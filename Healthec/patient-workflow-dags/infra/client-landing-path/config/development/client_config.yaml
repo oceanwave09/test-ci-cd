@@ -1,0 +1,51 @@
+nucleo:
+  common:
+    - ANALYTICAL
+    - MIGRATION
+    - FHIRBUNDLE
+    - PRACTICE
+    - PROVIDER
+  Pipeline_Test_Practice_01_cbe25fdd-e5c1-4bd9-ab89-6bb64f9fe717:
+    - FHIRBUNDLE
+    - BENEFICIARY
+    - MEDICAL_CLAIM
+    - RX_CLAIM
+    - CCD
+    - HL7
+    - ECW
+    - CCLF
+    - GI
+    - GAP
+  2022_AMM_Sample_1_89c7304f-2365-4185-8dbf-825b4d1a1547:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_AMR_Sample_1_48e33690-32e5-4eb1-ba28-55aea9588bad:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_APM_Sample_1_81a9099b-0e15-45b7-bb79-6a02ea9b152a:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_CBP_Sample_1_4b4e2680-2766-4791-81a4-21b58c442f70:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_CIS_Sample_1_14ebe3b6-d1fd-48df-9d39-5959587b24c8:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_HBD_Sample_1_15ac65a0-7f38-4612-9a1c-e72a79ccda9f:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_IMA_Sample_1_7f3cb8d9-5a27-429c-b83d-22df34c2e39a:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_SAA_Sample_1_de09a473-15c2-489f-bd4a-81ce0c811046:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_SSD_Sample_1_efadcbf1-2fac-467f-a850-0c5e4e6c53fd:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_W30_Sample_1_70e29ed5-b19d-42ca-ac21-b73bacf920e6:
+    - FHIRBUNDLE
+    - NCQA_HEDIS
+  2022_WCV_Sample_1_d9643762-88f9-41ff-9818-5753dc99e0a0:
+    - FHIRBUNDLE
+    - NCQA_HEDIS

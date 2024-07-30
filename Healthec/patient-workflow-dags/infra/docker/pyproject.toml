@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "airflow"
+version = "0.0.0"
+description = "Airflow docker image python dependencies"
+authors = ["Suresh Nakkeran"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+apache-airflow-providers-cncf-kubernetes = ">=5.0.0"
+airflow-provider-kafka = ">=0.1.1"
+confluent-kafka = ">=1.9.2"
+apache-airflow-providers-amazon = ">=6.0.0"
+dateparser = ">=1.1.6"
+jsonmerge = ">=1.9.0"
+ijson = ">=3.2.0.post0"
+xmlschema = ">=2.3.1"
+simplejson = ">=3.19.1"

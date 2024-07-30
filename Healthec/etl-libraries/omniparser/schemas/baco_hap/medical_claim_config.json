@@ -1,0 +1,277 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "claim_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "subscriber_id",
+            "start_pos": 29,
+            "length": 12
+          },
+          {
+            "name": "member_last_name",
+            "start_pos": 43,
+            "length": 35
+          },
+          {
+            "name": "member_first_name",
+            "start_pos": 78,
+            "length": 15
+          },
+          {
+            "name": "member_gender",
+            "start_pos": 93,
+            "length": 1
+          },
+          {
+            "name": "member_dob",
+            "start_pos": 94,
+            "length": 8
+          },
+          {
+            "name": "member_relationship_code",
+            "start_pos": 102,
+            "length": 2
+          },
+          {
+            "name": "member_zip",
+            "start_pos": 104,
+            "length": 15
+          },
+          {
+            "name": "claim_service_start_date",
+            "start_pos": 120,
+            "length": 8
+          },
+          {
+            "name": "claim_service_end_date",
+            "start_pos": 128,
+            "length": 8
+          },
+          {
+            "name": "claim_type",
+            "start_pos": 119,
+            "length": 1
+          },
+          {
+            "name": "claim_discharge_status",
+            "start_pos": 295,
+            "length": 4
+          },
+          {
+            "name": "claim_admission_type",
+            "start_pos": 291,
+            "length": 4
+          },
+          {
+            "name": "claim_total_amount",
+            "start_pos": 412,
+            "length": 19
+          },
+          {
+            "name": "line_number",
+            "start_pos": 650,
+            "length": 3
+          },
+          {
+            "name": "line_service_start_date",
+            "start_pos": 431,
+            "length": 8
+          },
+          {
+            "name": "line_service_end_date",
+            "start_pos": 439,
+            "length": 8
+          },
+          {
+            "name": "line_revenue_code",
+            "start_pos": 501,
+            "length": 4
+          },
+          {
+            "name": "line_primary_diagnosis_code",
+            "start_pos": 136,
+            "length": 30
+          },
+          {
+            "name": "line_diagnosis_code_1",
+            "start_pos": 166,
+            "length": 30
+          },
+          {
+            "name": "line_diagnosis_code_2",
+            "start_pos": 196,
+            "length": 30
+          },
+          {
+            "name": "line_diagnosis_code_3",
+            "start_pos": 226,
+            "length": 30
+          },
+          {
+            "name": "line_primary_procedure_code",
+            "start_pos": 266,
+            "length": 10
+          },
+          {
+            "name": "line_procedure_code_1",
+            "start_pos": 256,
+            "length": 10
+          },
+          {
+            "name": "line_procedure_code_2",
+            "start_pos": 276,
+            "length": 10
+          },
+          {
+            "name": "line_drg_code",
+            "start_pos": 286,
+            "length": 5
+          },
+          {
+            "name": "line_total_charges",
+            "start_pos": 505,
+            "length": 19
+          },
+          {
+            "name": "line_deduct_amount",
+            "start_pos": 543,
+            "length": 19
+          },
+          {
+            "name": "line_copay_amount",
+            "start_pos": 562,
+            "length": 19
+          },
+          {
+            "name": "line_amount_paid",
+            "start_pos": 581,
+            "length": 19
+          },
+          {
+            "name": "line_place_of_service",
+            "start_pos": 781,
+            "length": 5
+          },
+          {
+            "name": "line_type_of_service",
+            "start_pos": 786,
+            "length": 4
+          },
+          {
+            "name": "line_coinsurance_amount",
+            "start_pos": 918,
+            "length": 19
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "id": { "xpath": "claim_id" },
+        "row_id": { "template": "uuidv4" },
+        "patient": {
+          "object": {
+            "subscriber_id": { "xpath": "subscriber_id" },
+            "member_suffix": { "xpath": "member_suffix" },
+            "member_id": { "xpath": "member_id" },
+            "mrn": { "xpath": "member_mrn" },
+            "ssn": { "xpath": "member_ssn" },
+            "external_id": { "xpath": "member_external_id" },
+            "last_name": { "xpath": "member_last_name" },
+            "first_name": { "xpath": "member_first_name" },
+            "middle_initial": { "xpath": "member_middle_initial" },
+            "gender": { "xpath": "member_gender" },
+            "dob": { "xpath": "member_dob" },
+            "relationship_code": { "xpath": "member_relationship_code" },
+            "address": {
+              "object": {
+                "line1": { "xpath": "member_line_1" },
+                "line2": { "xpath": "member_line_2" },
+                "city": { "xpath": "member_city" },
+                "state": { "xpath": "member_state" },
+                "zip": { "xpath": "member_zip" },
+                "country": { "xpath": "member_country" }
+              }
+            },
+            "phone_work": { "xpath": "member_phone_work" },
+            "phone_mobile": { "xpath": "member_phone_mobile" },
+            "email": { "xpath": "member_email" }
+          }
+        },
+        "service_start_date": { "xpath": "claim_service_start_date" },
+        "service_end_date": { "xpath": "claim_service_end_date" },
+        "type": { "xpath": "claim_type" },
+        "discharge_status": { "xpath": "claim_discharge_status" },
+        "admission_type": { "xpath": "claim_admission_type" },
+        "total_amount": { "xpath": "claim_total_amount" },
+        "adjudication_date": { "xpath": "claim_adjudication_date" },
+        "adjudication_status": { "xpath": "claim_adjudication_status" },
+        "admit_date": { "xpath": "claim_admit_date" },
+        "discharge_date": { "xpath": "claim_discharge_date" },
+        "amount_paid": { "xpath": "claim_amount_paid" },
+        "bill_facility_id": { "xpath": "claim_bill_facility_id" },
+        "bill_frequency_code": { "xpath": "claim_bill_frequency_code" },
+        "line_number": { "xpath": "line_number" },
+        "line_service_start_date": { "xpath": "line_service_start_date" },
+        "line_service_end_date": { "xpath": "line_service_end_date" },
+        "line_revenue_code": { "xpath": "line_revenue_code" },
+        "line_primary_diagnosis_code": {
+          "xpath": "line_primary_diagnosis_code"
+        },
+        "line_admission_diagnosis_code": {
+          "xpath": "line_admission_diagnosis_code"
+        },
+        "line_diagnosis_code_1": { "xpath": "line_diagnosis_code_1" },
+        "line_diagnosis_code_2": { "xpath": "line_diagnosis_code_2" },
+        "line_diagnosis_code_3": { "xpath": "line_diagnosis_code_3" },
+        "line_diagnosis_code_4": { "xpath": "line_diagnosis_code_4" },
+        "line_primary_procedure_code": {
+          "xpath": "line_primary_procedure_code"
+        },
+        "line_procedure_code_1": { "xpath": "line_procedure_code_1" },
+        "line_procedure_code_2": { "xpath": "line_procedure_code_2" },
+        "line_drg_code": { "xpath": "line_drg_code" },
+        "line_unit": { "xpath": "line_unit" },
+        "line_total_charges": { "xpath": "line_total_charges" },
+        "line_deduct_amount": { "xpath": "line_deduct_amount" },
+        "line_copay_amount": { "xpath": "line_copay_amount" },
+        "line_amount_paid": { "xpath": "line_amount_paid" },
+        "line_place_of_service": { "xpath": "line_place_of_service" },
+        "line_type_of_service": { "xpath": "line_type_of_service" },
+        "line_adjudication_date": { "xpath": "line_adjudication_date" },
+        "line_coinsurance_amount": { "xpath": "line_coinsurance_amount" },
+        "line_adjudication_status": { "xpath": "line_adjudication_status" },
+        "line_rendering_provider_id": {
+          "xpath": "line_rendering_provider_id"
+        },
+        "line_attending_provider_id": {
+          "xpath": "line_attending_provider_id"
+        },
+        "line_diagnosis_code_type": { "xpath": "line_diagnosis_code_type" }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

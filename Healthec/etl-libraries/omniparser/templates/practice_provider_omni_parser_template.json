@@ -1,0 +1,190 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "csv2"
+    },
+    "file_declaration": {
+        "delimiter": "|",
+        "records": [
+            { "rows": 1, "min": 1, "max": 1 },
+            {
+                "is_target": true,
+                "columns": [
+                    {
+                        "name": "practice_name",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_external_id",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_oid",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_tin",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_address_line_1",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_address_line_2",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_city",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_state",
+                        "index": 0
+                    },
+                    {
+                        "name": "practice_zip",
+                        "index": 0
+                    },
+                    {
+                        "name": "po_name",
+                        "index": 0
+                    },
+                    {
+                        "name": "plan_name",
+                        "index": 0
+                    },
+                    {
+                        "name": "plan_effective_date",
+                        "index": 0
+                    },
+                    {
+                        "name": "plan_end_date",
+                        "index": 0
+                    },
+                    {
+                        "name": "provider_npi",
+                        "index": 0
+                    },
+                    {
+                        "name": "provider_first_name",
+                        "index": 0
+                    },
+                    {
+                        "name": "provider_last_name",
+                        "index": 0
+                    }
+                    // other fields... 
+                ]
+            }
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": {
+            "object": {
+                "practice": { //fhir:Organization, Organization.type = prov for Practice & dept for Sub-practice/facility?
+                    "object": {
+                        //questions:
+                            // record type
+                            // organization type
+                        "name": {"xpath": "practice_name"}, // fhir: Organization.name
+                        "doingBusinessAs": {"xpath": "practice_dba_name"}, // fhir: Organization.alias
+                        "externalId": {"xpath": "practice_external_id"},
+                        "oid": {"xpath": "practice_oid"},
+                        "tin": {"xpath": "practice_tin"},
+                        "address": {
+                            "object": {
+                                "line1": {"xpath": "practice_address_line_1"},
+                                "line2": {"xpath": "practice_address_line_2"},
+                                "city": {"xpath": "practice_city"},
+                                "state": {"xpath": "practice_state"},
+                                "zip": {"xpath": "practice_zip"}
+                            }
+                        },
+                        "email": {"xpath": "practice_email"}, // fhir: Organization.telecom
+                        "billing_system": {"xpath": "po_name"},
+                        "plan": { //fhir:Organization - type Insurance company
+                            "object": {
+                                "name": {"xpath": "plan_name"},
+                                //question: 
+                                    //plan_practice_id >> parent_subgroup_id - NU
+                                    //plan_org_id
+                                "effectiveDate": {"xpath": "plan_effective_date"},
+                                "endDate": {"xpath": "plan_end_date"}
+                            }
+                        },
+                        "provider": { //fhir:Practitioner
+                            "object": {                                
+                                "npi": {"xpath": "provider_npi"},
+                                "externalId": {"xpath": "provider_external_id"},  // Internal Id from the source
+                                "firstName": {"xpath": "provider_first_name"},
+                                "lastName": {"xpath": "provider_last_name"},
+                                "middleName": {"xpath": "provider_middle_name"},
+                                "suffix": {"xpath": "provider_suffix"}, // - NU, mostly degree represent as suffix
+                                "degree": {"xpath": "provider_degree"}, // Provider Name Credentials
+                                "mobilePhoneNumber": {"xpath": "provider_mobile_phone_number"},
+                                "workPhoneNumber": {"xpath": "provider_work_phone_number"},
+                                "email": {"xpath": "provider_email"},
+                                // primary practice
+                                // provider employed
+                                //question: plan_provider_id? - NU
+                                "specialtyCode":  {"xpath": "provider_specialty_code"}, // - NU
+                                "specialty":  {"xpath": "provider_specialty"}, // - NU
+                                "taxonomy": {"xpath": "provider_taxonomy"},  // Used as speciality
+                                "pcpType": {"xpath": "provider_pcp_type"}, // Optional, can be determined from taxonomy code from the master set
+                                "properUsageOfEHR": {"xpath": "provider_proper_usage_of_ehr"}, // This flag is must for the yearly report
+                                "type":  {"xpath": "provider_type"},
+                                "hospitalAffiliation": { 
+                                    "array": [
+                                        {"xpath": "provider_hospital_affiliation_1"},
+                                        {"xpath": "provider_hospital_affiliation_2"},
+                                        {"xpath": "provider_hospital_affiliation_3"},
+                                        {"xpath": "provider_hospital_affiliation_4"}
+                                    ]
+                                },
+                                "contact": {
+                                    "object": {
+                                        "title": {"xpath": "provider_contact_title"},
+                                        "firstName": {"xpath": "provider_contact_first_name"},
+                                        "lastName": {"xpath": "provider_contact_last_name"},
+                                        "email": {"xpath": "provider_contact_email"},
+                                        "phoneNumber": {"xpath": "provider_contact_phone_number"},
+                                        "preferredDay": {"xpath": "provider_preferred_contact_day"},
+                                        "preferredTime": {"xpath": "provider_preferred_contact_time"},
+                                        "preferredMethod": {"xpath": "provider_preferred_contact_method"}
+                                    }
+                                },
+                                "comments": {"xpath": "provider_comments"},
+                                "participationQualifier": {"xpath": "provider_participation_qualifier"}, // participating any additional programs
+                                //Questions:
+                                    //row_status_flag - NU
+                                    //po_name - ??
+                                "plan": { //fhir: Organization type Insurance company
+                                    "object": {
+                                        "name": {"xpath": "plan_name"},
+                                        "insuranceCompanyId": {"xpath": "plan_insurance_company_id"},
+                                        "acoNetworkCode": {"xpath": "plan_aco_network_code"},
+                                        "acoNetworkName": {"xpath": "plan_aco_network_name"},
+                                        "effectiveDate": {"xpath": "plan_effective_date"},
+                                        "endDate": {"xpath": "plan_end_date"},
+                                        "affiliationStatus": {"xpath": "plan_affiliation_status"},
+                                        "signedContractIndicator": {"xpath": "plan_signed_contract_indicator"},
+                                        "alert": {            // alerts to provider but right now NU
+                                            "object": {
+                                                "deliveryMethod": {"xpath": "plan_alert_delivery_method"},
+                                                "schedule": {"xpath": "plan_alert_schedule"},
+                                                "email": {"xpath": "plan_alert_email"},
+                                                "alternateEmail": {"xpath": "plan_alert_alternate_email"},
+                                                "mobileNumber": {"xpath": "plan_alert_mobile_number"}
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}

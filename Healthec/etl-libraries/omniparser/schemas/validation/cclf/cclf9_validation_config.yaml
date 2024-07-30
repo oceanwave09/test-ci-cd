@@ -1,0 +1,3 @@
+current_member_id:
+  key_path: crnt_num
+  required: True

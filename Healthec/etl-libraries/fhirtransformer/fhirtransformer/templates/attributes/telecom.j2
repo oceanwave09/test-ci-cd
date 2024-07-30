@@ -1,0 +1,57 @@
+[
+  {%- if data.phone_home -%}
+  {
+    "system": "phone",
+    "use": "home",
+    "value": "{{ data.phone_home }}"
+  }
+  {%- endif %}
+  {%- if data.phone_home and data.phone_mobile -%}
+  ,
+  {%- endif -%}
+  {%- if data.phone_mobile -%}
+  {
+    "system": "phone",
+    "use": "mobile",
+    "value": "{{ data.phone_mobile }}"
+  }
+  {%- endif %}
+  {%- if (data.phone_home or data.phone_mobile) and data.phone_work -%}
+  ,
+  {%- endif -%}
+  {%- if data.phone_work -%}
+  {
+    "system": "phone",
+    "use": "work",
+    "value": "{{ data.phone_work }}"
+  }
+  {%- endif %}
+  {%- if (data.phone_home or data.phone_mobile or data.phone_work) and data.phone_other -%}
+  ,
+  {%- endif -%}
+  {%- if data.phone_other -%}
+  {
+    "system": "phone",
+    "use": "temp",
+    "value": "{{ data.phone_other }}"
+  }
+  {%- endif %}
+  {%- if (data.phone_home or data.phone_mobile or data.phone_work or data.phone_other) and data.fax -%}
+  ,
+  {%- endif -%}
+  {%- if data.fax -%}
+  {
+    "system": "fax",
+    "value": "{{ data.fax }}"
+  }
+  {%- endif %}
+  {%- if (data.phone_home or data.phone_mobile or data.phone_work or data.phone_other or data.fax) and (data.email) -%}
+  ,
+  {%- endif -%}
+  {%- if data.email -%}
+  {
+    "system": "email",
+    "value": "{{ data.email }}"
+  }
+  {%- endif %}
+]

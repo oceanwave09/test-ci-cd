@@ -1,0 +1,23 @@
+{
+  "source_id": "45678",
+  "source_system": "http://orionhealth.com/fhir/apps/referralids",
+  "status": "active",
+  "intent": "order",
+  "category_code": "103696004",
+  "category_display": "Patient referral to specialist",
+  "category_system": "http://snomed.info/sct",
+  "priority": "routine",
+  "code": "172676009",
+  "code_display": "Myringotomy and insertion of tympanic ventilation tube",
+  "code_system": "http://snomed.info/sct",
+  "patient_id": "f2b8db7e-c0a4-40d2-a245-93ea68699394",
+  "encounter_id": "7533a02e-37ca-4ac1-bddd-d1e2c0c7df01",
+  "occurrence_date_time": "2023-01-01",
+  "authored_date_time": "2023-01-01",
+  "practitioner_id": "fc07d5d3-5d28-4ec9-a72b-5d59fe1c7cc2",
+  "performer_type_code": "ent",
+  "performer_type_display": "ENT",
+  "performer_type_system": "http://orionhealth.com/fhir/apps/specialties",
+  "performer_practitioner_id": "c0a8cd44-f9cb-420f-acce-28834d941d12",
+  "reason_text": "For consideration of Grommets"
+}

@@ -1,0 +1,120 @@
+{
+  "resourceType": "Coverage",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MR",
+            "display": "Medical Record Number"
+          }
+        ]
+      },
+      "system": "http://xyz.com/codes/identifier",
+      "value": "AB98761"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "MB",
+            "display": "Member Number"
+          }
+        ]
+      },
+      "value": "AB987601"
+    },
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "SN",
+            "display": "Subscriber Number"
+          }
+        ]
+      },
+      "value": "AB9876"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+        "code": "EHCPOL",
+        "display": "extended healthcare"
+      }
+    ]
+  },
+  "beneficiary": {
+    "reference": "Patient/f2b8db7e-c0a4-40d2-a245-93ea68699394"
+  },
+  "relationship": {
+    "coding": [
+      {
+        "code": "self",
+        "display": "Self"
+      }
+    ]
+  },
+  "period": {
+    "start": "2023-01-01",
+    "end": "2023-12-31"
+  },
+  "insurer": {
+    "reference": "Organization/7533a02e-37ca-4ac1-bddd-d1e2c0c7df01"
+  },
+  "extension": [
+    {
+      "url": "http://healthec.com/extensions/patients/flags/hospice",
+      "extension": [
+        {
+          "url": "http://healthec.com/extensions/patients/flags/hospice#value",
+          "valueBoolean": true
+        },
+        {
+          "url": "http://healthec.com/extensions/patients/flags/hospice#period",
+          "valuePeriod": {
+            "start": "2023-01-01T00:00:00",
+            "end": "2023-12-31T00:00:00"
+          }
+        }
+      ]
+    }
+  ],
+  "class": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-class",
+            "code": "plan"
+          }
+        ]
+      },
+      "value": "BG4352",
+      "name": "Full Coverage: Medical, Dental, Pharmacy, Vision, EHC"
+    }
+  ],
+  "order": 2,
+  "network": "aco network",
+  "costToBeneficiary": [
+    {
+      "valueMoney": {
+        "value": 20,
+        "currency": "USD"
+      },
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/coverage-copay-type",
+            "code": "gpvisit"
+          }
+        ]
+      }
+    }
+  ]
+}

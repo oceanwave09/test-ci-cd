@@ -1,0 +1,197 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      { "rows": 1, "min": 1, "max": 1 },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "provider_npi",
+            "index": 11
+          },
+          {
+            "name": "provider_work_location_priority",
+            "index": 17
+          },
+          {
+            "name": "provider_first_name",
+            "index": 13
+          },
+          {
+            "name": "provider_last_name",
+            "index": 12
+          },
+          {
+            "name": "provider_middle_initial",
+            "index": 14
+          },
+          {
+            "name": "provider_name_suffix",
+            "index": 15
+          },
+          {
+            "name": "provider_pcp_flag",
+            "index": 20
+          },
+          {
+            "name": "practice_name",
+            "index": 2
+          },
+          {
+            "name": "practice_tin",
+            "index": 4
+          },
+          {
+            "name": "practice_external_id",
+            "index": 3
+          },
+          {
+            "name": "practice_line_1",
+            "index": 5
+          },
+          {
+            "name": "practice_line_2",
+            "index": 6
+          },
+          {
+            "name": "practice_city",
+            "index": 7
+          },
+          {
+            "name": "practice_state",
+            "index": 8
+          },
+          {
+            "name": "practice_zip",
+            "index": 9
+          },
+          {
+            "name": "insurance_plan_id",
+            "index": 33
+          },
+          {
+            "name": "insurance_plan_name",
+            "index": 1
+          },
+          {
+            "name": "insurance_company_name",
+            "index": 26
+          },
+          {
+            "name": "insurance_company_external_id",
+            "index": 25
+          },
+          {
+            "name": "insurance_effective_date",
+            "index": 22
+          },
+          {
+            "name": "insurance_end_date",
+            "index": 23
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "npi": { "xpath": "provider_npi" },
+        "npi_type": { "xpath": "provider_npi_type" },
+        "external_id": { "xpath": "provider_external_id" },
+        "work_location_priority": {
+          "xpath": "provider_work_location_priority"
+        },
+        "first_name": { "xpath": "provider_first_name" },
+        "last_name": { "xpath": "provider_last_name" },
+        "middle_initial": { "xpath": "provider_middle_initial" },
+        "name_suffix": { "xpath": "provider_name_suffix" },
+        "phone_work": { "xpath": "provider_phone_work" },
+        "phone_mobile": { "xpath": "provider_phone_mobile" },
+        "email": { "xpath": "provider_email" },
+        "taxonomy_code": { "xpath": "provider_taxonomy_code" },
+        "specialty_code": { "xpath": "provider_specialty_code" },
+        "contact": {
+          "object": {
+            "title": { "xpath": "provider_contact_title" },
+            "first_name": { "xpath": "provider_contact_first_name" },
+            "last_name": { "xpath": "provider_contact_last_name" },
+            "middle_initial": {
+              "xpath": "provider_contact_middle_initial"
+            },
+            "phone": { "xpath": "provider_contact_phone" },
+            "email": { "xpath": "provider_contact_email" }
+          }
+        },
+        "pcp_flag": { "xpath": "provider_pcp_flag" },
+        "preferred_contact_days": {
+          "xpath": "provider_preferred_contact_days"
+        },
+        "preferred_contact_time": {
+          "xpath": "provider_preferred_contact_time"
+        },
+        "preferred_contact_method": {
+          "xpath": "provider_preferred_contact_method"
+        },
+        "comments": { "xpath": "provider_comments" },
+        "practice": {
+          "object": {
+            "name": { "xpath": "practice_name" },
+            "tin": { "xpath": "practice_tin" },
+            "group_npi": { "xpath": "practice_group_npi" },
+            "external_id": { "xpath": "practice_external_id" },
+            "location_rank": { "xpath": "practice_location_rank" },
+            "lab_id": { "xpath": "practice_lab_id" },
+            "lab_name": { "xpath": "practice_lab_name" },
+            "address": {
+              "object": {
+                "line1": { "xpath": "practice_line_1" },
+                "line2": { "xpath": "practice_line_2" },
+                "city": { "xpath": "practice_city" },
+                "state": { "xpath": "practice_state" },
+                "zip": { "xpath": "practice_zip" },
+                "country": { "xpath": "practice_country" }
+              }
+            }
+          }
+        },
+        "insurance_plan": {
+          "object": {
+            "plan_id": { "xpath": "insurance_plan_id" },
+            "plan_name": { "xpath": "insurance_plan_name" },
+            "company_name": { "xpath": "insurance_company_name" },
+            "company_external_id": {
+              "xpath": "insurance_company_external_id"
+            },
+            "effective_date": { "xpath": "insurance_effective_date" },
+            "end_date": { "xpath": "insurance_end_date" }
+          }
+        },
+        "aco_network_code": { "xpath": "aco_network_code" },
+        "aco_network_name": { "xpath": "aco_network_name" },
+        "aco_effective_date": { "xpath": "aco_effective_date" },
+        "aco_terminate_date": { "xpath": "aco_terminate_date" },
+        "aco_provider_status": { "xpath": "aco_provider_status" },
+        "aco_signed_contract": { "xpath": "aco_signed_contract" }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+    "resourceType": "ClaimResponse",
+    "text": {
+        "status": "generated",
+        "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A human-readable rendering of the ClaimResponse to Claim Oral Average with additional items</div>"
+    },
+    "status": "active",
+    "type": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/claim-type",
+                "code": "oral"
+            }
+        ]
+    },
+    "use": "claim",
+    "patient": {
+        "reference": "Patient/${patient_id}"
+    },
+    "insurer": {
+        "reference": "Organization/${payor_org_id}"
+    },
+    "requestor": {
+        "reference": "Organization/${provider_org_id}"
+    },
+    "created": "2014-08-16T07:20:50.52Z",
+    "outcome": "complete"
+}

@@ -1,0 +1,10 @@
+{
+  {%- if data.sex_code -%}
+    "coding" : [{
+      "system" : "{{ data.sex_system }}",
+      "code" : "{{ data.sex_code }}",
+      "display": "{{ data.sex_display }}"
+    }],
+  {%- endif %}
+  "text": "{{ data.sex_text }}"
+}

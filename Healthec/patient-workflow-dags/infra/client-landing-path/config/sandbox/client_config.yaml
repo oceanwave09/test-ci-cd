@@ -1,0 +1,18 @@
+testdp:
+  common:
+    - ANALYTICAL
+    - MIGRATION
+    - FHIRBUNDLE
+    - PRACTICE
+    - PROVIDER
+  testsource:
+    - FHIRBUNDLE
+    - BENEFICIARY
+    - MEDICAL_CLAIM
+    - RX_CLAIM
+    - CCD
+    - HL7
+    - ECW
+    - CCLF
+    - GI
+    - GAP

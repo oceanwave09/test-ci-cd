@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS cynchealth_analytical.facility (
+    facility_fhir_id VARCHAR,
+    external_id VARCHAR,
+    group_npi VARCHAR,
+    status VARCHAR,
+    name VARCHAR,
+    alias VARCHAR,
+    description VARCHAR,
+    mode VARCHAR,
+    type_code VARCHAR,
+    type_system VARCHAR,
+    type_desc VARCHAR,
+    phone_work VARCHAR,
+    email VARCHAR,
+    fax VARCHAR,
+    operational_code VARCHAR,
+    operational_system VARCHAR,
+    operational_desc VARCHAR,
+    address_line_1 VARCHAR,
+    address_line_2 VARCHAR,
+    county VARCHAR,
+    state VARCHAR,
+    city VARCHAR,
+    zip VARCHAR,
+    country VARCHAR,
+    practice_fhir_id VARCHAR,
+    physical_type_code VARCHAR,
+    physical_type_system VARCHAR,
+    physical_type_desc VARCHAR,
+    availability_exceptions VARCHAR,
+    updated_user VARCHAR,
+    updated_ts TIMESTAMP(3) WITH TIME ZONE
+)
+WITH (
+    LOCATION = 's3a://phm-development-datapipeline-bucket/delta-tables/cynchealth/analytical/facility',
+    CHECKPOINT_INTERVAL = 5
+);

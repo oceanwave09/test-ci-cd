@@ -1,0 +1,12 @@
+{
+  "source_id": "8576713",
+  "status": "active",
+  "code": "213293",
+  "code_display": "Capecitabine 500mg oral tablet (Xeloda)",
+  "code_system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+  "form_code": "385055001",
+  "form_display": "Tablet dose form (qualifier value)",
+  "form_system": "http://snomed.info/sct",
+  "lot_number": "9494788",
+  "expiration_date": "2017-05-22"
+}

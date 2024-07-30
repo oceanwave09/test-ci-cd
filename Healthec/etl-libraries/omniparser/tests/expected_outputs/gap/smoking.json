@@ -1,0 +1,67 @@
+[
+	{
+		"domain": "Smoking Status",
+		"external_patient_id": "7660601",
+		"external_practice_id": "Epic",
+		"last_confirmed_date": "20230405",
+		"patient_dob": "b699c2b9c5b08522dc986a2def4aca6e",
+		"patient_first_name": "920b1bfa8aeb6237faf53f11643c8ecf",
+		"patient_last_name": "41c337237eef08cdc7d9f625231d112a",
+		"row": "1",
+		"row_id": "21076b3b-c36e-4c71-b6a1-798d04e49bd4",
+		"smoking_status_code": "5",
+		"smoking_status_name": "Never"
+	},
+	{
+		"domain": "Smoking Status",
+		"external_patient_id": "7660602",
+		"external_practice_id": "Epic",
+		"last_confirmed_date": "20230424",
+		"patient_dob": "56a973e9f56eb206d960f2974ef9804b",
+		"patient_first_name": "4369a95df3b5152bdd7c64a72efd1aa6",
+		"patient_last_name": "fc65ea507d571ca1dde7d800f2f95573",
+		"row": "2",
+		"row_id": "35c739d3-7976-4840-b153-4db358ab6539",
+		"smoking_status_code": "1",
+		"smoking_status_name": "Every Day"
+	},
+	{
+		"domain": "Smoking Status",
+		"external_patient_id": "7660603",
+		"external_practice_id": "Epic",
+		"last_confirmed_date": "20230412",
+		"patient_dob": "65d8491e60430a0736b2abfd79856d4d",
+		"patient_first_name": "0430717827ce4c57e07c1e445bc70477",
+		"patient_last_name": "bd39484c0baafaf573a91d7eeb470750",
+		"row": "3",
+		"row_id": "e19fecc7-1eef-4d81-9c14-bab99e4518c7",
+		"smoking_status_code": "2",
+		"smoking_status_name": "Some Days"
+	},
+	{
+		"domain": "Smoking Status",
+		"external_patient_id": "7660604",
+		"external_practice_id": "Epic",
+		"last_confirmed_date": "20230416",
+		"patient_dob": "9fde4afa3f81b3e57465ff6668b68b41",
+		"patient_first_name": "4c2170080510d285b48e195f9c690c5a",
+		"patient_last_name": "29244f7cbc96db65581dba3839e472fe",
+		"row": "4",
+		"row_id": "ae160c5e-e9a5-4c02-8c69-8c5c4ac5aaa9",
+		"smoking_status_code": "4",
+		"smoking_status_name": "Former"
+	},
+	{
+		"domain": "Smoking Status",
+		"external_patient_id": "7660605",
+		"external_practice_id": "Epic",
+		"last_confirmed_date": "20230404",
+		"patient_dob": "6d65a93dd15e1ce35deca05d2f90426c",
+		"patient_first_name": "fe7030703fd7abee786ea532bf04cd7a",
+		"patient_last_name": "4b4e3c02a281e755267bd96cc57327b0",
+		"row": "5",
+		"row_id": "1c8d367e-9eb9-4a9f-a8eb-8b6260420d23",
+		"smoking_status_code": "5",
+		"smoking_status_name": "Never"
+	}
+]

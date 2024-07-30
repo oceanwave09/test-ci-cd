@@ -1,0 +1,19 @@
+{
+    "firstname": "Michael",
+    "lastname": "Jackson",
+    "gender": "male",
+    "dob": "1967-07-01",
+    "active": "true",
+    "street_address_1": "132, Erewhon St",
+    "city": "Kingston",
+    "state": "New York",
+    "zip": "12401",
+    "phone_mobile": "(03) 3410 5613",
+    "email": "michael.jackson@gmail.com",
+    "patient_id":"f2b8db7e-c0a4-40d2-a245-93ea68699394",
+    "subscriber_id":"48232",
+    "relationship_code": "other",
+    "relationship_display": "Other",
+    "period_start_date": "2023-01-01",
+    "period_end_date": "2023-12-31"
+  }

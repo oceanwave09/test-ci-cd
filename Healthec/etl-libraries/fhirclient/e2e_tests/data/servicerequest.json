@@ -1,0 +1,34 @@
+{
+  "resourceType": "ServiceRequest",
+  "status": "active",
+  "intent": "order",
+  "category": [
+      {
+      "coding": [
+          {
+          "system": "http://snomed.info/sct",
+          "code": "103693007",
+          "display": "Diagnostic procedure (procedure)"
+          }
+      ],
+      "text": "Diagnostics Procedure"
+      }
+  ],
+  "code": {
+      "concept": {
+      "coding": [
+          {
+          "system": "http://snomed.info/sct",
+          "code": "303653007",
+          "display": "Computed tomography of head"
+          }
+      ]
+      }
+  },
+  "subject": {
+      "reference": "Patient/${pat_id}"
+  },
+  "encounter": {
+    "reference": "Encounter/${enc_id}"
+  }
+}

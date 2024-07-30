@@ -1,0 +1,1 @@
+apuid|RecordID|PatientId|PatientAccountNo|encounterId|EncounterDate|ProviderNPI|Ecwstructid|Question|QuestionID|Answers|AnswerID|ItemName|ItemID|CategoryName|CategoryID|MainCategoryName|MainCategoryID

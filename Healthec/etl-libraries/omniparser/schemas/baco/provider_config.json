@@ -1,0 +1,150 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      { "rows": 1, "min": 1, "max": 1 },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "physician_npi",
+            "index": 11
+          },
+          {
+            "name": "physician_work_location_priority",
+            "index": 17
+          },
+          {
+            "name": "physician_first_name",
+            "index": 13
+          },
+          {
+            "name": "physician_last_name",
+            "index": 12
+          },
+          {
+            "name": "physician_middle_initial",
+            "index": 14
+          },
+          {
+            "name": "physician_name_suffix",
+            "index": 15
+          },
+          {
+            "name": "physician_specialty_type",
+            "index": 20
+          },
+          {
+            "name": "provider_org_name",
+            "index": 2
+          },
+          {
+            "name": "provider_org_tin",
+            "index": 4
+          },
+          {
+            "name": "provider_org_internal_id",
+            "index": 3
+          },
+          {
+            "name": "physician_address_line_1",
+            "index": 5
+          },
+          {
+            "name": "physician_address_line_2",
+            "index": 6
+          },
+          {
+            "name": "physician_city",
+            "index": 7
+          },
+          {
+            "name": "physician_state",
+            "index": 8
+          },
+          {
+            "name": "physician_zip",
+            "index": 9
+          },
+          {
+            "name": "insurance_company_name",
+            "index": 26
+          },
+          {
+            "name": "insurance_company_id",
+            "index": 25
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "physician_npi": { "xpath": "physician_npi" },
+        "physician_internal_id": { "xpath": "physician_internal_id" },
+        "physician_work_location_priority": { "xpath": "physician_work_location_priority" },
+        "physician_first_name": { "xpath": "physician_first_name" },
+        "physician_last_name": { "xpath": "physician_last_name" },
+        "physician_middle_initial": { "xpath": "physician_middle_initial" },
+        "physician_name_prefix": { "xpath": "physician_name_prefix" },
+        "physician_name_suffix": { "xpath": "physician_name_suffix" },
+        "physician_degree": { "xpath": "physician_degree" },
+        "physician_phone_work":{ "xpath":"physician_phone_work" },
+        "physician_phone_mobile":{ "xpath":"physician_phone_mobile" },
+        "physician_email":{ "xpath":"physician_email" },
+        "physician_taxonomy_code":{ "xpath":"physician_taxonomy_code" },
+        "physician_specialty_code":{ "xpath":"physician_specialty_code" },
+        "physician_specialty_desc":{ "xpath":"physician_specialty_desc" },
+        "physician_specialty_type":{ "xpath":"physician_specialty_type" },
+        "physician_address_line_1": { "xpath": "physician_address_line_1" },
+        "physician_address_line_2": { "xpath": "physician_address_line_2" },
+        "physician_city": { "xpath": "physician_city" },
+        "physician_state": { "xpath": "physician_state" },
+        "physician_zip": { "xpath": "physician_zip" },
+        "physician_contact_title": { "xpath": "physician_contact_title" },
+        "physician_contact_first_name": { "xpath": "physician_contact_first_name" },
+        "physician_contact_last_name": { "xpath": "physician_contact_last_name" },
+        "physician_contact_phone": { "xpath": "physician_contact_phone" },
+        "physician_contact_email": { "xpath": "physician_contact_email" },
+        "physician_preferred_contact_days":{ "xpath":"physician_preferred_contact_days" },
+        "physician_preferred_contact_time":{ "xpath":"physician_preferred_contact_time" },
+        "physician_preferred_contact_method":{ "xpath":"physician_preferred_contact_method" },
+        "physician_comments":{ "xpath":"physician_comments" },
+        "provider_org_name": { "xpath": "provider_org_name" },
+        "provider_org_tin": { "xpath": "provider_org_tin" },
+        "provider_org_group_npi": { "xpath": "provider_org_group_npi" },
+        "provider_org_internal_id": { "xpath": "provider_org_internal_id" },
+        "provider_org_location_rank": { "xpath": "provider_org_location_rank" },
+        "provider_org_lab_id": { "xpath": "provider_org_lab_id" },
+        "provider_org_lab_name": { "xpath": "provider_org_lab_name" },
+        "insurance_company_name": { "xpath": "insurance_company_name" },
+        "insurance_company_id": { "xpath": "insurance_company_id" },
+        "physician_participation": { "xpath": "physician_participation" },
+        "physician_network_code":{ "xpath":"physician_network_code" },
+        "physician_network_name":{ "xpath":"physician_network_name" },
+        "physician_effective_date":{ "xpath":"physician_effective_date" },
+        "physician_termination_date":{ "xpath":"physician_termination_date" },
+        "physician_affiliation_status":{ "xpath":"physician_affiliation_status" },
+        "physician_signed_contract":{ "xpath":"physician_signed_contract" }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

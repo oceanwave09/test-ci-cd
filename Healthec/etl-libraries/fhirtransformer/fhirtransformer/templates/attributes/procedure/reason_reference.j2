@@ -1,0 +1,15 @@
+[
+  {%- if data.condition_id -%}
+  {
+    "reference": "Condition/{{ data.condition_id }}"
+  }
+  {%- endif %}
+  {% for ent in data.reason_references %}
+  {
+    {%- if ent.condition_id -%}
+      "reference": "Condition/{{ ent.condition_id }}"
+    {%- endif %}
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

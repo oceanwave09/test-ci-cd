@@ -1,0 +1,333 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "order_date",
+            "index": 8
+          },
+          {
+            "name": "order_time",
+            "index": 9
+          },
+          {
+            "name": "cpt_code",
+            "index": 10
+          },
+          {
+            "name": "loinc_code",
+            "index": 11
+          },
+          {
+            "name": "accession_number",
+            "index": 12
+          },
+          {
+            "name": "attending_doctor_npi",
+            "index": 13
+          },
+          {
+            "name": "attending_doctor_last_name",
+            "index": 14
+          },
+          {
+            "name": "attending_doctor_first_name",
+            "index": 15
+          },
+          {
+            "name": "result_date",
+            "index": 16
+          },
+          {
+            "name": "result_time",
+            "index": 17
+          },
+          {
+            "name": "test_code",
+            "index": 18
+          },
+          {
+            "name": "test_description",
+            "index": 19
+          },
+          {
+            "name": "test_component_code",
+            "index": 20
+          },
+          {
+            "name": "test_component_description",
+            "index": 21
+          },
+          {
+            "name": "result_value",
+            "index": 22
+          },
+          {
+            "name": "units_of_measure",
+            "index": 23
+          },
+          {
+            "name": "reference_range",
+            "index": 24
+          },
+          {
+            "name": "abnormal_flag",
+            "index": 25
+          },
+          {
+            "name": "notes",
+            "index": 26
+          },
+          {
+            "name": "order_type",
+            "index": 27
+          },
+          {
+            "name": "collection_date",
+            "index": 28
+          },
+          {
+            "name": "result_text",
+            "index": 29
+          },
+          {
+            "name": "lab_reviewed_flag",
+            "index": 30
+          },
+          {
+            "name": "reviewed_by_id",
+            "index": 31
+          },
+          {
+            "name": "lab_company_id",
+            "index": 32
+          },
+          {
+            "name": "lab_company_name",
+            "index": 33
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "order_date": {
+          "xpath": "order_date"
+        },
+        "order_time": {
+          "xpath": "order_time"
+        },
+        "cpt_code": {
+          "xpath": "cpt_code"
+        },
+        "loinc_code": {
+          "xpath": "loinc_code"
+        },
+        "accession_number": {
+          "xpath": "accession_number"
+        },
+        "attending_doctor_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_doctor_npi"
+              }
+            ]
+          }
+        },
+        "attending_doctor_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_doctor_last_name"
+              }
+            ]
+          }
+        },
+        "attending_doctor_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "attending_doctor_first_name"
+              }
+            ]
+          }
+        },
+        "result_date": {
+          "xpath": "result_date"
+        },
+        "result_time": {
+          "xpath": "result_time"
+        },
+        "test_code": {
+          "xpath": "test_code"
+        },
+        "test_description": {
+          "xpath": "test_description"
+        },
+        "test_component_code": {
+          "xpath": "test_component_code"
+        },
+        "test_component_description": {
+          "xpath": "test_component_description"
+        },
+        "result_value": {
+          "xpath": "result_value"
+        },
+        "units_of_measure": {
+          "xpath": "units_of_measure"
+        },
+        "reference_range": {
+          "xpath": "reference_range"
+        },
+        "abnormal_flag": {
+          "xpath": "abnormal_flag"
+        },
+        "notes": {
+          "xpath": "notes"
+        },
+        "order_type": {
+          "xpath": "order_type"
+        },
+        "collection_date": {
+          "xpath": "collection_date"
+        },
+        "result_text": {
+          "xpath": "result_text"
+        },
+        "lab_reviewed_flag": {
+          "xpath": "lab_reviewed_flag"
+        },
+        "reviewed_by_id": {
+          "xpath": "reviewed_by_id"
+        },
+        "lab_company_id": {
+          "xpath": "lab_company_id"
+        },
+        "lab_company_name": {
+          "xpath": "lab_company_name"
+        }
+      }
+    }
+  }
+}

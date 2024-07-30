@@ -1,0 +1,359 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "index": 1
+          },
+          {
+            "name": "subscriber_id",
+            "index": 2
+          },
+          {
+            "name": "member_id_suffix",
+            "index": 3
+          },
+          {
+            "name": "member_relationship_code",
+            "index": 4
+          },
+          {
+            "name": "member_last_name",
+            "index": 5
+          },
+          {
+            "name": "member_first_name",
+            "index": 6
+          },
+          {
+            "name": "member_dob",
+            "index": 9
+          },
+          {
+            "name": "member_gender",
+            "index": 10
+          },
+          {
+            "name": "member_primary_language",
+            "index": 11
+          },
+          {
+            "name": "member_address_line_1",
+            "index": 12
+          },
+          {
+            "name": "member_address_line_2",
+            "index": 13
+          },
+          {
+            "name": "member_city",
+            "index": 14
+          },
+          {
+            "name": "member_state",
+            "index": 15
+          },
+          {
+            "name": "member_zip",
+            "index": 16
+          },
+          {
+            "name": "member_country",
+            "index": 17
+          },
+          {
+            "name": "member_phone_home",
+            "index": 18
+          },
+          {
+            "name": "member_phone_work",
+            "index": 19
+          },
+          {
+            "name": "insurance_effective_date",
+            "index": 20
+          },
+          {
+            "name": "insurance_end_date",
+            "index": 21
+          },
+          {
+            "name": "insurance_company_id",
+            "index": 26
+          },
+          {
+            "name": "insurance_company_name",
+            "index": 27
+          },
+          {
+            "name": "physician_npi",
+            "index": 30
+          },
+          {
+            "name": "physician_first_name",
+            "index": 31
+          },
+          {
+            "name": "physician_last_name",
+            "index": 32
+          },
+          {
+            "name": "member_mbi",
+            "index": 33
+          },
+          {
+            "name": "member_medicaid_id",
+            "index": 34
+          },
+          {
+            "name": "alternate_member_id",
+            "index": 35
+          },
+          {
+            "name": "member_ssn",
+            "index": 36
+          },
+          {
+            "name": "member_internal_id",
+            "index": 37
+          },
+          {
+            "name": "member_middle_initial",
+            "index": 38
+          },
+          {
+            "name": "member_name_prefix",
+            "index": 39
+          },
+          {
+            "name": "member_name_suffix",
+            "index": 40
+          },
+          {
+            "name": "member_county",
+            "index": 41
+          },
+          {
+            "name": "member_phone_mobile",
+            "index": 42
+          },
+          {
+            "name": "member_email",
+            "index": 43
+          },
+          {
+            "name": "member_deceased_flag",
+            "index": 44
+          },
+          {
+            "name": "member_deceased_date",
+            "index": 45
+          },
+          {
+            "name": "member_race_code",
+            "index": 46
+          },
+          {
+            "name": "member_race_desc",
+            "index": 47
+          },
+          {
+            "name": "member_ethnicity_code",
+            "index": 48
+          },
+          {
+            "name": "member_ethnicity_desc",
+            "index": 49
+          },
+          {
+            "name": "mental_health_flag",
+            "index": 50
+          },
+          {
+            "name": "pharmacy_flag",
+            "index": 51
+          },
+          {
+            "name": "dual_status_code",
+            "index": 52
+          },
+          {
+            "name": "medicare_status_code",
+            "index": 53
+          },
+          {
+            "name": "esrd_dual_eligibility_status",
+            "index": 54
+          },
+          {
+            "name": "esrd_dual_status_code",
+            "index": 55
+          },
+          {
+            "name": "member_risk_score",
+            "index": 56
+          },
+          {
+            "name": "hospice_indicator",
+            "index": 57
+          },
+          {
+            "name": "hospice_start_date",
+            "index": 58
+          },
+          {
+            "name": "hospice_end_date",
+            "index": 59
+          },
+          {
+            "name": "insurance_group_name",
+            "index": 60
+          },
+          {
+            "name": "insurance_group_id",
+            "index": 61
+          },
+          {
+            "name": "insurance_group_plan_name",
+            "index": 62
+          },
+          {
+            "name": "insurance_group_plan_id",
+            "index": 63
+          },
+          {
+            "name": "line_of_business",
+            "index": 64
+          },
+          {
+            "name": "insurance_pay_rank",
+            "index": 65
+          },
+          {
+            "name": "provider_org_tin",
+            "index": 66
+          },
+          {
+            "name": "provider_org_name",
+            "index": 67
+          },
+          {
+            "name": "physician_internal_id",
+            "index": 68
+          },
+          {
+            "name": "physician_taxonomy_code",
+            "index": 69
+          },
+          {
+            "name": "physician_specialty_code",
+            "index": 70
+          },
+          {
+            "name": "physician_specialty_desc",
+            "index": 71
+          },
+          {
+            "name": "physician_effective_date",
+            "index": 72
+          },
+          {
+            "name": "physician_termination_date",
+            "index": 73
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "member_id": { "xpath": "member_id" },
+        "member_mbi": { "xpath": "member_mbi" },
+        "member_medicaid_id": { "xpath": "member_medicaid_id" },
+        "subscriber_id": { "xpath": "subscriber_id" },
+        "member_id_suffix": { "xpath": "member_id_suffix" },
+        "alternate_member_id": { "xpath": "alternate_member_id" },
+        "member_ssn": { "xpath": "member_ssn" },
+        "member_internal_id": { "xpath": "member_internal_id" },
+        "member_last_name": { "xpath": "member_last_name" },
+        "member_first_name": { "xpath": "member_first_name" },
+        "member_middle_initial": { "xpath": "member_middle_initial" },
+        "member_name_prefix": { "xpath": "member_name_prefix" },
+        "member_name_suffix": { "xpath": "member_name_suffix" },
+        "member_dob": { "xpath": "member_dob" },
+        "member_gender": { "xpath": "member_gender" },
+        "member_relationship_code": { "xpath": "member_relationship_code" },
+        "member_address_line_1": { "xpath": "member_address_line_1" },
+        "member_address_line_2": { "xpath": "member_address_line_2" },
+        "member_city": { "xpath": "member_city" },
+        "member_county": { "xpath": "member_county" },
+        "member_state": { "xpath": "member_state" },
+        "member_zip": { "xpath": "member_zip" },
+        "member_country": { "xpath": "member_country" },
+        "member_phone_home": { "xpath": "member_phone_home" },
+        "member_phone_work": { "xpath": "member_phone_work" },
+        "member_phone_mobile": { "xpath": "member_phone_mobile" },
+        "member_email": { "xpath": "member_email" },
+        "member_deceased_flag": { "xpath": "member_deceased_flag" },
+        "member_deceased_date": { "xpath": "member_deceased_date" },
+        "member_primary_language": { "xpath": "member_primary_language" },
+        "member_race_code": { "xpath": "member_race_code" },
+        "member_race_desc": { "xpath": "member_race_desc" },
+        "member_ethnicity_code": { "xpath": "member_ethnicity_code" },
+        "member_ethnicity_desc": { "xpath": "member_ethnicity_desc" },
+        "mental_health_flag": { "xpath": "mental_health_flag" },
+        "pharmacy_flag": { "xpath": "pharmacy_flag" },
+        "dual_status_code": { "xpath": "dual_status_code" },
+        "medicare_status_code": { "xpath": "medicare_status_code" },
+        "esrd_dual_eligibility_status": { "xpath": "esrd_dual_eligibility_status" },
+        "esrd_dual_status_code": { "xpath": "esrd_dual_status_code" },
+        "member_risk_score": { "xpath": "member_risk_score" },
+        "hospice_indicator": { "xpath": "hospice_indicator" },
+        "hospice_start_date": { "xpath": "hospice_start_date" },
+        "hospice_end_date": { "xpath": "hospice_end_date" },
+        "insurance_company_name": { "xpath": "insurance_company_name" },
+        "insurance_company_id": {"xpath": "insurance_company_id"},
+        "insurance_group_name": { "xpath": "insurance_group_name" },
+        "insurance_group_id": { "xpath": "insurance_group_id" },
+        "insurance_group_plan_name": { "xpath": "insurance_group_plan_name" },
+        "insurance_group_plan_id": { "xpath": "insurance_group_plan_id" },
+        "line_of_business": { "xpath": "line_of_business" },
+        "insurance_effective_date": { "xpath": "insurance_effective_date" },
+        "insurance_end_date": { "xpath": "insurance_end_date" },
+        "insurance_pay_rank": { "xpath": "insurance_pay_rank" },
+        "provider_org_tin": { "xpath": "provider_org_tin" },
+        "provider_org_name": { "xpath": "provider_org_name" },
+        "physician_npi": { "xpath": "physician_npi" },
+        "physician_internal_id": { "xpath": "physician_internal_id" },
+        "physician_first_name": { "xpath": "physician_first_name" },
+        "physician_last_name": { "xpath": "physician_last_name" },
+        "physician_taxonomy_code": { "xpath": "physician_taxonomy_code" },
+        "physician_specialty_code": { "xpath": "physician_specialty_code" },
+        "physician_specialty_desc": { "xpath": "physician_specialty_desc" },
+        "physician_effective_date": { "xpath": "physician_effective_date" },
+        "physician_termination_date": { "xpath": "physician_termination_date" }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

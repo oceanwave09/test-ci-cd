@@ -1,0 +1,317 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          { "name": "BENE_MBI_ID", "start_pos": 1, "length": 11 },
+          { "name": "BENE_HIC_NUM", "start_pos": 12, "length": 11 },
+          { "name": "BENE_FIPS_STATE_CD", "start_pos": 23, "length": 2 },
+          { "name": "BENE_FIPS_CNTY_CD", "start_pos": 25, "length": 3 },
+          { "name": "BENE_ZIP_CD", "start_pos": 28, "length": 5 },
+          { "name": "BENE_DOB", "start_pos": 33, "length": 10 },
+          { "name": "BENE_SEX_CD", "start_pos": 43, "length": 1 },
+          { "name": "BENE_RACE_CD", "start_pos": 44, "length": 1 },
+          { "name": "BENE_AGE", "start_pos": 45, "length": 3 },
+          { "name": "BENE_MDCR_STUS_CD", "start_pos": 48, "length": 2 },
+          { "name": "BENE_DUAL_STUS_CD", "start_pos": 50, "length": 2 },
+          { "name": "BENE_DEATH_DT", "start_pos": 52, "length": 10 },
+          { "name": "BENE_RNG_BGN_DT", "start_pos": 62, "length": 10 },
+          { "name": "BENE_RNG_END_DT", "start_pos": 72, "length": 10 },
+          { "name": "BENE_1ST_NAME", "start_pos": 82, "length": 30 },
+          { "name": "BENE_MIDL_NAME", "start_pos": 112, "length": 15 },
+          { "name": "BENE_LAST_NAME", "start_pos": 127, "length": 40 },
+          { "name": "BENE_ORGNL_ENTLMT_RSN_CD", "start_pos": 167, "length": 1 },
+          { "name": "BENE_ENTLMT_BUYIN_IND", "start_pos": 168, "length": 1 },
+          {
+            "name": "BENE_PART_A_ENRLMT_BGN_DT",
+            "start_pos": 169,
+            "length": 10
+          },
+          {
+            "name": "BENE_PART_B_ENRLMT_BGN_DT",
+            "start_pos": 179,
+            "length": 10
+          },
+          { "name": "BENE_LINE_1_ADR", "start_pos": 189, "length": 45 },
+          { "name": "BENE_LINE_2_ADR", "start_pos": 234, "length": 45 },
+          { "name": "BENE_LINE_3_ADR", "start_pos": 279, "length": 40 },
+          { "name": "BENE_LINE_4_ADR", "start_pos": 319, "length": 40 },
+          { "name": "BENE_LINE_5_ADR", "start_pos": 359, "length": 40 },
+          { "name": "BENE_LINE_6_ADR", "start_pos": 399, "length": 40 },
+          { "name": "GEO_ZIP_PLC_NAME", "start_pos": 439, "length": 100 },
+          { "name": "GEO_USPS_STATE_CD", "start_pos": 539, "length": 2 },
+          { "name": "GEO_ZIP5_CD", "start_pos": 541, "length": 5 },
+          { "name": "GEO_ZIP4_CD", "start_pos": 546, "length": 4 }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "bene_mbi_id": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_MBI_ID",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_hic_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_HIC_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_fips_state_cd": { "xpath": "BENE_FIPS_STATE_CD", "type": "int" },
+        "bene_fips_cnty_cd": { "xpath": "BENE_FIPS_CNTY_CD", "type": "int" },
+        "bene_zip_cd": {
+          "xpath": "BENE_ZIP_CD",
+          "template": "remove_special_char"
+        },
+        "bene_dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_DOB",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_sex_cd": {
+          "xpath": "BENE_SEX_CD",
+          "template": "remove_special_char"
+        },
+        "bene_race_cd": {
+          "xpath": "BENE_RACE_CD",
+          "template": "remove_special_char"
+        },
+        "bene_age": { "xpath": "BENE_AGE", "type": "int" },
+        "bene_mdcr_stus_cd": {
+          "xpath": "BENE_MDCR_STUS_CD",
+          "template": "remove_special_char"
+        },
+        "bene_dual_stus_cd": {
+          "xpath": "BENE_DUAL_STUS_CD",
+          "template": "remove_special_char"
+        },
+        "bene_death_dt": {
+          "xpath": "BENE_DEATH_DT",
+          "template": "remove_special_char"
+        },
+        "bene_rng_bgn_dt": {
+          "xpath": "BENE_RNG_BGN_DT",
+          "template": "remove_special_char"
+        },
+        "bene_rng_end_dt": {
+          "xpath": "BENE_RNG_END_DT",
+          "template": "remove_special_char"
+        },
+        "bene_1st_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_1ST_NAME",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_midl_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_MIDL_NAME",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_LAST_NAME",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_orgnl_entlmt_rsn_cd": {
+          "xpath": "BENE_ORGNL_ENTLMT_RSN_CD",
+          "template": "remove_special_char"
+        },
+        "bene_entlmt_buyin_ind": {
+          "xpath": "BENE_ENTLMT_BUYIN_IND",
+          "template": "remove_special_char"
+        },
+        "bene_part_a_enrlmt_bgn_dt": {
+          "xpath": "BENE_PART_A_ENRLMT_BGN_DT",
+          "template": "remove_special_char"
+        },
+        "bene_part_b_enrlmt_bgn_dt": {
+          "xpath": "BENE_PART_B_ENRLMT_BGN_DT",
+          "template": "remove_special_char"
+        },
+        "bene_line_1_adr": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_LINE_1_ADR",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_line_2_adr": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_LINE_2_ADR",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_line_3_adr": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_LINE_3_ADR",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_line_4_adr": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_LINE_4_ADR",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_line_5_adr": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_LINE_5_ADR",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_line_6_adr": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_LINE_6_ADR",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "geo_zip_plc_name": {
+          "xpath": "GEO_ZIP_PLC_NAME",
+          "template": "remove_special_char"
+        },
+        "geo_usps_state_cd": {
+          "xpath": "GEO_USPS_STATE_CD",
+          "template": "remove_special_char"
+        },
+        "geo_zip5_cd": {
+          "xpath": "GEO_ZIP5_CD",
+          "template": "remove_special_char"
+        },
+        "geo_zip4_cd": {
+          "xpath": "GEO_ZIP4_CD",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

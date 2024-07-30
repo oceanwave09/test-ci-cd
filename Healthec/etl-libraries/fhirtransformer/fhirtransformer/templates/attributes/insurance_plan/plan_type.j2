@@ -1,0 +1,12 @@
+[
+  {
+    {% if data.plan_type %} 
+    "coding" : [
+      {
+        "system" : "http://hl7.org/fhir/ValueSet/insuranceplan-type",
+        "code" : "{{ data.plan_type }}"
+      }
+    ]
+    {% endif %}
+  }
+]

@@ -1,0 +1,47 @@
+[
+	{
+		"code_flag": "S",
+		"end_date": "20211128",
+		"member_id": "95057",
+		"procedure_code": "11075005",
+		"row_id": "2eaa1966-8c9d-4365-b44a-3359d44c3db8",
+		"service_date": "20211128",
+		"service_status": "EVN"
+	},
+	{
+		"code_flag": "C",
+		"end_date": "19531211",
+		"member_id": "95060",
+		"procedure_code": "90870",
+		"row_id": "a192c85f-ba98-4468-84c5-e4e1f13a34eb",
+		"service_date": "19531211",
+		"service_status": "EVN"
+	},
+	{
+		"code_flag": "C",
+		"end_date": "20210712",
+		"member_id": "95063",
+		"procedure_code": "90870",
+		"row_id": "6a299942-8fff-45bb-9a8c-62fe5ba1a953",
+		"service_date": "20210712",
+		"service_status": "EVN"
+	},
+	{
+		"code_flag": "S",
+		"end_date": "20210705",
+		"member_id": "95111",
+		"procedure_code": "1010696002",
+		"row_id": "213dd3ba-10ab-4d0b-a796-000e98de790d",
+		"service_date": "20210705",
+		"service_status": "INT"
+	},
+	{
+		"code_flag": "S",
+		"end_date": "20220302",
+		"member_id": "95218",
+		"procedure_code": "391054008",
+		"row_id": "e9354c04-f7d4-4c25-93a7-1069e99687fc",
+		"service_date": "20220302",
+		"service_status": "INT"
+	}
+]

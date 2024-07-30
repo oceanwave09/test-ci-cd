@@ -1,0 +1,12 @@
+{
+  {% if data.funds_reserve_code %}
+  "coding": [
+    {
+      "system": "{{ data.funds_reserve_system }}",
+      "code": "{{ data.funds_reserve_code }}",
+      "display": "{{ data.funds_reserve_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.funds_reserve_text }}"
+}

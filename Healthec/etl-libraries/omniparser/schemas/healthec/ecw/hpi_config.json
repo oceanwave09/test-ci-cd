@@ -1,0 +1,168 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "patient_id",
+            "index": 3
+          },
+          {
+            "name": "patient_account_no",
+            "index": 4
+          },
+          {
+            "name": "encounter_id",
+            "index": 5
+          },
+          {
+            "name": "encounter_date",
+            "index": 6
+          },
+          {
+            "name": "provider_npi",
+            "index": 7
+          },
+          {
+            "name": "ecw_struct_id",
+            "index": 8
+          },
+          {
+            "name": "question",
+            "index": 9
+          },
+          {
+            "name": "question_id",
+            "index": 10
+          },
+          {
+            "name": "answers",
+            "index": 11
+          },
+          {
+            "name": "answers_id",
+            "index": 12
+          },
+          {
+            "name": "item_name",
+            "index": 13
+          },
+          {
+            "name": "item_id",
+            "index": 14
+          },
+          {
+            "name": "category_name",
+            "index": 15
+          },
+          {
+            "name": "category_id",
+            "index": 16
+          },
+          {
+            "name": "main_category_name",
+            "index": 17
+          },
+          {
+            "name": "main_category_id",
+            "index": 18
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "encounter_date": {
+          "xpath": "encounter_date"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "ecw_struct_id": {
+          "xpath": "ecw_struct_id"
+        },
+        "question": {
+          "xpath": "question"
+        },
+        "question_id": {
+          "xpath": "question_id"
+        },
+        "answers": {
+          "xpath": "answers"
+        },
+        "answers_id": {
+          "xpath": "answers_id"
+        },
+        "item_name": {
+          "xpath": "item_name"
+        },
+        "item_id": {
+          "xpath": "item_id"
+        },
+        "category_name": {
+          "xpath": "category_name"
+        },
+        "category_id": {
+          "xpath": "category_id"
+        },
+        "main_category_name": {
+          "xpath": "main_category_name"
+        },
+        "main_category_id": {
+          "xpath": "main_category_id"
+        }
+      }
+    }
+  }
+}

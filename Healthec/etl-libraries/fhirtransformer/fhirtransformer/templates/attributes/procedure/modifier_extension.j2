@@ -1,0 +1,20 @@
+[
+  {% for modifier in data.modifiers %}
+  {
+    "url": "{{ modifier.url }}",
+    "valueCodeableConcept": {
+      {%- if modifier.code -%}
+      "coding": [
+        {
+          "system": "{{ modifier.code_system }}",
+          "code": "{{ modifier.code }}",
+          "display": "{{ modifier.code_display }}"
+        }
+      ],
+      {%- endif %}
+      "text": "{{ modifier.code_text }}"
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

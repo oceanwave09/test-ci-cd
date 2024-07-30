@@ -1,0 +1,114 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "csv2"
+    },
+    "file_declaration": {
+        "delimiter": "|",
+        "records": [
+            { "rows": 1, "min": 1, "max": 1 },
+            {
+                "is_target": true,
+                "columns": [
+                    {
+                        "name": "attribute_name1",
+                        "index": 0
+                    },
+                    {
+                        "name": "attribute_name2",
+                        "index": 0
+                    }
+                    // other fields... 
+                ]
+            }
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": {
+            "object": {
+                "patient": { // fhir: Patient
+                    "object": {
+                        "identifiers": {
+                            "object": {
+                                "memberId": {"xpath": "member_id"}, //http://fhir-ru.github.io/v2/0203/index.html fhir code system MB
+                                "memberIdSuffix": {"xpath": "member_id_suffix"}, // specific to BACO HAP        
+                                "medicareNumber": {"xpath": "patient_medicare_number"}, //http://fhir-ru.github.io/v2/0203/index.html fhir code system MC 
+                                "medicareRecipientId": {"xpath": "patient_medicare_recipient_id"},  //NU
+                            }
+                        },
+                        "lastName": {"xpath": "patient_last_name"},
+                        "firstName": {"xpath": "patient_first_name"},
+                        "middleName": {"xpath": "patient_middle_name"},
+                        "title": {"xpath": "patient_title"}, //NU
+                        "dateOfBirth": {"xpath": "patient_date_of_birth"},
+                        "gender": {"xpath": "patient_gender"},
+                        "language": {"xpath": "patient_language"},
+                        "address": {
+                            "object": {
+                                "line1": {"xpath": "patient_address_line_1"},
+                                "line2": {"xpath": "patient_address_line_2"},
+                                "city": {"xpath": "patient_city"},
+                                "state": {"xpath": "patient_state"},
+                                "zip": {"xpath": "patient_zip"},
+                                "country": {"xpath": "patient_country"},
+                            }
+                        },
+                        "homePhoneNumber": {"xpath": "patient_home_phone_number"},
+                        "workPhoneNumber": {"xpath": "patient_work_phone_number"},
+                        "caseManagementFlag": {"xpath": "case_management_flag"},
+                        "coverage": { //fhir: Coverage - establishes the relationship between the patient and the health plan/insurance company 
+                            "object": {
+                                "memberId": {"xpath": "member_id"}, //http://fhir-ru.github.io/v2/0203/index.html fhir code system MB
+                                "memberIdSuffix": {"xpath": "member_id_suffix"}, // specific to BACO HAP        
+                                "relationshipCode": {"xpath": "patient_relationship_code"},
+                                "effectiveDate": {"xpath": "patient_effective_date"},
+                                "terminationDate": {"xpath": "patient_termination_date"},
+                                "eligibilityStatus": {"xpath": "patient_eligibility_status"},
+                                "payor": {"const": "HAP"}, // payor/health plan/etc. 
+                                "groupId": {"xpath": "group_id"}, // fhir:Coverage.class.<type=group, name=group id, value=group_id>
+                                "groupName": {"xpath": "group_name"}, // fhir:Coverage.class.<type=group, name=employer name, value=group_name>
+                                "subgroupId": {"xpath": "subgroup_id"}, // fhir:Coverage.class.<type=subgroup, name=subgroup id, value=subgroup_id>
+                                "subgroupName": {"xpath": "subgroup_name"} // fhir:Coverage.class.<type=subgroup, name=employer subgroup name, value=subgroup_name>
+                            }
+                        },
+                        "plan": {
+                            "object": {
+                                "name": {"xpath": "plan_name"},
+                                //question: 
+                                    //plan_practice_id >> parent_subgroup_id - NU
+                                    //plan_org_id
+                                "effectiveDate": {"xpath": "plan_effective_date"},
+                                "endDate": {"xpath": "plan_end_date"}
+                            }
+                        },
+                        "provider": {
+                            "object": {
+                                "npi": {"xpath": "provider_npi"},
+                                "firstName": {"xpath": "provider_first_name"},
+                                "lastName": {"xpath": "provider_last_name"},
+                                "middleName": {"xpath": "provider_middle_name"},
+                                "suffix": {"xpath": "provider_suffix"},
+                                "degree": {"xpath": "provider_degree"},
+                                // primary practice
+                                // provider employed
+                                //question: plan_provider_id? - NU
+                                "specialty":  {"xpath": "provider_specialty"},
+                                "type":  {"xpath": "provider_type"},
+                                //Questions:
+                                    //row_status_flag - NU
+                                    //po_name - ??
+                                "plan": {
+                                    "object": {
+                                        "name": {"xpath": "plan_name"},
+                                        "effectiveDate": {"xpath": "plan_effective_date"},
+                                        "endDate": {"xpath": "plan_end_date"}
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }        
+    }
+}

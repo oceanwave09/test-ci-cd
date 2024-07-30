@@ -1,0 +1,33 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "category": {% include "attributes/procedure/category.j2" %},
+  "code": {% include "attributes/procedure/code.j2" %},
+  "status": "{{ data.status }}",
+  "subject": {% include "attributes/patient_reference.j2" %},
+  "encounter": {% include "attributes/encounter_reference.j2" %},
+  {%- if data.performed_date_time -%}
+  "performedDateTime": "{{ data.performed_date_time }}",
+  {%- endif %}
+  "performedPeriod": {% include "attributes/procedure/performed_period.j2" %},
+  "performer": {% include "attributes/procedure/performer.j2" %},
+  "location": {% include "attributes/location_reference.j2" %},
+  "modifierExtension": {% include "attributes/procedure/modifier_extension.j2" %},
+  "reasonCode": {% include "attributes/procedure/reason_code.j2" %},
+  "bodySite": {% include "attributes/procedure/body_site.j2" %},
+  "reasonReference": {% include "attributes/procedure/reason_reference.j2"%},
+  "outcome": {% include "attributes/procedure/outcome.j2" %}
+{% endblock %}

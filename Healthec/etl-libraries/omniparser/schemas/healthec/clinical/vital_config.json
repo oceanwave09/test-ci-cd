@@ -1,0 +1,330 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "systolic",
+            "index": 8
+          },
+          {
+            "name": "diastolic",
+            "index": 9
+          },
+          {
+            "name": "bp_date_time",
+            "index": 10
+          },
+          {
+            "name": "bmi_date",
+            "index": 11
+          },
+          {
+            "name": "bmi_value",
+            "index": 12
+          },
+          {
+            "name": "lvef",
+            "index": 13
+          },
+          {
+            "name": "reason",
+            "index": 14
+          },
+          {
+            "name": "npi",
+            "index": 15
+          },
+          {
+            "name": "vitals_captured_by",
+            "index": 16
+          },
+          {
+            "name": "vitals_name",
+            "index": 17
+          },
+          {
+            "name": "standared_vitals",
+            "index": 18
+          },
+          {
+            "name": "modified_date",
+            "index": 19
+          },
+          {
+            "name": "relationship_to_patient",
+            "index": 20
+          },
+          {
+            "name": "status_of_relation",
+            "index": 21
+          },
+          {
+            "name": "age_of_relation",
+            "index": 22
+          },
+          {
+            "name": "dob_of_relation",
+            "index": 23
+          },
+          {
+            "name": "icd_code",
+            "index": 24
+          },
+          {
+            "name": "icd_description",
+            "index": 25
+          },
+          {
+            "name": "year_of_diagnosis",
+            "index": 26
+          },
+          {
+            "name": "diagnosed_age",
+            "index": 27
+          },
+          {
+            "name": "past_medical_history",
+            "index": 28
+          },
+          {
+            "name": "icd_past_history",
+            "index": 29
+          },
+          {
+            "name": "bmi_followup_date",
+            "index": 30
+          },
+          {
+            "name": "bp_followup_date",
+            "index": 31
+          },
+          {
+            "name": "bmi_percentile",
+            "index": 32
+          },
+          {
+            "name": "counseling_nutrition_date",
+            "index": 33
+          },
+          {
+            "name": "counseling_phy_act_date",
+            "index": 34
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "systolic": {
+          "xpath": "systolic"
+        },
+        "diastolic": {
+          "xpath": "diastolic"
+        },
+        "bp_date_time": {
+          "xpath": "bp_date_time"
+        },
+        "bmi_date": {
+          "xpath": "bmi_date"
+        },
+        "bmi_value": {
+          "xpath": "bmi_value"
+        },
+        "lvef": {
+          "xpath": "lvef"
+        },
+        "reason": {
+          "xpath": "reason"
+        },
+        "npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "npi"
+              }
+            ]
+          }
+        },
+        "vitals_captured_by": {
+          "xpath": "vitals_captured_by"
+        },
+        "vitals_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "vitals_name"
+              }
+            ]
+          }
+        },
+        "standared_vitals": {
+          "xpath": "standared_vitals"
+        },
+        "modified_date": {
+          "xpath": "modified_date"
+        },
+        "relationship_to_patient": {
+          "xpath": "relationship_to_patient"
+        },
+        "status_of_relation": {
+          "xpath": "status_of_relation"
+        },
+        "age_of_relation": {
+          "xpath": "age_of_relation"
+        },
+        "dob_of_relation": {
+          "xpath": "dob_of_relation"
+        },
+        "icd_code": {
+          "xpath": "icd_code"
+        },
+        "icd_description": {
+          "xpath": "icd_description"
+        },
+        "year_of_diagnosis": {
+          "xpath": "year_of_diagnosis"
+        },
+        "diagnosed_age": {
+          "xpath": "diagnosed_age"
+        },
+        "past_medical_history": {
+          "xpath": "past_medical_history"
+        },
+        "icd_past_history": {
+          "xpath": "icd_past_history"
+        },
+        "bmi_followup_date": {
+          "xpath": "bmi_followup_date"
+        },
+        "bp_followup_date": {
+          "xpath": "bp_followup_date"
+        },
+        "bmi_percentile": {
+          "xpath": "bmi_percentile"
+        },
+        "counseling_nutrition_date": {
+          "xpath": "counseling_nutrition_date"
+        },
+        "counseling_phy_act_date": {
+          "xpath": "counseling_phy_act_date"
+        }
+      }
+    }
+  }
+}

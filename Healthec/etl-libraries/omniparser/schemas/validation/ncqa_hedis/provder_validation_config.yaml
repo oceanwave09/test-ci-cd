@@ -1,0 +1,8 @@
+ncqa_hedis_npr_provider:
+  key_path: npr_provider
+  type: string
+
+ncqa_hedis_provider_id:
+  key_path: provider_id
+  min_length: 1
+  required: True

@@ -1,0 +1,44 @@
+[
+  {% for procedure in data.procedures %}
+  {
+    {%- if procedure.sequence -%}
+    "sequence": {{procedure.sequence}},
+    {%- endif %}
+    "procedureCodeableConcept": {
+      {% if procedure.procedure_code %}
+      "coding": [
+        {
+          "system": "{{ procedure.procedure_system }}",
+          "code": "{{ procedure.procedure_code }}",
+          "display": "{{ procedure.procedure_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ procedure.procedure_text }}"
+    },
+    "procedureReference": {
+      {% if procedure.procedure_id %}
+      "reference": "Procedure/{{ procedure.procedure_id }}"
+      {%- endif %}
+    },
+    "type": [
+      {%- if procedure.type_code or procedure.type_text -%}
+      {
+        {% if procedure.type_code %}
+        "coding": [
+          {
+            "system": "{{ procedure.type_system }}",
+            "code": "{{ procedure.type_code }}",
+            "display": "{{ procedure.type_display }}"
+          } 
+        ],
+        {%- endif %}
+        "text": "{{ procedure.type_text }}"
+      }
+      {%- endif %}
+    ],
+    "date": "{{ procedure.date_time }}"
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

@@ -1,0 +1,10 @@
+{
+  {%- if data.relationship_code -%}
+    "coding" : [{
+      "system" : "{{ data.relationship_system }}",
+      "code" : "{{ data.relationship_code }}",
+      "display": "{{ data.relationship_display }}"
+    }],
+  {%- endif %}
+  "text": "{{ data.relationship_text }}"
+}

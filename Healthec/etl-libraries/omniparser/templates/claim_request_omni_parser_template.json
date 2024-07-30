@@ -1,0 +1,616 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "edi"
+    },
+    "file_declaration": {
+        "segment_delimiter": "~",
+        "element_delimiter": "*",
+        "component_delimiter": ":",
+        "ignore_crlf": true,
+        "segment_declarations": [
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": { 
+            "object": {
+                "claim": {  // fhir: Claim
+                    "id": {"xpath": "claim_id"},  // CLM01
+                    "amount": {"xpath": "claim_amount"},  // CLM02
+                    "placeOfService": {"xpath": "claim_place_of_service"},  // CLM05 - 1
+                    "frequencyTypeCode": {"xpath": "claim_frequency_type_code"}, // CLM05 - 3 Note: resubmission - '6' for corrected claim
+                    "providerSignIndicator": {"xpath": "claim_provider_signature_indicator"}, // CLM06
+                    "providerAssignmentCode": {"xpath": "claim_provider_assignment_code"},  // CLM07
+                    "assignmentOfBenefitsIndicator": {"xpath": "claim_assignment_of_benefits_indicator"}, // CLM08
+                    "releaseOfInformationCode": {"xpath": "claim_release_of_information_code"},  // CLM09
+                    "patientSignSourceCode": {"xpath": "claim_patient_signature_source_code"},  // CLM10
+                    "relatedCausesCode": {"xpath": "claim_related_causes_code"},  // CLM11 - 1
+                    "relatedCausesState": {"xpath": "claim_related_causes_state"},  // CLM11 - 4
+                    "relatedCausesCountry": {"xpath": "claim_related_causes_country"},  // CLM11 - 5
+                    "specialProgramCode": {"xpath": "claim_special_program_code"},  // CLM12
+                    "delayReasonCode": {"xpath": "claim_delay_reason_code"},  // CLM20
+                    "effectiveDate": {"xpath": "claim_effective_date"},  // #1 DTP03
+                    "attachmentTypeCode": {"xpath": "claim_attachment_type_code"},  // PWK01
+                    "attachmentTransmissionCode": {"xpath": "claim_attachment_transmission_code"},  // PWK02
+                    "attachmentControlNumber": {"xpath": "claim_attachment_control_number"},  // PWK06
+                    "contractTypeCode": {"xpath": "claim_contract_type_code"},  // CN101
+                    "contractAmount": {"xpath": "claim_contract_amount"},  // CN102
+                    "patientAmountPaid": {"xpath": "claim_patient_amount_paid"},  // AMT02
+                    "priorAuthorization": {"xpath": "claim_prior_authorization"}, // REF02 if REF01 = G1
+                    "payerClaimControlNumber": {"xpath": "cliam_payer_claim_control_number"}, // REF02 if REF01 = F8
+                    "cliaNumber": {"xpath": "claim_clia_number"}, // REF02 if REF01 = X4
+                    "repricedClaimNumber": {"xpath": "claim_repriced_claim_number"}, // REF02 if REF01 = 9A
+                    "medicalRecordNumber": {"xpath": "claim_medical_record_number"}, // REF02 if REF01 = EA
+                    "fileInformation": {"xpath": "claim_file_information"}, // K301
+                    "noteRefCode": {"xpath": "claim_note_reference_code"},   // NTE01
+                    "noteDecsription": {"xpath": "claim_note_description"},  // NTE02
+                    "ambTransPatientWeightInPounds": {"xpath": "ambulance_transport_patient_weight_in_pounds"},  // CR102
+                    "ambTransReasonCode": {"xpath": "ambulance_transport_reason_code"},  // CR104
+                    "ambTransportDistanceInMiles": {"xpath": "ambulance_transport_distance_in_miles"},  // CR106
+                    "ambTransportRoundTripDesc": {"xpath": "ambulance_transport_round_trip_description"}, // CR109
+                    "ambTransportStretcherDesc": {"xpath": "ambulance_transport_stretcher_description"}, // CR110
+                    "patientConditionCode": {"xpath": "claim_patient_condition_code"},  // CR208
+                    "ambCertConditionCode": {"xpath": "claim_ambulance_certification_condition_code"},  // #1 CRC03 Note: Identified based on ambulance certification code category
+                    "ambCertConditionIndicator": {"xpath": "claim_ambulance_certification_condition_indicator"},  // #1 CRC02
+                    "patientVisionConditionCode": {"xpath": "claim_patient_vision_condition_code"},  // #2 CRC03 Note: Identified based on patient vision code category
+                    "patientVisionConditionIndicator": {"xpath": "claim_patient_vision_condition_indicator"},  // #1 CRC02
+                    "homeBoundConditionCode": {"xpath": "claim_home_bound_condition_code"},  // #3 CRC03 Note: Identified based on home bound code category
+                    "homeBoundConditionIndicator": {"xpath": "claim_home_bound_condition_indicator"}, // #3 CRC02
+                    "epsdlConditionCode": {"xpath": "claim_epsdl_condition_code"}, // #4 CRC03 Note: Identified based on epsdl code category
+                    "epsdlConditionIndicator": {"xpath": "claim_epsdl_condition_indicator"}, // #4 CRC02
+                    "anesthesiaRelatedSurgicalProcedureCode": {"xpath": "claim_anesthesia_related_surgical_procedure_code"}, // #2 HI01 - 2 If HI01 - 1 = BP
+                    "pricingMethod": {"xpath": "claim_pricing_method"},  // HCP01
+                    "allowedAmount": {"xpath": "claim_allowed_amount"},  // HCP02
+                    "savingAmount": {"xpath": "claim_saving_amount"},  // HCP03
+                    "repricingOrgId": {"xpath": "claim_repricing_org_id"},  // HCP04
+                    "flatRateAmount": {"xpath": "claim_flat_rate_amount"}, // HCP05
+                    "approvedDRGCode": {"xpath": "claim_approved_drg_code"},  // HCP06
+                    "approvedDRGAmount": {"xpath": "claim_approved_drg_amount"},  // HCP07
+                    "rejectReasonCode": {"xpath": "claim_reject_reason_code"},  // HCP13
+                    "policyComplianceCode": {"xpath": "claim_compliance_code"}, // HCP14
+                    "excemptionCode": {"xpath": "claim_excemption_code"},  // HCP15
+                    "submitter": {  // fhir:{Resource} ???
+                        "object": {
+                            "type": {"xpath": "submitter_type"},  // NM102
+                            "lastName": {"xpath": "submitter_last_name"},  // NM103
+                            "firstName": {"xpath": "submitter_first_name"}, // NM104
+                            "middleName": {"xpath": "submitter_middle_name"}, // NM105
+                            "id": {"xpath": "subimitter_id"}, // NM109
+                            "contact": {
+                                "object": {
+                                    "name": {"xpath": "subimitter_contact_name"},  // PER02
+                                    "phone": {"xpath": "subimitter_contact_phone"}, // PER04,PER06,PER08 if qualifier = TE
+                                    "phoneExt": {"xpath": "subimitter_contact_phone_extention"}, // PER04,PER06,PER08 if qualifier = EX
+                                    "email": {"xpath": "subimitter_contact_email"}, // PER04,PER06,PER08 if qualifier = EM
+                                    "fax": {"xpath": "subimitter_contact_fax"} // PER04,PER06,PER08 if qualifier = FX
+                                }
+                            }
+                        }
+                    },
+                    "receiver": {  // fhir:{Resource} ???
+                        "object": {
+                            "name": {"xpath": "receiver_name"}, // NM103
+                            "id": {"xpath": "receiver_id"} // NM109
+                        }
+                    },
+                    "subscriber": { // fhir: RelatedPerson/Patient(/Guarantor)
+                        "object": {
+                            "type": {"xpath": "subscriber_type"}, // NM102
+                            "lastName": {"xpath": "subscriber_last_name"},  // NM103
+                            "firstName": {"xpath": "subscriber_first_name"}, // NM104
+                            "middleName": {"xpath": "subscriber_middle_name"}, // NM105
+                            "nameSuffix": {"xpath": "subscriber_name_suffix"}, // NM107
+                            "idType": {"xpath": "subscriber_id_type"}, // NM108 (II, MI)
+                            "id": {"xpath": "subscriber_id"}, // NM109
+                            "address": {
+                                "object": {
+                                    "line1": {"xpath": "subscriber_address_line_1"}, // N301
+                                    "line2": {"xpath": "subscriber_address_line_2"}, // N302
+                                    "city": {"xpath": "subscriber_address_city"},  // N401
+                                    "state": {"xpath": "subscriber_address_state"}, // N402
+                                    "zip": {"xpath": "subscriber_address_zip"}, // N403
+                                    "country": {"xpath": "subscriber_address_country"} // N404
+                                }
+                            },
+                            "dob": {"xpath": "subscriber_dob"}, // DMG02
+                            "gender": {"xpath": "subscriber_gender"},  // DMG03
+                            "ssn": {"xpath": "subscriber_ssn"}, // #1 REF02 if qualifier = SY
+                            "casualityClaimNumber": {"xpath": "subscriber_casuality_claim_number"}, // #2 REF02 if qualifier = Y4
+                            "casualitySubscriberContact": {
+                                "object": {
+                                    "name": {"xpath": "subscriber_casuality_contact_name"}, // PER02
+                                    "phone": {"xpath": "subscriber_casuality_contact_phone"}, // PER04,PER06 if qualifier = TE
+                                    "phoneExt": {"xpath": "subscriber_casuality_phone_extention"} // PER04,PER06 if qualifier = EX
+                                }
+                            }
+                        }
+                    },
+                    "patient": {  // fhir: Patient
+                        "relationshipCode": {"xpath": "patient_relationship_code"}, // PAT01
+                        "deathDate": {"xpath": "patient_death_date"}, // PAT06
+                        "weightInPounds": {"xpath": "patient_weight_in_pounds"}, // PAT08
+                        "pregnancyIndicator": {"xpath": "patient_pregnancy_indicator"}, // PAT09
+                        "lastName": {"xpath": "patient_last_name"},
+                        "firstName": {"xpath": "patient_first_name"},
+                        "middleName": {"xpath": "patient_middle_name"},
+                        "nameSuffix": {"xpath": "patient_name_suffix"},
+                        "address": {
+                            "object": {
+                                "line1": {"xpath": "patient_address_line_1"}, // N301
+                                "line2": {"xpath": "patient_address_line_2"}, // N302
+                                "city": {"xpath": "patient_address_city"},  // N401
+                                "state": {"xpath": "patient_address_state"},  // N402
+                                "zip": {"xpath": "patient_address_zip"},  // N403
+                                "country": {"xpath": "patient_address_country"}  // N404
+                            }
+                        },
+                        "dob": {"xpath": "patient_dob"},  // DMG02
+                        "gender": {"xpath": "patient_gender"},  // DMG03
+                        "casualityClaimNumber": {"xpath": "patient_casuality_claim_number"}, // #2 REF02 if qualifier = Y4
+                        "casualityPatientContact": {
+                            "object": {
+                                "name": {"xpath": "patient_casuality_contact_name"}, // PER02
+                                "phone": {"xpath": "patient_casuality_contact_phone"}, // PER04,PER06 if qualifier = TE
+                                "phoneExt": {"xpath": "patient_casuality_phone_extention"} // PER04,PER06 if qualifier = EX
+                            }
+                        }
+                    },
+                    "billingProvider": {  // fhir:Organization(type = prov)
+                        "object": {
+                            "type": {"xpath": "billing_provider_type"}, // NM102
+                            "lastName": {"xpath": "billing_provider_last_name"},  // NM103 Note: For practice, it's an organization name
+                            "firstName": {"xpath": "billing_provider_first_name"},  // NM104
+                            "middleName": {"xpath": "billing_provider_middle_name"},  // NM105
+                            "nameSuffix": {"xpath": "billing_provider_name_suffix"},  // NM107
+                            "id": {"xpath": "billing_provider_id"},  // NM109
+                            "address": {
+                                "object": {
+                                    "line1": {"xpath": "billing_provider_address_line_1"}, // N301
+                                    "line2": {"xpath": "billing_provider_address_line_2"}, // N302
+                                    "city": {"xpath": "billing_provider_address_city"}, // N401
+                                    "state": {"xpath": "billing_provider_address_state"}, // N402
+                                    "zip": {"xpath": "billing_provider_address_zip"}, // N403
+                                    "country": {"xpath": "billing_provider_address_country"} // N404
+                                }
+                            },
+                            "tin": {"xpath": "billing_provider_tin"}, // #1 REF02 if qualifier = EI
+                            "ssn": {"xpath": "billing_provider_ssn"}, // #1 REF02 if qualifier = SY
+                            "stateLicenseNumber": {"xpath": "billing_provider_state_license"}, // #2 REF02 if qualifier = 0B
+                            "upinNumber": {"xpath": "billing_provider_upin"}, // #2 REF02 if qualifier = 1G
+                            "contact": {
+                                "object": {
+                                    "name": {"xpath": "billing_provider_contact_name"},  // PER02
+                                    "phone": {"xpath": "billing_provider_contact_phone"}, // PER04,PER06,PER08 if qualifier = TE
+                                    "phoneExt": {"xpath": "billing_provider_contact_phone_extention"}, // PER04,PER06,PER08 if qualifier = EX
+                                    "email": {"xpath": "billing_provider_contact_email"}, // PER04,PER06,PER08 if qualifier = EM
+                                    "fax": {"xpath": "billing_provider_contact_fax"} // PER04,PER06,PER08 if qualifier = TX
+                                }
+                            }
+                            // TODO: PAY-TO ADDRESS NAME
+                            // TODO: PAY-TO PLAN NAME
+                        }
+                    },
+                    "payer": {  //fhir: Organization(type=ins)
+                        "object": {
+                            "name": {"xpath": "payer_name"}, // NM103
+                            "idType": {"xpath": "payer_id_type"}, // NM108 (PI, XV)
+                            "id": {"xpath": "payer_id"},  // NM109
+                            "address": {
+                                "object": {
+                                    "line1": {"xpath": "payer_address_line_1"},  // N301
+                                    "line2": {"xpath": "payer_address_line_2"},  // N302
+                                    "city": {"xpath": "payer_address_city"}, // N401
+                                    "state": {"xpath": "payer_address_state"}, // N402
+                                    "zip": {"xpath": "payer_address_zip"},  // N403
+                                    "country": {"xpath": "payer_address_country"}  // N404
+                                }
+                            },
+                            "secondaryIdType": {"xpath": "payer_secondary_id_type"}, // #1 REF01 (2U, EI, FY, NF)
+                            "secondaryId": {"xpath": "payer_secondary_id"},  // #1 REF02
+                            "billingProviderSecondaryIdType": {"xpath": "payer_billing_provider_secondary_id_type"}, // #2 REF01 (G2, LU)
+                            "billingProviderSecondaryId": {"xpath": "payer_billing_provider_secondary_id"},  // #2 REF02
+                            "payerResponsibilityCode": {"xpath": "payer_responsibility_code"},  // SBR01
+                            "insuranceTypeCode": {"xpath": "payer_insurance_type_code"},  // SBR05
+                            "claimFilingIndicatorCode": {"xpath": "payer_claim_filing_indicator_code"}  // SBR09
+                        }
+                    },
+                    "referringProvider": {  // fhir: Practitioner
+                        "object": {
+                            "lastName": {"xpath": "referring_provider_last_name"},  // NM103
+                            "firstName": {"xpath": "referring_provider_first_name"},  // NM104
+                            "middleName": {"xpath": "referring_provider_middle_name"}, // NM105
+                            "nameSuffix": {"xpath": "referring_provider_name_suffix"},  // NM107
+                            "idQualifier": {"xpath": "referring_provider_id_qualifier"}, 
+                            "id": {"xpath": "referring_provider_id"}, // NM109
+                            "stateLicenseNumber": {"xpath": "referring_provider_state_license"},  // REF02 if REF01 = 0B
+                            "upinNumber": {"xpath": "referring_provider_upin"}, // REF02 if REF01 = 1G
+                            "commercialNumber": {"xpath": "referring_provider_commercial_number"} // REF02 if REF01 = G2
+                        }
+                    },
+                    "renderingProvider": {  // fhir: Practitioner
+                        "object": {
+                            "type": {"xpath": "rendering_provider_type"}, // NM102
+                            "lastName": {"xpath": "rendering_provider_last_name"},  // NM103
+                            "firstName": {"xpath": "rendering_provider_first_name"}, // NM104
+                            "middleName": {"xpath": "rendering_provider_middle_name"},  // NM105
+                            "nameSuffix": {"xpath": "rendering_provider_name_suffix"},  // NM107
+                            "id": {"xpath": "rendering_provider_id"}, // NM109
+                            "taxonomy": {"xpath": "rendering_provider_taxonomy"}, // PRV03
+                            "stateLicenseNumber": {"xpath": "rendering_provider_state_license"},  // REF02 if REF01 = 0B
+                            "upinNumber": {"xpath": "rendering_provider_upin"}, // REF02 if REF01 = 1G
+                            "commercialNumber": {"xpath": "rendering_provider_commercial_number"}, // REF02 if REF01 = G2
+                            "locationNumber": {"xpath": "rendering_provider_location_number"} // REF02 if REF01 = LU
+                        }
+                    },
+                    "serviceFacility": {  // fhir: Location
+                        "object": {
+                            "name": {"xpath": "service_facility_name"},  // NM103
+                            "id": {"xpath": "service_facility_id"},  // NM109
+                            "address": {
+                                "object": {
+                                    "line1": {"xpath": "service_facility_address_line_1"},  // N301
+                                    "line2": {"xpath": "service_facility_address_line_2"},  // N302
+                                    "city": {"xpath": "service_facility_address_city"},  // N401
+                                    "state": {"xpath": "service_facility_address_state"},  // N402
+                                    "zip": {"xpath": "service_facility_address_zip"},  // N403
+                                    "country": {"xpath": "service_facility_address_country"}  // N404
+                                }
+                            },
+                            "stateLicenseNumber": {"xpath": "service_facility_state_license_number"}, // REF02 if REF01 = 0B
+                            "locationNumber": {"xpath": "service_facility_location_number"}, // REF02 if REF01 = LU
+                            "commercialNumber": {"xpath": "service_facility_commercial_number"}, // REF02 if REF01 = G2
+                            "contact": {
+                                "object": {
+                                    "name": {"xpath": "service_facility_contact_name"},  // PER02
+                                    "phone": {"xpath": "service_facility_contact_phone"},  // PER04, PER06 if qualifier is TE
+                                    "phoneExt": {"xpath": "service_facility_contact_phone_extention"}  // PER04, PER06 if qualifier is EX
+                                }
+                            }
+                        }
+                    },
+                    "supervisingProvider": {  // fhir: Practitioner
+                        "object": {
+                            "lastName": {"xpath": "supervising_provider_last_name"},  // NM103
+                            "firstName": {"xpath": "supervising_provider_first_name"},  // NM104
+                            "middleName": {"xpath": "supervising_provider_middle_name"},  // NM105
+                            "nameSuffix": {"xpath": "supervising_provider_name_suffix"},  // NM107
+                            "id": {"xpath": "supervising_provider_id"}, // NM109
+                            "stateLicense_number": {"xpath": "supervising_provider_state_license"}, // REF02 if REF01 = 0B
+                            "upinNumber": {"xpath": "supervising_provider_upin"},  // REF02 if REF01 = 1G
+                            "locationNumber": {"xpath": "supervising_provider_location_number"},  // REF02 if REF01 = G2
+                            "commercialNumber": {"xpath": "supervising_provider_commercial_number"} // REF02 if REF01 = LU
+                        }
+                    },
+                    "ambPickUp": {  // fhir: Claim.???
+                        "object": {
+                            "address": {
+                                "object": {
+                                    "line1": {"xpath": "ambulance_pick_up_address_line_1"},  // N301
+                                    "line2": {"xpath": "ambulance_pick_up_address_line_2"}, // N302
+                                    "city": {"xpath": "ambulance_pick_up_address_city"},  // N401
+                                    "state": {"xpath": "ambulance_pick_up_address_state"},  // N402
+                                    "zip": {"xpath": "ambulance_pick_up_address_zip"},  // N403
+                                    "country": {"xpath": "ambulance_pick_up_address_country"}  // N404
+                                }
+                            }
+                        }
+                    },
+                    "ambDropOff": {  // fhir: Claim.???
+                        "object": {
+                            "locationName": {"xpath": "ambulance_drop_off_location_name"},  // NM103
+                            "address": {
+                                "object": {
+                                    "line1": {"xpath": "ambulance_drop_off_address_line_1"},  // N301
+                                    "line2": {"xpath": "ambulance_drop_off_address_line_2"}, // N302
+                                    "city": {"xpath": "ambulance_drop_off_address_city"},  // N401
+                                    "state": {"xpath": "ambulance_drop_off_address_state"}, // N402
+                                    "zip": {"xpath": "ambulance_drop_off_address_zip"}, // N403
+                                    "country": {"xpath": "ambulance_drop_off_address_country"} // N404
+                                }
+                            }
+                        }
+                    },
+                    "diagnosis": [  // It can have maximum 12 diagnosis codes, first entry would a primary diagnosis code
+                        {
+                            "primaryIndicator": {"xpath": "claim_primary_code_indicator"},  // Note: Y - For first diagnosis code
+                            "typeCode": {"xpath": "claim_diagnosis_type_code"}, // #1 HI01 - 1 Note: to identify is it ICD-9-CM(BK) or ICD-10-CM(ABK)
+                            "code": {"xpath": "claim_diagnosis_code"}  // #1 HI01 - 2
+                        }
+                    ],
+                    "condition": [  // It can have maximum 12 condition codes, first entry would a primary diagnosis code
+                        {
+                            "primaryIndicator": {"xpath": "claim_primary_code_indicator"}, // Note: Y - For first condition code
+                            "typeCode": {"xpath": "claim_diagnosis_type_code"}, // #3 HI01 - 1
+                            "code": {"xpath": "claim_diagnosis_code"}  // #3 HI01 - 2
+                        }
+                    ],
+                    "procedure": {},
+                    "serviceLines": { "array": [  // fhir: Claim.items
+                        {
+                            "object": {
+                                "lineNumber": {"xpath": "service_line_number"}, 
+                                "serviceIdCode": {"xpath": "professional_service_id_code"},  // SV101 - 1
+                                "serviceId": {"xpath": "professional_service_id"},  // SV101 - 2
+                                "serviceModifier1": {"xpath": "professional_service_modifier_1"},  // SV101 - 3
+                                "serviceModifier2": {"xpath": "professional_service_modifier_2"},  // SV101 - 4
+                                "serviceModifier3": {"xpath": "professional_service_modifier_3"},  // SV101 - 5
+                                "serviceModifier4": {"xpath": "professional_service_modifier_4"},  // SV101 - 6
+                                "lineAmount": {"xpath": "service_line_amount"}, // SV102
+                                "unitCode": {"xpath": "service_unit_code"}, // SV103
+                                "quantity": {"xpath": "service_quantity"}, // SV104
+                                "placeOfService": {"xpath": "service_place_of_service"},  // SV105
+                                "diagnosisCodePointer1": {"xpath": "service_diagnosis_code_pointer_1"}, // SV107 - 1
+                                "diagnosisCodePointer2": {"xpath": "service_diagnosis_code_pointer_2"}, // SV107 - 2
+                                "diagnosisCodePointer3": {"xpath": "service_diagnosis_code_pointer_3"}, // SV107 - 3
+                                "diagnosisCodePointer4": {"xpath": "service_diagnosis_code_pointer_4"}, // SV107 - 4
+                                "emergencyIndicator": {"xpath": "service_emergency_indicator"}, // SV109 
+                                "epsdtIndicator": {"xpath": "service_epsdt_indicator"},  // SV111
+                                "familyPlanningIndicator": {"xpath": "service_familiy_planning_indicator"}, // SV112
+                                "copayStatusCode": {"xpath": "service_copay_status_code"}, // SV115
+                                "dmeProcedureId": {"xpath": "service_dme_procedure_id"}, // SV501 - 1
+                                "dmeProcedureCode": {"xpath": "service_dme_procedure_code"}, // SV501 - 1
+                                "dmeMedicalNecessityInDays": {"xpath": "service_dme_medical_necessity_in_days"}, // SV503
+                                "dmeRentalPrice": {"xpath": "service_dme_rental_price"}, // SV504
+                                "dmePurchasePrice": {"xpath": "service_dme_purchase_price"}, // SV505
+                                "dmeFrequencyCode": {"xpath": "service_dme_frequency_code"}, // SV506
+                                "reportTypeCode": {"xpath": "service_report_type_code"}, // PWK01
+                                "reportTransmissionCode": {"xpath": "service_report_transmission_code"},  // PWK02
+                                "reportControlNumber": {"xpath": "service_report_control_number"}, // PWK06
+                                "ambTransPatientWeightInPounds": {"xpath": "service_ambulance_transport_patient_weight_in_pounds"}, // CR102
+                                "ambTransReasonCode": {"xpath": "service_ambulance_transport_reason_code"}, // CR104
+                                "ambTransDistanceInMiles": {"xpath": "service_ambulance_transport_distance_in_miles"}, // CR106
+                                "ambTransportRoundTripDesc": {"xpath": "service_ambulance_transport_round_trip_description"}, // CR109
+                                "ambTransportStretcherDesc": {"xpath": "service_ambulance_transport_stretcher_description"}, // CR110
+                                "dmeCertTypeCode": {"xpath": "service_dme_certificate_type_code"}, // CR301
+                                "dmeCertDurationInMonths": {"xpath": "service_dme_cert_duration_in_months"}, // CR303
+                                "ambCertConditionIndicator": {"xpath": "service_ambulance_certification_condition_indicator"}, // #1 CRC02 Note: Identified based on ambulance certification code category
+                                "ambCertConditionCode1": {"xpath": "service_ambulance_certification_condition_code_1"}, // #1 CRC03
+                                "ambCertConditionCode2": {"xpath": "service_ambulance_certification_condition_code_2"},  // #1 CRC04
+                                "ambCertConditionCode3": {"xpath": "service_ambulance_certification_condition_code_3"},  // #1 CRC05
+                                "ambCertConditionCode4": {"xpath": "service_ambulance_certification_condition_code_4"},  // #1 CRC06
+                                "ambCertConditionCode5": {"xpath": "service_ambulance_certification_condition_code_5"},  // #1 CRC07
+                                "hospiceConditionIndicator": {"xpath": "service_hospice_condition_indicator"}, // #2 CRC02 Note: Identified based on ambulance certification code category
+                                "hospiceConditionCode": {"xpath": "service_hospice_condition_code"},  // #2 CRC03
+                                // TODO: CRC CONDITION INDICATOR
+                                "fromDate": {"xpath": "service_from_date"},  // #1 DTP03
+                                "toDate": {"xpath": "service_to_date"},  // #1 DTP03
+                                "prescriptionDate": {"xpath": "service_prescription_date"}, // #2 DTP03
+                                "certRevisionDate": {"xpath": "service_certificate_revision_date"}, // #3 DTP03
+                                "beginTherapyDate": {"xpath": "service_begin_therapy_date"}, // #4 DTP03
+                                "lastCertDate": {"xpath": "service_last_certification_date"}, // #5 DTP03
+                                "lastSeenDate": {"xpath": "service_last_seen_date"}, // #6 DTP03
+                                "testDate": {"xpath": "service_test_date"}, // #7 DTP03
+                                "shippedDate": {"xpath": "service_shipped_date"}, // #8 DTP03
+                                "lastXRayDate": {"xpath": "service_last_xray_date"}, // #9 DTP03
+                                "initialTreatmentDate": {"xpath": "service_initial_treatment_date"}, // #10 DTP03
+                                "ambPatientCount": {"xpath": "service_ambulance_patient_count"}, // #1 QTY02
+                                "obstetricAnesthesiaAdditionalUnits": {"xpath": "service_obstetric_anesthesia_additional_units"}, // #2 QTY02 
+                                "testResultsIdCode": {"xpath": "service_test_results_id_code"}, // MEA01
+                                "testResultsCode": {"xpath": "service_test_results_id"}, // MEA02
+                                "testResults": {"xpath": "service_test_results"}, // MEA03
+                                "contractTypeCode": {"xpath": "service_contract_type_code"},  // CN101 Note: It's not be part of exported sending file
+                                "contractAmount": {"xpath": "service_contract_amount"}, // CN102
+                                "repricedRefNumber": {"xpath": "service_repriced_reference_number"}, // #1 REF02 if REF01 = 9B
+                                "adjustedRepricedRefNumber": {"xpath": "service_adjusted_repriced_reference_number"}, // #2 REF02 if REF01 = 9D
+                                "priorAuthorizationNumber": {"xpath": "service_prior_authorization_number"}, // #3 REF02 if REF01 = G1
+                                "lineItemControlNumber": {"xpath": "service_line_item_control_number"}, // #4 REF02 if REF01 = 6R
+                                "mamographyCertNumber": {"xpath": "service_mamography_certification_number"}, // #5 REF02 if REF01 = EW
+                                "cliaNumber": {"xpath": "service_clia_number"}, // #6 REF02 if REF01 = X4
+                                "ReferringCLIANumber": {"xpath": "service_referring_clia_number"}, // #7 REF02 if REF01 = F4
+                                "immunizationBatchNumber": {"xpath": "service_immunization_batch_number"}, // #8 REF02 if REF01 = BT
+                                "refferalnumber": {"xpath": "service_refferal_number"}, // #9 REF02 if REF01 = 9F
+                                "salesTaxAmount": {"xpath": "service_sales_tax_amount"}, // #1 AMT02
+                                "postageClaimedAmount": {"xpath": "service_postage_claimed_amount"}, // #2 AMT02 
+                                "fileInformation": {"xpath": "service_file_information"}, // K301
+                                "serviceNotes": {"xpath": "service_notes"}, // #1 NTE02
+                                "thirdPartyOrgNotes": {"xpath": "service_third_party_organiztion_notes"}, // #2 NTE02
+                                "purchasedServiceProviderId": {"xpath": "purchased_service_provider_id"}, // PS101
+                                "purchasedServiceChargeAmount": {"xpath": "purchased_service_charge_amount"}, // PS102
+                                "pricingMethod": {"xpath": "service_pricing_method"}, // HCP01
+                                "allowedAmount": {"xpath": "service_allowed_amount"}, // HCP02
+                                "savingAmount": {"xpath": "service_saving_amount"}, // HCP03
+                                "repricingOrgId": {"xpath": "service_repricing_organization_id"}, // HCP04
+                                "flatRateAmount": {"xpath": "service_flat_rate_amount"}, // HCP05
+                                "approvedDRGCode": {"xpath": "service_approved_drg_code"}, // HCP06
+                                "approvedDRGAmount": {"xpath": "service_approved_drg_amount"}, // HCP07
+                                "repricedServiceIdQualifier": {"xpath": "service_repriced_service_id_qualifier"}, // HCP09
+                                "repricedApprovedHCPCSCode": {"xpath": "service_repriced_approved_hcpcs_code"}, // HCP10
+                                "repricedUnitType": {"xpath": "service_repriced_unit_type"}, // HCP11
+                                "repricedUnitCode": {"xpath": "service_repriced_unit_code"}, // HCP12
+                                "rejectReasonCode": {"xpath": "service_reject_reason_code"}, // HCP13
+                                "policyComplianceCode": {"xpath": "service_policy_compliance_code"}, // HCP14
+                                "excemptionCode": {"xpath": "service_excemption_code"}, // HCP15
+                                "drug": {
+                                    "object": {
+                                        "code": {"xpath": "drug_code"}, // LIN03
+                                        "unitCount": {"xpath": "drug_unit_count"}, // CTP04
+                                        "unitCode": {"xpath": "drug_unit_code"}, // CTP05 - 1
+                                        "prescriptionIdCode": {"xpath": "prescription_id_code"}, // REF01
+                                        "prescriptionNumber": {"xpath": "prescription_number"} // REF02
+                                    }
+                                },
+                                "renderingProvider": {  // fhir: Practitioner
+                                    "object": {
+                                        "type": {"xpath": "rendering_provider_type"}, // NM102
+                                        "lastName": {"xpath": "rendering_provider_last_name"},  // NM103
+                                        "firstName": {"xpath": "rendering_provider_first_name"}, // NM104
+                                        "middleName": {"xpath": "rendering_provider_middle_name"},  // NM105
+                                        "nameSuffix": {"xpath": "rendering_provider_name_suffix"},  // NM107
+                                        "id": {"xpath": "rendering_provider_id"}, // NM109
+                                        "taxonomy": {"xpath": "rendering_provider_taxonomy"}, // PRV03
+                                        "stateLicenseNumber": {"xpath": "rendering_provider_state_license"},  // REF02 if REF01 = 0B
+                                        "upinNumber": {"xpath": "rendering_provider_upin"}, // REF02 if REF01 = 1G
+                                        "commercialNumber": {"xpath": "rendering_provider_commercial_number"}, // REF02 if REF01 = G2
+                                        "locationNumber": {"xpath": "rendering_provider_location_number"} // REF02 if REF01 = LU
+                                    }
+                                },
+                                "purchasedServiceProvider": {  // fhir: Practitioner
+                                    "object": {
+                                        "type": {"xpath": "purchased_service_provider_type"}, // NM102
+                                        "id": {"xpath": "purchased_service_provider_id"}, // NM109
+                                        "stateLicenseNumber": {"xpath": "purchased_service_provider_state_license"},  // REF02 if REF01 = 0B
+                                        "upinNumber": {"xpath": "purchased_service_provider_upin"}, // REF02 if REF01 = 1G
+                                        "commercialNumber": {"xpath": "purchased_service_provider_commercial_number"} // REF02 if REF01 = G2
+                                    }
+                                },
+                                "serviceFacility": {  // fhir: Location
+                                    "object": {
+                                        "name": {"xpath": "service_facility_name"},  // NM103
+                                        "id": {"xpath": "service_facility_id"},  // NM109
+                                        "address": {
+                                            "object": {
+                                                "line1": {"xpath": "service_facility_address_line_1"},  // N301
+                                                "line2": {"xpath": "service_facility_address_line_2"},  // N302
+                                                "city": {"xpath": "service_facility_address_city"},  // N401
+                                                "state": {"xpath": "service_facility_address_state"},  // N402
+                                                "zip": {"xpath": "service_facility_address_zip"},  // N403
+                                                "country": {"xpath": "service_facility_address_country"}  // N404
+                                            }
+                                        },
+                                        "locationNumber": {"xpath": "service_facility_location_number"}, // REF02 if REF01 = LU
+                                        "commercialNumber": {"xpath": "service_facility_commercial_number"} // REF02 if REF01 = G2
+                                    }
+                                },
+                                "supervisingProvider": {  // fhir: Practitioner
+                                    "object": {
+                                        "lastName": {"xpath": "supervising_provider_last_name"},  // NM103
+                                        "firstName": {"xpath": "supervising_provider_first_name"},  // NM104
+                                        "middleName": {"xpath": "supervising_provider_middle_name"},  // NM105
+                                        "nameSuffix": {"xpath": "supervising_provider_name_suffix"},  // NM107
+                                        "id": {"xpath": "supervising_provider_id"}, // NM109
+                                        "stateLicense_number": {"xpath": "supervising_provider_state_license"}, // REF02 if REF01 = 0B
+                                        "upinNumber": {"xpath": "supervising_provider_upin"},  // REF02 if REF01 = 1G
+                                        "locationNumber": {"xpath": "supervising_provider_location_number"},  // REF02 if REF01 = G2
+                                        "commercialNumber": {"xpath": "supervising_provider_commercial_number"} // REF02 if REF01 = LU
+                                    }
+                                },
+                                "orderingProvider": {  // fhir: Practitioner
+                                    "object": {
+                                        "lastName": {"xpath": "ordering_provider_last_name"}, // NM103
+                                        "firstName": {"xpath": "ordering_provider_first_name"}, // NM104
+                                        "middleName": {"xpath": "ordering_provider_middle_name"}, // NM105
+                                        "nameSuffix": {"xpath": "ordering_provider_name_suffix"}, // NM107
+                                        "id": {"xpath": "ordering_provider_id"}, // NM109
+                                        "address": {
+                                            "object": {
+                                                "line1": {"xpath": "ordering_provider_address_line_1"},  // N301
+                                                "line2": {"xpath": "ordering_provider_address_line_2"},  // N302
+                                                "city": {"xpath": "ordering_provider_address_city"},  // N401
+                                                "state": {"xpath": "ordering_provider_address_state"},  // N402
+                                                "zip": {"xpath": "ordering_provider_address_zip"},  // N403
+                                                "country": {"xpath": "ordering_provider_address_country"}  // N404
+                                            }
+                                        },
+                                        "stateLicense_number": {"xpath": "ordering_provider_state_license"}, // REF02 if REF01 = 0B
+                                        "upinNumber": {"xpath": "ordering_provider_upin"},  // REF02 if REF01 = 1G
+                                        "commercialNumber": {"xpath": "ordering_provider_commercial_number"}, // REF02 if REF01 = LU
+                                        "contact": {
+                                            "object": {
+                                                "name": {"xpath": "ordering_provider_contact_name"},  // PER02
+                                                "phone": {"xpath": "ordering_provider_contact_phone"}, // PER04,PER06,PER08 if qualifier = TE
+                                                "phoneExt": {"xpath": "ordering_provider_contact_phone_extention"}, // PER04,PER06,PER08 if qualifier = EX
+                                                "email": {"xpath": "ordering_provider_contact_email"}, // PER04,PER06,PER08 if qualifier = EM
+                                                "fax": {"xpath": "ordering_provider_contact_fax"} // PER04,PER06,PER08 if qualifier = TX
+                                            }
+                                        }
+                                    }
+                                },
+                                "referringProvider": {  // fhir: Practitioner
+                                    "object": {
+                                        "lastName": {"xpath": "referring_provider_last_name"},  // NM103
+                                        "firstName": {"xpath": "referring_provider_first_name"},  // NM104
+                                        "middleName": {"xpath": "referring_provider_middle_name"}, // NM105
+                                        "nameSuffix": {"xpath": "referring_provider_name_suffix"},  // NM107
+                                        "idQualifier": {"xpath": "referring_provider_id_qualifier"}, 
+                                        "id": {"xpath": "referring_provider_id"}, // NM109
+                                        "stateLicenseNumber": {"xpath": "referring_provider_state_license"},  // REF02 if REF01 = 0B
+                                        "upinNumber": {"xpath": "referring_provider_upin"}, // REF02 if REF01 = 1G
+                                        "commercialNumber": {"xpath": "referring_provider_commercial_number"} // REF02 if REF01 = G2
+                                    }
+                                },
+                                "ambPickUp": {  // fhir: Claim.???
+                                    "object": {
+                                        "address": {
+                                            "object": {
+                                                "line1": {"xpath": "ambulance_pick_up_address_line_1"},  // N301
+                                                "line2": {"xpath": "ambulance_pick_up_address_line_2"}, // N302
+                                                "city": {"xpath": "ambulance_pick_up_address_city"},  // N401
+                                                "state": {"xpath": "ambulance_pick_up_address_state"},  // N402
+                                                "zip": {"xpath": "ambulance_pick_up_address_zip"},  // N403
+                                                "country": {"xpath": "ambulance_pick_up_address_country"}  // N404
+                                            }
+                                        }
+                                    }
+                                },
+                                "ambDropOff": {  // fhir: Claim.???
+                                    "object": {
+                                        "locationName": {"xpath": "ambulance_drop_off_location_name"},  // NM103
+                                        "address": {
+                                            "object": {
+                                                "line1": {"xpath": "ambulance_drop_off_address_line_1"},  // N301
+                                                "line2": {"xpath": "ambulance_drop_off_address_line_2"}, // N302
+                                                "city": {"xpath": "ambulance_drop_off_address_city"},  // N401
+                                                "state": {"xpath": "ambulance_drop_off_address_state"}, // N402
+                                                "zip": {"xpath": "ambulance_drop_off_address_zip"}, // N403
+                                                "country": {"xpath": "ambulance_drop_off_address_country"} // N404
+                                            }
+                                        }
+                                    }
+                                },
+                                "lineAdjudication": {  // fhir: {Resource} ???
+                                    "object": {
+                                        "identificationCode": {"xpath": "line_adjudication_identification_code"}, // SVD01
+                                        "paidAmount": {"xpath": "line_adjudication_paid_amount"}, // SVD02
+                                        "procedureIdQualifier": {"xpath": "line_adjudication_procedure_id_qualifier"}, // SVD03 - 1
+                                        "procedureCode": {"xpath": "line_adjudication_procedure_code"}, // SVD03 - 2
+                                        "procedureModifier1": {"xpath": "line_adjudication_procedure_modifier_1"}, // SVD03 - 3
+                                        "procedureModifier2": {"xpath": "line_adjudication_procedure_modifier_2"}, // SVD03 - 4
+                                        "procedureModifier3": {"xpath": "line_adjudication_procedure_modifier_3"}, // SVD03 - 5
+                                        "procedureModifier4": {"xpath": "line_adjudication_procedure_modifier_4"}, // SVD03 - 6
+                                        "description": {"xpath": "line_adjudication_description"}, // SVD03 - 7
+                                        "paidServiceUnitCount": {"xpath": "line_adjudication_paid_service_unit_code"}, // SVD05
+                                        "assignedNumber": {"xpath": "line_adjudication_assigned_number"}, // SVD06
+                                        "lineAdjustmentGroupCode": {"xpath": "line_adjustment_group_code"}, // CAS01
+                                        "lineAdjustmentReasonCode1": {"xpath": "line_adjustment_reason_code_1"}, // CAS02
+                                        "lineAdjustmentAmount1": {"xpath": "line_adjustment_amount_1"}, // CAS03
+                                        "lineAdjustmentQuantity1": {"xpath": "line_adjustment_quantity_1"}, // CAS04
+                                        "lineAdjustmentReasonCode2": {"xpath": "line_adjustment_reason_code_2"}, // CAS04
+                                        "lineAdjustmentAmount2": {"xpath": "line_adjustment_amount_2"}, // CAS05
+                                        "lineAdjustmentQuantity2": {"xpath": "line_adjustment_quantity_2"}, // CAS06
+                                        "lineAdjustmentReasonCode3": {"xpath": "line_adjustment_reason_code_3"}, // CAS07
+                                        "lineAdjustmentAmount3": {"xpath": "line_adjustment_amount_3"}, // CAS08
+                                        "lineAdjustmentQuantity3": {"xpath": "line_adjustment_quantity_3"}, // CAS09
+                                        "lineAdjustmentReasonCode4": {"xpath": "line_adjustment_reason_code_4"}, // CAS10
+                                        "lineAdjustmentAmount4": {"xpath": "line_adjustment_amount_4"}, // CAS11
+                                        "lineAdjustmentQuantity4": {"xpath": "line_adjustment_quantity_4"}, // CAS12
+                                        "lineAdjustmentReasonCode5": {"xpath": "line_adjustment_reason_code_5"}, // CAS13
+                                        "lineAdjustmentAmount5": {"xpath": "line_adjustment_amount_5"}, // CAS14
+                                        "lineAdjustmentQuantity5": {"xpath": "line_adjustment_quantity_5"}, // CAS15
+                                        "lineAdjustmentReasonCode6": {"xpath": "line_adjustment_reason_code_6"}, // CAS16
+                                        "lineAdjustmentAmount6": {"xpath": "line_adjustment_amount_6"}, // CAS17
+                                        "lineAdjustmentQuantity6": {"xpath": "line_adjustment_quantity_6"}, // CAS18
+                                        "paymentDate": {"xpath": "line_adjudication_payment_date"}, // DTP03
+                                        "remainingPatientLiability": {"xpath": "line_adjudication_remaining_patient_liability"} // AMT02
+                                    }
+                                },
+                                "form": {  // fhir: {Resource} ???
+                                    "object": {
+                                        "typeCode": {"xpath": "form_type_code"}, // LQ01
+                                        "id": {"xpath": "form_id"}, // LQ02
+                                        "questionNumber": {"xpath": "form_question_number"}, // FRM01
+                                        "questionResponseCode": {"xpath": "form_question_response_code"}, // FRM02
+                                        "questionResponse1": {"xpath": "form_reference_id"}, // FRM03
+                                        "questionResponse2": {"xpath": "form_date"}, // FRM04
+                                        "questionResponse3": {"xpath": "form_percent"} // FRM05
+                                    }
+                                }
+                            }
+                        }
+                    ]}
+                }
+
+            }
+
+        }
+    }
+}

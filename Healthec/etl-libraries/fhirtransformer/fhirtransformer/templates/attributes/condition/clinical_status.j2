@@ -1,0 +1,10 @@
+{
+  {% if data.clinical_status %}
+  "coding": [
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+      "code": "{{ data.clinical_status }}"
+    } 
+  ]
+  {%- endif %}
+}

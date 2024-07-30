@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS TENANT_staging.ecw_immunization (
+    row_id VARCHAR,
+    apuid VARCHAR,
+    record_id VARCHAR,
+    item_id VARCHAR,
+    patient_id VARCHAR,
+    patient_account_no VARCHAR,
+    encounter_id VARCHAR,
+    provider_npi VARCHAR,
+    given_date TIMESTAMP(3) WITH TIME ZONE,
+    immunization_description VARCHAR,
+    history_flag VARCHAR,
+    lot_number VARCHAR,
+    vaccine_manufacturer VARCHAR,
+    immunization_dose VARCHAR,
+    site VARCHAR,
+    route VARCHAR,
+    expiration_date DATE,
+    cvx_code VARCHAR,
+    cpt_code VARCHAR,
+    immunization_given_by VARCHAR,
+    immunization_status VARCHAR,
+    vfc_status VARCHAR,
+    file_batch_id VARCHAR,
+    file_name VARCHAR,
+    file_source_name VARCHAR,
+    file_status VARCHAR,
+    created_user VARCHAR,
+    created_ts TIMESTAMP(3) WITH TIME ZONE,
+    updated_user VARCHAR,
+    updated_ts TIMESTAMP(3) WITH TIME ZONE
+)
+WITH (
+    LOCATION = 's3a://DATA_S3_BUCKET/delta-tables/TENANT/staging/ecw_immunization',
+    PARTITIONED_BY = ARRAY['file_batch_id'],
+    CHECKPOINT_INTERVAL = 5
+);

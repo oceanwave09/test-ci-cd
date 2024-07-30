@@ -1,0 +1,18 @@
+smoking_patient_external_id:
+  key_path: external_patient_id
+  min_length: 1
+  required: True
+
+smoking_patient_first_name:
+  key_path: patient_first_name
+  type: string
+  min_length: 1
+
+smoking_patient_last_name:
+  key_path: patient_last_name
+  type: string
+  min_length: 1
+
+smoking_practice_external_id:
+  key_path: practice_external_id
+  required: True

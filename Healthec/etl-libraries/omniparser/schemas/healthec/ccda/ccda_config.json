@@ -1,0 +1,2447 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "json"
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "patient": {
+          "xpath": "patient",
+          "object": {
+            "identifier": {
+              "array": [
+                {
+                  "xpath": "id/*",
+                  "object": {
+                    "value": {"xpath": ".", "template": "get_identifier_value"},
+                    "system": {"xpath": ".", "template": "get_identifier_system"}
+                  }
+                }
+              ]
+            },
+            "address": {
+              "array": [
+                {
+                  "xpath": "addr/*",
+                  "object": {
+                    "city": {"xpath": "city/*[position() = 1]/value"},
+                    "state": {"xpath": "state/*[position() = 1]/value"},
+                    "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                    "country": {"xpath": "country/*[position() = 1]/value"},
+                    "line": {
+                      "array": [
+                        {
+                          "xpath": "streetAddressLine/*/value"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "email": {
+              "array": [
+                {
+                  "xpath": "telecom/*/value[contains(., 'mailto:')]"
+                }
+              ]
+            },
+            "phone_mobile": {
+              "array": [
+                {
+                  "xpath": "telecom/*/use[contains(., 'MC')]/following-sibling::value"
+                }
+              ]
+            },
+            "phone_home": {
+              "array": [
+                {
+                  "xpath": "telecom/*/use[contains(., 'HP')]/following-sibling::value"
+                }
+              ]
+            },
+            "phone_work": {
+              "array": [
+                {
+                  "xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"
+                }
+              ]
+            },
+            "name": {
+              "array": [
+                {
+                  "xpath": "patient/name/*",
+                  "object": {
+                    "family": {"xpath": "family/*[position() = 1]/value"},
+                    "given": {
+                      "array": [
+                        {
+                          "xpath": "given/*/value"
+                        }
+                      ]
+                    }
+                  }
+                }
+              ]
+            },
+            "gender": {
+              "xpath": "patient/administrativeGenderCode",
+              "object": {
+                "code": {"xpath": "code"},
+                "display": {"xpath": "displayName"},
+                "system": {"xpath": "codeSystem"},
+                "system_name": {"xpath": "codeSystemName"},
+                "text": {"xpath": "originalText/value"}
+              }
+            },
+            "birth_date": {"xpath": "patient/birthTime/value"},
+            "marital_status": {
+              "xpath": "patient/maritalStatusCode",
+              "object": {
+                "code": {"xpath": "code"},
+                "display": {"xpath": "displayName"},
+                "system": {"xpath": "codeSystem"},
+                "system_name": {"xpath": "codeSystemName"},
+                "text": {"xpath": "originalText/value"}
+              }
+            },
+            "race": {
+              "xpath": "patient/raceCode",
+              "object": {
+                "code": {"xpath": "code"},
+                "display": {"xpath": "displayName"},
+                "system": {"xpath": "codeSystem"},
+                "system_name": {"xpath": "codeSystemName"},
+                "text": {"xpath": "originalText/value"}
+              }
+            },
+            "ethnicity": {
+              "xpath": "patient/ethnicGroupCode",
+              "object": {
+                "code": {"xpath": "code"},
+                "display": {"xpath": "displayName"},
+                "system": {"xpath": "codeSystem"},
+                "system_name": {"xpath": "codeSystemName"},
+                "text": {"xpath": "originalText/value"}
+              }
+            },
+            "deceased": {"xpath": "patient/*[name()='sdtc:deceasedInd']/value"},
+            "religion": {
+              "xpath": "patient/religiousAffiliationCode",
+              "object": {
+                "code": {"xpath": "code"},
+                "display": {"xpath": "displayName"},
+                "system": {"xpath": "codeSystem"},
+                "system_name": {"xpath": "codeSystemName"},
+                "text": {"xpath": "originalText/value"}
+              }
+            },
+            "language": {
+              "object": {
+                "spoken": {
+                  "array": [
+                    {
+                      "xpath": "patient/languageCommunication/*/modeCode/code[contains(., 'ESP')]/../..",
+                      "object": {
+                        "code": {"xpath": "languageCode/code"},
+                        "display": {"xpath": "languageCode/displayName"},
+                        "system": {"xpath": "languageCode/codeSystem"},
+                        "system_name": {"xpath": "languageCode/codeSystemName"},
+                        "text": {"xpath": "languageCode/originalText/value"}
+                      }
+                    }
+                  ]
+                },
+                "written": {
+                  "array": [
+                    {
+                      "xpath": "patient/languageCommunication/*/modeCode/code[contains(., 'EWR')]/../..",
+                      "object": {
+                        "code": {"xpath": "languageCode/code"},
+                        "display": {"xpath": "languageCode/displayName"},
+                        "system": {"xpath": "languageCode/codeSystem"},
+                        "system_name": {"xpath": "languageCode/codeSystemName"},
+                        "text": {"xpath": "languageCode/originalText/value"}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "practice": {
+          "xpath": "practice/assignedCustodian/representedCustodianOrganization",
+          "object": {
+            "identifier": {
+              "array": [
+                {
+                  "xpath": "id/*",
+                  "object": {
+                    "value": {"xpath": ".", "template": "get_identifier_value"},
+                    "system": {"xpath": ".", "template": "get_identifier_system"}
+                  }
+                }
+              ]
+            },
+            "name": {"xpath": "name"},
+            "address": {
+              "xpath": "addr",
+              "object": {
+                "city": {"xpath": "city/*[position() = 1]/value"},
+                "state": {"xpath": "state/*[position() = 1]/value"},
+                "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                "country": {"xpath": "country/*[position() = 1]/value"},
+                "line": {
+                  "array": [
+                    {
+                      "xpath": "streetAddressLine/*/value"
+                    }
+                  ]
+                }
+              }
+            },
+            "phone_work": {"xpath": "telecom/use[contains(., 'WP')]/following-sibling::value"}
+          }
+        },
+        "providers": {
+          "array": [
+            {
+              "xpath": "providers/*/assignedEntity",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "taxonomy": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "address": {
+                  "xpath": "addr/*[position() = 1]",
+                  "object": {
+                    "city": {"xpath": "city/*[position() = 1]/value"},
+                    "state": {"xpath": "state/*[position() = 1]/value"},
+                    "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                    "country": {"xpath": "country/*[position() = 1]/value"},
+                    "line": {
+                      "array": [
+                        {
+                          "xpath": "streetAddressLine/*/value"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "phone_work": {"xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"},
+                "name": {
+                  "array": [
+                    {
+                      "xpath": "assignedPerson/name/*",
+                      "object": {
+                        "family": {"xpath": "family/*[position() = 1]/value"},
+                        "given": {
+                          "array": [
+                            {
+                              "xpath": "given/*/value"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "provider_organization": {
+                  "xpath": "representedOrganization",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "name": {"xpath": "name"},
+                    "address": {
+                      "xpath": "addr/*[position() = 1]",
+                      "object": {
+                        "city": {"xpath": "city/*[position() = 1]/value"},
+                        "state": {"xpath": "state/*[position() = 1]/value"},
+                        "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                        "country": {"xpath": "country/*[position() = 1]/value"},
+                        "line": {
+                          "array": [
+                            {
+                              "xpath": "streetAddressLine/*/value"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "phone_work": {
+                      "array": [
+                        {
+                          "xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"
+                        }
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "problems": {
+          "array": [
+            {
+              "xpath": "problems/*/act/entryRelationship/*/observation",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "code": {
+                  "xpath": "value/*[position() = 1]",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "display": {"xpath": "displayName"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "onset_date_time": {
+                  "xpath": "effectiveTime/low/value | effectiveTime/low/value"
+                },
+                "abatement_date_time": {
+                  "xpath": "effectiveTime/high/value"
+                },
+                "asserter": {
+                  "xpath": "author/*[position() = 1]/assignedAuthor",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "address": {
+                      "xpath": "addr/*[position() = 1]",
+                      "object": {
+                        "city": {"xpath": "city/*[position() = 1]/value"},
+                        "state": {"xpath": "state/*[position() = 1]/value"},
+                        "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                        "country": {"xpath": "country/*[position() = 1]/value"},
+                        "line": {
+                          "array": [
+                            {
+                              "xpath": "streetAddressLine/*/value"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "phone_work": {"xpath": "telecom/*/use[contains(., 'WP')][1]/following-sibling::value"},
+                    "name": {
+                      "array": [
+                        {
+                          "xpath": "assignedPerson/name/*",
+                          "object": {
+                            "family": {"xpath": "family/*[position() = 1]/value"},
+                            "given": {
+                              "array": [
+                                {
+                                  "xpath": "given/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "clinical_status": {
+                  "xpath": "entryRelationship/*/typeCode[contains(., 'REFR')][1]/../observation/value/*[position() = 1]",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "results": {
+          "array": [
+            {
+              "xpath": "results/*/organizer",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "code": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "display": {"xpath": "displayName"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "category": {
+                  "object": {
+                    "code": {"const": "LAB"},
+                    "display": {"const": "Laboratory"},
+                    "system": {"const": "http://terminology.hl7.org/CodeSystem/v2-0074"}
+                  }
+                },
+                "status": {"xpath": "statusCode/code"},
+                "effective_period": {
+                  "xpath": "effectiveTime",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "effective_date_time": {"xpath": "effectiveTime/value"},
+                "component": {
+                  "array": [
+                    {
+                      "xpath": "component/*/observation",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "code": {
+                          "xpath": "code",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"},
+                            "translation": {
+                              "array": [
+                                {
+                                  "xpath": "translation/*",
+                                  "object": {
+                                    "code": {"xpath": "code"},
+                                    "system": {"xpath": "codeSystem"},
+                                    "system_name": {"xpath": "codeSystemName"},
+                                    "display": {"xpath": "displayName"},
+                                    "text": {"xpath": "originalText/value"}
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "value": {
+                          "xpath": "value/*[position() = 1]",
+                          "object": {
+                            "value": {"xpath": "value"},
+                            "unit": {"xpath": "unit"}
+                          }
+                        },
+                        "effective_period": {
+                          "xpath": "effectiveTime",
+                          "object": {
+                            "start": {"xpath": "low/value"},
+                            "end": {"xpath": "high/value"}
+                          }
+                        },
+                        "effective_date_time": {"xpath": "effectiveTime/value"},
+                        "status": {"xpath": "statusCode/code"},
+                        "method": {
+                          "xpath": "methodCode",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "interpretation": {
+                          "xpath": "interpretationCode/*[position() = 1]",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "body_site": {
+                          "xpath": "targetSiteCode",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "reference_range": {
+                          "xpath": "referenceRange/*[position() = 1]/observationRange",
+                          "object": {
+                            "value": {"xpath": "text/value"}
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "procedures": {
+          "array": [
+            {
+              "xpath": "procedures/*/procedure",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "code": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "display": {"xpath": "displayName"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "performed_period": {
+                  "xpath": "effectiveTime",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "performed_date_time": {"xpath": "effectiveTime/value"},
+                "status": {"xpath": "statusCode/code"},
+                "performer": {
+                  "array": [
+                    {
+                      "xpath": "performer/*/assignedEntity",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "address": {
+                          "xpath": "addr/*[position() = 1]",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "phone_work": {"xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"},
+                        "name": {
+                          "array": [
+                            {
+                              "xpath": "assignedPerson/name/*",
+                              "object": {
+                                "family": {"xpath": "family/*[position() = 1]/value"},
+                                "given": {
+                                  "array": [
+                                    {
+                                      "xpath": "given/*/value"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "participant": {
+                  "array": [
+                    {
+                      "xpath": "participant/*/participantRole",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "address": {
+                          "xpath": "addr/*[position() = 1]",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "code": {
+                          "xpath": "code",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"},
+                            "translation": {
+                              "array": [
+                                {
+                                  "xpath": "translation/*",
+                                  "object": {
+                                    "code": {"xpath": "code"},
+                                    "display": {"xpath": "displayName"},
+                                    "system": {"xpath": "codeSystem"},
+                                    "system_name": {"xpath": "codeSystemName"},
+                                    "text": {"xpath": "originalText/value"}
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "name": {"xpath": "playingEntity/name[1]"}
+                      }
+                    }
+                  ]
+                },
+                "reasons": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*/typeCode[contains(., 'RSON')]/../observation/value/*[position() = 1]",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    }
+                  ]
+                },
+                "encounter": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*/encounter",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "type": {
+                          "xpath": "code",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "allergies": {
+          "array": [
+            {
+              "xpath": "allergies/*/act",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "clinical_status": {"xpath": "statusCode/code"},
+                "onset_date_time": {"xpath": "entryRelationship/*[position() = 1]/observation/effectiveTime/value"},
+                "onset_period": {
+                  "xpath": "entryRelationship/*[position() = 1]/observation/effectiveTime",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "category": {
+                  "xpath": "entryRelationship/*[position() = 1]/observation/value/*[position() = 1]",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "code": {
+                  "xpath": "entryRelationship/*[position() = 1]/observation/participant/*[position() = 1]/participantRole/playingEntity/code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "asserter": {
+                  "xpath": "entryRelationship/*[position() = 1]/observation/author/*[position() = 1]/assignedAuthor",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "address": {
+                      "xpath": "addr/*[position() = 1]",
+                      "object": {
+                        "city": {"xpath": "city/*[position() = 1]/value"},
+                        "state": {"xpath": "state/*[position() = 1]/value"},
+                        "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                        "country": {"xpath": "country/*[position() = 1]/value"},
+                        "line": {
+                          "array": [
+                            {
+                              "xpath": "streetAddressLine/*/value"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "phone_work": {"xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"},
+                    "name": {
+                      "array": [
+                        {
+                          "xpath": "assignedPerson/name/*",
+                          "object": {
+                            "family": {"xpath": "family/*[position() = 1]/value"},
+                            "given": {
+                              "array": [
+                                {
+                                  "xpath": "given/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "criticality": {
+                  "xpath": "entryRelationship/*[position() = 1]/observation/entryRelationship/*/observation/code[contains(code, '82606-5')][1]/following-sibling::value/*[position() = 1]",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "reaction": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*[position() = 1]/observation/entryRelationship/*/typeCode[contains(., 'MFST')]/..",
+                      "object": {
+                        "manifestation": {
+                          "xpath": "observation/value/*[position() = 1]",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "onset_date_time": {"xpath": "observation/effectiveTime/low/value"},
+                        "severity": {
+                          "xpath": "observation/entryRelationship/*/observation/code[contains(code, 'SEV')][1]/following-sibling::value/*[position() = 1]",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "medications": {
+          "array": [
+            {
+              "xpath": "medications/*/substanceAdministration",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "category": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "effective_period": {
+                  "xpath": "effectiveTime/*/*[name()='xsi:type'][contains(., 'IVL_TS')][1]/..",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "dosage_frequency": {
+                  "xpath": "effectiveTime/*/*[name()='xsi:type'][contains(., 'PIVL_TS')][1]/..",
+                  "object": {
+                    "value": {"xpath": "period/value"},
+                    "unit": {"xpath": "period/unit"}
+                  }
+                },
+                "effective_date_time": {"xpath": "effectiveTime/*/*[name()='xsi:type'][contains(., 'IVL_TS')][1]/following-sibling::value"},
+                "status": {"xpath": "statusCode/code"},
+                "dosage_text": {"xpath": "text/value"},
+                "route": {
+                  "xpath": "routeCode",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "site": {
+                  "xpath": "approachSiteCode/*[position() = 1]",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "dose_quantity": {
+                  "xpath": "doseQuantity",
+                  "object": {
+                    "value": {"xpath": "value"},
+                    "unit": {"xpath": "unit"}
+                  }
+                },
+                "rate_quantity": {
+                  "xpath": "rateQuantity",
+                  "object": {
+                    "value": {"xpath": "value"},
+                    "unit": {"xpath": "unit"}
+                  }
+                },
+                "max_dose_per_period": {"xpath": "repeatNumber/value"},
+                "max_dose_per_administration": {
+                  "xpath": "maxDoseQuantity",
+                  "object": {
+                    "value": {"xpath": "value"},
+                    "unit": {"xpath": "unit"}
+                  }
+                },
+                "performer": {
+                  "array": [
+                    {
+                      "xpath": "informant/*/assignedEntity",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "address": {
+                          "xpath": "addr/*[position() = 1]",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "phone_work": {"xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"},
+                        "name": {
+                          "array": [
+                            {
+                              "xpath": "assignedPerson/name/*",
+                              "object": {
+                                "family": {"xpath": "family/*[position() = 1]/value"},
+                                "given": {
+                                  "array": [
+                                    {
+                                      "xpath": "given/*/value"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "participant": {
+                  "array": [
+                    {
+                      "xpath": "participant/*/participantRole",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "address": {
+                          "xpath": "addr/*[position() = 1]",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "code": {
+                          "xpath": "code",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"},
+                            "translation": {
+                              "array": [
+                                {
+                                  "xpath": "translation/*",
+                                  "object": {
+                                    "code": {"xpath": "code"},
+                                    "display": {"xpath": "displayName"},
+                                    "system": {"xpath": "codeSystem"},
+                                    "system_name": {"xpath": "codeSystemName"},
+                                    "text": {"xpath": "originalText/value"}
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "name": {"xpath": "playingEntity/name[1]"}
+                      }
+                    }
+                  ]
+                },
+                "product": {
+                  "xpath": "consumable/manufacturedProduct",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "code": {
+                      "xpath": "manufacturedMaterial/code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"},
+                        "translation": {
+                          "array": [
+                            {
+                              "xpath": "translation/*",
+                              "object": {
+                                "code": {"xpath": "code"},
+                                "display": {"xpath": "displayName"},
+                                "system": {"xpath": "codeSystem"},
+                                "system_name": {"xpath": "codeSystemName"},
+                                "text": {"xpath": "originalText/value"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  }
+                },
+                "supply": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*/supply",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "status": {"xpath": "statusCode/code"},
+                        "validity_period": {
+                          "xpath": "effectiveTime",
+                          "object": {
+                            "start": {"xpath": "low/value"},
+                            "end": {"xpath": "high/value"}
+                          }
+                        },
+                        "validity_date_time": {"xpath": "effectiveTime/value"},
+                        "repeats_allowed": {"xpath": "repeatNumber/value"},
+                        "quantity": {
+                          "xpath": "quantity",
+                          "object": {
+                            "value": {"xpath": "value"},
+                            "unit": {"xpath": "unit"}
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "encounters": {
+          "array": [
+            {
+              "xpath": "encounters/*/encounter",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "type": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "display": {"xpath": "displayName"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "status": {"xpath": "statusCode/code"},
+                "effective_period": {
+                  "xpath": "effectiveTime",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "discharge_disposition": {
+                  "xpath": "dischargeDispositionCode",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "display": {"xpath": "displayName"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "reasons": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*/typeCode[contains(., 'RSON')]/../observation/value/*[position() = 1]",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"},
+                        "translation": {
+                          "array": [
+                            {
+                              "xpath": "translation/*",
+                              "object": {
+                                "code": {"xpath": "code"},
+                                "display": {"xpath": "displayName"},
+                                "system": {"xpath": "codeSystem"},
+                                "system_name": {"xpath": "codeSystemName"},
+                                "text": {"xpath": "originalText/value"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "performer": {
+                  "array": [
+                    {
+                      "xpath": "performer/*/assignedEntity",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "address": {
+                          "xpath": "addr/*[position() = 1]",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "phone_work": {"xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"},
+                        "name": {
+                          "array": [
+                            {
+                              "xpath": "assignedPerson/name/*",
+                              "object": {
+                                "family": {"xpath": "family/*[position() = 1]/value"},
+                                "given": {
+                                  "array": [
+                                    {
+                                      "xpath": "given/*/value"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                },
+                "participant": {
+                  "array": [
+                    {
+                      "xpath": "participant/*/participantRole",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "address": {
+                          "xpath": "addr/*[position() = 1]",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "code": {
+                          "xpath": "code",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"},
+                            "translation": {
+                              "array": [
+                                {
+                                  "xpath": "translation/*",
+                                  "object": {
+                                    "code": {"xpath": "code"},
+                                    "display": {"xpath": "displayName"},
+                                    "system": {"xpath": "codeSystem"},
+                                    "system_name": {"xpath": "codeSystemName"},
+                                    "text": {"xpath": "originalText/value"}
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "name": {"xpath": "playingEntity/name[1]"}
+                      }
+                    }
+                  ]
+                },
+                "diagnoses": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*/act/entryRelationship/*/typeCode[contains(., 'SUBJ')]/../observation",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "category": {
+                          "object": {
+                            "code": {"const": "encounter-diagnosis"},
+                            "system": {"const": "http://terminology.hl7.org/CodeSystem/condition-category"},
+                            "display": {"const": "Encounter Diagnosis"}
+                          }
+                        },
+                        "code": {
+                          "xpath": "value/*[position() = 1]",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"},
+                            "translation": {
+                              "array": [
+                                {
+                                  "xpath": "translation/*",
+                                  "object": {
+                                    "code": {"xpath": "code"},
+                                    "system": {"xpath": "codeSystem"},
+                                    "system_name": {"xpath": "codeSystemName"},
+                                    "display": {"xpath": "displayName"},
+                                    "text": {"xpath": "originalText/value"}
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "clinical_status": {
+                          "xpath": "entryRelationship/*/typeCode[contains(., 'REFR')][1]/../observation/value/*[position() = 1]",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "onset_date_time": {"xpath": "effectiveTime/low/value"},
+                        "abatement_date_time": {"xpath": "effectiveTime/high/value"}
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "immunizations": {
+          "array": [
+            {
+              "xpath": "immunizations/*/substanceAdministration",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "status": {"xpath": "statusCode/code"},
+                "occurrence_date_time": {"xpath": "effectiveTime/*[position() = 1]/value"},
+                "dose_quantity": {
+                  "xpath": "doseQuantity",
+                  "object": {
+                    "value": {"xpath": "value"},
+                    "unit": {"xpath": "unit"}
+                  }
+                },
+                "dose_number": {"xpath": "repeatNumber/value"},
+                "route": {
+                  "xpath": "routeCode",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "site": {
+                  "xpath": "approachSiteCode",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "reasons": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*/typeCode[contains(., 'RSON')]/../observation/value/*[position() = 1]",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    }
+                  ]
+                },
+                "reaction": {
+                  "array": [
+                    {
+                      "xpath": "entryRelationship/*/typeCode[contains(., 'MFST')]/..",
+                      "object": {
+                        "manifestation": {
+                          "xpath": "observation/value/*[position() = 1]",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "onset_date_time": {"xpath": "observation/effectiveTime/low/value"}
+                      }
+                    }
+                  ]
+                },
+                "vaccine_code": {
+                  "xpath": "consumable/manufacturedProduct/manufacturedMaterial/code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "lot_number": {"xpath": "consumable/manufacturedProduct/manufacturedMaterial/lotNumberText/value"}
+              }
+            }
+          ]
+        },
+        "social_histories": {
+          "array": [
+            {
+              "xpath": "social_history/*/observation",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "code": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "display": {"xpath": "displayName"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "status": {"xpath": "statusCode/code"},
+                "effective_period": {
+                  "xpath": "effectiveTime",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "effective_date_time": {"xpath": "effectiveTime/value"},
+                "value": {
+                  "xpath": "value/*[position() = 1]",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "display": {"xpath": "displayName"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "vital_signs": {
+          "array": [
+            {
+              "xpath": "vital_signs/*/organizer",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "category": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "display": {"xpath": "displayName"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "text": {"xpath": "originalText/value"}
+                  }
+                },
+                "status": {"xpath": "statusCode/code"},
+                "effective_period": {
+                  "xpath": "effectiveTime",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "effective_date_time": {"xpath": "effectiveTime/value"},
+                "component": {
+                  "array": [
+                    {
+                      "xpath": "component/*/observation",
+                      "object": {
+                        "code": {
+                          "xpath": "code",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"},
+                            "translation": {
+                              "array": [
+                                {
+                                  "xpath": "translation/*",
+                                  "object": {
+                                    "code": {"xpath": "code"},
+                                    "system": {"xpath": "codeSystem"},
+                                    "system_name": {"xpath": "codeSystemName"},
+                                    "display": {"xpath": "displayName"},
+                                    "text": {"xpath": "originalText/value"}
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "value": {
+                          "xpath": "value/*[position() = 1]",
+                          "object": {
+                            "value": {"xpath": "value"},
+                            "unit": {"xpath": "unit"}
+                          }
+                        },
+                        "interpretation": {
+                          "xpath": "interpretationCode",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "method": {
+                          "xpath": "methodCode",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        },
+                        "body_site": {
+                          "xpath": "targetSiteCode",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      }
+                    }
+                  ]
+                },
+                "performer": {
+                  "array": [
+                    {
+                      "xpath": "component/*/observation/author/*/assignedAuthor",
+                      "object": {
+                        "identifier": {
+                          "array": [
+                            {
+                              "xpath": "id/*",
+                              "object": {
+                                "value": {"xpath": ".", "template": "get_identifier_value"},
+                                "system": {"xpath": ".", "template": "get_identifier_system"}
+                              }
+                            }
+                          ]
+                        },
+                        "address": {
+                          "xpath": "addr/*[position() = 1]",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        "phone_work": {"xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"},
+                        "name": {
+                          "array": [
+                            {
+                              "xpath": "assignedPerson/name/*",
+                              "object": {
+                                "family": {"xpath": "family/*[position() = 1]/value"},
+                                "given": {
+                                  "array": [
+                                    {
+                                      "xpath": "given/*/value"
+                                    }
+                                  ]
+                                }
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "plan_of_treatments": {
+          "object": {
+            "planned_observation": {
+              "array": [
+                {
+                  "xpath": "plan_of_treatment/*/observation/templateId/*/root[contains(., '2.16.840.1.113883.10.20.22.4.44')]/../../..",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "xpath": "code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"},
+                        "translation": {
+                          "array": [
+                            {
+                              "xpath": "translation/*",
+                              "object": {
+                                "code": {"xpath": "code"},
+                                "display": {"xpath": "displayName"},
+                                "system": {"xpath": "codeSystem"},
+                                "system_name": {"xpath": "codeSystemName"},
+                                "text": {"xpath": "originalText/value"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "status": {"xpath": "statusCode/code"},
+                    "effective_period": {
+                      "xpath": "effectiveTime",
+                      "object": {
+                        "start": {"xpath": "low/value"},
+                        "end": {"xpath": "high/value"}
+                      }
+                    },
+                    "effective_date_time": {"xpath": "effectiveTime/value"},
+                    "site": {
+                      "xpath": "targetSiteCode",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    },
+                    "reasons": {
+                      "array": [
+                        {
+                          "xpath": "entryRelationship/*/typeCode[contains(., 'RSON')]/../observation/value/*[position() = 1]",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "display": {"xpath": "displayName"},
+                            "text": {"xpath": "originalText/value"},
+                            "translation": {
+                              "array": [
+                                {
+                                  "xpath": "translation/*",
+                                  "object": {
+                                    "code": {"xpath": "code"},
+                                    "display": {"xpath": "displayName"},
+                                    "system": {"xpath": "codeSystem"},
+                                    "system_name": {"xpath": "codeSystemName"},
+                                    "text": {"xpath": "originalText/value"}
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+
+                }    
+              ]
+            },
+            "planned_encounter": {
+              "array": [
+                {
+                  "xpath": "plan_of_treatment/*/encounter",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "xpath": "code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"},
+                        "translation": {
+                          "array": [
+                            {
+                              "xpath": "translation/*",
+                              "object": {
+                                "code": {"xpath": "code"},
+                                "display": {"xpath": "displayName"},
+                                "system": {"xpath": "codeSystem"},
+                                "system_name": {"xpath": "codeSystemName"},
+                                "text": {"xpath": "originalText/value"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "status": {"xpath": "statusCode/code"},
+                    "effective_period": {
+                      "xpath": "effectiveTime",
+                      "object": {
+                        "start": {"xpath": "low/value"},
+                        "end": {"xpath": "high/value"}
+                      }
+                    },
+                    "effective_date_time": {"xpath": "effectiveTime/value"}
+                  }
+
+                }    
+              ]
+            },
+            "planned_procedure": {
+              "array": [
+                {
+                  "xpath": "plan_of_treatment/*/procedure",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "xpath": "code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"},
+                        "translation": {
+                          "array": [
+                            {
+                              "xpath": "translation/*",
+                              "object": {
+                                "code": {"xpath": "code"},
+                                "display": {"xpath": "displayName"},
+                                "system": {"xpath": "codeSystem"},
+                                "system_name": {"xpath": "codeSystemName"},
+                                "text": {"xpath": "originalText/value"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "status": {"xpath": "statusCode/code"},
+                    "effective_period": {
+                      "xpath": "effectiveTime",
+                      "object": {
+                        "start": {"xpath": "low/value"},
+                        "end": {"xpath": "high/value"}
+                      }
+                    },
+                    "effective_date_time": {"xpath": "effectiveTime/value"},
+                    "site": {
+                      "xpath": "targetSiteCode",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    }
+                  }
+
+                }    
+              ]
+            },
+            "planned_medication": {
+              "array": [
+                {
+                  "xpath": "plan_of_treatment/*/substanceAdministration/templateId/*/root[contains(., '2.16.840.1.113883.10.20.22.4.42')]/../..",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "code": {
+                      "xpath": "code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"},
+                        "translation": {
+                          "array": [
+                            {
+                              "xpath": "translation/*",
+                              "object": {
+                                "code": {"xpath": "code"},
+                                "display": {"xpath": "displayName"},
+                                "system": {"xpath": "codeSystem"},
+                                "system_name": {"xpath": "codeSystemName"},
+                                "text": {"xpath": "originalText/value"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "status": {"xpath": "statusCode/code"},
+                    "effective_period": {
+                      "xpath": "effectiveTime",
+                      "object": {
+                        "start": {"xpath": "low/value"},
+                        "end": {"xpath": "high/value"}
+                      }
+                    },
+                    "effective_date_time": {"xpath": "effectiveTime/value"},
+                    "site": {
+                      "xpath": "targetSiteCode",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    }
+                  }
+
+                }    
+              ]
+            },
+            "planned_immunization": {
+              "array": [
+                {
+                  "xpath": "plan_of_treatment/*/substanceAdministration/templateId/*/root[contains(., '2.16.840.1.113883.10.20.22.4.120')]/../..",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "xpath": "code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"},
+                        "translation": {
+                          "array": [
+                            {
+                              "xpath": "translation/*",
+                              "object": {
+                                "code": {"xpath": "code"},
+                                "display": {"xpath": "displayName"},
+                                "system": {"xpath": "codeSystem"},
+                                "system_name": {"xpath": "codeSystemName"},
+                                "text": {"xpath": "originalText/value"}
+                              }
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "status": {"xpath": "statusCode/code"},
+                    "effective_period": {
+                      "xpath": "effectiveTime",
+                      "object": {
+                        "start": {"xpath": "low/value"},
+                        "end": {"xpath": "high/value"}
+                      }
+                    },
+                    "effective_date_time": {"xpath": "effectiveTime/value"},
+                    "site": {
+                      "xpath": "targetSiteCode",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    }
+                  }
+
+                }    
+              ]
+            }
+          }
+        },
+        "coverages": {
+          "array": [
+            {
+              "xpath": "payers/*/act/entryRelationship/*/act",
+              "object": {
+                "identifier": {
+                  "array": [
+                    {
+                      "xpath": "id/*",
+                      "object": {
+                        "value": {"xpath": ".", "template": "get_identifier_value"},
+                        "system": {"xpath": ".", "template": "get_identifier_system"}
+                      }
+                    }
+                  ]
+                },
+                "type": {
+                  "xpath": "code",
+                  "object": {
+                    "code": {"xpath": "code"},
+                    "system": {"xpath": "codeSystem"},
+                    "system_name": {"xpath": "codeSystemName"},
+                    "display": {"xpath": "displayName"},
+                    "text": {"xpath": "originalText/value"},
+                    "translation": {
+                      "array": [
+                        {
+                          "xpath": "translation/*",
+                          "object": {
+                            "code": {"xpath": "code"},
+                            "display": {"xpath": "displayName"},
+                            "system": {"xpath": "codeSystem"},
+                            "system_name": {"xpath": "codeSystemName"},
+                            "text": {"xpath": "originalText/value"}
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                "period": {
+                  "xpath": "participant/*[position() = 1]/time",
+                  "object": {
+                    "start": {"xpath": "low/value"},
+                    "end": {"xpath": "high/value"}
+                  }
+                },
+                "payer": {
+                  "xpath": "performer/*[position() = 1]/assignedEntity",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "type": {
+                      "xpath": "code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    },
+                    "name": {"xpath": "representedOrganization/name"},
+                    "address": {
+                      "xpath": "addr/*[position() = 1]",
+                      "object": {
+                        "city": {"xpath": "city/*[position() = 1]/value"},
+                        "state": {"xpath": "state/*[position() = 1]/value"},
+                        "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                        "country": {"xpath": "country/*[position() = 1]/value"},
+                        "line": {
+                          "array": [
+                            {
+                              "xpath": "streetAddressLine/*/value"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "phone_work": {
+                      "array": [
+                        {
+                          "xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "beneficiary": {
+                  "xpath": "participant/*[position() = 1]/participantRole",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "relationship": {
+                      "xpath": "code",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "display": {"xpath": "displayName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    },
+                    "address": {
+                      "array": [
+                        {
+                          "xpath": "addr/*",
+                          "object": {
+                            "city": {"xpath": "city/*[position() = 1]/value"},
+                            "state": {"xpath": "state/*[position() = 1]/value"},
+                            "postal_code": {"xpath": "postalCode/*[position() = 1]/value"},
+                            "country": {"xpath": "country/*[position() = 1]/value"},
+                            "line": {
+                              "array": [
+                                {
+                                  "xpath": "streetAddressLine/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "email": {
+                      "array": [
+                        {
+                          "xpath": "telecom/*/value[contains(., 'mailto:')]"
+                        }
+                      ]
+                    },
+                    "phone_mobile": {
+                      "array": [
+                        {
+                          "xpath": "telecom/*/use[contains(., 'MC')]/following-sibling::value"
+                        }
+                      ]
+                    },
+                    "phone_home": {
+                      "array": [
+                        {
+                          "xpath": "telecom/*/use[contains(., 'HP')]/following-sibling::value"
+                        }
+                      ]
+                    },
+                    "phone_work": {
+                      "array": [
+                        {
+                          "xpath": "telecom/*/use[contains(., 'WP')]/following-sibling::value"
+                        }
+                      ]
+                    },
+                    "name": {
+                      "array": [
+                        {
+                          "xpath": "playingEntity/name/*",
+                          "object": {
+                            "family": {"xpath": "family/*[position() = 1]/value"},
+                            "given": {
+                              "array": [
+                                {
+                                  "xpath": "given/*/value"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "gender": {
+                      "xpath": "playingEntity/administrativeGenderCode",
+                      "object": {
+                        "code": {"xpath": "code"},
+                        "display": {"xpath": "displayName"},
+                        "system": {"xpath": "codeSystem"},
+                        "system_name": {"xpath": "codeSystemName"},
+                        "text": {"xpath": "originalText/value"}
+                      }
+                    },
+                    "birth_date": {"xpath": "playingEntity/*[name()='sdtc:birthTime']/value"}
+                  }
+                },
+                "plan": {
+                  "xpath": "entryRelationship/*[position() = 1]/act",
+                  "object": {
+                    "identifier": {
+                      "array": [
+                        {
+                          "xpath": "id/*",
+                          "object": {
+                            "value": {"xpath": ".", "template": "get_identifier_value"},
+                            "system": {"xpath": ".", "template": "get_identifier_system"}
+                          }
+                        }
+                      ]
+                    },
+                    "name": {"xpath": "text/value"},
+                    "effective_period": {
+                      "xpath": "effectiveTime",
+                      "object": {
+                        "start": {"xpath": "low/value"},
+                        "end": {"xpath": "high/value"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "get_identifier_value": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var n = JSON.parse(_node); n.hasOwnProperty('nullFlavor')? '' : n.hasOwnProperty('extension')? n.extension : n.root;"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "get_identifier_system": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var n = JSON.parse(_node); n.hasOwnProperty('nullFlavor')? '' : n.hasOwnProperty('extension')? n.root : '';"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

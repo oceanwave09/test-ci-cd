@@ -1,0 +1,287 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "place_of_service",
+            "index": 8
+          },
+          {
+            "name": "type_of_bill",
+            "index": 9
+          },
+          {
+            "name": "admit_date",
+            "index": 10
+          },
+          {
+            "name": "discharge_date",
+            "index": 11
+          },
+          {
+            "name": "rendering_doctor_npi",
+            "index": 12
+          },
+          {
+            "name": "rendering_doctor_lastname",
+            "index": 13
+          },
+          {
+            "name": "rendering_doctor_firstname",
+            "index": 14
+          },
+          {
+            "name": "taxonomy_code",
+            "index": 15
+          },
+          {
+            "name": "rendering_doctor_mid_initial",
+            "index": 16
+          },
+          {
+            "name": "suffix_of_the_pcp",
+            "index": 17
+          },
+          {
+            "name": "prefix_of_the_pcp",
+            "index": 18
+          },
+          {
+            "name": "pos_description",
+            "index": 19
+          },
+          {
+            "name": "visit_code ",
+            "index": 20
+          },
+          {
+            "name": "visit_code_system",
+            "index": 21
+          },
+          {
+            "name": "visit_description",
+            "index": 22
+          },
+          {
+            "name": "primary_diagnosis_code",
+            "index": 23
+          },
+          {
+            "name": "primary_diagnosis_code_system",
+            "index": 24
+          },
+          {
+            "name": "primary_diagnosis_description",
+            "index": 25
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "place_of_service": {
+          "xpath": "place_of_service"
+        },
+        "type_of_bill": {
+          "xpath": "type_of_bill"
+        },
+        "admit_date": {
+          "xpath": "admit_date"
+        },
+        "discharge_date": {
+          "xpath": "discharge_date"
+        },
+        "rendering_doctor_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_npi"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_lastname": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_lastname"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_firstname": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_firstname"
+              }
+            ]
+          }
+        },
+        "taxonomy_code": {
+          "xpath": "taxonomy_code"
+        },
+        "rendering_doctor_mid_initial": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_mid_initial"
+              }
+            ]
+          }
+        },
+        "suffix_of_the_pcp": {
+          "xpath": "suffix_of_the_pcp"
+        },
+        "prefix_of_the_pcp": {
+          "xpath": "prefix_of_the_pcp"
+        },
+        "pos_description": {
+          "xpath": "pos_description"
+        },
+        "visit_code": {
+          "xpath": "visit_code"
+        },
+        "visit_code_system": {
+          "xpath": "visit_code_system"
+        },
+        "visit_description": {
+          "xpath": "visit_description"
+        },
+        "primary_diagnosis_code": {
+          "xpath": "primary_diagnosis_code"
+        },
+        "primary_diagnosis_code_system": {
+          "xpath": "primary_diagnosis_code_system"
+        },
+        "primary_diagnosis_description": {
+          "xpath": "primary_diagnosis_description"
+        }
+      }
+    }
+  }
+}

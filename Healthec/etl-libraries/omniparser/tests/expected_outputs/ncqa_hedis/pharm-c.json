@@ -1,0 +1,57 @@
+[
+	{
+		"active_or_inactive_flag": "1",
+		"code_flag": "R",
+		"dispensed_date": "20270314",
+		"drug_code": "996634",
+		"end_date": "20270314",
+		"member_id": "95063",
+		"ordered_date": "20270314",
+		"row_id": "84771966-8c9d-4365-b44a-3359d44c3db8",
+		"start_date": "20270314"
+	},
+	{
+		"active_or_inactive_flag": "1",
+		"code_flag": "R",
+		"dispensed_date": "20220127",
+		"drug_code": "1368438",
+		"end_date": "20220127",
+		"member_id": "95122",
+		"ordered_date": "20220127",
+		"row_id": "f76fc85f-ba98-4468-84c5-e4e1f13a34eb",
+		"start_date": "20220127"
+	},
+	{
+		"active_or_inactive_flag": "1",
+		"code_flag": "R",
+		"dispensed_date": "20210414",
+		"drug_code": "313352",
+		"end_date": "20210414",
+		"member_id": "95192",
+		"ordered_date": "20210414",
+		"row_id": "b0f69942-8fff-45bb-9a8c-62fe5ba1a953",
+		"start_date": "20210414"
+	},
+	{
+		"active_or_inactive_flag": "1",
+		"code_flag": "R",
+		"dispensed_date": "20221118",
+		"drug_code": "1360184",
+		"end_date": "20221118",
+		"member_id": "95248",
+		"ordered_date": "20221118",
+		"row_id": "180ad3ba-10ab-4d0b-a796-000e98de790d",
+		"start_date": "20221118"
+	},
+	{
+		"active_or_inactive_flag": "1",
+		"code_flag": "R",
+		"dispensed_date": "20211024",
+		"drug_code": "209247",
+		"end_date": "20211024",
+		"member_id": "95262",
+		"ordered_date": "20211024",
+		"row_id": "11024c04-f7d4-4c25-93a7-1069e99687fc",
+		"start_date": "20211024"
+	}
+]

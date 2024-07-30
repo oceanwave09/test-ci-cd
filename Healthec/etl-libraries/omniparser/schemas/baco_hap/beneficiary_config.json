@@ -1,0 +1,197 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "columns": [
+          {
+            "name": "subscriber_id",
+            "index": 2
+          },
+          {
+            "name": "member_suffix",
+            "index": 3
+          },
+          {
+            "name": "relationship_code",
+            "index": 4
+          },
+          {
+            "name": "last_name",
+            "index": 5
+          },
+          {
+            "name": "first_name",
+            "index": 6
+          },
+          {
+            "name": "middle_initial",
+            "index": 7
+          },
+          {
+            "name": "dob",
+            "index": 9
+          },
+          {
+            "name": "gender",
+            "index": 10
+          },
+          {
+            "name": "primary_language",
+            "index": 11
+          },
+          {
+            "name": "line_1",
+            "index": 12
+          },
+          {
+            "name": "line_2",
+            "index": 13
+          },
+          {
+            "name": "city",
+            "index": 14
+          },
+          {
+            "name": "state",
+            "index": 15
+          },
+          {
+            "name": "zip",
+            "index": 16
+          },
+          {
+            "name": "country",
+            "index": 17
+          },
+          {
+            "name": "phone_home",
+            "index": 18
+          },
+          {
+            "name": "phone_work",
+            "index": 19
+          },
+          {
+            "name": "medicare_number",
+            "index": 23
+          },
+          {
+            "name": "group_id",
+            "index": 26
+          },
+          {
+            "name": "group_name",
+            "index": 27
+          },
+          {
+            "name": "subgroup_id",
+            "index": 28
+          },
+          {
+            "name": "subgroup_name",
+            "index": 29
+          },
+          {
+            "name": "insurance_plan_id",
+            "index": 30
+          },
+          {
+            "name": "provider_npi",
+            "index": 39
+          },
+          {
+            "name": "provider_last_name",
+            "index": 40
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "subscriber_id": { "xpath": "subscriber_id" },
+        "member_suffix": { "xpath": "member_suffix" },
+        "relationship_code": { "xpath": "relationship_code" },
+        "last_name": { "xpath": "last_name" },
+        "first_name": { "xpath": "first_name" },
+        "middle_initial": { "xpath": "middle_initial" },
+        "dob": { "xpath": "dob" },
+        "gender": { "xpath": "gender" },
+        "primary_language": { "xpath": "primary_language" },
+        "address": {
+          "object": {
+            "line1": { "xpath": "line_1" },
+            "line2": { "xpath": "line_2" },
+            "city": { "xpath": "city" },
+            "state": { "xpath": "state" },
+            "zip": { "xpath": "zip" },
+            "country": { "xpath": "country" }
+          }
+        },
+        "phone_work": { "xpath": "phone_work" },
+        "phone_home": { "xpath": "phone_home" },
+        "phone_mobile": { "xpath": "phone_mobile" },
+        "email": { "xpath": "email" },
+        "ssn": { "xpath": "ssn" },
+        "mrn": { "xpath": "mrn" },
+        "mbi": { "xpath": "mbi" },
+        "external_id": { "xpath": "external_id" },
+        "account_number": { "xpath": "account_number" },
+        "medicare_number": { "xpath": "medicare_number" },
+        "medicaid_number": { "xpath": "medicaid_number" },
+        "insurance_plan": {
+          "object": {
+            "group_id": { "xpath": "group_id" },
+            "group_name": { "xpath": "group_name" },
+            "subgroup_id": { "xpath": "subgroup_id" },
+            "subgroup_name": { "xpath": "subgroup_name" },
+            "plan_id": { "xpath": "insurance_plan_id" },
+            "plan_name": { "xpath": "insurance_plan_name" },
+            "plan_type": { "xpath": "insurance_plan_type" },
+            "company_name": { "xpath": "insurance_company_name" },
+            "company_external_id": {
+              "xpath": "insurance_company_external_id"
+            },
+            "effectice_date": { "xpath": "insurance_effective_date" },
+            "end_date": { "xpath": "insurance_end_date" }
+          }
+        },
+        "practice": {
+          "object": {
+            "tin": { "xpath": "practice_tin" },
+            "name": { "xpath": "practice_name" }
+          }
+        },
+        "provider": {
+          "object": {
+            "npi": { "xpath": "provider_npi" },
+            "external_id": { "xpath": "provider_external_id" },
+            "first_name": { "xpath": "provider_first_name" },
+            "last_name": { "xpath": "provider_last_name" },
+            "effective_date": { "xpath": "provider_effective_date" },
+            "end_date": { "xpath": "provider_end_date" }
+          }
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

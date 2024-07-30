@@ -1,0 +1,12 @@
+{
+  {% if data.method_code %}
+  "coding": [
+    {
+      "system": "{{ data.method_system }}",
+      "code": "{{ data.method_code }}",
+      "display": "{{ data.method_display }}"
+    }
+  ],
+  {%- endif %}
+  "text": "{{ data.method_text }}"
+}

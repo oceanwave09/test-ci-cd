@@ -1,0 +1,39 @@
+[
+  {% for extension in data.extensions %}
+  {
+    "url": "{{ extension.url }}",
+    "extension": [
+      {% for value_extension in extension.value_extensions %}
+      {
+        "url": "{{ value_extension.url }}",
+        {% if value_extension.value_boolean %}
+        "valueBoolean": {{ value_extension.value_boolean }}
+        {% elif value_extension.value_code %}
+        "valueCode": "{{ value_extension.value_code }}"
+        {% elif value_extension.value_coding %}
+        "valueCoding": {
+          "system": "{{ value_extension.value_coding_system }}",
+          "code": "{{ value_extension.value_coding }}",
+          "display": "{{ value_extension.value_coding_display }}"
+        }
+        {% elif value_extension.value_integer %}
+        "valueInteger": {{ value_extension.value_integer }}
+        {% elif value_extension.value_period_start or value_extension.value_period_end %}
+        "valuePeriod": {
+          "start": "{{ value_extension.value_period_start }}",
+          "end": "{{ value_extension.value_period_end }}"
+        }
+        {% else %}
+        "valueString": "{{ value_extension.value }}"
+        {%- endif %}
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ],
+    {% with data = extension %}
+    {% include "attributes/valueset.j2" %}
+    {% endwith %}
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

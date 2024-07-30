@@ -1,0 +1,37 @@
+CREATE TABLE IF NOT EXISTS nucleo_staging.fhirbundle_status(
+    bundle_id VARCHAR,
+    file_tenant VARCHAR,
+    file_source VARCHAR,
+    file_resource_type VARCHAR,
+    file_batch_id VARCHAR,
+    src_file_name VARCHAR,
+    src_organization_id VARCHAR,
+    organization_ids ARRAY(VARCHAR),
+    location_ids ARRAY(VARCHAR),
+    practitioner_ids ARRAY(VARCHAR),
+    practitioner_role_ids ARRAY(VARCHAR),
+    encounter_ids ARRAY(VARCHAR),
+    patient_ids ARRAY(VARCHAR),
+    condition_ids ARRAY(VARCHAR),
+    observation_ids ARRAY(VARCHAR),
+    procedure_ids ARRAY(VARCHAR),
+    immunization_ids ARRAY(VARCHAR),
+    allergy_intolerance_ids ARRAY(VARCHAR),
+    medication_ids ARRAY(VARCHAR),
+    medication_request_ids ARRAY(VARCHAR),
+    medication_statement_ids ARRAY(VARCHAR),
+    claim_ids ARRAY(VARCHAR),
+    claim_respone_ids ARRAY(VARCHAR),
+    coverage_ids ARRAY(VARCHAR),
+    insurance_plan_ids ARRAY(VARCHAR),
+    service_request_ids ARRAY(VARCHAR),
+    status VARCHAR,
+    error_message VARCHAR,
+    updated_user VARCHAR,
+    updated_ts TIMESTAMP(3) WITH TIME ZONE
+)
+WITH (
+    LOCATION = 's3a://phm-development-datapipeline-bucket/delta-tables/nucleo/staging/fhirbundle_status',
+    partitioned_by = ARRAY['file_resource_type'],
+    CHECKPOINT_INTERVAL = 5
+); 

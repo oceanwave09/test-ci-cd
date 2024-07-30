@@ -1,0 +1,263 @@
+[
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-04-20",
+		"encounter_id": "678578",
+		"patient_id": "17502",
+		"provider_npi": "f8146bd9f2775e71590bc4aa304ae03f",
+		"record_id": "280807.17502",
+		"row_id": "574ba388-204e-4b2f-ab8e-a27725e2ede6"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2014-06-10",
+		"encounter_id": "705342",
+		"patient_id": "17502",
+		"provider_npi": "e12755040fe3f39b1d6310dd39810699",
+		"record_id": "280807.17502",
+		"row_id": "82e1394e-551d-4666-baa7-f012b838945d"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-02-24",
+		"encounter_id": "705261",
+		"patient_id": "17502",
+		"provider_npi": "96e8ba0665107ea239b0a258dbc31ce1",
+		"record_id": "280807.17502",
+		"row_id": "8610a5c9-5c0b-47f5-9a24-4838438d7516"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2011-12-02",
+		"encounter_id": "705365",
+		"patient_id": "17502",
+		"provider_npi": "c524d5cfa3a1e0d8bd8352eeaca25455",
+		"record_id": "280807.17502",
+		"row_id": "e9b8a935-f7bd-4a94-93eb-d4ab1bd773e9"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-11-16",
+		"encounter_id": "705258",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "1607bd8c-90df-4c3c-9cf8-362b0c42d177"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2014-10-22",
+		"encounter_id": "705260",
+		"patient_id": "17502",
+		"provider_npi": "cc8473289580a14bfaa0423d40f320e6",
+		"record_id": "280807.17502",
+		"row_id": "39c3b17c-e84b-4a58-8632-f3c8c936016c"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2010-10-27",
+		"encounter_id": "705262",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "8cf467fa-c375-4f26-9791-b56171ae8f4a"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-02-25",
+		"encounter_id": "705266",
+		"patient_id": "17502",
+		"provider_npi": "f8146bd9f2775e71590bc4aa304ae03f",
+		"record_id": "280807.17502",
+		"row_id": "0a07ac1a-90b4-4c9b-8c85-74d7f5b24f8c"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2014-01-24",
+		"encounter_id": "705275",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "acf54d54-f163-4b91-887e-35aeb406420f"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2011-10-06",
+		"encounter_id": "705281",
+		"patient_id": "17502",
+		"provider_npi": "fd2f15a31ef49fb4e73406762aca72bf",
+		"record_id": "280807.17502",
+		"row_id": "551f0695-3dfa-4534-a950-04f7a91f2697"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2013-09-19",
+		"encounter_id": "705273",
+		"patient_id": "17502",
+		"provider_npi": "fd2f15a31ef49fb4e73406762aca72bf",
+		"record_id": "280807.17502",
+		"row_id": "62285694-9283-4431-b015-ca95d4285d6b"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-04-13",
+		"encounter_id": "705276",
+		"patient_id": "17502",
+		"provider_npi": "cf1b6d9924ad783cd65db7a27d361ece",
+		"record_id": "280807.17502",
+		"row_id": "881afdf3-afbd-450e-9552-93c3b9546190"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-03-27",
+		"encounter_id": "705280",
+		"patient_id": "17502",
+		"provider_npi": "09dcdd6618d61c0ba861962fc8e5f2ae",
+		"record_id": "280807.17502",
+		"row_id": "bad021ac-abf9-4778-96b2-e51a47e2c134"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2014-05-14",
+		"encounter_id": "705278",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "1cba9a8d-78a0-41c7-a865-b37c910bd684"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2012-06-19",
+		"encounter_id": "705279",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "2716f979-3c7b-4ba8-a86c-21081d8f32d0"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-06-19",
+		"encounter_id": "705339",
+		"patient_id": "17502",
+		"provider_npi": "20dfd6b7bb04a46e5a53fbf0b526824e",
+		"record_id": "280807.17502",
+		"row_id": "16b76a16-b56b-44f0-9e38-9435754cbc88"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2014-05-22",
+		"encounter_id": "705340",
+		"patient_id": "17502",
+		"provider_npi": "6d1c6795aff803d71fdb11dd1b7594d2",
+		"record_id": "280807.17502",
+		"row_id": "6a83e41d-99d7-403a-a408-a9ff41092c22"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2012-05-29",
+		"encounter_id": "705341",
+		"patient_id": "17502",
+		"provider_npi": "6d1c6795aff803d71fdb11dd1b7594d2",
+		"record_id": "280807.17502",
+		"row_id": "235b8a05-39ca-4d39-b807-8724a039e809"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2016-02-15",
+		"encounter_id": "698842",
+		"patient_id": "17502",
+		"provider_npi": "4331fbebad4054f357cc957829a0ef23",
+		"record_id": "280807.17502",
+		"row_id": "5d046c8c-acb9-4b17-9163-4ba040805e2f"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2013-04-09",
+		"encounter_id": "703707",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "7f16345f-6276-4597-8667-2b0d3a91ec14"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2010-05-24",
+		"encounter_id": "703830",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "ab952a1d-d6b3-4e4d-9b76-f9815841e453"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2016-05-03",
+		"encounter_id": "702823",
+		"patient_id": "17502",
+		"provider_npi": "6b3043ebbd6b257fb07d3ba37c665a47",
+		"record_id": "280807.17502",
+		"row_id": "cafc4d79-332d-4e4c-8147-4e60610b335a"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2015-07-24",
+		"encounter_id": "704912",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "d172e319-7134-4f5e-9cc0-787478dfb38f"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2014-10-29",
+		"encounter_id": "704914",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "0f238404-7022-414c-a5b4-070ea9acc528"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2013-11-06",
+		"encounter_id": "704917",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "6f65450b-49d8-43e8-b4a7-8db79de73850"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2010-08-05",
+		"encounter_id": "704919",
+		"patient_id": "17502",
+		"provider_npi": "fd2f15a31ef49fb4e73406762aca72bf",
+		"record_id": "280807.17502",
+		"row_id": "cab95422-5b87-498a-b7e4-86ca8e829ddb"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2013-03-26",
+		"encounter_id": "704920",
+		"patient_id": "17502",
+		"provider_npi": "b1e03b982a7d9fd11a37b2e87571a558",
+		"record_id": "280807.17502",
+		"row_id": "21b76239-d6b1-48c9-b8e5-a6fbf87abdf2"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2013-09-17",
+		"encounter_id": "704299",
+		"patient_id": "17502",
+		"provider_npi": "eedfb04e13f4d844343912907246426f",
+		"record_id": "280807.17502",
+		"row_id": "c13992a0-8d7d-4297-8272-06e8196293ce"
+	},
+	{
+		"apuid": "280807",
+		"encounter_date": "2013-08-30",
+		"encounter_id": "704300",
+		"patient_id": "17502",
+		"provider_npi": "20a5c6f47975465f0f3a05f8cbbf2ce8",
+		"record_id": "280807.17502",
+		"row_id": "5f80440a-2541-4d6a-aaa6-f8b50e6475ad"
+	}
+]

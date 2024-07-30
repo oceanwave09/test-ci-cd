@@ -1,0 +1,30 @@
+[
+  {
+    {% if data.copay_money_value -%}
+    "valueMoney": {
+      "value": {{ data.copay_money_value }},
+      "currency": "{{ data.copay_money_currency }}"
+    },
+    {%- endif %}
+    {% if data.copay_quantity_value -%}
+    "valueQuantity": {
+      "value": {{ data.copay_quantity_value }},
+      "unit": "{{ data.copay_quantity_unit }}",
+      "system": "{{ data.copay_quantity_system }}",
+      "code": "{{ data.copay_quantity_code }}"
+    },
+    {%- endif %}
+    "type": {
+      {% if data.copay_type_code %}
+      "coding": [
+        {
+          "system": "{{ data.copay_type_system }}",
+          "code": "{{ data.copay_type_code }}",
+          "display": "{{ data.copay_type_display }}"
+        }
+      ],
+      {%- endif %}
+      "text": "{{ data.copay_type_text }}"
+    }
+  }
+]

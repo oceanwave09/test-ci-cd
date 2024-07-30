@@ -1,0 +1,7 @@
+[
+  {% if data.medication_request_id %}
+  {
+    "reference": "MedicationRequest/{{ data.medication_request_id }}"
+  }
+  {%- endif -%}
+]

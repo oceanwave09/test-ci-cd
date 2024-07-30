@@ -1,0 +1,224 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "order_type",
+            "index": 3
+          },
+          {
+            "name": "item_id",
+            "index": 4
+          },
+          {
+            "name": "lonic",
+            "index": 5
+          },
+          {
+            "name": "cpt",
+            "index": 6
+          },
+          {
+            "name": "order_id",
+            "index": 7
+          },
+          {
+            "name": "patient_id",
+            "index": 8
+          },
+          {
+            "name": "patient_account_no",
+            "index": 9
+          },
+          {
+            "name": "provider_id",
+            "index": 10
+          },
+          {
+            "name": "encounter_id",
+            "index": 11
+          },
+          {
+            "name": "provider_npi",
+            "index": 12
+          },
+          {
+            "name": "order_date",
+            "index": 13
+          },
+          {
+            "name": "order_description",
+            "index": 14
+          },
+          {
+            "name": "result_description",
+            "index": 15
+          },
+          {
+            "name": "collection_date",
+            "index": 16
+          },
+          {
+            "name": "result_date",
+            "index": 17
+          },
+          {
+            "name": "result_text",
+            "index": 18
+          },
+          {
+            "name": "lab_reviewed_flag",
+            "index": 19
+          },
+          {
+            "name": "reviewed_by_id",
+            "index": 20
+          },
+          {
+            "name": "result_numeric",
+            "index": 21
+          },
+          {
+            "name": "ref_range",
+            "index": 22
+          },
+          {
+            "name": "hl_units",
+            "index": 23
+          },
+          {
+            "name": "result_modify_timestamp",
+            "index": 24
+          },
+          {
+            "name": "lab_company_id",
+            "index": 25
+          },
+          {
+            "name": "lab_company_name",
+            "index": 26
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "order_type": {
+          "xpath": "order_type"
+        },
+        "item_id": {
+          "xpath": "item_id"
+        },
+        "lonic": {
+          "xpath": "lonic"
+        },
+        "cpt": {
+          "xpath": "cpt"
+        },
+        "order_id": {
+          "xpath": "order_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "provider_id": {
+          "xpath": "provider_id"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "order_date": {
+          "xpath": "order_date"
+        },
+        "order_description": {
+          "xpath": "order_description"
+        },
+        "result_description": {
+          "xpath": "result_description"
+        },
+        "collection_date": {
+          "xpath": "collection_date"
+        },
+        "result_date": {
+          "xpath": "result_date"
+        },
+        "result_text": {
+          "xpath": "result_text"
+        },
+        "lab_reviewed_flag": {
+          "xpath": "lab_reviewed_flag"
+        },
+        "reviewed_by_id": {
+          "xpath": "reviewed_by_id"
+        },
+        "result_numeric": {
+          "xpath": "result_numeric"
+        },
+        "ref_range": {
+          "xpath": "ref_range"
+        },
+        "hl_units": {
+          "xpath": "hl_units"
+        },
+        "result_modify_timestamp": {
+          "xpath": "result_modify_timestamp"
+        },
+        "lab_company_id": {
+          "xpath": "lab_company_id"
+        },
+        "lab_company_name": {
+          "xpath": "lab_company_name"
+        }
+      }
+    }
+  }
+}

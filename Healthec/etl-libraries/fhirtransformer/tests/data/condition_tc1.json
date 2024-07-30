@@ -1,0 +1,21 @@
+{
+  "source_id": "8576713",
+  "clinical_status": "resolved",
+  "verification_status": "confirmed",
+  "category_code": "55607006",
+  "category_system": "http://snomed.info/sct",
+  "category_display": "Problem",
+  "severity_code": "255604002",
+  "severity_system": "http://snomed.info/sct",
+  "severity_display": "Mild",
+  "code": "386661006",
+  "code_system": "http://snomed.info/sct",
+  "code_display": "Fever",
+  "encounter_id": "d4dc14ea-a5a2-481e-aa0d-3432e0b562eb",
+  "practitioner_id": "2bb088a4-5259-47b2-8d0b-8d67d4af8fca",
+  "patient_id": "dda84174-22dc-4af5-a5f0-2e9f828365c8",
+  "onset_date_time": "2015-01-17T16:00:00+10:00",
+  "body_site_code": "38266002",
+  "body_site_system": "http://snomed.info/sct",
+  "body_site_display": "Entire body as a whole"
+}

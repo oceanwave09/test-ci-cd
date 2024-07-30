@@ -1,0 +1,11 @@
+{
+  {%- if data.born_period_start -%}
+  "start": "{{ data.born_period_start }}"
+  {%- endif %}
+  {%- if data.born_period_start and data.born_period_end -%}
+  ,
+  {%- endif -%}
+  {%- if data.born_period_end -%}
+  "end": "{{ data.born_period_end }}"
+  {%- endif %}
+}

@@ -1,0 +1,45 @@
+{
+  "resourceType": "MedicationRequest",
+  "identifier": [
+    {
+      "use": "official",
+      "system": "http://www.bmc.nl/portal/prescriptions",
+      "value": "12345"
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "324689003",
+        "display": "Nystatin 100,000 units/ml oral suspension (product)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/${pat_id}"
+  },
+  "encounter": {
+    "reference": "Encounter/${enc_id}"
+  },
+  "authoredOn": "2015-03-01",
+  "reasonCode": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "59621000",
+          "display": "Essential hypertension (disorder)"
+        }
+      ]
+    }
+  ],
+  "dosageInstruction": [
+    {
+      "sequence": 1,
+      "text": "Take one tablet daily as directed"
+    }
+  ]
+}

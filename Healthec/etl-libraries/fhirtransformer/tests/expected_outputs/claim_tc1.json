@@ -1,0 +1,377 @@
+{
+  "resourceType": "Claim",
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+            "code": "RI",
+            "display": "Resource Identifier"
+          }
+        ]
+      },
+      "value": "107274487100"
+    }
+  ],
+  "status": "active",
+  "type": {
+    "coding": [
+      {
+        "code": "oral"
+      }
+    ]
+  },
+  "use": "claim",
+  "related": [
+    {
+      "reference": {
+        "system": "http://happyvalley.com/claim",
+        "value": "123466"
+      }
+    }
+  ],
+  "patient": {
+    "reference": "Patient/10008769"
+  },
+  "billablePeriod": {
+    "start": "06-02-2023",
+    "end": "07-02-2023"
+  },
+  "created": "07-02-2023",
+  "insurer": {
+    "reference": "Organization/8675594"
+  },
+  "provider": {
+    "reference": "Practitioner/12401"
+  },
+  "priority": {
+    "coding": [
+      {
+        "code": "normal"
+      }
+    ]
+  },
+  "fundsReserve": {
+    "coding": [
+      {
+        "code": "RED"
+      }
+    ]
+  },
+  "prescription": {
+    "reference": "MedicationRequest/PMR02"
+  },
+  "originalPrescription": {
+    "reference": "MedicationRequest/orginal"
+  },
+  "payee": {
+    "type": {
+      "coding": [
+        {
+          "code": "HLOO231"
+        }
+      ]
+    },
+    "party": {
+      "reference": "Practitioner/2135-2"
+    }
+  },
+  "referral": {
+    "reference": "ServiceRequest/SERV-22"
+  },
+  "facility": {
+    "reference": "Location/USA472"
+  },
+  "careTeam": [
+    {
+      "sequence": 1,
+      "provider": {
+        "reference": "Practitioner/cppid123"
+      },
+      "role": {
+        "coding": [
+          {
+            "code": "blue"
+          }
+        ]
+      },
+      "qualification": {
+        "coding": [
+          {
+            "code": "MBA"
+          }
+        ]
+      }
+    }
+  ],
+  "diagnosis": [
+    {
+      "sequence": 32,
+      "diagnosisCodeableConcept": {
+        "coding": [
+          {
+            "code": "diag_test_22"
+          }
+        ]
+      },
+      "diagnosisReference": {
+        "reference": "Condition/diag123"
+      },
+      "packageCode": {
+        "coding": [
+          {
+            "code": "3456-6"
+          }
+        ]
+      }
+    },
+    {
+      "sequence": 33,
+      "diagnosisCodeableConcept": {
+        "coding": [
+          {
+            "code": "diag_test_23"
+          }
+        ]
+      },
+      "type": [
+        {
+          "coding": [
+            {
+              "code": "C"
+            }
+          ]
+        }
+      ],
+      "onAdmission": {
+        "coding": [
+          {
+            "code": "18oac104"
+          }
+        ]
+      }
+    }
+  ],
+  "procedure": [
+    {
+      "sequence": 23,
+      "procedureCodeableConcept": {
+        "coding": [
+          {
+            "code": "proc_test_12"
+          }
+        ]
+      },
+      "procedureReference": {
+        "reference": "Procedure/proc123"
+      }
+    },
+    {
+      "sequence": 24,
+      "procedureCodeableConcept": {
+        "coding": [
+          {
+            "code": "proc_test_13"
+          }
+        ]
+      },
+      "date": "20-02-2023"
+    }
+  ],
+  "insurance": [
+    {
+      "sequence": 5,
+      "focal": 88.8,
+      "coverage": {
+        "reference": "Coverage/IOBA345"
+      }
+    }
+  ],
+  "accident": {
+    "date": "08-02-2023",
+    "type": {
+      "coding": [
+        {
+          "code": "test_acc"
+        }
+      ]
+    },
+    "locationAddress": {
+      "line": [
+        "street 1"
+      ],
+      "city": "New York"
+    },
+    "locationReference": {
+      "reference": "Location/NY-23"
+    }
+  },
+  "item": [
+    {
+      "sequence": 42,
+      "careTeamSequence": [
+        4245
+      ],
+      "revenue": {
+        "coding": [
+          {
+            "code": "REV_56"
+          }
+        ]
+      },
+      "category": {
+        "coding": [
+          {
+            "code": "CAT_67"
+          }
+        ]
+      },
+      "productOrService": {
+        "coding": [
+          {
+            "system": "http://example.org/fhir/oralservicecodes",
+            "code": "67221",
+            "display": "Maryland Bridge"
+          },
+          {
+            "system": "http://example.org/fhir/oralservicecodes",
+            "code": "ORTHOEXAM"
+          }
+        ]
+      },
+      "servicedDate": "20-02-2023",
+      "servicedPeriod": {
+        "start": "20-02-2023"
+      },
+      "patientPaid": {
+        "value": 1100,
+        "currency": "USD"
+      },
+      "encounter": [
+        {
+          "reference": "Encounter/ENC_01"
+        }
+      ]
+    },
+    {
+      "sequence": 43,
+      "diagnosisSequence": [
+        4356
+      ],
+      "revenue": {
+        "coding": [
+          {
+            "code": "REV_57"
+          }
+        ]
+      },
+      "locationCodeableConcept": {
+        "coding": [
+          {
+            "code": "LOC_TEST"
+          }
+        ]
+      },
+      "locationReference": {
+        "reference": "Location/FACI_234"
+      },
+      "patientPaid": {
+        "value": 1100,
+        "currency": "USD"
+      },
+      "encounter": [
+        {
+          "reference": "Encounter/ENC_02"
+        }
+      ]
+    },
+    {
+      "sequence": 44,
+      "procedureSequence": [
+        4245
+      ],
+      "category": {
+        "coding": [
+          {
+            "code": "CAT_68"
+          }
+        ]
+      },
+      "patientPaid": {
+        "value": 1100,
+        "currency": "USD"
+      },
+      "quantity": {
+        "value": 210
+      },
+      "unitPrice": {
+        "value": 23
+      },
+      "net": {
+        "value": 34
+      },
+      "bodySite": {
+        "coding": [
+          {
+            "code": "34"
+          }
+        ]
+      },
+      "encounter": [
+        {
+          "reference": "Encounter/ENC_03"
+        }
+      ]
+    }
+  ],
+  "supportingInfo": [
+    {
+      "category": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+            "code": "employmentimpacted"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "student"
+          }
+        ]
+      }
+    },
+    {
+      "category": {
+        "coding": [
+          {
+            "system": "http://terminology.hl7.org/CodeSystem/claiminformationcategory",
+            "code": "hospitalized"
+          }
+        ]
+      },
+      "code": {
+        "coding": [
+          {
+            "code": "disabled"
+          }
+        ]
+      }
+    }
+  ],
+  "diagnosisRelatedGroup": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup",
+        "code": "400",
+        "display": "Head trauma - concussion"
+      }
+    ]
+  },
+  "patientPaid": {
+    "value": 1100,
+    "currency": "USD"
+  }
+}

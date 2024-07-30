@@ -1,0 +1,25 @@
+[
+  {% for total in data.total_amounts %}
+  {
+    {%- if total.amount_value -%}
+    "amount":{
+      "value" : {{ total.amount_value }},
+      "currency" : "{{ total.amount_currency }}"
+    },
+    {%- endif %}
+    "category": {
+      {% if total.category_code %}
+      "coding": [
+        {
+          "system": "{{ total.category_system }}",
+          "code": "{{ total.category_code }}",
+          "display": "{{ total.category_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ total.category_text }}"
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

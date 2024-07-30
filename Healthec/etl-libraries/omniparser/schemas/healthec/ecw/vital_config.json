@@ -1,0 +1,127 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "item_id",
+            "index": 3
+          },
+          {
+            "name": "patient_id",
+            "index": 4
+          },
+          {
+            "name": "patient_account_no",
+            "index": 5
+          },
+          {
+            "name": "encounter_id",
+            "index": 6
+          },
+          {
+            "name": "provider_npi",
+            "index": 7
+          },
+          {
+            "name": "vitals_captured_by",
+            "index": 8
+          },
+          {
+            "name": "vitals_name",
+            "index": 9
+          },
+          {
+            "name": "standard_vital",
+            "index": 10
+          },
+          {
+            "name": "vitals_value",
+            "index": 11
+          },
+          {
+            "name": "modified_date",
+            "index": 12
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "item_id": {
+          "xpath": "item_id"
+        },
+        "vitals_captured_by": {
+          "xpath": "vitals_captured_by"
+        },
+        "vitals_name": {
+          "xpath": "vitals_name"
+        },
+        "standard_vital": {
+          "xpath": "standard_vital"
+        },
+        "vitals_value": {
+          "xpath": "vitals_value"
+        },
+        "modified_date": {
+          "xpath": "modified_date"
+        }
+      }
+    }
+  }
+}

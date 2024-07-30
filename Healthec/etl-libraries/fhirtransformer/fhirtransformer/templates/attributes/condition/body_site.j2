@@ -1,0 +1,16 @@
+[
+  {%- if data.body_site_code or data.body_site_text -%}
+  {
+    {% if data.body_site_code %}
+    "coding": [
+      {
+        "system": "{{ data.body_site_system }}",
+        "code": "{{ data.body_site_code }}",
+        "display": "{{ data.body_site_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.body_site_text }}"
+  }
+  {%- endif %}
+]

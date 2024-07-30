@@ -1,0 +1,344 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": ",",
+    "replace_double_quotes": false,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "row",
+            "index": 1
+          },
+          {
+            "name": "domain",
+            "index": 2
+          },
+          {
+            "name": "patient_first_name",
+            "index": 3
+          },
+          {
+            "name": "patient_last_name",
+            "index": 4
+          },
+          {
+            "name": "patient_dob",
+            "index": 5
+          },
+          {
+            "name": "external_patient_id",
+            "index": 6
+          },
+          {
+            "name": "external_practice_id",
+            "index": 7
+          },
+          {
+            "name": "code",
+            "index": 8
+          },
+          {
+            "name": "name",
+            "index": 9
+          },
+          {
+            "name": "dictionary_name",
+            "index": 10
+          },
+          {
+            "name": "date_performed",
+            "index": 11
+          },
+          {
+            "name": "date_ordered",
+            "index": 12
+          },
+          {
+            "name": "date_due",
+            "index": 13
+          },
+          {
+            "name": "refused",
+            "index": 14
+          },
+          {
+            "name": "med_unnecessary_reason_code",
+            "index": 15
+          },
+          {
+            "name": "med_unnecessary_reason_name",
+            "index": 16
+          },
+          {
+            "name": "med_unnecessary_reason_dictionary",
+            "index": 17
+          },
+          {
+            "name": "provider_npi",
+            "index": 18
+          },
+          {
+            "name": "practice_tin",
+            "index": 19
+          },
+          {
+            "name": "provider_name",
+            "index": 20
+          },
+          {
+            "name": "administered_amount",
+            "index": 21
+          },
+          {
+            "name": "administered_unit",
+            "index": 22
+          },
+          {
+            "name": "vaccine_lot_number",
+            "index": 23
+          },
+          {
+            "name": "immunization_manufacture_code",
+            "index": 24
+          },
+          {
+            "name": "vendor",
+            "index": 25
+          },
+          {
+            "name": "source_type",
+            "index": 26
+          },
+          {
+            "name": "patient_id",
+            "index": 27
+          },
+          {
+            "name": "remove_specified_immunization_flag",
+            "index": 28
+          },
+          {
+            "name": "vfc_eligibility_dictionary",
+            "index": 29
+          },
+          {
+            "name": "vfc_eligibility_code",
+            "index": 30
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "row": {
+          "xpath": "row",
+          "template": "remove_special_char"
+        },
+        "domain": {
+          "xpath": "domain",
+          "template": "remove_special_char"
+        },
+        "patient_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_dob",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "external_patient_id": {
+          "xpath": "external_patient_id",
+          "template": "remove_special_char"
+        },
+        "external_practice_id": {
+          "xpath": "external_practice_id",
+          "template": "remove_special_char"
+        },
+        "code": {
+          "xpath": "code",
+          "template": "remove_special_char"
+        },
+        "name": {
+          "xpath": "name",
+          "template": "remove_special_char"
+        },
+        "dictionary_name": {
+          "xpath": "dictionary_name",
+          "template": "remove_special_char"
+        },
+        "date_performed": {
+          "xpath": "date_performed",
+          "template": "remove_special_char"
+        },
+        "date_ordered": {
+          "xpath": "date_ordered",
+          "template": "remove_special_char"
+        },
+        "date_due": {
+          "xpath": "date_due",
+          "template": "remove_special_char"
+        },
+        "refused": {
+          "xpath": "refused",
+          "template": "remove_special_char"
+        },
+        "med_unnecessary_reason_code": {
+          "xpath": "med_unnecessary_reason_code",
+          "template": "remove_special_char"
+        },
+        "med_unnecessary_reason_name": {
+          "xpath": "med_unnecessary_reason_name",
+          "template": "remove_special_char"
+        },
+        "med_unnecessary_reason_dictionary": {
+          "xpath": "med_unnecessary_reason_dictionary",
+          "template": "remove_special_char"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "practice_tin": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "practice_tin",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "provider_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "administered_amount": {
+          "xpath": "administered_amount",
+          "template": "remove_special_char"
+        },
+        "administered_unit": {
+          "xpath": "administered_unit",
+          "template": "remove_special_char"
+        },
+        "vaccine_lot_number": {
+          "xpath": "vaccine_lot_number",
+          "template": "remove_special_char"
+        },
+        "immunization_manufacture_code": {
+          "xpath": "immunization_manufacture_code",
+          "template": "remove_special_char"
+        },
+        "vendor": {
+          "xpath": "vendor",
+          "template": "remove_special_char"
+        },
+        "source_type": {
+          "xpath": "source_type",
+          "template": "remove_special_char"
+        },
+        "patient_id": {
+          "xpath": "patient_id",
+          "template": "remove_special_char"
+        },
+        "remove_specified_immunization_flag": {
+          "xpath": "remove_specified_immunization_flag",
+          "template": "remove_special_char"
+        },
+        "vfc_eligibility_dictionary": {
+          "xpath": "vfc_eligibility_dictionary",
+          "template": "remove_special_char"
+        },
+        "vfc_eligibility_code": {
+          "xpath": "vfc_eligibility_code",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": true
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+apuid|FacilityID|FacilityName|AddressLine1|AddressLine2|City|State|Zip
+280807|26|Facility26|343 Thornall Street||Edison|NJ|08837
+280807|6|Facility6|343 Thornall Street||Edison|NJ|08837
+280807|75|Facility75|||Edison|NJ|08837
+280807|267|Facility267|343 Thornall Street||Edison|NJ|08837
+280807|268|Facility268|343 Thornall Street||Edison|NJ|08837
+280807|2|Facility2|343 Thornall Street||ROOSEVELT|NJ|08837
+280807|136|Facility136|343 Thornall Street|Suite #630|Edison|NJ|08837
+280807|49|Facility49|343 Thornall Street||Edison|NJ|08837
+280807|57|Facility57|343 Thornall Street||Ewing|NJ|08837
+280807|76|Facility76|||||
+280807|84|Facility84|||||
+280807|112|Facility112|343 Thornall Street|Suite #630|Edison|NJ|08837
+280807|36|Facility36|343 Thornall Street||Edison|NJ|08837
+280807|37|Facility37|343 Thornall Street|Suite #630|Edison|NJ|08837
+280807|45|Facility45|343 Thornall Street||Edison|NJ|08837
+280807|4|Facility4|343 Thornall Street||Edison|NM|08837
+280807|3|Facility3|343 Thornall Street||Edison|NJ|08837
+280807|9|Facility9|343 Thornall Street||Edison|NJ|08837
+280807|19|Facility19|343 Thornall Street||Edison|NJ|08837
+280807|58|Facility58|343 Thornall Street||Edison|NJ|08837
+280807|94|Facility94|343 Thornall Street||Edison|NJ|08837
+280807|124|Facility124|343 Thornall Street||Edison|NJ|08837

@@ -1,0 +1,240 @@
+cynchealth:
+  common:
+    PRACTICE:
+      schema: healthec/practice_roster/practice_config.json
+      validation: validation/practice_validation_config.yaml
+      fhir_bundle: practice_stage_to_fhirbundle_dag
+    PROVIDER:
+      schema: healthec/provider_roster/provider_config.json
+      validation: validation/provider_validation_config.yaml
+      fhir_bundle: provider_stage_to_fhirbundle_dag
+  testsource:
+    BENEFICIARY:
+      schema: baco_hap/beneficiary_config.json
+      validation: validation/beneficiary_validation_config.yaml
+      fhir_bundle: beneficiary_stage_to_fhirbundle_dag
+    MEDICAL_CLAIM:
+      schema: baco_hap/medical_claim_config.json
+      validation: validation/medical_claim_validation_config.yaml
+      fhir_bundle: medical_claim_stage_to_fhirbundle_dag
+    RX_CLAIM:
+      schema: baco_hap/rx_claim_config.json
+      validation: validation/rx_claim_validation_config.yaml
+      fhir_bundle: rx_claim_stage_to_fhirbundle_dag
+    # ECW
+    ECW_ALLERGY:
+      schema: healthec/ecw/allergy_config.json
+      validation: validation/ecw/allergy_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_DIAGNOSIS:
+      schema: healthec/ecw/diagnosis_config.json
+      validation: validation/ecw/diagnois_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_ENCOUNTER:
+      schema: healthec/ecw/encounter_config.json
+      validation: validation/ecw/encounter_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_EXAMINATION:
+      schema: healthec/ecw/examination_config.json
+      validation: validation/ecw/examination_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_FACILITY:
+      schema: healthec/ecw/facility_config.json
+      validation: validation/ecw/facility_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_FAMILYHISTORY:
+      schema: healthec/ecw/family_history_config.json
+      validation: validation/ecw/familyhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_HOSPITALIZATION:
+      schema: healthec/ecw/hospitalization_config.json
+      validation: validation/ecw/hospitalization_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_HPI:
+      schema: healthec/ecw/hpi_config.json
+      validation: validation/ecw/hpi_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_IMMUNIZATION:
+      schema: healthec/ecw/immunization_config.json
+      validation: validation/ecw/immunization_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_MEDICALHISTORY:
+      schema: healthec/ecw/medical_history_config.json
+      validation: validation/ecw/medicalhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_MEDICATION:
+      schema: healthec/ecw/medication_config.json
+      validation: validation/ecw/medication_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_OBGYNHISTORY:
+      schema: healthec/ecw/obgyn_history_config.json
+      validation: validation/ecw/obygnhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_ORDERANDRESULT:
+      schema: healthec/ecw/order_and_result_config.json
+      validation: validation/ecw/orderandresult_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PATIENTDEMOGRAPHIC:
+      schema: healthec/ecw/patient_demographic_config.json
+      validation: validation/ecw/patientdemographic_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PHYSICALEXAM:
+      schema: healthec/ecw/physical_exam_config.json
+      validation: validation/ecw/physicalexam_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PRACTICEUSER:
+      schema: healthec/ecw/practice_user_config.json
+      validation: validation/ecw/practiceuser_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PREVENTIVE:
+      schema: healthec/ecw/preventive_config.json
+      validation: validation/ecw/preventive_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROBLEMLIST:
+      schema: healthec/ecw/problem_list_config.json
+      validation: validation/ecw/problemlist_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROCEDURECODE:
+      schema: healthec/ecw/procedure_code_config.json
+      validation: validation/ecw/procedurecode_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROCEDURE:
+      schema: healthec/ecw/procedure_config.json
+      validation: validation/ecw/procedure_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_REFERRAL:
+      schema: healthec/ecw/referral_config.json
+      validation: validation/ecw/referral_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_SOCIALHISTORY:
+      schema: healthec/ecw/social_history_config.json
+      validation: validation/ecw/socialhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_SURGICALHISTORY:
+      schema: healthec/ecw/surgical_history_config.json
+      validation: validation/ecw/surgicalhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_VITAL:
+      schema: healthec/ecw/vital_config.json
+      validation: validation/ecw/vital_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    # GAP
+    GAP_ALLERGY:
+      schema: healthec/gap/allergy_config.json
+      validation: validation/gap/allergy_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_CARE:
+      schema: healthec/gap/care_config.json
+      validation: validation/gap/care_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_IMMUNIZATION:
+      schema: healthec/gap/immunization_config.json
+      validation: validation/gap/immunization_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_VITAL:
+      schema: healthec/gap/vital_config.json
+      validation: validation/gap/vital_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    # GI
+    GI_ALLERGY:
+      schema: healthec/gi/allergy_config.json
+      validation: validation/gi/allergy_validation_config.yaml
+      fhir_bundle: gi_stage_to_fhirbundle_dag
+    GI_LAB:
+      schema: healthec/gi/lab_config.json
+      validation: validation/gi/lab_validation_config.yaml
+      fhir_bundle: gi_stage_to_fhirbundle_dag
+    GI_DEMOGRAPHIC:
+      schema: healthec/gi/demographic_config.json
+      validation: validation/gi/demographic_validation_config.yaml
+      fhir_bundle: gi_stage_to_fhirbundle_dag
+    GI_CARE:
+      schema: healthec/gi/care_config.json
+      validation: validation/gi/care_validation_config.yaml
+      fhir_bundle: gi_stage_to_fhirbundle_dag
+    GI_MEDICATION:
+      schema: healthec/gi/medication_config.json
+      validation: validation/gi/medication_validation_config.yaml
+      fhir_bundle: gi_stage_to_fhirbundle_dag
+    GI_MEDICALCONDITION:
+      schema: healthec/gi/medical_condition_config.json
+      validation: validation/gi/medicalcondition_validation_config.yaml
+      fhir_bundle: gi_stage_to_fhirbundle_dag
+    GI_SMOKING:
+      schema: healthec/gi/smoking_config.json
+      validation: validation/gi/smoking_validation_config.yaml
+      fhir_bundle: gi_stage_to_fhirbundle_dag
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  barton_health_center_d624b38b-7617-4684-85e8-10434b0d8e28:
+    src_organization_id: d624b38b-7617-4684-85e8-10434b0d8e28
+    src_location_id: ""
+    src_practitioner_id: ""
+  bins_health_center_c9fd4b34-f315-4435-acbe-85ed31314f6a:
+    src_organization_id: c9fd4b34-f315-4435-acbe-85ed31314f6a
+    src_location_id: ""
+    src_practitioner_id: ""
+  romaguera_health_center_b8cca967-cace-4f65-859e-4db95d99beaf:
+    src_organization_id: b8cca967-cace-4f65-859e-4db95d99beaf
+    src_location_id: ""
+    src_practitioner_id: ""
+  frami_health_center_880029cf-7532-4ce1-a0ab-d8f8eefe93bc:
+    src_organization_id: 880029cf-7532-4ce1-a0ab-d8f8eefe93bc
+    src_location_id: ""
+    src_practitioner_id: ""
+  tremblay_health_center_6e8185f9-2d43-45ae-9574-8db66c7dc274:
+    src_organization_id: 6e8185f9-2d43-45ae-9574-8db66c7dc274
+    src_location_id: ""
+    src_practitioner_id: ""

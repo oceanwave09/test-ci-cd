@@ -1,0 +1,81 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "service_date",
+            "start_pos": 17,
+            "length": 8
+          },
+          {
+            "name": "procedure_code",
+            "start_pos": 25,
+            "length": 20
+          },
+          {
+            "name": "code_flag",
+            "start_pos": 45,
+            "length": 1
+          },
+          {
+            "name": "end_date",
+            "start_pos": 46,
+            "length": 8
+          },
+          {
+            "name": "service_status",
+            "start_pos": 54,
+            "length": 3
+          },
+          {
+            "name": "attribute",
+            "start_pos": 57,
+            "length": 20
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "service_date": {
+          "xpath": "service_date"
+        },
+        "procedure_code": {
+          "xpath": "procedure_code"
+        },
+        "code_flag": {
+          "xpath": "code_flag"
+        },
+        "end_date": {
+          "xpath": "end_date"
+        },
+        "service_status": {
+          "xpath": "service_status"
+        },
+        "attribute": {
+          "xpath": "attribute"
+        }
+      }
+    }
+  }
+}

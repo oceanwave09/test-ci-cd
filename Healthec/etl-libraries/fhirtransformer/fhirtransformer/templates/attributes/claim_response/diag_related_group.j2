@@ -1,0 +1,12 @@
+{
+  {% if data.diagnosis_related_code %}
+  "coding": [
+    {
+      "system": "http://terminology.hl7.org/CodeSystem/ex-diagnosisrelatedgroup",
+      "code": "{{ data.diagnosis_related_code }}",
+      "display": "{{ data.diagnosis_related_display }}"
+    }
+  ],
+  {%- endif %}
+  "text": "{{ data.diagnosis_related_text }}"
+}

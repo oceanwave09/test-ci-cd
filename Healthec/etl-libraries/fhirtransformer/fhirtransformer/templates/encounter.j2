@@ -1,0 +1,52 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "extension": {% include "attributes/extension.j2" %},
+  "class": {% include "attributes/encounter/class.j2" %},
+  "type": {% include "attributes/encounter/type.j2" %},
+  "reasonCode": {% include "attributes/encounter/reason_code.j2" %},
+  "period": {% include "attributes/period.j2" %},
+  "length": {% include "attributes/encounter/length.j2" %},
+  "priority": {% include "attributes/encounter/priority.j2" %},
+  "serviceType": {% include "attributes/encounter/service_type.j2" %},
+  "participant": {% include "attributes/encounter/participant_reference_with_type.j2" %},
+  "diagnosis": [
+    {
+      "condition": {% include "attributes/condition_reference.j2" %}
+    }
+  ],
+  "hospitalization": {
+    "origin": {% include "attributes/encounter/from_location_reference.j2" %},
+    "preAdmissionIdentifier": {% include "attributes/encounter/pre_admission_identifier.j2" %},
+    "admitSource": {% include "attributes/encounter/admit_source.j2" %},
+    "destination": {% include "attributes/encounter/to_location_reference.j2" %},
+    "dischargeDisposition": {% include "attributes/encounter/discharge_disposition.j2" %},
+    "reAdmission": {% include "attributes/encounter/re_admission.j2" %},
+    "dietPreference": {% include "attributes/encounter/diet_preference.j2" %},
+    "specialCourtesy": {% include "attributes/encounter/special_courtesy.j2" %}
+  },
+  "subject": {% include "attributes/patient_reference.j2" %},
+  "location": [
+    {
+      {% if data.location_id %}
+      "location": {% include "attributes/location_reference.j2" %},
+      {%- endif %}
+      "physicalType": {% include "attributes/encounter/physical_type.j2" %}
+    }
+  ],
+  "serviceProvider": {% include "attributes/organization_reference.j2" %}
+{% endblock %}

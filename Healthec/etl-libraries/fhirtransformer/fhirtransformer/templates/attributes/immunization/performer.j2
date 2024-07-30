@@ -1,0 +1,21 @@
+[
+  {%- if data.practitioner_id -%}
+  {
+    "function":{
+      {% if data.function_code %}
+      "coding": [
+        {
+          "system": "{{ data.function_system }}",
+          "code": "{{ data.function_code }}",
+          "display": "{{ data.function_display }}"
+        }
+      ],
+      {%- endif %}
+      "text": "{{ data.function_text }}"
+    },
+    "actor": {
+      "reference": "Practitioner/{{ data.practitioner_id }}"
+    }
+  }
+  {%- endif %}
+]

@@ -1,0 +1,736 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": ",",
+    "replace_double_quotes": false,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "row1",
+            "index": 1
+          },
+          {
+            "name": "domain",
+            "index": 2
+          },
+          {
+            "name": "patient_first_name",
+            "index": 3
+          },
+          {
+            "name": "patient_last_name",
+            "index": 4
+          },
+          {
+            "name": "patient_dob",
+            "index": 5
+          },
+          {
+            "name": "external_patient_id",
+            "index": 6
+          },
+          {
+            "name": "external_practice_id",
+            "index": 7
+          },
+          {
+            "name": "first_name",
+            "index": 8
+          },
+          {
+            "name": "last_name",
+            "index": 9
+          },
+          {
+            "name": "dob",
+            "index": 10
+          },
+          {
+            "name": "middle_name",
+            "index": 11
+          },
+          {
+            "name": "suffix",
+            "index": 12
+          },
+          {
+            "name": "gender",
+            "index": 13
+          },
+          {
+            "name": "race_code",
+            "index": 14
+          },
+          {
+            "name": "race_name",
+            "index": 15
+          },
+          {
+            "name": "race_dictionary",
+            "index": 16
+          },
+          {
+            "name": "ethnicity_code",
+            "index": 17
+          },
+          {
+            "name": "ethnicity_name",
+            "index": 18
+          },
+          {
+            "name": "ethnicity_dictionary",
+            "index": 19
+          },
+          {
+            "name": "primary_language_code",
+            "index": 20
+          },
+          {
+            "name": "primary_language_name",
+            "index": 21
+          },
+          {
+            "name": "primary_language_dictionary",
+            "index": 22
+          },
+          {
+            "name": "marital_status_code",
+            "index": 23
+          },
+          {
+            "name": "martial_status_name",
+            "index": 24
+          },
+          {
+            "name": "marital_status_dictionary",
+            "index": 25
+          },
+          {
+            "name": "ssn",
+            "index": 26
+          },
+          {
+            "name": "active",
+            "index": 27
+          },
+          {
+            "name": "primary_physician_first_name",
+            "index": 28
+          },
+          {
+            "name": "primary_physician_last_name",
+            "index": 29
+          },
+          {
+            "name": "primary_physician_npi",
+            "index": 30
+          },
+          {
+            "name": "override_pcp",
+            "index": 31
+          },
+          {
+            "name": "other_physician_first_name",
+            "index": 32
+          },
+          {
+            "name": "other_physician_last_name",
+            "index": 33
+          },
+          {
+            "name": "other_physician_npi",
+            "index": 34
+          },
+          {
+            "name": "remove_spec_other_physician",
+            "index": 35
+          },
+          {
+            "name": "home_phone",
+            "index": 36
+          },
+          {
+            "name": "other_phone",
+            "index": 37
+          },
+          {
+            "name": "email",
+            "index": 38
+          },
+          {
+            "name": "home_address_line1",
+            "index": 39
+          },
+          {
+            "name": "home_address_line2",
+            "index": 40
+          },
+          {
+            "name": "city",
+            "index": 41
+          },
+          {
+            "name": "state",
+            "index": 42
+          },
+          {
+            "name": "zip",
+            "index": 43
+          },
+          {
+            "name": "patient_provider_partnership",
+            "index": 44
+          },
+          {
+            "name": "patient_provider_partnership_date",
+            "index": 45
+          },
+          {
+            "name": "advance_directives",
+            "index": 46
+          },
+          {
+            "name": "advance_directives_date",
+            "index": 47
+          },
+          {
+            "name": "inactive_reason_code",
+            "index": 48
+          },
+          {
+            "name": "inactive_reason_name",
+            "index": 49
+          },
+          {
+            "name": "inactive_reason_dictionary",
+            "index": 50
+          },
+          {
+            "name": "health_literacy",
+            "index": 51
+          },
+          {
+            "name": "caremanager_first_name",
+            "index": 52
+          },
+          {
+            "name": "caremanager_last_name",
+            "index": 53
+          },
+          {
+            "name": "caremanager_npi",
+            "index": 54
+          },
+          {
+            "name": "remove_specified_caremanager",
+            "index": 55
+          },
+          {
+            "name": "date_of_death",
+            "index": 56
+          },
+          {
+            "name": "reminder_preference",
+            "index": 57
+          },
+          {
+            "name": "last_reminder_date",
+            "index": 58
+          },
+          {
+            "name": "patient_id",
+            "index": 59
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "row": {
+          "xpath": "row1",
+          "template": "remove_special_char"
+        },
+        "domain": {
+          "xpath": "domain",
+          "template": "remove_special_char"
+        },
+        "patient_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "patient_dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "patient_dob",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "external_patient_id": {
+          "xpath": "external_patient_id",
+          "template": "remove_special_char"
+        },
+        "external_practice_id": {
+          "xpath": "external_practice_id",
+          "template": "remove_special_char"
+        },
+        "first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "dob": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "dob",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "middle_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "middle_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "suffix": {
+          "xpath": "suffix",
+          "template": "remove_special_char"
+        },
+        "gender": {
+          "xpath": "gender",
+          "template": "remove_special_char"
+        },
+        "race_code": {
+          "xpath": "race_code",
+          "template": "remove_special_char"
+        },
+        "race_name": {
+          "xpath": "race_name",
+          "template": "remove_special_char"
+        },
+        "race_dictionary": {
+          "xpath": "race_dictionary",
+          "template": "remove_special_char"
+        },
+        "ethnicity_code": {
+          "xpath": "ethnicity_code",
+          "template": "remove_special_char"
+        },
+        "ethnicity_name": {
+          "xpath": "ethnicity_name",
+          "template": "remove_special_char"
+        },
+        "ethnicity_dictionary": {
+          "xpath": "ethnicity_dictionary",
+          "template": "remove_special_char"
+        },
+        "primary_language_code": {
+          "xpath": "primary_language_code",
+          "template": "remove_special_char"
+        },
+        "primary_language_name": {
+          "xpath": "primary_language_name",
+          "template": "remove_special_char"
+        },
+        "primary_language_dictionary": {
+          "xpath": "primary_language_dictionary",
+          "template": "remove_special_char"
+        },
+        "marital_status_code": {
+          "xpath": "marital_status_code",
+          "template": "remove_special_char"
+        },
+        "martial_status_name": {
+          "xpath": "martial_status_name",
+          "template": "remove_special_char"
+        },
+        "marital_status_dictionary": {
+          "xpath": "marital_status_dictionary",
+          "template": "remove_special_char"
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "active": {
+          "xpath": "active",
+          "template": "remove_special_char"
+        },
+        "primary_physician_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "primary_physician_first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "primary_physician_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "primary_physician_last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "primary_physician_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "primary_physician_npi",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "override_pcp": {
+          "xpath": "override_pcp",
+          "template": "remove_special_char"
+        },
+        "other_physician_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "other_physician_first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "other_physician_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "other_physician_last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "other_physician_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "other_physician_npi",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "remove_specified_other_physician": {
+          "xpath": "remove_spec_other_physician",
+          "template": "remove_special_char"
+        },
+        "home_phone": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "home_phone",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "other_phone": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "other_phone",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "email": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "email",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "home_address_line1": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "home_address_line1",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "home_address_line2": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "home_address_line2",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "city": {
+          "xpath": "city",
+          "template": "remove_special_char"
+        },
+        "state": {
+          "xpath": "state",
+          "template": "remove_special_char"
+        },
+        "zip": {
+          "xpath": "zip",
+          "template": "remove_special_char"
+        },
+        "patient_provider_partnership": {
+          "xpath": "patient_provider_partnership",
+          "template": "remove_special_char"
+        },
+        "patient_provider_partnership_date": {
+          "xpath": "patient_provider_partnership_date",
+          "template": "remove_special_char"
+        },
+        "advance_directives": {
+          "xpath": "advance_directives",
+          "template": "remove_special_char"
+        },
+        "advance_directives_date": {
+          "xpath": "advance_directives_date",
+          "template": "remove_special_char"
+        },
+        "inactive_reason_code": {
+          "xpath": "inactive_reason_code",
+          "template": "remove_special_char"
+        },
+        "inactive_reason_name": {
+          "xpath": "inactive_reason_name",
+          "template": "remove_special_char"
+        },
+        "inactive_reason_dictionary": {
+          "xpath": "inactive_reason_dictionary",
+          "template": "remove_special_char"
+        },
+        "health_literacy": {
+          "xpath": "health_literacy",
+          "template": "remove_special_char"
+        },
+        "caremanager_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "caremanager_first_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "caremanager_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "caremanager_last_name",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "caremanager_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "caremanager_npi",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "remove_specified_caremanager": {
+          "xpath": "remove_specified_caremanager",
+          "template": "remove_special_char"
+        },
+        "date_of_death": {
+          "xpath": "date_of_death",
+          "template": "remove_special_char"
+        },
+        "reminder_preference": {
+          "xpath": "reminder_preference",
+          "template": "remove_special_char"
+        },
+        "last_reminder_date": {
+          "xpath": "last_reminder_date",
+          "template": "remove_special_char"
+        },
+        "patient_id": {
+          "xpath": "patient_id",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

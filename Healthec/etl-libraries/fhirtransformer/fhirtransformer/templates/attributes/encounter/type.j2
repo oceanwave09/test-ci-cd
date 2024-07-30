@@ -1,0 +1,16 @@
+[
+  {%- if data.type_code or data.type_text -%}
+  {
+    {% if data.type_code %}
+    "coding": [
+      {
+        "system": "{{ data.type_system }}",
+        "code": "{{ data.type_code }}",
+        "display": "{{ data.type_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.type_text }}"
+  }
+  {%- endif %}
+]

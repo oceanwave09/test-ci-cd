@@ -1,0 +1,32 @@
+[
+  {%- if data.reason_code or data.reason_text -%}
+  {
+    {% if data.reason_code %}
+    "coding": [
+      {
+        "system": "{{ data.reason_system }}",
+        "code": "{{ data.reason_code }}",
+        "display": "{{ data.reason_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.reason_text }}"
+  }
+  {% elif data.reason_codes %}
+    {% for entry in data.reason_codes %}
+    {
+      {% if entry.reason_code %}
+      "coding": [
+        {
+          "system": "{{ entry.reason_system }}",
+          "code": "{{ entry.reason_code }}",
+          "display": "{{ entry.reason_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ entry.reason_text }}"
+    }
+    {% if not loop.last %},{% endif %}
+    {% endfor %}
+  {%- endif %}
+]

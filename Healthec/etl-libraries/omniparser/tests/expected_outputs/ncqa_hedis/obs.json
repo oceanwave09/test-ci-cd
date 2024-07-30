@@ -1,0 +1,58 @@
+[
+	{
+		"end_date": "20220307",
+		"member_id": "95058",
+		"observation_date": "20220307",
+		"row_id": "cc150966-8c9d-4365-b44a-3359d44c3db8",
+		"status": "3",
+		"test": "43396009",
+		"test_code_flag": "S",
+		"type": "V",
+		"units": "percent",
+		"value": "006.94"
+	},
+	{
+		"end_date": "20241203",
+		"member_id": "95066",
+		"observation_date": "20241203",
+		"row_id": "4f0db85f-ba98-4468-84c5-e4e1f13a34eb",
+		"test": "305381007",
+		"test_code_flag": "S"
+	},
+	{
+		"end_date": "20221204",
+		"member_id": "95069",
+		"observation_date": "20221204",
+		"row_id": "08948942-8fff-45bb-9a8c-62fe5ba1a953",
+		"status": "3",
+		"test": "313835008",
+		"test_code_flag": "S",
+		"type": "V",
+		"units": "percent",
+		"value": "007.00"
+	},
+	{
+		"end_date": "20221106",
+		"member_id": "95069",
+		"observation_date": "20221106",
+		"row_id": "6fa8c3ba-10ab-4d0b-a796-000e98de790d",
+		"status": "3",
+		"test": "83037",
+		"test_code_flag": "C",
+		"type": "V",
+		"units": "percent",
+		"value": "017.50"
+	},
+	{
+		"end_date": "20230208",
+		"member_id": "95133",
+		"observation_date": "20230208",
+		"row_id": "69a03c04-f7d4-4c25-93a7-1069e99687fc",
+		"status": "3",
+		"test": "43396009",
+		"test_code_flag": "S",
+		"type": "V",
+		"units": "percent",
+		"value": "007.88"
+	}
+]

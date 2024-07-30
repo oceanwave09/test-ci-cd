@@ -1,0 +1,105 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "observation_date",
+            "start_pos": 17,
+            "length": 8
+          },
+          {
+            "name": "test",
+            "start_pos": 25,
+            "length": 20
+          },
+          {
+            "name": "test_code_flag",
+            "start_pos": 45,
+            "length": 1
+          },
+          {
+            "name": "value",
+            "start_pos": 46,
+            "length": 20
+          },
+          {
+            "name": "units",
+            "start_pos": 66,
+            "length": 10
+          },
+          {
+            "name": "end_date",
+            "start_pos": 76,
+            "length": 8
+          },
+          {
+            "name": "status",
+            "start_pos": 84,
+            "length": 1
+          },
+          {
+            "name": "result_value_flag",
+            "start_pos": 85,
+            "length": 1
+          },
+          {
+            "name": "type",
+            "start_pos": 86,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "observation_date": {
+          "xpath": "observation_date"
+        },
+        "test": {
+          "xpath": "test"
+        },
+        "test_code_flag": {
+          "xpath": "test_code_flag"
+        },
+        "value": {
+          "xpath": "value"
+        },
+        "units": {
+          "xpath": "units"
+        },
+        "end_date": {
+          "xpath": "end_date"
+        },
+        "status": {
+          "xpath": "status"
+        },
+        "result_value_flag": {
+          "xpath": "result_value_flag"
+        },
+        "type": {
+          "xpath": "type"
+        }
+      }
+    }
+  }
+}

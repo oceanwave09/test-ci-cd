@@ -1,0 +1,153 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "provider_id",
+            "start_pos": 1,
+            "length": 10
+          },
+          {
+            "name": "pcp",
+            "start_pos": 11,
+            "length": 1
+          },
+          {
+            "name": "obgyn",
+            "start_pos": 12,
+            "length": 1
+          },
+          {
+            "name": "mh_provider",
+            "start_pos": 13,
+            "length": 1
+          },
+          {
+            "name": "eye_care_provider",
+            "start_pos": 14,
+            "length": 1
+          },
+          {
+            "name": "dentist",
+            "start_pos": 15,
+            "length": 1
+          },
+          {
+            "name": "nephrologist",
+            "start_pos": 16,
+            "length": 1
+          },
+          {
+            "name": "anesthesiologist",
+            "start_pos": 17,
+            "length": 1
+          },
+          {
+            "name": "npr_provider",
+            "start_pos": 18,
+            "length": 1
+          },
+          {
+            "name": "pas_provider",
+            "start_pos": 19,
+            "length": 1
+          },
+          {
+            "name": "provider_prescribing_privileges",
+            "start_pos": 20,
+            "length": 1
+          },
+          {
+            "name": "clinical_pharmacist",
+            "start_pos": 21,
+            "length": 1
+          },
+          {
+            "name": "hospital",
+            "start_pos": 22,
+            "length": 1
+          },
+          {
+            "name": "snf",
+            "start_pos": 23,
+            "length": 1
+          },
+          {
+            "name": "surgeon",
+            "start_pos": 24,
+            "length": 1
+          },
+          {
+            "name": "registered_nurse",
+            "start_pos": 25,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "provider_id": {
+          "xpath": "provider_id"
+        },
+        "pcp": {
+          "xpath": "pcp"
+        },
+        "obgyn": {
+          "xpath": "obgyn"
+        },
+        "mh_provider": {
+          "xpath": "mh_provider"
+        },
+        "eye_care_provider": {
+          "xpath": "eye_care_provider"
+        },
+        "dentist": {
+          "xpath": "dentist"
+        },
+        "nephrologist": {
+          "xpath": "nephrologist"
+        },
+        "anesthesiologist": {
+          "xpath": "anesthesiologist"
+        },
+        "npr_provider": {
+          "xpath": "npr_provider"
+        },
+        "pas_provider": {
+          "xpath": "pas_provider"
+        },
+        "provider_prescribing_privileges": {
+          "xpath": "provider_prescribing_privileges"
+        },
+        "clinical_pharmacist": {
+          "xpath": "clinical_pharmacist"
+        },
+        "hospital": {
+          "xpath": "hospital"
+        },
+        "snf": {
+          "xpath": "snf"
+        },
+        "surgeon": {
+          "xpath": "surgeon"
+        },
+        "registered_nurse": {
+          "xpath": "registered_nurse"
+        }
+      }
+    }
+  }
+}

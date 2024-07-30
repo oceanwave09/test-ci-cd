@@ -1,0 +1,29 @@
+[
+    {% for ingredient in data.ingredients %}
+    {
+        "strength":{
+            {% if ingredient.num_value %}
+            "numerator":{
+                "value": {{ ingredient.num_value }},
+                "unit": "{{ ingredient.num_unit }}",
+                "system": "{{ ingredient.num_system }}",
+                "code": "{{ ingredient.num_code }}"
+            }
+            {% endif %}
+            {% if ingredient.num_value and ingredient.denum_value %}
+            ,
+            {% endif %}
+            "denominator":{
+                {% if ingredient.denum_value %}
+                "value": {{ ingredient.denum_value }},
+                "unit": "{{ ingredient.denum_unit }}",
+                "system": "{{ ingredient.denum_system }}",
+                "code": "{{ ingredient.denum_code }}"
+                {% endif %}
+            }
+        }
+    }
+    {% if not loop.last %},{% endif %}
+    {% endfor %}
+
+]

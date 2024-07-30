@@ -1,0 +1,49 @@
+[
+  {% for coverage in data.coverages %}
+  {
+    "type": {
+      {% if coverage.type_code %}
+      "coding": [
+        {
+          "system": "{{ coverage.type_system }}",
+          "code": "{{ coverage.type_code }}",
+          "display": "{{ coverage.type_display }}"
+        } 
+      ],
+      {%- endif %}
+      "text": "{{ coverage.type_text }}"
+    },
+    "benefit": [
+      {% for benefit in coverage.benefits %}
+      {
+        "type": {
+          {% if benefit.type_code %}
+          "coding": [
+            {
+              "system": "{{ benefit.type_system }}",
+              "code": "{{ benefit.type_code }}",
+              "display": "{{ benefit.type_display }}"
+            } 
+          ],
+          {%- endif %}
+          "text": "{{ benefit.type_text }}"
+        },
+        {% if benefit.max_value %}
+        "limit": [
+          {
+            "value": {
+              "value": {{ benefit.max_value }},
+              "unit": "{{ benefit.max_value_unit }}"
+            }
+          }
+        ],
+        {%- endif %}
+        "requirement": "{{ benefit.requirement }}"
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

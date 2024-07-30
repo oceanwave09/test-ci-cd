@@ -1,0 +1,11 @@
+{
+  "vaccineCode": {
+    "coding": [
+      {
+        "system": "http://hl7.org/fhir/sid/cvx",
+        "code": "01",
+        "display": "DTP"
+      }
+    ]
+  }
+}

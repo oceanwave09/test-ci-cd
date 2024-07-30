@@ -1,0 +1,46 @@
+[
+	{
+		"bene_1st_name": "2501FirstName",
+		"bene_brth_dt": "01/01/1965",
+		"bene_last_name": "2501LastName",
+		"bene_mbi_id": "1AAAAMKR10",
+		"bene_sex_cd": "2",
+		"master_id": "202084193",
+		"npi_used": "1902896608",
+		"pcs_count": "6",
+		"row_id": "ce06dbd1-cc9d-4365-b44a-3359d44c3db8"
+	},
+	{
+		"bene_1st_name": "2502FirstName",
+		"bene_brth_dt": "01/01/1947",
+		"bene_last_name": "2502LastName",
+		"bene_mbi_id": "1AAAAMKR20",
+		"bene_sex_cd": "2",
+		"master_id": "383593303",
+		"npi_used": "1558439737",
+		"pcs_count": "2",
+		"row_id": "31fe8aca-fa98-4468-84c5-e4e1f13a34eb"
+	},
+	{
+		"bene_1st_name": "2505FirstName",
+		"bene_brth_dt": "01/01/1932",
+		"bene_last_name": "2505LastName",
+		"bene_mbi_id": "1AAAAMKR50",
+		"bene_sex_cd": "2",
+		"master_id": "383593303",
+		"npi_used": "1134547862",
+		"pcs_count": "2",
+		"row_id": "0a855bbd-cfff-45bb-9a8c-62fe5ba1a953"
+	},
+	{
+		"bene_1st_name": "2506FirstName",
+		"bene_brth_dt": "01/01/1945",
+		"bene_last_name": "2506LastName",
+		"bene_mbi_id": "1AAAAMKR60",
+		"bene_sex_cd": "1",
+		"master_id": "473592743",
+		"npi_used": "1538149828",
+		"pcs_count": "3",
+		"row_id": "c1999525-50ab-4d0b-a796-000e98de790d"
+	}
+]

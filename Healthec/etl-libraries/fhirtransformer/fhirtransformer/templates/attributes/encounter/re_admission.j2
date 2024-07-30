@@ -1,0 +1,12 @@
+{
+  {% if data.re_admission_code %}
+  "coding": [
+    {
+      "system": "{{ data.re_admission_system }}",
+      "code": "{{ data.re_admission_code }}",
+      "display": "{{ data.re_admission_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.re_admission_text }}"
+}

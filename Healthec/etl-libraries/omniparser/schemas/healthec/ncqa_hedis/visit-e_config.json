@@ -1,0 +1,97 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "member_id",
+            "start_pos": 1,
+            "length": 16
+          },
+          {
+            "name": "service_date",
+            "start_pos": 17,
+            "length": 8
+          },
+          {
+            "name": "activity_type",
+            "start_pos": 25,
+            "length": 20
+          },
+          {
+            "name": "code_flag",
+            "start_pos": 45,
+            "length": 1
+          },
+          {
+            "name": "end_date",
+            "start_pos": 46,
+            "length": 8
+          },
+          {
+            "name": "status",
+            "start_pos": 54,
+            "length": 1
+          },
+          {
+            "name": "provider_id",
+            "start_pos": 55,
+            "length": 10
+          },
+          {
+            "name": "diagnosis_code",
+            "start_pos": 65,
+            "length": 20
+          },
+          {
+            "name": "diagnosis_flag",
+            "start_pos": 85,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "member_id": {
+          "xpath": "member_id"
+        },
+        "service_date": {
+          "xpath": "service_date"
+        },
+        "activity_type": {
+          "xpath": "activity_type"
+        },
+        "code_flag": {
+          "xpath": "code_flag"
+        },
+        "end_date": {
+          "xpath": "end_date"
+        },
+        "status": {
+          "xpath": "status"
+        },
+        "provider_id": {
+          "xpath": "provider_id"
+        },
+        "diagnosis_code": {
+          "xpath": "diagnosis_code"
+        },
+        "diagnosis_flag": {
+          "xpath": "diagnosis_flag"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+is_delimited_file: true
+has_header: true
+field_mappings:
+    member_id: "src=MemberID"
+    lastname: "src=MemberLastName"
+    firstname: "src=MemberFirstName"
+    middle_initials: "src=MemberMidName"
+    member_ssn: "src=MemberSSN"
+    phone_home: "src=MemberPhone;type=bigint"
+    street_address_1: "src=MemberAddress1"
+    street_address_2: "src=MemberAddress2"
+    city: "src=MemberCity"
+    state: "src=MemberState"
+    zip: "src=MemberZip"
+    country: "src=MemberCounty;fillna=US"
+    dob: "src=MemberDOB;type=date"
+    sex: "src=MemberGender;fillna=U"
+    phone_mobile: "src=MemberCellPhone;type=bigint"
+    fax: "src=MemberFax;type=bigint"
+    phone_work: "src=MemberWorkPhone;type=bigint"
+    email: "src=MemberEmail"

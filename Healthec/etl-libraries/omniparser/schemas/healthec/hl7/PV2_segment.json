@@ -1,0 +1,780 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "PV2",
+            "min": 1,
+            "max": -1,
+            "elements": [
+              {
+                "name": "prior_pending_location_point_of_care",
+                "index": 1,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_room",
+                "index": 1,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_bed",
+                "index": 1,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_facility",
+                "index": 1,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_status",
+                "index": 1,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_type",
+                "index": 1,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_building",
+                "index": 1,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_floor",
+                "index": 1,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_description",
+                "index": 1,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_identifier",
+                "index": 1,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "prior_pending_location_authority",
+                "index": 1,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "accommodation_code",
+                "index": 2,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "accommodation_description",
+                "index": 2,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "admit_reason_identifier",
+                "index": 3,
+                "component_index": 1
+              },
+              {
+                "name": "admit_reason_identifier_text",
+                "index": 3,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "admit_reason_identifier_system",
+                "index": 3,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "admit_reason_alternate_identifier",
+                "index": 3,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "admit_reason_alternate_identifier_text",
+                "index": 3,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "admit_reason_alternate_identifier_system",
+                "index": 3,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "transfer_reason",
+                "index": 4,
+                "default": ""
+              },
+              {
+                "name": "patient_valuables",
+                "index": 5,
+                "default": ""
+              },
+              {
+                "name": "patient_valuables_location",
+                "index": 6,
+                "default": ""
+              },
+              {
+                "name": "visit_user_code",
+                "index": 7,
+                "default": ""
+              },
+              {
+                "name": "expected_admit_date_time",
+                "index": 8,
+                "default": ""
+              },
+              {
+                "name": "expected_discharge_date_time",
+                "index": 9,
+                "default": ""
+              },
+              {
+                "name": "estimated_length_of_inpatient_stay",
+                "index": 10,
+                "default": ""
+              },
+              {
+                "name": "actual_length_of_inpatient_stay",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "visit_description",
+                "index": 12,
+                "default": ""
+              },
+              {
+                "name": "referral_source_id",
+                "index": 13,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "referral_source_family_name",
+                "index": 13,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "referral_source_given_name",
+                "index": 13,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "referral_source_middle_name",
+                "index": 13,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "referral_source_preffix",
+                "index": 13,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "referral_source_suffix",
+                "index": 13,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "referral_source_degree",
+                "index": 13,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "referral_source_source_table",
+                "index": 13,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "referral_source_assigning_authority",
+                "index": 13,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "referral_source_type_code",
+                "index": 13,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "referral_source_identifier_check_digit",
+                "index": 13,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "referral_source_check_digit_scheme",
+                "index": 13,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "referral_source_identifier_type_code",
+                "index": 13,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "referral_source_assigning_facility",
+                "index": 13,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "referral_source_representation_code",
+                "index": 13,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "referral_source_name_context",
+                "index": 13,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "referral_source_name_validity_range",
+                "index": 13,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "referral_source_name_assembly_order",
+                "index": 13,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "referral_source_effective_date",
+                "index": 13,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "referral_source_expiration_date",
+                "index": 13,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "referral_source_professional_suffix",
+                "index": 13,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "referral_source_assigning_jurisdiction",
+                "index": 13,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "referral_source_assigning_agency",
+                "index": 13,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "previous_service_date",
+                "index": 14,
+                "default": ""
+              },
+              {
+                "name": "employment_illness_related_indicator",
+                "index": 15,
+                "default": ""
+              },
+              {
+                "name": "purge_status_code",
+                "index": 16,
+                "default": ""
+              },
+              {
+                "name": "purge_status_date",
+                "index": 17,
+                "default": ""
+              },
+              {
+                "name": "special_program_code",
+                "index": 18,
+                "default": ""
+              },
+              {
+                "name": "retention_indicator",
+                "index": 19,
+                "default": ""
+              },
+              {
+                "name": "expected_number_of_insurance_plans",
+                "index": 20,
+                "default": ""
+              },
+              {
+                "name": "visit_publicity_code",
+                "index": 21,
+                "default": ""
+              },
+              {
+                "name": "visit_protection_indicator",
+                "index": 22,
+                "default": ""
+              },
+              {
+                "name": "clinic_organization_name",
+                "index": 23,
+                "default": ""
+              },
+              {
+                "name": "patient_status_code",
+                "index": 24,
+                "default": ""
+              },
+              {
+                "name": "visit_priority_code",
+                "index": 25,
+                "default": ""
+              },
+              {
+                "name": "previous_treatment_date",
+                "index": 26,
+                "default": ""
+              },
+              {
+                "name": "expected_discharge_disposition",
+                "index": 27,
+                "default": ""
+              },
+              {
+                "name": "signature_on_file_date",
+                "index": 28,
+                "default": ""
+              },
+              {
+                "name": "first_similar_illness_date",
+                "index": 29,
+                "default": ""
+              },
+              {
+                "name": "patient_charge_adjustment_code",
+                "index": 30,
+                "default": ""
+              },
+              {
+                "name": "recurring_service_code",
+                "index": 31,
+                "default": ""
+              },
+              {
+                "name": "billing_media_code",
+                "index": 32,
+                "default": ""
+              },
+              {
+                "name": "expected_surgery_date_and_time",
+                "index": 33,
+                "default": ""
+              },
+              {
+                "name": "military_partnership_code",
+                "index": 34,
+                "default": ""
+              },
+              {
+                "name": "military_non_availability_code",
+                "index": 35,
+                "default": ""
+              },
+              {
+                "name": "newborn_baby_indicator",
+                "index": 36,
+                "default": ""
+              },
+              {
+                "name": "baby_detained_indicator",
+                "index": 37,
+                "default": ""
+              },
+              {
+                "name": "mode_of_arrival_code",
+                "index": 38,
+                "default": ""
+              },
+              {
+                "name": "recreational_drug_use_code",
+                "index": 39,
+                "default": ""
+              },
+              {
+                "name": "admission_level_of_care_code",
+                "index": 40,
+                "default": ""
+              },
+              {
+                "name": "precaution_code",
+                "index": 41,
+                "default": ""
+              },
+              {
+                "name": "patient_condition_code",
+                "index": 42,
+                "default": ""
+              },
+              {
+                "name": "living_will_code",
+                "index": 43,
+                "default": ""
+              },
+              {
+                "name": "organ_donor_code",
+                "index": 44,
+                "default": ""
+              },
+              {
+                "name": "advance_directive_code",
+                "index": 45,
+                "default": ""
+              },
+              {
+                "name": "patient_status_effective_date",
+                "index": 46,
+                "default": ""
+              },
+              {
+                "name": "expected_loa_return_date_time",
+                "index": 47,
+                "default": ""
+              },
+              {
+                "name": "expected_pre_admission_testing_date_time",
+                "index": 48,
+                "default": ""
+              },
+              {
+                "name": "notify_clergy_code",
+                "index": 49,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "PV2": {
+          "array":[
+            {
+              "xpath": "PV2",
+              "object": {
+                "prior_pending_location_point_of_care": {
+                  "xpath": "prior_pending_location_point_of_care"
+                },
+                "prior_pending_location_room": {
+                  "xpath": "prior_pending_location_room"
+                },
+                "prior_pending_location_bed": {
+                  "xpath": "prior_pending_location_bed"
+                },
+                "prior_pending_location_facility": {
+                  "xpath": "prior_pending_location_facility"
+                },
+                "prior_pending_location_status": {
+                  "xpath": "prior_pending_location_status"
+                },
+                "prior_pending_location_type": {
+                  "xpath": "prior_pending_location_type"
+                },
+                "prior_pending_location_building": {
+                  "xpath": "prior_pending_location_building"
+                },
+                "prior_pending_location_floor": {
+                  "xpath": "prior_pending_location_floor"
+                },
+                "prior_pending_location_description": {
+                  "xpath": "prior_pending_location_description"
+                },
+                "prior_pending_location_identifier": {
+                  "xpath": "prior_pending_location_identifier"
+                },
+                "prior_pending_location_authority": {
+                  "xpath": "prior_pending_location_authority"
+                },
+                "accommodation_code": {
+                  "xpath": "accommodation_code"
+                },
+                "accommodation_description": {
+                  "xpath": "accommodation_description"
+                },
+                "admit_reason_identifier": {
+                  "xpath": "admit_reason_identifier"
+                },
+                "admit_reason_identifier_text": {
+                  "xpath": "admit_reason_identifier_text"
+                },
+                "admit_reason_identifier_system": {
+                  "xpath": "admit_reason_identifier_system"
+                },
+                "admit_reason_alternate_identifier": {
+                  "xpath": "admit_reason_alternate_identifier"
+                },
+                "admit_reason_alternate_identifier_text": {
+                  "xpath": "admit_reason_alternate_identifier_text"
+                },
+                "admit_reason_alternate_identifier_system": {
+                  "xpath": "admit_reason_alternate_identifier_system"
+                },
+                "transfer_reason": {
+                  "xpath": "transfer_reason"
+                },
+                "patient_valuables": {
+                  "xpath": "patient_valuables"
+                },
+                "patient_valuables_location": {
+                  "xpath": "patient_valuables_location"
+                },
+                "visit_user_code": {
+                  "xpath": "visit_user_code"
+                },
+                "expected_admit_date_time": {
+                  "xpath": "expected_admit_date_time"
+                },
+                "expected_discharge_date_time": {
+                  "xpath": "expected_discharge_date_time"
+                },
+                "estimated_length_of_inpatient_stay": {
+                  "xpath": "estimated_length_of_inpatient_stay"
+                },
+                "actual_length_of_inpatient_stay": {
+                  "xpath": "actual_length_of_inpatient_stay"
+                },
+                "visit_description": {
+                  "xpath": "visit_description"
+                },
+                "referral_source_id": {
+                  "xpath": "referral_source_id"
+                },
+                "referral_source_family_name": {
+                  "xpath": "referral_source_family_name"
+                },
+                "referral_source_given_name": {
+                  "xpath": "referral_source_given_name"
+                },
+                "referral_source_middle_name": {
+                  "xpath": "referral_source_middle_name"
+                },
+                "referral_source_suffix": {
+                  "xpath": "referral_source_suffix"
+                },
+                "referral_source_preffix": {
+                  "xpath": "referral_source_preffix"
+                },
+                "referral_source_degree": {
+                  "xpath": "referral_source_degree"
+                },
+                "referral_source_source_table": {
+                  "xpath": "referral_source_source_table"
+                },
+                "referral_source_assigning_authority": {
+                  "xpath": "referral_source_assigning_authority"
+                },
+                "referral_source_type_code": {
+                  "xpath": "referral_source_type_code"
+                },
+                "referral_source_identifier_check_digit": {
+                  "xpath": "referral_source_identifier_check_digit"
+                },
+                "referral_source_check_digit_scheme": {
+                  "xpath": "referral_source_check_digit_scheme"
+                },
+                "referral_source_identifier_type_code": {
+                  "xpath": "referral_source_identifier_type_code"
+                },
+                "referral_source_assigning_facility": {
+                  "xpath": "referral_source_assigning_facility"
+                },
+                "referral_source_representation_code": {
+                  "xpath": "referral_source_representation_code"
+                },
+                "referral_source_name_context": {
+                  "xpath": "referral_source_name_context"
+                },
+                "referral_source_name_validity_range": {
+                  "xpath": "referral_source_name_validity_range"
+                },
+                "referral_source_name_assembly_order": {
+                  "xpath": "referral_source_name_assembly_order"
+                },
+                "referral_source_effective_date": {
+                  "xpath": "referral_source_effective_date"
+                },
+                "referral_source_expiration_date": {
+                  "xpath": "referral_source_expiration_date"
+                },
+                "referral_source_professional_suffix": {
+                  "xpath": "referral_source_professional_suffix"
+                },
+                "referral_source_assigning_jurisdiction": {
+                  "xpath": "referral_source_assigning_jurisdiction"
+                },
+                "referral_source_assigning_agency": {
+                  "xpath": "referral_source_assigning_agency"
+                },
+                "previous_service_date": {
+                  "xpath": "previous_service_date"
+                },
+                "employment_illness_related_indicator": {
+                  "xpath": "employment_illness_related_indicator"
+                },
+                "purge_status_code": {
+                  "xpath": "purge_status_code"
+                },
+                "purge_status_date": {
+                  "xpath": "purge_status_date"
+                },
+                "special_program_code": {
+                  "xpath": "special_program_code"
+                },
+                "retention_indicator": {
+                  "xpath": "retention_indicator"
+                },
+                "expected_number_of_insurance_plans": {
+                  "xpath": "expected_number_of_insurance_plans"
+                },
+                "visit_publicity_code": {
+                  "xpath": "visit_publicity_code"
+                },
+                "visit_protection_indicator": {
+                  "xpath": "visit_protection_indicator"
+                },
+                "clinic_organization_name": {
+                  "xpath": "clinic_organization_name"
+                },
+                "patient_status_code": {
+                  "xpath": "patient_status_code"
+                },
+                "visit_priority_code": {
+                  "xpath": "visit_priority_code"
+                },
+                "previous_treatment_date": {
+                  "xpath": "previous_treatment_date"
+                },
+                "expected_discharge_disposition": {
+                  "xpath": "expected_discharge_disposition"
+                },
+                "signature_on_file_date": {
+                  "xpath": "signature_on_file_date"
+                },
+                "first_similar_illness_date": {
+                  "xpath": "first_similar_illness_date"
+                },
+                "patient_charge_adjustment_code": {
+                  "xpath": "patient_charge_adjustment_code"
+                },
+                "recurring_service_code": {
+                  "xpath": "recurring_service_code"
+                },
+                "billing_media_code": {
+                  "xpath": "billing_media_code"
+                },
+                "expected_surgery_date_and_time": {
+                  "xpath": "expected_surgery_date_and_time"
+                },
+                "military_partnership_code": {
+                  "xpath": "military_partnership_code"
+                },
+                "military_non-availability_code": {
+                  "xpath": "military_non_availability_code"
+                },
+                "newborn_baby_indicator": {
+                  "xpath": "newborn_baby_indicator"
+                },
+                "baby_detained_indicator": {
+                  "xpath": "baby_detained_indicator"
+                },
+                "mode_of_arrival_code": {
+                  "xpath": "mode_of_arrival_code"
+                },
+                "recreational_drug_use_code": {
+                  "xpath": "recreational_drug_use_code"
+                },
+                "admission_level_of_care_code": {
+                  "xpath": "admission_level_of_care_code"
+                },
+                "precaution_code": {
+                  "xpath": "precaution_code"
+                },
+                "patient_condition_code": {
+                  "xpath": "patient_condition_code"
+                },
+                "living_will_code": {
+                  "xpath": "living_will_code"
+                },
+                "organ_donor_code": {
+                  "xpath": "organ_donor_code"
+                },
+                "advance_directive_code": {
+                  "xpath": "advance_directive_code"
+                },
+                "patient_status_effective_date": {
+                  "xpath": "patient_status_effective_date"
+                },
+                "expected_loa_return_date_time": {
+                  "xpath": "expected_loa_return_date_time"
+                },
+                "expected_pre_admission_testing_date_time": {
+                  "xpath": "expected_pre_admission_testing_date_time"
+                },
+                "notify_clergy_code": {
+                  "xpath": "notify_clergy_code"
+                }
+              }
+            }
+      ]}
+      }
+    }
+  }
+}

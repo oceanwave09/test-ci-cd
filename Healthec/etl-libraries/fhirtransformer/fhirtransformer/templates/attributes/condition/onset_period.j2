@@ -1,0 +1,11 @@
+{
+  {%- if data.onset_period_start -%}
+  "start": "{{ data.onset_period_start }}"
+  {%- endif %}
+  {%- if data.onset_period_start and data.onset_period_end -%}
+  ,
+  {%- endif -%}
+  {%- if data.onset_period_end -%}
+  "end": "{{ data.onset_period_end }}"
+  {%- endif %}
+}

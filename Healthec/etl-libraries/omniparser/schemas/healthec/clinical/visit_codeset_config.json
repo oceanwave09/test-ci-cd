@@ -1,0 +1,354 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "code_type",
+            "index": 8
+          },
+          {
+            "name": "code_value",
+            "index": 9
+          },
+          {
+            "name": "code_sequence",
+            "index": 10
+          },
+          {
+            "name": "rendering_doctor_npi",
+            "index": 11
+          },
+          {
+            "name": "rendering_doctor_last_name",
+            "index": 12
+          },
+          {
+            "name": "rendering_doctor_first_name",
+            "index": 13
+          },
+          {
+            "name": "code_description",
+            "index": 14
+          },
+          {
+            "name": "onset_date_of_diagnosis",
+            "index": 15
+          },
+          {
+            "name": "primary_providers_unique_id",
+            "index": 16
+          },
+          {
+            "name": "type_of_visit",
+            "index": 17
+          },
+          {
+            "name": "status_of_visit",
+            "index": 18
+          },
+          {
+            "name": "visit_start_time",
+            "index": 19
+          },
+          {
+            "name": "visit_end_time",
+            "index": 20
+          },
+          {
+            "name": "reason_of_visit",
+            "index": 21
+          },
+          {
+            "name": "locked_vs_unlocked",
+            "index": 22
+          },
+          {
+            "name": "medication_reconciliation_flag",
+            "index": 23
+          },
+          {
+            "name": "apponitment_facility_name",
+            "index": 24
+          },
+          {
+            "name": "facility_unique_id",
+            "index": 25
+          },
+          {
+            "name": "name_of_facility",
+            "index": 26
+          },
+          {
+            "name": "facility_address_line1",
+            "index": 27
+          },
+          {
+            "name": "facility_address_line2",
+            "index": 28
+          },
+          {
+            "name": "facility_city",
+            "index": 29
+          },
+          {
+            "name": "facility_state",
+            "index": 30
+          },
+          {
+            "name": "facility_zip",
+            "index": 31
+          },
+          {
+            "name": "status",
+            "index": 32
+          },
+          {
+            "name": "severity",
+            "index": 33
+          },
+          {
+            "name": "risk",
+            "index": 34
+          },
+          {
+            "name": "problem_list_added_date",
+            "index": 35
+          },
+          {
+            "name": "resolved_on_date",
+            "index": 36
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "code_type": {
+          "xpath": "code_type"
+        },
+        "code_value": {
+          "xpath": "code_value"
+        },
+        "code_sequence": {
+          "xpath": "code_sequence"
+        },
+        "rendering_doctor_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_npi"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_last_name"
+              }
+            ]
+          }
+        },
+        "rendering_doctor_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "rendering_doctor_first_name"
+              }
+            ]
+          }
+        },
+        "code_description": {
+          "xpath": "code_description"
+        },
+        "onset_date_of_diagnosis": {
+          "xpath": "onset_date_of_diagnosis"
+        },
+        "primary_providers_unique_id": {
+          "xpath": "primary_providers_unique_id"
+        },
+        "type_of_visit": {
+          "xpath": "type_of_visit"
+        },
+        "status_of_visit": {
+          "xpath": "status_of_visit"
+        },
+        "visit_start_time": {
+          "xpath": "visit_start_time"
+        },
+        "visit_end_time": {
+          "xpath": "visit_end_time"
+        },
+        "reason_of_visit": {
+          "xpath": "reason_of_visit"
+        },
+        "locked_vs_unlocked": {
+          "xpath": "locked_vs_unlocked"
+        },
+        "medication_reconciliation_flag": {
+          "xpath": "medication_reconciliation_flag"
+        },
+        "apponitment_facility_name": {
+          "xpath": "apponitment_facility_name"
+        },
+        "facility_unique_id": {
+          "xpath": "facility_unique_id"
+        },
+        "name_of_facility": {
+          "xpath": "name_of_facility"
+        },
+        "facility_address_line1": {
+          "xpath": "facility_address_line1"
+        },
+        "facility_address_line2": {
+          "xpath": "facility_address_line2"
+        },
+        "facility_city": {
+          "xpath": "facility_city"
+        },
+        "facility_state": {
+          "xpath": "facility_state"
+        },
+        "facility_zip": {
+          "xpath": "facility_zip"
+        },
+        "status": {
+          "xpath": "status"
+        },
+        "severity": {
+          "xpath": "severity"
+        },
+        "risk": {
+          "xpath": "risk"
+        },
+        "problem_list_added_date": {
+          "xpath": "problem_list_added_date"
+        },
+        "resolved_on_date": {
+          "xpath": "resolved_on_date"
+        }
+      }
+    }
+  }
+}

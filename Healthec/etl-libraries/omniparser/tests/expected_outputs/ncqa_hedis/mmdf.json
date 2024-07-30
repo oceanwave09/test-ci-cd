@@ -1,0 +1,64 @@
+[
+	{
+
+		"beneficiary_id": "95001",
+		"original_reason_for_entitlement_code": "1",
+		"payment_date": "202201",
+		"run_date": "20211209",
+		"row_id": "a8fdf966-8c9d-4365-b44a-3359d44c3db8",
+		"unknown_field_1": "-0444.29"
+
+	},
+	{
+
+		"beneficiary_id": "95002",
+		"original_reason_for_entitlement_code": "1",
+		"payment_date": "202201",
+		"run_date": "20211209",
+		"row_id": "a8fdf966-8c9d-4365-b44a-3350d44c3db8",
+		"unknown_field_1": "8810.80"
+
+	},
+	{
+
+		"beneficiary_id": "95003",
+		"original_reason_for_entitlement_code": "1",
+		"payment_date": "202201",
+		"run_date": "20211209",
+		"row_id": "a8fdf966-8c9d-4365-b44a-3359d44c8db8",
+		"unknown_field_1": "0093.17"
+
+	},
+	{
+
+		"beneficiary_id": "95004",
+		"original_reason_for_entitlement_code": "3",
+		"payment_date": "202201",
+		"run_date": "20211209",
+		"row_id": "a8fdf966-8c9d-4365-b44a-3359d44c3dc4",
+		"unknown_field_1": "8658.79"
+
+	},
+	{
+
+		"beneficiary_id": "95005",
+		"original_reason_for_entitlement_code": "3",
+		"payment_date": "202201",
+		"run_date": "20211209",
+		"row_id": "a8fdf966-8c9d-4365-b44a-3359d44c3eb8",
+		"unknown_field_1": "0012.07"
+
+	},
+	{
+
+		"beneficiary_id": "95125",
+		"hospice": "Y",
+		"long_term_institutionalized_flag": "Y",
+		"original_reason_for_entitlement_code": "2",
+		"payment_date": "202201",
+		"run_date": "20211209",
+		"row_id": "a8fdf966-8c9d-4365-b44a-3378d44c3db8",
+		"unknown_field_1": "0279.24"
+
+	}
+]

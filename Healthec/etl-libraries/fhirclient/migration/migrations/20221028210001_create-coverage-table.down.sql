@@ -1,0 +1,8 @@
+BEGIN;
+
+DROP TABLE IF EXISTS coverage_history;
+DROP TABLE IF EXISTS coverage;
+
+COMMIT;
+
+END;

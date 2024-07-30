@@ -1,0 +1,160 @@
+datapipeline_bucket: phm-development-datapipeline-bucket
+landing_key_prefix: files
+file_formats:
+  ANALYTICAL:
+    file_types:
+      - PATIENT
+      - PROVIDER
+      - USER
+      - FINANCIAL
+      - MEASURE
+    canonical: false
+    compressed: false
+    error_report: false
+  MIGRATION:
+    file_types:
+      - PATIENT
+      - PROVIDER
+      - USER
+      - FINANCIAL
+    canonical: false
+    compressed: false
+    error_report: true
+  FHIRBUNDLE:
+    file_types: 
+    canonical: false
+    compressed: false
+    error_report: false
+  PRACTICE:
+    file_types:
+    canonical: true
+    compressed: false
+    error_report: false
+  PROVIDER:
+    file_types:
+    canonical: true
+    compressed: false
+    error_report: false
+  BENEFICIARY:
+    file_types:
+    canonical: true
+    compressed: false
+    error_report: false
+  MEDICAL_CLAIM:
+    file_types:
+    canonical: true
+    compressed: false
+    error_report: false
+  RX_CLAIM:
+    file_types:
+    canonical: true
+    compressed: false
+    error_report: false
+  CCD:
+    file_types:
+    compressed: false
+    canonical: false
+    error_report: false
+  HL7:
+    file_types:
+      - ADT_A01
+      - ADT_A02
+      - ADT_A03
+      - ADT_A04
+      - ADT_A05
+      - ADT_A06
+      - ADT_A07
+      - ADT_A08
+      - ADT_A11
+      - ADT_A13
+      - ADT_A28
+      - ADT_A31
+      - ORU_R01
+      - VXU_V04
+    compressed: false
+    canonical: false
+    error_report: false
+  ECW:
+    file_types:
+      - ALLERGY
+      - DIAGNOSIS
+      - ENCOUNTER
+      - EXAMINATION
+      - FACILITY
+      - FAMILYHISTORY
+      - HOSPITALIZATION
+      - HPI
+      - IMMUNIZATION
+      - MEDICALHISTORY
+      - MEDICATION
+      - OBGYNHISTORY
+      - ORDERANDRESULT
+      - PATIENTDEMOGRAPHIC
+      - PHYSICALEXAM
+      - PRACTICEUSER
+      - PREVENTIVE
+      - PROBLEMLIST
+      - PROCEDURE
+      - PROCEDURECODE
+      - REFERRAL
+      - SOCIALHISTORY
+      - SURGICALHISTORY
+      - VITAL
+    canonical: true
+    compressed: false
+    error_report: false
+  CCLF:
+    file_types:
+      - CCLF1
+      - CCLF2
+      - CCLF3
+      - CCLF4
+      - CCLF5
+      - CCLF6
+      - CCLF7
+      - CCLF8
+      - CCLF9
+    canonical: true
+    compressed: true
+    error_report: false
+  GI:
+    file_types:
+      - ALLERGY
+      - CARE
+      - DEMOGRAPHIC
+      - LAB
+      - MEDICALCONDITION
+      - MEDICATION
+      - SMOKING
+      - IMMUNIZATION
+      - VITAL
+    canonical: true
+    compressed: false
+    error_report: false
+  GAP:
+    file_types:
+      - ALLERGY
+      - CARE
+      - IMMUNIZATION
+      - VITAL
+    canonical: true
+    compressed: false
+    error_report: false
+  NCQA_HEDIS:
+    file_types:
+      - DIAG
+      - LAB
+      - LISHIST
+      - MEMBEREN
+      - MEMBERGM
+      - MMDF
+      - OBS
+      - PHARM
+      - PHARMC
+      - PROC
+      - PROVIDER
+      - VISIT
+      - VISITE
+    canonical: true
+    compressed: false
+    error_report: false

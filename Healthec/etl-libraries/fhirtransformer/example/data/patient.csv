@@ -1,0 +1,3 @@
+health_record_key,ssn,firstname,lastname,gender,dob,active,street_address_1,street_address_2,city,state,zip,phone_mobile,email,race,race_code,race_display,ethnicity,ethnicity_code,ethnicity_display,sub_group_id
+HEC2091,983748232,Michael,Jackson,male,1967-07-01,true,"132, Erewhon St","",Kingston,New York,12401,(03) 3410 5233,michael.jackson@gmail.com,White,2106-3,White,Hispanic or Latino,2135-2,Hispanic or Latino,NECQ1032
+HEC2092,983750378,Zara,Royce,female,1975-07-01,true,"112","Erewhon St",Kingston,New York,12401,(03) 3410 5613,zara.royce@gmail.com,White,2106-3,White,Hispanic or Latino,2135-2,Hispanic or Latino,NECQ1032

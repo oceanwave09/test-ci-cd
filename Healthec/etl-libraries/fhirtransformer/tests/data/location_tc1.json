@@ -1,0 +1,13 @@
+{
+  "status": "active",
+  "name": "Patient Home",
+  "alias": "Home",
+  "description": "Patient Home",
+  "mode": "kind",
+  "type_code": "PTRES",
+  "type_system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+  "type_display": "Patient Residence",
+  "physical_type_code": "ho",
+  "physical_type_display": "House",
+  "organization_id": "1c8ed3d8-6bca-47e7-aad4-2c65c7961099"
+}

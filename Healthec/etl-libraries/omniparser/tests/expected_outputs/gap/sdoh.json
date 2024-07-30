@@ -1,0 +1,40 @@
+[
+    {
+        "domain": "SDOH",
+        "external_patient_id": "3118456",
+        "external_practice_id": "93670101",
+        "answer": "Not at all",
+        "mihin_common_key": "AGEAJBGOPKSRD2FSQOQW3INO5NPM76UK4B7ZTXBQ",
+        "patient_date_of_birth": "dede4fcf683a135cd18d15d712437723",
+        "patient_first_name": "5bef84e8c20f28f79f77f7d960349365",
+        "patient_last_name": "442c7e82b284f8a7733bbaf95d199474",
+        "provider_name": "7a4428db7471c8b7701d95510896afab51655af3ca9d9c74801bc64547276599",
+        "provider_npi": "b6dbcfa98158519cfab65b2cc8c7e472",
+        "question": "Little interest or pleasure in doing things",
+        "question_group": "Depression_2",
+        "row": "1",
+        "row_id": "c2a0987f-0f1d-4cb0-9dd3-879c5be7e848",
+        "screen_date": "01/07/2022 07:00:00",
+        "screening_practice_name": "ABC URGENT CARE PC",
+        "source_name": "Epic"
+    },
+    {
+        "domain": "SDOH",
+        "external_patient_id": "3118456",
+        "external_practice_id": "93670101",
+        "answer": "Not at all",
+        "mihin_common_key": "AGEAJBGOPKSRD2FSQOQW3INO5NPM76UK4B7ZTXBQ",
+        "patient_date_of_birth": "dede4fcf683a135cd18d15d712437723",
+        "patient_first_name": "5bef84e8c20f28f79f77f7d960349365",
+        "patient_last_name": "442c7e82b284f8a7733bbaf95d199474",
+        "provider_name": "7a4428db7471c8b7701d95510896afab51655af3ca9d9c74801bc64547276599",
+        "provider_npi": "b6dbcfa98158519cfab65b2cc8c7e472",
+        "question": "Feeling down, depressed, or hopeless",
+        "question_group": "Depression_1",
+        "row": "2",
+        "row_id": "357c8a30-93e6-46de-af58-f6cd58b3fce9",
+        "screen_date": "01/07/2022 07:00:00",
+        "screening_practice_name": "ABC URGENT CARE PC",
+        "source_name": "Epic"
+    }
+]

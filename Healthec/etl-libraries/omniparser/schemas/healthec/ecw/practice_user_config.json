@@ -1,0 +1,156 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "user_id",
+            "index": 3
+          },
+          {
+            "name": "user_type",
+            "index": 4
+          },
+          {
+            "name": "user_first_name",
+            "index": 5
+          },
+          {
+            "name": "user_last_name",
+            "index": 6
+          },
+          {
+            "name": "provider_npi",
+            "index": 7
+          },
+          {
+            "name": "speciality",
+            "index": 8
+          },
+          {
+            "name": "facility_id",
+            "index": 9
+          },
+          {
+            "name": "date_of_birth",
+            "index": 10
+          },
+          {
+            "name": "gender",
+            "index": 11
+          },
+          {
+            "name": "user_status",
+            "index": 12
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "user_id": {
+          "xpath": "user_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "user_type": {
+          "xpath": "user_type"
+        },
+        "user_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "user_first_name"
+              }
+            ]
+          }
+        },
+        "user_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "user_last_name"
+              }
+            ]
+          }
+        },
+        "speciality": {
+          "xpath": "speciality"
+        },
+        "facility_id": {
+          "xpath": "facility_id"
+        },
+        "date_of_birth": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "date_of_birth"
+              }
+            ]
+          }
+        },
+        "gender": {
+          "xpath": "gender"
+        },
+        "user_status": {
+          "xpath": "user_status"
+        }
+      }
+    }
+  }
+}

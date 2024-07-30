@@ -1,0 +1,55 @@
+[
+  {% for item in data.claim_items %}
+  {
+    {%- if item.sequence -%}
+    "itemSequence": {{ item.sequence }},
+    {%- endif %}
+    "adjudication": [
+      {% for adjudication in item.adjudications %}
+      {
+        {%- if adjudication.amount_value -%}
+        "amount":{
+          "value" : {{ adjudication.amount_value }},
+          "currency" : "{{ adjudication.amount_currency }}"
+        },
+        {%- endif %}
+        {%- if adjudication.quantity_value -%}
+        "quantity": {
+          "value": {{ adjudication.quantity_value }},
+          "unit": "{{ adjudication.quantity_unit }}",
+          "system": "{{ adjudication.quantity_system }}",
+          "code": "{{ adjudication.quantity_code }}"
+        },
+        {%- endif %}
+        "category": {
+          {% if adjudication.category_code %}
+          "coding": [
+            {
+              "system": "{{ adjudication.category_system }}",
+              "code": "{{ adjudication.category_code }}",
+              "display": "{{ adjudication.category_display }}"
+            }
+          ],
+          {%- endif %}
+          "text": "{{ adjudication.category_text }}"
+        },
+        "reason": {
+          {% if adjudication.reason_code %}
+          "coding": [
+            {
+              "system": "{{ adjudication.reason_system }}",
+              "code": "{{ adjudication.reason_code }}",
+              "display": "{{ adjudication.reason_display }}"
+            }
+          ],
+          {%- endif %}
+          "text": "{{ adjudication.reason_text }}"
+        }
+      }
+      {% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

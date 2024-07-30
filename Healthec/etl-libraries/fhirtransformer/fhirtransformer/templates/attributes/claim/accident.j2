@@ -1,0 +1,38 @@
+{
+  "date": "{{ data.accident_date_time }}",
+  "type": {
+    {% if data.accident_type_code %}
+    "coding": [
+      {
+        "system": "{{ data.accident_type_system }}",
+        "code": "{{ data.accident_type_code }}",
+        "display": "{{ data.accident_type_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.accident_type_text }}"
+  },
+  {% if data.accident_city or data.accident_state or data.accident_zip %}
+  "locationAddress": {
+    "line": [
+      {%- if data.accident_line_1 -%}
+      "{{ data.accident_line_1 }}"
+      {%- endif %}
+      {%- if data.accident_line_1 and data.accident_line_2 -%}
+      ,
+      {%- endif -%}
+      {%- if data.accident_line_2 -%}
+      "{{ data.accident_line_2 }}"
+      {%- endif %}
+    ],
+    "city": "{{ data.accident_city }}",
+    "state": "{{ data.accident_state }}",
+    "postalCode": "{{ data.accident_zip }}"
+  },
+  {% endif %}
+  "locationReference": {
+    {% if data.accident_location_id %}
+    "reference": "Location/{{ data.accident_location_id }}"
+    {%- endif %}
+  } 
+}

@@ -1,0 +1,24 @@
+rad-aid:
+  Denver_Health_3da3b03e-0b30-4213-815c-dd9202a4e94a:
+    src_organization_id: 3da3b03e-0b30-4213-815c-dd9202a4e94a
+    # RADAID
+    RADAID_PATIENT:
+      schema: healthec/radaid/patient_config.json
+    RADAID_PTOUTREACH:
+      schema: healthec/radaid/ptoutreach_config.json
+    RADAID_BRCASCR:
+      schema: healthec/radaid/brcascr_config.json
+    RADAID_BRCADIAG:
+      schema: healthec/radaid/brcadiag_config.json
+    RADAID_BRCAPROC:
+      schema: healthec/radaid/brcaproc_config.json
+    RADAID_BRCATX:
+      schema: healthec/radaid/brcatx_config.json
+    RADAID_CXCASCR:
+      schema: healthec/radaid/cxcascr_config.json
+    RADAID_CXCADIAG:
+      schema: healthec/radaid/cxcadiag_config.json
+    RADAID_CXCAPROC:
+      schema: healthec/radaid/cxcaproc_config.json
+    RADAID_CXCATX:
+      schema: healthec/radaid/cxcatx_config.json

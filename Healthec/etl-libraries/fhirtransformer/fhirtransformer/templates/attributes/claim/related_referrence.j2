@@ -1,0 +1,13 @@
+[
+  {% for claim in data.related_claims %}
+  {
+    "reference":{
+      {% if claim.related_claim_id -%}
+      "system": "{{ claim.related_claim_system }}",
+      "value": "{{ claim.related_claim_id }}"
+      {%- endif %}
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

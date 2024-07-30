@@ -1,0 +1,6 @@
+BEGIN;
+
+ALTER TABLE IF EXISTS procedure
+    DROP COLUMN IF EXISTS encounter_id;
+
+COMMIT;

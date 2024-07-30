@@ -1,0 +1,12 @@
+{
+  {% if data.severity_code %}
+  "coding": [
+    {
+      "system": "{{ data.severity_system }}",
+      "severity_code": "{{ data.severity_code }}",
+      "display": "{{ data.severity_display }}"
+    }
+  ],
+  {%- endif %}
+  "text": "{{ data.severity_text }}"
+}

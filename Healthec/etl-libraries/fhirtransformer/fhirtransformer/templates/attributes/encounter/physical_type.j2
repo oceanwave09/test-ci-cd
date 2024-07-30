@@ -1,0 +1,12 @@
+{
+  {% if data.physical_type_code %}
+  "coding": [
+    {
+      "system": "{{ data.physical_type_system }}",
+      "code": "{{ data.physical_type_code }}",
+      "display": "{{ data.physical_type_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.physical_type_text }}"
+}

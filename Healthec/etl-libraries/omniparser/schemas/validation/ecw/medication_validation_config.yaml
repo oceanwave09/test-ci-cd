@@ -1,0 +1,21 @@
+medication_patient_id:
+  key_path: patient_id
+  min_length: 1
+  required: True
+
+medication_provider_npi:
+  key_path: provider_npi
+  required: True
+  type: string
+  min_length: 10
+
+medication_practice_apuid:
+  key_path: apuid
+  type: string
+  required: True
+
+medication_encounter_id:
+  key_path: encounter_id
+  type: string
+  required: True
+  min_length: 1

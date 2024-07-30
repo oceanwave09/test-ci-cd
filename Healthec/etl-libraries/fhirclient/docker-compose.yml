@@ -1,0 +1,231 @@
+version: "3.8"
+
+networks:
+  datapipeline:
+    external: true
+
+services:
+  zookeeper:
+    container_name: zookeeper
+    image: confluentinc/cp-zookeeper:latest
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - 22181:2181
+    networks:
+      - datapipeline
+
+  kafka:
+    container_name: kafka
+    image: confluentinc/cp-kafka:latest
+    depends_on:
+      - zookeeper
+    ports:
+      - 29092:29092
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - datapipeline
+
+  fhir-db:
+    image: postgres
+    container_name: fhir-db
+    init: true
+    environment:
+      - POSTGRES_USER=${POSTGRES_ROOT_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_ROOT_PASSWORD:-postgres}
+      - POSTGRES_HOST=${POSTGRES_HOST:-fhir-db}
+    depends_on:
+      - kafka
+    ports:
+      - '${POSTGRES_PORT:-54320}:${POSTGRES_PORT:-54320}'
+    command: -p ${POSTGRES_PORT:-54320}
+    networks:
+      - datapipeline
+
+  fhir-db-migration:
+    build:
+      context: ./
+      args:
+        ACCESS_TOKEN: ${ACCESS_TOKEN}
+      dockerfile: ./migration/Dockerfile
+    container_name: fhir-db-migration
+    init: true
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_ROOT_USER=${POSTGRES_ROOT_USER:-postgres}
+      - POSTGRES_ROOT_PASSWORD=${POSTGRES_ROOT_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-fhirdb}
+      - POSTGRES_HOST=${POSTGRES_HOST:-fhir-db}
+      - POSTGRES_PORT=${POSTGRES_PORT:-54320}
+    depends_on:
+      - fhir-db
+    command: /bin/bash -c "sleep 30 && ./runner.sh"
+    networks:
+      - datapipeline
+
+  provider-service:
+    image: registry.gitlab.com/health-ec/platform/domain/provider/services/provider-ms-core:latest
+    profiles: ["service"]
+    container_name: provider-service
+    init: true
+    environment:
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
+      - AUTH_DISABLED=${AUTH_DISABLED:-true}
+      - AUTH_DEFAULT_USER_ID=${AUTH_DEFAULT_USER_ID:-local_pc}
+      - PROVIDER_BASE_URL=${PROVIDER_BASE_URL:-http://host.docker.internal:5002}
+      - BUN_DEBUG=${BUN_DEBUG}
+      - KAFKA_BROKERS=${KAFKA_BROKERS:-kafka:29092,kafka:9092,localhost:29092,host.docker.internal:29092}
+      - KAFKA_CONSUMER_GROUP=${KAFKA_CONSUMER_GROUP:-provider-service}
+      - KAFKA_DISABLED=${KAFKA_DISABLED:-true}
+      - PORT=${PROVIDER_PORT:-5002}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PORT=${POSTGRES_PORT:-54320}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-fhirdb}
+      - POSTGRES_HOST=${POSTGRES_HOST:-fhir-db}
+      - TRACING_SAMPLE_RATIO=${TRACING_SAMPLE_RATIO:-0.0}
+      - TRACING_EXPORTER_TYPE=${TRACING_EXPORTER_TYPE:-console}
+      - TRACING_EXPORTER_ENDPOINT=${TRACING_EXPORTER_ENDPOINT}
+      - TRACING_PROPAGATOR_TYPE=${TRACING_PROPAGATOR_TYPE:-jaeger}
+    depends_on:
+      - fhir-db
+      - fhir-db-migration
+    ports:
+      - "${PROVIDER_PORT:-5002}:${PROVIDER_PORT:-5002}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: sh -c "sleep 45 && ./docker-gs-ping"
+    networks:
+      - datapipeline
+
+  user-service:
+    image: registry.gitlab.com/health-ec/platform/domain/auth/services/auth-ms-user:latest
+    profiles: [ "service" ]
+    container_name: user-service
+    init: true
+    environment:
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
+      - AUTH_DISABLED=${AUTH_DISABLED:-true}
+      - AUTH_DEFAULT_USER_ID=${AUTH_DEFAULT_USER_ID:-local_pc}
+      - KAFKA_BROKERS=${KAFKA_BROKERS:-kafka:29092,kafka:9092,localhost:29092,host.docker.internal:29092}
+      - KAFKA_CONSUMER_GROUP=${KAFKA_CONSUMER_GROUP:-user-service}
+      - KAFKA_DISABLED=${KAFKA_DISABLED:-true}
+      - PORT=${MEMBER_PORT:-5003}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PORT=${POSTGRES_PORT:-54320}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-fhirdb}
+      - POSTGRES_HOST=${POSTGRES_HOST:-fhir-db}
+      - TRACING_SAMPLE_RATIO=${TRACING_SAMPLE_RATIO:-0.0}
+      - TRACING_EXPORTER_TYPE=${TRACING_EXPORTER_TYPE:-console}
+      - TRACING_EXPORTER_ENDPOINT=${TRACING_EXPORTER_ENDPOINT}
+      - TRACING_PROPAGATOR_TYPE=${TRACING_PROPAGATOR_TYPE:-jaeger}
+      - ORGANIZATION_SERVICE_URL=${ORGANIZATION_SERVICE_URL:-http://host.docker.internal:5002}
+      - PRACTITIONER_ROLE_ORGANIZATION_MATCH_ENABLED=${PRACTITIONER_ROLE_ORGANIZATION_MATCH_ENABLED:-true}
+    depends_on:
+      - fhir-db
+      - fhir-db-migration
+      - provider-service
+    ports:
+      - "${MEMBER_PORT:-5003}:${MEMBER_PORT:-5003}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: sh -c "sleep 45 && ./docker-gs-ping"
+    networks:
+      - datapipeline
+
+  patient-service:
+    image: registry.gitlab.com/health-ec/platform/domain/member/services/member-ms-core:latest
+    profiles: [ "service" ]
+    container_name: patient-service
+    init: true
+    environment:
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
+      - AUTH_DISABLED=${AUTH_DISABLED:-true}
+      - BASE_URL=${PATIENT_BASE_URL:-http://host.docker.internal:5001}
+      - AUTH_DEFAULT_USER_ID=${AUTH_DEFAULT_USER_ID:-local_pc}
+      - KAFKA_BROKERS=${KAFKA_BROKERS:-kafka:29092,kafka:9092,localhost:29092,host.docker.internal:29092}
+      - KAFKA_CONSUMER_GROUP=${KAFKA_CONSUMER_GROUP:-patient-service}
+      - KAFKA_DISABLED=${KAFKA_DISABLED:-true}
+      - PORT=${PATIENT_PORT:-5001}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PORT=${POSTGRES_PORT:-54320}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-fhirdb}
+      - POSTGRES_HOST=${POSTGRES_HOST:-fhir-db}
+      - PROVIDER_SERVICE_URL=${PROVIDER_SERVICE_URL:-http://host.docker.internal:5002/}
+      - ORGANIZATION_SERVICE_URL=${ORGANIZATION_SERVICE_URL:-http://host.docker.internal:5002}
+      - PATIENT_ORGANIZATION_MATCH_ENABLED=${PATIENT_ORGANIZATION_MATCH_ENABLED:-true}
+      - OBSERVATION_SUBJECT_LOCATION_MATCH_ENABLED=${OBSERVATION_SUBJECT_LOCATION_MATCH_ENABLED:-true}
+      - OBSERVATION_PERFORMER_PRACTITIONER_MATCH_ENABLED=${OBSERVATION_PERFORMER_PRACTITIONER_MATCH_ENABLED:-true}
+      - OBSERVATION_PERFORMER_PRACTITIONER_ROLE_MATCH_ENABLED=${OBSERVATION_PERFORMER_PRACTITIONER_ROLE_MATCH_ENABLED:-true}
+      - OBSERVATION_PERFORMER_ORGANIZATION_MATCH_ENABLED=${OBSERVATION_PERFORMER_ORGANIZATION_MATCH_ENABLED:-true}
+      - ENCOUNTER_LOCATION_MATCH_ENABLED=${ENCOUNTER_LOCATION_MATCH_ENABLED:-true}
+      - ENCOUNTER_SERVICE_PROVIDER_MATCH_ENABLED=${ENCOUNTER_SERVICE_PROVIDER_MATCH_ENABLED:-true}
+      - TRACING_SAMPLE_RATIO=${TRACING_SAMPLE_RATIO:-0.0}
+      - TRACING_EXPORTER_TYPE=${TRACING_EXPORTER_TYPE:-console}
+      - TRACING_EXPORTER_ENDPOINT=${TRACING_EXPORTER_ENDPOINT}
+      - TRACING_PROPAGATOR_TYPE=${TRACING_PROPAGATOR_TYPE:-jaeger}
+    depends_on:
+      - fhir-db
+      - fhir-db-migration
+      - provider-service
+    ports:
+      - "${PATIENT_PORT:-5001}:${PATIENT_PORT:-5001}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: sh -c "sleep 45 && ./docker-gs-ping"
+    networks:
+      - datapipeline
+
+  financial-service:
+    image: registry.gitlab.com/health-ec/platform/domain/financial/services/financial-ms-core:latest
+    profiles: [ "service" ]
+    container_name: financial-service
+    init: true
+    environment:
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
+      - AUTH_DISABLED=${AUTH_DISABLED:-true}
+      - BASE_URL=${BASE_URL:-http://host.docker.internal:5004}
+      - AUTH_DEFAULT_USER_ID=${AUTH_DEFAULT_USER_ID:-local_pc}
+      - KAFKA_BROKERS=${KAFKA_BROKERS:-kafka:29092,kafka:9092,localhost:29092,host.docker.internal:29092}
+      - KAFKA_CONSUMER_GROUP=${KAFKA_CONSUMER_GROUP:-financial-service}
+      - KAFKA_DISABLED=${KAFKA_DISABLED:-true}
+      - PORT=${FINANCIAL_PORT:-5004}
+      - POSTGRES_USER=${POSTGRES_USER:-postgres}
+      - POSTGRES_PORT=${POSTGRES_PORT:-54320}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-postgres}
+      - POSTGRES_DB=${POSTGRES_DB:-fhirdb}
+      - POSTGRES_HOST=${POSTGRES_HOST:-fhir-db}
+      - TRACING_SAMPLE_RATIO=${TRACING_SAMPLE_RATIO:-0.0}
+      - TRACING_EXPORTER_TYPE=${TRACING_EXPORTER_TYPE:-console}
+      - TRACING_EXPORTER_ENDPOINT=${TRACING_EXPORTER_ENDPOINT}
+      - TRACING_PROPAGATOR_TYPE=${TRACING_PROPAGATOR_TYPE:-jaeger}
+      - PROVIDER_SERVICE_URL=${PROVIDER_SERVICE_URL:-http://host.docker.internal:5002/}
+      - ORGANIZATION_MATCH_ENABLED=${ORGANIZATION_MATCH_ENABLED:-true}
+      - PATIENT_SERVICE_URL=${PATIENT_SERVICE_URL:-http://host.docker.internal:5001/}
+      - PATIENT_MATCH_ENABLED=${PATIENT_MATCH_ENABLED:-true}
+      - USER_SERVICE_URL=${USER_SERVICE_URL:-http://host.docker.internal:5003/}
+      - PRACTITIONER_MATCH_ENABLED=${PRACTITIONER_MATCH_ENABLED:-true}
+      - PRACTITIONER_ROLE_MATCH_ENABLED=${PRACTITIONER_ROLE_MATCH_ENABLED:-true}
+    depends_on:
+      - fhir-db
+      - fhir-db-migration
+      - provider-service
+      - patient-service
+      - user-service
+    ports:
+      - "${FINANCIAL_PORT:-5004}:${FINANCIAL_PORT:-5004}"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: sh -c "sleep 45 && ./docker-gs-ping"
+    networks:
+      - datapipeline

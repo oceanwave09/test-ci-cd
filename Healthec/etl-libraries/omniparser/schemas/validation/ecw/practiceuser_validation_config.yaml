@@ -1,0 +1,9 @@
+practice_user_practice_apuid:
+  key_path: apuid
+  type: string
+  required: True
+
+practice_facility_id:
+  key_path: facility_id
+  type: string
+  required: True

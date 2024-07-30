@@ -1,0 +1,36 @@
+[
+	{
+		"beneficiary_id": "95002",
+		"low_income_period_end_date": "20211231",
+		"low_income_period_start_date": "20210101",
+		"record_type": "D",
+		"row_id": "e53af966-8c9d-4365-b44a-3359d44c3db8"
+	},
+	{
+		"beneficiary_id": "95003",
+		"low_income_period_start_date": "20210101",
+		"record_type": "D",
+		"row_id": "6822a85f-ba98-4468-84c5-e4e1f13a34eb"
+	},
+	{
+		"beneficiary_id": "95004",
+		"low_income_period_end_date": "20210909",
+		"low_income_period_start_date": "20190625",
+		"record_type": "D",
+		"row_id": "41b97942-8fff-45bb-9a8c-62fe5ba1a953"
+	},
+	{
+		"beneficiary_id": "95005",
+		"low_income_period_end_date": "20200515",
+		"low_income_period_start_date": "20190409",
+		"record_type": "D",
+		"row_id": "a9cdb3ba-10ab-4d0b-a796-000e98de790d"
+	},
+	{
+		"beneficiary_id": "95006",
+		"low_income_period_end_date": "20220217",
+		"low_income_period_start_date": "20231228",
+		"record_type": "D",
+		"row_id": "92c52c04-f7d4-4c25-93a7-1069e99687fc"
+	}
+]

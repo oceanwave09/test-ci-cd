@@ -1,0 +1,19 @@
+{
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code": "PT",
+        "display": "Patient external identifier"
+      }
+    ]
+  },
+  "system": "{{ data.patient_external_system }}",
+  "value": "{{ data.patient_external_id }}"
+  {%- if data.assigner_organization_id -%}
+  ,
+  "assigner": {
+    "reference": "Organization/{{ data.assigner_organization_id }}"
+  }
+  {%- endif %}
+}

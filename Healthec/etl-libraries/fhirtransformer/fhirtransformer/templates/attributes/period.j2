@@ -1,0 +1,11 @@
+{
+  {%- if data.period_start_date -%}
+  "start": "{{ data.period_start_date }}"
+  {%- endif %}
+  {%- if data.period_start_date and data.period_end_date -%}
+  ,
+  {%- endif %}
+  {%- if data.period_end_date -%}
+  "end": "{{ data.period_end_date }}"
+  {%- endif %}
+}

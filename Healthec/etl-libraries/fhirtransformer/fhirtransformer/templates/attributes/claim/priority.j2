@@ -1,0 +1,12 @@
+{
+  {% if data.priority_code %}
+  "coding": [
+    {
+      "system": "{{ data.priority_system }}",
+      "code": "{{ data.priority_code }}",
+      "display": "{{ data.priority_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.priority_text }}"
+}

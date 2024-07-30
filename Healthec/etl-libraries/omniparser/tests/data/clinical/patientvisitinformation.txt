@@ -1,0 +1,17 @@
+"00"|"WUG408"|"Watch Us Grow Pediatrics, PC"|"12/27/2023"|"13:9:10"|"Q"|"T"|"5.0"|"82-1556859"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|""|""|""
+"02"|"1234"|""|""|""|"12/21/2023"|"287696"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"15 year old female in with dad for Anxiety follow up and medication check"|"F41.9"|"ICD10"|"Anxiety disorder,unspecified"
+"02"|"5678"|""|""|""|"12/21/2023"|"287693"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"6 year old female with mom here for left abdominal pain x4 days. Mom states patient has a history of constipation since she was 2 years old. No meds help. Patient uses benefiber and miralax."|"K21.9"|"ICD10"|"Gastro-esophageal reflux disease without esophagitis"
+"02"|"9023"|""|""|""|"12/22/2023"|"287738"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"16day old F in with mom for wheezing,noticed some congestion last night,aunt has sterp"|"Z71.1"|"ICD10"|"Person w feared hlth complaint in whom no diagnosis is made"
+"02"|"9101"|""|""|"12/22/2023"|"287740"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"3 year old male in with dad for cough,congestion,runny nose,rash x2 weeks. No fevers."|"H66.41"|"ICD10"|"Suppurative otitis media,unspecified,right ear"
+"02"|"1123"|""|""|""|"12/22/2023"|"287741"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"19mo male in with dad for c/o cold symptoms,cough,congestion,fever x4 days."|"J06.9"|"ICD10"|"Acute upper respiratory infection,unspecified"
+"02"|"2232"|""|""|""|"12/22/2023"|"287742"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"3 year old male here with Mom for R ear pain and L ear drainage (no pain). Mom states pain started over a week ago. No meds given. No fevers."|"H66.41"|"ICD10"|"Suppurative otitis media,unspecified,right ear"
+"02"|"1213"|""|""|""|"12/22/2023"|"287743"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"11 year old female here with Mom for UM admission follow up."|"Z51.89"|"ICD10"|"Encounter for other specified aftercare"
+"02"|"9022"|""|""|""|"12/22/2023"|"287745"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"8 year old male here with mom and sibling for asthma review."|"J45.30"|"ICD10"|"Mild persistent asthma,uncomplicated"
+"02"|"2314"|""|""|""|"12/22/2023"|"287746"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"8 year old male here with mom and sibling for asthma review."|"J45.30"|"ICD10"|"Mild persistent asthma,uncomplicated"
+"02"|"4321"|""|""|""|"12/22/2023"|"287748"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"2 year old male in with both parents for cough/congestion/fever x3 days."|"J05.0"|"ICD10"|"Acute obstructive laryngitis [croup]"
+"02"|"1233"|""|""|""|"12/22/2023"|"287749"|""|""|""|""|""|""|""|""|""|""|""|""|""|""|"6mo male in with dad for Seasonal flu vaccine 1st dose"|"Z23"|"ICD10"|"Encounter for immunization"
+
+
+
+
+

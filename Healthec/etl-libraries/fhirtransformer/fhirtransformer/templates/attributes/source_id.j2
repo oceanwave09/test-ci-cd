@@ -1,0 +1,26 @@
+{
+  "type": {
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+        "code": "RI",
+        "display": "Resource Identifier"
+      }
+      {%- if data.source_file_name -%}
+      ,
+      {
+        "system": "https://healthec.com/identifiers/file",
+        "code": "{{ data.source_file_name }}"
+      }
+      {%- endif %}
+    ]
+  },
+  "system": "{{ data.source_system }}",
+  "value": "{{ data.source_id }}"
+  {%- if data.assigner_organization_id -%}
+  ,
+  "assigner": {
+    "reference": "Organization/{{ data.assigner_organization_id }}"
+  }
+  {%- endif %}
+}

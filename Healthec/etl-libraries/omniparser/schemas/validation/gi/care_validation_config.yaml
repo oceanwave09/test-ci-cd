@@ -1,0 +1,29 @@
+care_patient_external_id:
+  key_path: external_patient_id
+  required: True
+
+care_patient_first_name:
+  key_path: patient_first_name
+  type: string
+  min_length: 1
+
+care_patient_last_name:
+  key_path: patient_last_name
+  type: string
+  min_length: 1
+
+care_practice_external_id:
+  key_path: external_practice_id
+  min_length: 1
+  required: True
+
+care_provider_name:
+  key_path: provider_name
+  type: string
+  min_length: 1
+
+care_provider_npi:
+  key_path: provider_npi
+  required: True
+  type: string
+  min_length: 10

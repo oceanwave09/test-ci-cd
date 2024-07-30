@@ -1,0 +1,17 @@
+~ROW1~,~Domain~,~Patient First Name~,~Patient Last Name~,~Patient Date of Birth~,~External Patient ID~,~External Practice ID~,~Code~,~Name~,~Dictionary Name~,~Start Date~,~End Date~,~Resolution Date~,~Vendor~,~Source Type~
+~1~,~Medical Conditions~,~First7660601~,~Last7660601~,~19600101~,~7660601~,~Epic~,~729.6~,~Foreign body (FB) in soft tissue~,~ICD9~,~20130517~,~~,~~,~~,~~
+~2~,~Medical Conditions~,~First7660601~,~Last7660601~,~19600101~,~7660601~,~Epic~,~786.6~,~Mass of upper lobe of left lung~,~ICD9~,~20220310~,~~,~~,~~,~~
+~3~,~Medical Conditions~,~First7660601~,~Last7660601~,~19600101~,~7660601~,~Epic~,~727.82~,~Calcium deposits in tendon and bursa~,~ICD9~,~20130524~,~~,~~,~~,~~
+~4~,~Medical Conditions~,~First7660601~,~Last7660601~,~19600101~,~7660601~,~Epic~,~305.1~,~Heavy smoker~,~ICD9~,~20220310~,~~,~~,~~,~~
+~5~,~Medical Conditions~,~First7660601~,~Last7660601~,~19600101~,~7660601~,~Epic~,~793.19~,~Multiple pulmonary nodules~,~ICD9~,~20220405~,~~,~~,~~,~~
+~6~,~Medical Conditions~,~First7660602~,~Last7660602~,~19580101~,~7660602~,~Epic~,~268.9~,~Vitamin D deficiency~,~ICD9~,~20220323~,~~,~~,~~,~~
+~7~,~Medical Conditions~,~First7660602~,~Last7660602~,~19580101~,~7660602~,~Epic~,~726.31~,~Medial epicondylitis of right elbow~,~ICD9~,~20200111~,~~,~~,~~,~~
+~8~,~Medical Conditions~,~First7660602~,~Last7660602~,~19580101~,~7660602~,~Epic~,~305.1~,~Tobacco abuse~,~ICD9~,~20220323~,~~,~~,~~,~~
+~9~,~Medical Conditions~,~First7660602~,~Last7660602~,~19580101~,~7660602~,~Epic~,~278.02~,~Overweight (BMI 25.0-29.9)~,~ICD9~,~20200111~,~~,~~,~~,~~
+~10~,~Medical Conditions~,~First7660602~,~Last7660602~,~19580101~,~7660602~,~Epic~,~272.4~,~Dyslipidemia~,~ICD9~,~20220323~,~~,~~,~~,~~
+~11~,~Medical Conditions~,~First7660603~,~Last7660603~,~19920101~,~7660603~,~Epic~,~250.00~,~DM (diabetes mellitus), type 2 (CMS/HCC)~,~ICD9~,~20120620~,~~,~~,~~,~~
+~12~,~Medical Conditions~,~First7660603~,~Last7660603~,~19920101~,~7660603~,~Epic~,~727.51~,~Baker cyst~,~ICD9~,~20150812~,~~,~~,~~,~~
+~13~,~Medical Conditions~,~First7660603~,~Last7660603~,~19920101~,~7660603~,~Epic~,~564.00~,~Chronic constipation~,~ICD9~,~20170816~,~~,~~,~~,~~
+~14~,~Medical Conditions~,~First7660603~,~Last7660603~,~19920101~,~7660603~,~Epic~,~401.9~,~Hypertension~,~ICD9~,~20120620~,~~,~~,~~,~~
+~15~,~Medical Conditions~,~First7660603~,~Last7660603~,~19920101~,~7660603~,~Epic~,~780.57~,~Sleep apnea~,~ICD9~,~20150309~,~~,~~,~~,~~
+~16~,~Medical Conditions~,~First7660603~,~Last7660603~,~19920101~,~7660603~,~Epic~,~459.81~,~Venous insufficiency~,~ICD9~,~20131031~,~~,~~,~~,~~

@@ -1,0 +1,3508 @@
+nucleo:
+  common:
+    PRACTICE:
+      schema: healthec/practice_roster/practice_config.json
+      validation: validation/practice_validation_config.yaml
+      fhir_bundle: practice_stage_to_fhirbundle_dag
+    PROVIDER:
+      schema: healthec/provider_roster/provider_config.json
+      validation: validation/provider_validation_config.yaml
+      fhir_bundle: provider_stage_to_fhirbundle_dag
+    # ECW
+    ECW_ALLERGY:
+      schema: healthec/ecw/allergy_config.json
+      validation: validation/ecw/allergy_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_DIAGNOSIS:
+      schema: healthec/ecw/diagnosis_config.json
+      validation: validation/ecw/diagnois_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_ENCOUNTER:
+      schema: healthec/ecw/encounter_config.json
+      validation: validation/ecw/encounter_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_EXAMINATION:
+      schema: healthec/ecw/examination_config.json
+      validation: validation/ecw/examination_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_FACILITY:
+      schema: healthec/ecw/facility_config.json
+      validation: validation/ecw/facility_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_FAMILYHISTORY:
+      schema: healthec/ecw/family_history_config.json
+      validation: validation/ecw/familyhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_HOSPITALIZATION:
+      schema: healthec/ecw/hospitalization_config.json
+      validation: validation/ecw/hospitalization_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_HPI:
+      schema: healthec/ecw/hpi_config.json
+      validation: validation/ecw/hpi_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_IMMUNIZATION:
+      schema: healthec/ecw/immunization_config.json
+      validation: validation/ecw/immunization_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_MEDICALHISTORY:
+      schema: healthec/ecw/medical_history_config.json
+      validation: validation/ecw/medicalhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_MEDICATION:
+      schema: healthec/ecw/medication_config.json
+      validation: validation/ecw/medication_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_OBGYNHISTORY:
+      schema: healthec/ecw/obgyn_history_config.json
+      validation: validation/ecw/obygnhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_ORDERANDRESULT:
+      schema: healthec/ecw/order_and_result_config.json
+      validation: validation/ecw/orderandresult_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PATIENTDEMOGRAPHIC:
+      schema: healthec/ecw/patient_demographic_config.json
+      validation: validation/ecw/patientdemographic_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PHYSICALEXAM:
+      schema: healthec/ecw/physical_exam_config.json
+      validation: validation/ecw/physicalexam_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PRACTICEUSER:
+      schema: healthec/ecw/practice_user_config.json
+      validation: validation/ecw/practiceuser_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PREVENTIVE:
+      schema: healthec/ecw/preventive_config.json
+      validation: validation/ecw/preventive_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROBLEMLIST:
+      schema: healthec/ecw/problem_list_config.json
+      validation: validation/ecw/problemlist_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROCEDURECODE:
+      schema: healthec/ecw/procedure_code_config.json
+      validation: validation/ecw/procedurecode_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROCEDURE:
+      schema: healthec/ecw/procedure_config.json
+      validation: validation/ecw/procedure_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_REFERRAL:
+      schema: healthec/ecw/referral_config.json
+      validation: validation/ecw/referral_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_SOCIALHISTORY:
+      schema: healthec/ecw/social_history_config.json
+      validation: validation/ecw/socialhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_SURGICALHISTORY:
+      schema: healthec/ecw/surgical_history_config.json
+      validation: validation/ecw/surgicalhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_VITAL:
+      schema: healthec/ecw/vital_config.json
+      validation: validation/ecw/vital_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    # GAP
+    GAP_ALLERGY:
+      schema: healthec/gap/allergy_config.json
+      validation: validation/gap/allergy_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_CARE:
+      schema: healthec/gap/care_config.json
+      validation: validation/gap/care_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_LAB:
+      schema: healthec/gap/lab_config.json
+      validation: validation/gap/lab_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_DEMOGRAPHIC:
+      schema: healthec/gap/demographic_config.json
+      validation: validation/gap/demographic_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_MEDICATION:
+      schema: healthec/gap/medication_config.json
+      validation: validation/gap/medication_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_MEDICALCONDITION:
+      schema: healthec/gap/medicalcondition_config.json
+      validation: validation/gap/medicalcondition_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_SMOKING:
+      schema: healthec/gap/smoking_config.json
+      validation: validation/gap/smoking_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_IMMUNIZATION:
+      schema: healthec/gap/immunization_config.json
+      validation: validation/gap/immunization_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_VITAL:
+      schema: healthec/gap/vital_config.json
+      validation: validation/gap/vital_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_SDOH:
+      schema: healthec/gap/sdoh_config.json
+      validation: validation/gap/sdoh_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+  # Datapipeline Testing Practice
+  Pipeline_Test_Practice_02_6e78f1d1-49ea-474f-af75-608cd0bf5fd8:
+    src_organization_id: 6e78f1d1-49ea-474f-af75-608cd0bf5fd8
+    # CCLF
+    CCLF_CCLF1:
+      schema: healthec/cclf/cclf1_config.json
+      validation: validation/cclf/cclf1_validation_config.yaml
+    CCLF_CCLF2:
+      schema: healthec/cclf/cclf2_config.json
+      validation: validation/cclf/cclf2_validation_config.yaml
+    CCLF_CCLF3:
+      schema: healthec/cclf/cclf3_config.json
+      validation: validation/cclf/cclf3_validation_config.yaml
+    CCLF_CCLF4:
+      schema: healthec/cclf/cclf4_config.json
+      validation: validation/cclf/cclf4_validation_config.yaml
+    CCLF_CCLF5:
+      schema: healthec/cclf/cclf5_config.json
+      validation: validation/cclf/cclf5_validation_config.yaml
+    CCLF_CCLF6:
+      schema: healthec/cclf/cclf6_config.json
+      validation: validation/cclf/cclf6_validation_config.yaml
+    CCLF_CCLF7:
+      schema: healthec/cclf/cclf7_config.json
+      validation: validation/cclf/cclf7_validation_config.yaml
+    CCLF_CCLF8:
+      schema: healthec/cclf/cclf8_config.json
+      validation: validation/cclf/cclf8_validation_config.yaml
+    CCLF_CCLF9:
+      schema: healthec/cclf/cclf9_config.json
+      validation: validation/cclf/cclf9_validation_config.yaml
+    CCLF_CCLFA:
+      schema: healthec/cclf/cclfa_config.json
+      validation: validation/cclf/cclfa_validation_config.yaml
+    CCLF_CCLFB:
+      schema: healthec/cclf/cclfb_config.json
+      validation: validation/cclf/cclfb_validation_config.yaml
+    # CCLF BENEFICIARY
+    CCLF_BENEFICIARY_ALR1_1:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_1_mdvc_config.json
+    CCLF_BENEFICIARY_ALR1_2:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_2_config.json
+    CCLF_BENEFICIARY_ALR1_3:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_3_config.json
+    CCLF_BENEFICIARY_ALR1_4:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_4_config.json
+    CCLF_BENEFICIARY_ALR1_5:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_5_config.json
+    CCLF_BENEFICIARY_ALR1_6:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_6_config.json
+    CCLF_BENEFICIARY_ALR1_7:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_7_config.json
+    CCLF_BENEFICIARY_ALR1_8:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_8_config.json
+    CCLF_BENEFICIARY_ALR1_9:
+      schema: healthec/cclf_beneficiary/cclf_bene_alr1_9_config.json
+    # RADAID
+    RADAID_PATIENT:
+      schema: healthec/radaid/patient_config.json
+    RADAID_PTOUTREACH:
+      schema: healthec/radaid/ptoutreach_config.json
+    RADAID_BRCASCR:
+      schema: healthec/radaid/brcascr_config.json
+    RADAID_BRCADIAG:
+      schema: healthec/radaid/brcadiag_config.json
+    RADAID_BRCAPROC:
+      schema: healthec/radaid/brcaproc_config.json
+    RADAID_BRCATX:
+      schema: healthec/radaid/brcatx_config.json
+    RADAID_CXCASCR:
+      schema: healthec/radaid/cxcascr_config.json
+    RADAID_CXCADIAG:
+      schema: healthec/radaid/cxcadiag_config.json
+    RADAID_CXCAPROC:
+      schema: healthec/radaid/cxcaproc_config.json
+    RADAID_CXCATX:
+      schema: healthec/radaid/cxcatx_config.json
+  # NCQA Practices
+  2022_WCV_Sample_1_d9643762-88f9-41ff-9818-5753dc99e0a0:
+    src_organization_id: d9643762-88f9-41ff-9818-5753dc99e0a0
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_W30_Sample_1_70e29ed5-b19d-42ca-ac21-b73bacf920e6:
+    src_organization_id: 70e29ed5-b19d-42ca-ac21-b73bacf920e6
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_CBP_Sample_1_4b4e2680-2766-4791-81a4-21b58c442f70:
+    src_organization_id: 4b4e2680-2766-4791-81a4-21b58c442f70
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_HBD_Sample_1_15ac65a0-7f38-4612-9a1c-e72a79ccda9f:
+    src_organization_id: 15ac65a0-7f38-4612-9a1c-e72a79ccda9f
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_AMM_Sample_1_89c7304f-2365-4185-8dbf-825b4d1a1547:
+    src_organization_id: 89c7304f-2365-4185-8dbf-825b4d1a1547
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_APM_Sample_1_81a9099b-0e15-45b7-bb79-6a02ea9b152a:
+    src_organization_id: 81a9099b-0e15-45b7-bb79-6a02ea9b152a
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_SSD_Sample_1_efadcbf1-2fac-467f-a850-0c5e4e6c53fd:
+    src_organization_id: efadcbf1-2fac-467f-a850-0c5e4e6c53fd
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_SAA_Sample_1_de09a473-15c2-489f-bd4a-81ce0c811046:
+    src_organization_id: de09a473-15c2-489f-bd4a-81ce0c811046
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_CIS_Sample_1_14ebe3b6-d1fd-48df-9d39-5959587b24c8:
+    src_organization_id: 14ebe3b6-d1fd-48df-9d39-5959587b24c8
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_IMA_Sample_1_7f3cb8d9-5a27-429c-b83d-22df34c2e39a:
+    src_organization_id: 7f3cb8d9-5a27-429c-b83d-22df34c2e39a
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022_AMR_Sample_1_48e33690-32e5-4eb1-ba28-55aea9588bad:
+    src_organization_id: 48e33690-32e5-4eb1-ba28-55aea9588bad
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-WCV-Sample-2_0d2bb392-0391-45a6-89b5-bfd3c9c8b3da:
+    src_organization_id: 0d2bb392-0391-45a6-89b5-bfd3c9c8b3da
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-W30-Sample-2_5fec35e4-f489-47aa-90eb-6027910fe798:
+    src_organization_id: 5fec35e4-f489-47aa-90eb-6027910fe798
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-CBP-Sample-2_ac1a080d-12bd-4321-a3bb-ce551cf2dd82:
+    src_organization_id: ac1a080d-12bd-4321-a3bb-ce551cf2dd82
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-HBD-Sample-2_2bcc4117-00a3-492c-ad59-c470495ca092:
+    src_organization_id: 2bcc4117-00a3-492c-ad59-c470495ca092
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMM-Sample-2_bdc053f1-03cf-4062-838e-7c40a1c2fd4c:
+    src_organization_id: bdc053f1-03cf-4062-838e-7c40a1c2fd4c
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-APM-Sample-2_d7191412-400b-4bbe-a75d-70fdfd858432:
+    src_organization_id: d7191412-400b-4bbe-a75d-70fdfd858432
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SSD-Sample-2_e57707a2-75ad-41d6-aba8-932a69f3a5ec:
+    src_organization_id: e57707a2-75ad-41d6-aba8-932a69f3a5ec
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SAA-Sample-2_23750e26-69dc-438b-9391-a94c4b969b8d:
+    src_organization_id: 23750e26-69dc-438b-9391-a94c4b969b8d
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-CIS-Sample-2_bd3dd9cc-56a0-4f58-9947-9dfde0a17e4f:
+    src_organization_id: bd3dd9cc-56a0-4f58-9947-9dfde0a17e4f
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-IMA-Sample-2_2b245a6d-1c32-4965-922b-fd5eac9a3fe8:
+    src_organization_id: 2b245a6d-1c32-4965-922b-fd5eac9a3fe8
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMR-Sample-2_7150f6fa-02be-476b-acb5-d5cd3b036fdf:
+    src_organization_id: 7150f6fa-02be-476b-acb5-d5cd3b036fdf
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  Heatherington_Health_Center_8545a111-edee-4b2b-8440-cece8aaffd91:
+      src_organization_id: 8545a111-edee-4b2b-8440-cece8aaffd91
+  Lourens_Health_Center_49ab6424-8d9a-4c2d-a759-03c18d5b52f6:
+      src_organization_id: 49ab6424-8d9a-4c2d-a759-03c18d5b52f6
+  Yanez_Health_Center_faa19785-2045-443d-b5d6-8b99954a84f6:
+      src_organization_id: faa19785-2045-443d-b5d6-8b99954a84f6
+  HEWMANA_2d50f590-9481-4e0e-a299-7d687fb434a0:
+    src_organization_id: 2d50f590-9481-4e0e-a299-7d687fb434a0
+    BENEFICIARY:
+      schema: nucleo/hewmana/beneficiary_config.json
+      validation: validation/beneficiary_validation_config.yaml
+      fhir_bundle: beneficiary_stage_to_fhirbundle_dag
+    MEDICAL_CLAIM:
+      schema: nucleo/hewmana/medical_claim_config.json
+      validation: validation/medical_claim_validation_config.yaml
+      fhir_bundle: medical_claim_stage_to_fhirbundle_dag
+    RX_CLAIM:
+      schema: nucleo/hewmana/rx_claim_config.json
+      validation: validation/rx_claim_validation_config.yaml
+      fhir_bundle: rx_claim_stage_to_fhirbundle_dag
+  HORIGHZON_5561fa2c-c05d-48b2-a978-0963b1eb86f3:
+    src_organization_id: 5561fa2c-c05d-48b2-a978-0963b1eb86f3
+    BENEFICIARY:
+      schema: nucleo/horighzon/beneficiary_config.json
+      validation: validation/beneficiary_validation_config.yaml
+      fhir_bundle: beneficiary_stage_to_fhirbundle_dag
+    MEDICAL_CLAIM:
+      schema: nucleo/horighzon/medical_claim_config.json
+      validation: validation/medical_claim_validation_config.yaml
+      fhir_bundle: medical_claim_stage_to_fhirbundle_dag
+    RX_CLAIM:
+      schema: nucleo/horighzon/rx_claim_config.json
+      validation: validation/rx_claim_validation_config.yaml
+      fhir_bundle: rx_claim_stage_to_fhirbundle_dag
+  2022-CBP-Sample-3_f440516f-3aba-4477-a501-3d6052af13fa:
+    src_organization_id: f440516f-3aba-4477-a501-3d6052af13fa
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMR-Sample-3_3eceab9c-738f-4f81-9afa-f71047e00d3a:
+    src_organization_id: 3eceab9c-738f-4f81-9afa-f71047e00d3a
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-IMA-Sample-3_691ecc45-df2d-43c7-9849-0a9bfdd02184:
+    src_organization_id: 691ecc45-df2d-43c7-9849-0a9bfdd02184
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-CIS-Sample-3_475587d7-1b5d-4a12-8bf5-03d57be02ef3:
+    src_organization_id: 475587d7-1b5d-4a12-8bf5-03d57be02ef3
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SAA-Sample-3_4bf9297e-32eb-4185-9907-31f5e7b71f9a:
+    src_organization_id: 4bf9297e-32eb-4185-9907-31f5e7b71f9a
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SSD-Sample-3_931d74f9-19f5-4156-8bbe-4fdb2eab1c0f:
+    src_organization_id: 931d74f9-19f5-4156-8bbe-4fdb2eab1c0f
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-APM-Sample-3_7f935747-8227-4937-ad3d-c32ab7e42305:
+    src_organization_id: 7f935747-8227-4937-ad3d-c32ab7e42305
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMM-Sample-3_fff08d8d-8c22-4234-b883-3ccec4840302:
+    src_organization_id: fff08d8d-8c22-4234-b883-3ccec4840302
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-HBD-Sample-3_f3d2205e-c3d7-46e9-a26d-a42d65ed336d:
+    src_organization_id: f3d2205e-c3d7-46e9-a26d-a42d65ed336d
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-W30-Sample-3_e222f29e-ca5e-4b89-9d32-66196c137bea:
+    src_organization_id: e222f29e-ca5e-4b89-9d32-66196c137bea
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-WCV-Sample-3_609f5db1-9cf6-44bf-9692-0216a35a48fc:
+    src_organization_id: 609f5db1-9cf6-44bf-9692-0216a35a48fc
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-CBP-Sample-4_db1b1937-2f1c-423b-81a9-830d70e7e084:
+    src_organization_id: db1b1937-2f1c-423b-81a9-830d70e7e084
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMR-Sample-4_fbea8e46-4cd8-4b14-8f8c-4cc3cb4fcddc:
+    src_organization_id: fbea8e46-4cd8-4b14-8f8c-4cc3cb4fcddc
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-IMA-Sample-4_c4c4d4e7-6055-451e-a241-cadeaff31688:
+    src_organization_id: c4c4d4e7-6055-451e-a241-cadeaff31688
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-CIS-Sample-4_20cb8041-f9cb-46a2-97d1-544355199bdd:
+    src_organization_id: 20cb8041-f9cb-46a2-97d1-544355199bdd
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SAA-Sample-4_d0ecbc52-4f24-4082-8a38-5315886c72d9:
+    src_organization_id: d0ecbc52-4f24-4082-8a38-5315886c72d9
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SSD-Sample-4_a7f7e50c-8beb-45ff-824b-219fe40b479f:
+    src_organization_id: a7f7e50c-8beb-45ff-824b-219fe40b479f
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-APM-Sample-4_ea07ec3a-e69c-40ae-b464-98d3043e07b9:
+    src_organization_id: ea07ec3a-e69c-40ae-b464-98d3043e07b9
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMM-Sample-4_3c5b9909-bd2f-4a15-9cd2-32632ee6bb53:
+    src_organization_id: 3c5b9909-bd2f-4a15-9cd2-32632ee6bb53
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-HBD-Sample-4_18b26286-186a-4b5b-ad1d-9151fdc87212:
+    src_organization_id: 18b26286-186a-4b5b-ad1d-9151fdc87212
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-W30-Sample-4_9f03c5df-e32d-418a-b4b9-117fbfc808af:
+    src_organization_id: 9f03c5df-e32d-418a-b4b9-117fbfc808af
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-WCV-Sample-4_4476bf99-8c07-4b56-bb06-c6792a5d9ace:
+    src_organization_id: 4476bf99-8c07-4b56-bb06-c6792a5d9ace
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-WCV-Sample-5_bbf4043c-7602-4867-8bc8-e435340ae229:
+    src_organization_id: bbf4043c-7602-4867-8bc8-e435340ae229
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-HBD-Sample-5_08b41796-0051-44ef-a219-cd38a123358c:
+    src_organization_id: 08b41796-0051-44ef-a219-cd38a123358c
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SAA-Sample-5_75c073c8-139b-4575-a5b5-c756664da0d4:
+    src_organization_id: 75c073c8-139b-4575-a5b5-c756664da0d4
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-HBD-Sample-6_185a170f-5cba-4615-8bca-a36905e66588:
+    src_organization_id: 185a170f-5cba-4615-8bca-a36905e66588
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-W30-Sample-5_22557e80-d31f-49d6-a6a1-621fb5ab04ba:
+    src_organization_id: 22557e80-d31f-49d6-a6a1-621fb5ab04ba
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-IMA-Sample-5_1bec98c9-e7d6-4660-bb5f-0e5c15f681e6:
+    src_organization_id: 1bec98c9-e7d6-4660-bb5f-0e5c15f681e6
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMM-Sample-5_3c721a41-bb8f-4ab3-9de2-fab53f4ba8f7:
+    src_organization_id: 3c721a41-bb8f-4ab3-9de2-fab53f4ba8f7
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SSD-Sample-5_39e420e2-5fce-4072-9de3-e7db061ad415:
+    src_organization_id: 39e420e2-5fce-4072-9de3-e7db061ad415
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-APM-Sample-5_b2831495-660b-4f91-a116-b4d202db8578:
+    src_organization_id: b2831495-660b-4f91-a116-b4d202db8578
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-WCV-Sample-6_d241dea9-cbbb-41d3-a1d6-b1d54fe66187:
+    src_organization_id: d241dea9-cbbb-41d3-a1d6-b1d54fe66187
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-APM-Sample-6_9a0ccf0a-cc9a-4588-9816-d7ef8c6ca367:
+    src_organization_id: 9a0ccf0a-cc9a-4588-9816-d7ef8c6ca367
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SAA-Sample-6_40263965-73aa-4558-ba03-98af626cfd87:
+    src_organization_id: 40263965-73aa-4558-ba03-98af626cfd87
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-SSD-Sample-6_c8cea0f6-289d-4956-b57d-6f1d4edbd634:
+    src_organization_id: c8cea0f6-289d-4956-b57d-6f1d4edbd634
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+  2022-AMR-Sample-6_8a5444b3-4708-4fe2-b301-845aaf2fa8db:
+    src_organization_id: 8a5444b3-4708-4fe2-b301-845aaf2fa8db
+    # NCQA HEDIS
+    NCQA_HEDIS_DIAG:
+      schema: healthec/ncqa_hedis/diag_config.json
+      validation: validation/ncqa_hedis/diagnosis_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LAB:
+      schema: healthec/ncqa_hedis/lab_config.json
+      validation: validation/ncqa_hedis/lab_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_LISHIST:
+      schema: healthec/ncqa_hedis/lishist_config.json
+      validation: validation/ncqa_hedis/lishist_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBEREN:
+      schema: healthec/ncqa_hedis/member-en_config.json
+      validation: validation/ncqa_hedis/member-en_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MEMBERGM:
+      schema: healthec/ncqa_hedis/member-gm_config.json
+      validation: validation/ncqa_hedis/member-gm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_MMDF:
+      schema: healthec/ncqa_hedis/mmdf_config.json
+      validation: validation/ncqa_hedis/mmdf_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_OBS:
+      schema: healthec/ncqa_hedis/obs_config.json
+      canonical_path: NCQA_HEDIS_OBS
+      validation: validation/ncqa_hedis/obs_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARM:
+      schema: healthec/ncqa_hedis/pharm_config.json
+      validation: validation/ncqa_hedis/pharm_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PHARMC:
+      schema: healthec/ncqa_hedis/pharm-c_config.json
+      validation: validation/ncqa_hedis/pharm-c_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROC:
+      schema: healthec/ncqa_hedis/proc_config.json
+      validation: validation/ncqa_hedis/proc_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_PROVIDER:
+      schema: healthec/ncqa_hedis/provider_config.json
+      validation: validation/ncqa_hedis/provder_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISIT:
+      schema: healthec/ncqa_hedis/visit_config.json
+      validation: validation/ncqa_hedis/visit_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag
+    NCQA_HEDIS_VISITE:
+      schema: healthec/ncqa_hedis/visit-e_config.json
+      validation: validation/ncqa_hedis/visit-e_validation_config.yaml
+      fhir_bundle: ncqa_hedis_stage_to_fhirbundle_dag

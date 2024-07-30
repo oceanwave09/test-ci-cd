@@ -1,0 +1,9 @@
+ncqa_hedis_diagnosis_code:
+  key_path: diagnosis_code
+  min_length: 1
+  required: True
+
+ncqa_hedis_member_id:
+  key_path: member_id
+  min_length: 1
+  required: True

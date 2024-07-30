@@ -1,0 +1,8 @@
+ncqa_hedis_service_date:
+  key_path: service_date
+  type: string
+
+ncqa_hedis_member_id:
+  key_path: member_id
+  min_length: 1
+  required: True

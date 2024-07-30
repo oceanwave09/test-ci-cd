@@ -1,0 +1,20 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "type": {% include "attributes/insurance_plan/plan_type.j2" %},
+  "name": "{{ data.name }}",
+  "alias": ["{{ data.alias }}"],
+  "period": {% include "attributes/period.j2" %},
+  "ownedBy": {% include "attributes/insurance_plan/owned_by.j2" %},
+  "administeredBy": {% include "attributes/insurance_plan/administered_by.j2" %},
+  "coverageArea": {% include "attributes/insurance_plan/coverage_area.j2" %},
+  "coverage": {% include "attributes/insurance_plan/coverage.j2" %}
+{% endblock %}

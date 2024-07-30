@@ -1,0 +1,6 @@
+BEGIN;
+
+DROP TABLE IF EXISTS hec_user_history;
+DROP TABLE IF EXISTS hec_user;
+
+COMMIT;

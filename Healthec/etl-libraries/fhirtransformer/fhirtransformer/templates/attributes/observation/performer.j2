@@ -1,0 +1,18 @@
+[
+  {%- if data.practitioner_id -%}
+  {
+    "reference": "Practitioner/{{ data.practitioner_id }}"
+  }
+  {%- endif %}
+  {% for ent in data.performer %}
+  {
+    {%- if ent.practitioner_id -%}
+    "reference": "Practitioner/{{ ent.practitioner_id }}"
+    {%- endif %}
+    {%- if ent.organization_id -%}
+    "reference": "Organization/{{ ent.organization_id }}"
+    {%- endif %}
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

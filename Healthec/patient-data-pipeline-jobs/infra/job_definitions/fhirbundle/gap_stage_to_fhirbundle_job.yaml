@@ -1,0 +1,249 @@
+apiVersion: "sparkoperator.k8s.io/v1beta2"
+kind: SparkApplication
+metadata:
+  name: gap-${ENTITY}-stage-to-fhirbundle-job-$RANDOM_ID
+  namespace: data-pipeline
+spec:
+  type: Python
+  pythonVersion: "3"
+  mode: cluster
+  image: "registry.gitlab.com/health-ec/platform/domain/member/etl/patient-data-pipeline-jobs/patient-data-pipeline:latest"
+  imagePullPolicy: Always
+  imagePullSecrets:
+    - gitlab-patient-datapipeline-regcred
+  mainApplicationFile: local:///app/jobs/fhirbundle/gap/gap_${ENTITY}_stage_to_fhirbundle_job.py
+  deps:
+    pyFiles:
+      - local:///app/python-deps.zip
+  sparkVersion: "3.4.1"
+  timeToLiveSeconds: 3600
+  nodeSelector:
+    role: pyspark_jobs
+  restartPolicy:
+    type: Never
+  driver:
+    cores: 1
+    memory: "4096m"
+    labels:
+      version: 3.4.1
+      auto_scaling_groups: pyspark_jobs
+    serviceAccount: spark-operator-spark
+    env:
+      - name: DELTA_SCHEMA_LOCATION
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.delta_schema_location
+      - name: DELTA_TABLE_NAME
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.gap_${ENTITY}_table_name
+            optional: true
+      - name: LANDING_PATH
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.landing_path
+      - name: PIPELINE_DATA_KEY
+        valueFrom:
+          secretKeyRef:
+            name: ${TENANT}-data-key
+            key: pipeline_data_key
+      - name: FILE_TENANT
+        value: $FILE_TENANT
+      - name: FILE_SOURCE
+        value: $FILE_SOURCE
+      - name: FILE_FORMAT
+        value: $FILE_FORMAT
+      - name: RESOURCE_TYPE
+        value: $RESOURCE_TYPE
+      - name: FILE_BATCH_ID
+        value: $FILE_BATCH_ID
+      - name: SRC_FILE_NAME
+        value: $SRC_FILE_NAME
+      - name: SRC_ORGANIZATION_ID
+        value: $SRC_ORGANIZATION_ID
+      - name: PLATFORM_SERVICE_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_protocol
+      - name: PLATFORM_PATIENT_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: patient_host
+      - name: PLATFORM_PROVIDER_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: provider_host
+      - name: PLATFORM_USER_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: user_host
+      - name: PLATFORM_FINANCIAL_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: financial_host
+      - name: PLATFORM_SERVICE_TENANT_ID
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_tenant_id
+      - name: PLATFORM_SERVICE_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_tenant_subdomain
+      - name: PLATFORM_SERVICE_AUTH_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_protocol
+      - name: PLATFORM_SERVICE_AUTH_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_host
+      - name: PLATFORM_SERVICE_AUTH_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_subdomain
+      - name: PLATFORM_SERVICE_AUTH_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_tenant_subdomain
+      - name: PLATFORM_SERVICE_AUTH_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            name: ${TENANT}-platform-service-auth-credentials
+            key: service_auth_client_id
+      - name: PLATFORM_SERVICE_AUTH_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: ${TENANT}-platform-service-auth-credentials
+            key: service_auth_client_secret
+    tolerations:
+      - key: dedicated
+        operator: "Equal"
+        value: pyspark_jobs
+        effect: NoSchedule
+  executor:
+    cores: 1
+    instances: 1
+    memory: "4096m"
+    labels:
+      version: 3.4.1
+      auto_scaling_groups: pyspark_jobs
+    env:
+      - name: DELTA_SCHEMA_LOCATION
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.delta_schema_location
+      - name: DELTA_TABLE_NAME
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.gap_${ENTITY}_table_name
+            optional: true
+      - name: LANDING_PATH
+        valueFrom:
+          configMapKeyRef:
+            name: ingestion-pipeline-config
+            key: ${TENANT}.landing_path
+      - name: PIPELINE_DATA_KEY
+        valueFrom:
+          secretKeyRef:
+            name: ${TENANT}-data-key
+            key: pipeline_data_key 
+      - name: FILE_TENANT
+        value: $FILE_TENANT
+      - name: FILE_SOURCE
+        value: $FILE_SOURCE
+      - name: FILE_FORMAT
+        value: $FILE_FORMAT
+      - name: RESOURCE_TYPE
+        value: $RESOURCE_TYPE
+      - name: FILE_BATCH_ID
+        value: $FILE_BATCH_ID
+      - name: SRC_FILE_NAME
+        value: $SRC_FILE_NAME
+      - name: SRC_ORGANIZATION_ID
+        value: $SRC_ORGANIZATION_ID
+      - name: PLATFORM_SERVICE_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_protocol
+      - name: PLATFORM_PATIENT_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: patient_host
+      - name: PLATFORM_PROVIDER_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: provider_host
+      - name: PLATFORM_USER_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: user_host
+      - name: PLATFORM_FINANCIAL_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: financial_host
+      - name: PLATFORM_SERVICE_TENANT_ID
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_tenant_id
+      - name: PLATFORM_SERVICE_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_tenant_subdomain
+      - name: PLATFORM_SERVICE_AUTH_PROTOCOL
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_protocol
+      - name: PLATFORM_SERVICE_AUTH_HOST
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_host
+      - name: PLATFORM_SERVICE_AUTH_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_subdomain
+      - name: PLATFORM_SERVICE_AUTH_TENANT_SUBDOMAIN
+        valueFrom:
+          configMapKeyRef:
+            name: ${TENANT}-platform-service-config
+            key: service_auth_tenant_subdomain
+      - name: PLATFORM_SERVICE_AUTH_CLIENT_ID
+        valueFrom:
+          secretKeyRef:
+            name: ${TENANT}-platform-service-auth-credentials
+            key: service_auth_client_id
+      - name: PLATFORM_SERVICE_AUTH_CLIENT_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: ${TENANT}-platform-service-auth-credentials
+            key: service_auth_client_secret
+    tolerations:
+      - key: dedicated
+        operator: "Equal"
+        value: pyspark_jobs
+        effect: NoSchedule

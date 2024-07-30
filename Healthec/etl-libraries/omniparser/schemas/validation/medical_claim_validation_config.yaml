@@ -1,0 +1,13 @@
+medical_claim_member_first_name:
+  key_path: member_first_name
+  min_length: 1
+  required: True
+
+medical_claim_subscriber_id:
+  key_path: subscriber_id
+  required: True
+  type: string
+
+medical_claim_member_zip:
+  key_path: member_zip
+  type: string

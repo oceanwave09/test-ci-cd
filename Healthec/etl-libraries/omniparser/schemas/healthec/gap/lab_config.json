@@ -1,0 +1,376 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "csv2"
+    },
+    "file_declaration": {
+        "delimiter": ",",
+        "replace_double_quotes": false,
+        "records": [
+            {
+                "rows": 1,
+                "min": 1,
+                "max": 1
+            },
+            {
+                "is_target": true,
+                "columns": [
+                    {
+                        "name": "row1",
+                        "index": 1
+                    },
+                    {
+                        "name": "domain",
+                        "index": 2
+                    },
+                    {
+                        "name": "patient_first_name",
+                        "index": 3
+                    },
+                    {
+                        "name": "patient_last_name",
+                        "index": 4
+                    },
+                    {
+                        "name": "patient_dob",
+                        "index": 5
+                    },
+                    {
+                        "name": "external_patient_id",
+                        "index": 6
+                    },
+                    {
+                        "name": "external_practice_id",
+                        "index": 7
+                    },
+                    {
+                        "name": "code",
+                        "index": 8
+                    },
+                    {
+                        "name": "name",
+                        "index": 9
+                    },
+                    {
+                        "name": "dictionary_name",
+                        "index": 10
+                    },
+                    {
+                        "name": "date_performed",
+                        "index": 11
+                    },
+                    {
+                        "name": "date_ordered",
+                        "index": 12
+                    },
+                    {
+                        "name": "date_due",
+                        "index": 13
+                    },
+                    {
+                        "name": "value",
+                        "index": 14
+                    },
+                    {
+                        "name": "medi_unnecessary_reason_code",
+                        "index": 15
+                    },
+                    {
+                        "name": "medi_unnecessary_reason_name",
+                        "index": 16
+                    },
+                    {
+                        "name": "medi_unnecessary_reason_dict",
+                        "index": 17
+                    },
+                    {
+                        "name": "record_verified",
+                        "index": 18
+                    },
+                    {
+                        "name": "provider_npi",
+                        "index": 19
+                    },
+                    {
+                        "name": "practice_tin",
+                        "index": 20
+                    },
+                    {
+                        "name": "provider_name",
+                        "index": 21
+                    },
+                    {
+                        "name": "note",
+                        "index": 22
+                    },
+                    {
+                        "name": "note_type",
+                        "index": 23
+                    },
+                    {
+                        "name": "specimen_source",
+                        "index": 24
+                    },
+                    {
+                        "name": "specimen_condition",
+                        "index": 25
+                    },
+                    {
+                        "name": "facility_name",
+                        "index": 26
+                    },
+                    {
+                        "name": "facility_address",
+                        "index": 27
+                    },
+                    {
+                        "name": "received_value",
+                        "index": 28
+                    },
+                    {
+                        "name": "received_units",
+                        "index": 29
+                    },
+                    {
+                        "name": "reference_range",
+                        "index": 30
+                    },
+                    {
+                        "name": "abnormal_flag_code",
+                        "index": 31
+                    },
+                    {
+                        "name": "remove_specified_lab_flag",
+                        "index": 32
+                    },
+                    {
+                        "name": "vendor",
+                        "index": 33
+                    },
+                    {
+                        "name": "source_type",
+                        "index": 34
+                    }
+                ]
+            }
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": {
+            "object": {
+                "row_id": {
+                    "custom_func": {
+                        "name": "uuidv4"
+                    }
+                },
+                "row": {
+                    "xpath": "row1",
+                    "template": "remove_special_char"
+                },
+                "domain": {
+                    "xpath": "domain",
+                    "template": "remove_special_char"
+                },
+                "patient_first_name": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_first_name",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "patient_last_name": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_last_name",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "patient_dob": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_dob",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "external_patient_id": {
+                    "xpath": "external_patient_id",
+                    "template": "remove_special_char"
+                },
+                "external_practice_id": {
+                    "xpath": "external_practice_id",
+                    "template": "remove_special_char"
+                },
+                "code": {
+                    "xpath": "code",
+                    "template": "remove_special_char"
+                },
+                "name": {
+                    "xpath": "name",
+                    "template": "remove_special_char"
+                },
+                "dictionary_name": {
+                    "xpath": "dictionary_name",
+                    "template": "remove_special_char"
+                },
+                "date_performed": {
+                    "xpath": "date_performed",
+                    "template": "remove_special_char"
+                },
+                "date_ordered": {
+                    "xpath": "date_ordered",
+                    "template": "remove_special_char"
+                },
+                "date_due": {
+                    "xpath": "date_due",
+                    "template": "remove_special_char"
+                },
+                "value": {
+                    "xpath": "value",
+                    "template": "remove_special_char"
+                },
+                "medi_unnecessary_reason_code": {
+                    "xpath": "medi_unnecessary_reason_code",
+                    "template": "remove_special_char"
+                },
+                "medi_unnecessary_reason_name": {
+                    "xpath": "medi_unnecessary_reason_name",
+                    "template": "remove_special_char"
+                },
+                "medi_unnecessary_reason_dict": {
+                    "xpath": "medi_unnecessary_reason_dict",
+                    "template": "remove_special_char"
+                },
+                "record_verified": {
+                    "xpath": "record_verified",
+                    "template": "remove_special_char"
+                },
+                "provider_npi": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "provider_npi",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "practice_tin": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "practice_tin",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "provider_name": {
+                    "custom_func": {
+                      "name": "encryptAesEcb",
+                      "args": [
+                        {
+                          "external": "data_key"
+                        },
+                        {
+                          "xpath": "provider_name",
+                          "template": "remove_special_char"
+                        }
+                      ]
+                    }
+                  },
+                "note": {
+                    "xpath": "note",
+                    "template": "remove_special_char"
+                },
+                "note_type": {
+                    "xpath": "note_type",
+                    "template": "remove_special_char"
+                },
+                "specimen_source": {
+                    "xpath": "specimen_source",
+                    "template": "remove_special_char"
+                },
+                "specimen_condition": {
+                    "xpath": "specimen_condition",
+                    "template": "remove_special_char"
+                },
+                "facility_name": {
+                    "xpath": "facility_name",
+                    "template": "remove_special_char"
+                },
+                "facility_address": {
+                    "xpath": "facility_address",
+                    "template": "remove_special_char"
+                },
+                "received_value": {
+                    "xpath": "received_value",
+                    "template": "remove_special_char"
+                },
+                "received_units": {
+                    "xpath": "received_units",
+                    "template": "remove_special_char"
+                },
+                "reference_range": {
+                    "xpath": "reference_range",
+                    "template": "remove_special_char"
+                },
+                "abnormal_flag_code": {
+                    "xpath": "abnormal_flag_code",
+                    "template": "remove_special_char"
+                },
+                "remove_specified_lab_flag": {
+                    "xpath": "remove_specified_lab_flag",
+                    "template": "remove_special_char"
+                },
+                "vendor": {
+                    "xpath": "vendor",
+                    "template": "remove_special_char"
+                },
+                "source_type": {
+                    "xpath": "source_type",
+                    "template": "remove_special_char"
+                }
+            }
+        },
+        "remove_special_char": {
+            "custom_func": {
+                "name": "javascript_with_context",
+                "args": [
+                    {
+                        "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+                    }
+                ],
+                "ignore_error": false
+            }
+        }
+    }
+}

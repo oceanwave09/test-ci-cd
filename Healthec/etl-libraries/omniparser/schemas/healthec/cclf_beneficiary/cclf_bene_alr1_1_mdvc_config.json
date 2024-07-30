@@ -1,0 +1,1049 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "csv2"
+    },
+    "file_declaration": {
+        "delimiter": ",",
+        "records": [
+            {
+                "rows": 1,
+                "min": 1,
+                "max": 1
+            },
+            {
+                "is_target": true,
+                "columns": [
+                    {
+                        "name": "BENE_MBI_ID",
+                        "index": 1
+                    },
+                    {
+                        "name": "BENE_HIC_NUM",
+                        "index": 2
+                    },
+                    {
+                        "name": "BENE_1ST_NAME",
+                        "index": 3
+                    },
+                    {
+                        "name": "BENE_LAST_NAME",
+                        "index": 4
+                    },
+                    {
+                        "name": "BENE_SEX_CD",
+                        "index": 5
+                    },
+                    {
+                        "name": "BENE_BRTH_DT",
+                        "index": 6
+                    },
+                    {
+                        "name": "BENE_DEATH_DT",
+                        "index": 7
+                    },
+                    {
+                        "name": "GEO_SSA_CNTY_CD_NAME",
+                        "index": 8
+                    },
+                    {
+                        "name": "GEO_SSA_STATE_NAME",
+                        "index": 9
+                    },
+                    {
+                        "name": "STATE_COUNTY_CD",
+                        "index": 10
+                    },
+                    {
+                        "name": "IN_VA_MAX",
+                        "index": 11
+                    },
+                    {
+                        "name": "VA_TIN",
+                        "index": 12
+                    },
+                    {
+                        "name": "VA_NPI",
+                        "index": 13
+                    },
+                    {
+                        "name": "CBA_FLAG",
+                        "index": 14
+                    },
+                    {
+                        "name": "ASSIGNMENT_TYPE",
+                        "index": 15
+                    },
+                    {
+                        "name": "ASSIGNED_BEFORE",
+                        "index": 16
+                    },
+                    {
+                        "name": "ASG_STATUS",
+                        "index": 17
+                    },
+                    {
+                        "name": "PARTD_MONTHS",
+                        "index": 18
+                    },
+                    {
+                        "name": "EnrollFlag1",
+                        "index": 19
+                    },
+                    {
+                        "name": "EnrollFlag2",
+                        "index": 20
+                    },
+                    {
+                        "name": "EnrollFlag3",
+                        "index": 21
+                    },
+                    {
+                        "name": "EnrollFlag4",
+                        "index": 22
+                    },
+                    {
+                        "name": "EnrollFlag5",
+                        "index": 23
+                    },
+                    {
+                        "name": "EnrollFlag6",
+                        "index": 24
+                    },
+                    {
+                        "name": "EnrollFlag7",
+                        "index": 25
+                    },
+                    {
+                        "name": "EnrollFlag8",
+                        "index": 26
+                    },
+                    {
+                        "name": "EnrollFlag9",
+                        "index": 27
+                    },
+                    {
+                        "name": "EnrollFlag10",
+                        "index": 28
+                    },
+                    {
+                        "name": "EnrollFlag11",
+                        "index": 29
+                    },
+                    {
+                        "name": "EnrollFlag12",
+                        "index": 30
+                    },
+                    {
+                        "name": "HCC_version",
+                        "index": 31
+                    },
+                    {
+                        "name": "HCC_COL_1",
+                        "index": 32
+                    },
+                    {
+                        "name": "HCC_COL_2",
+                        "index": 33
+                    },
+                    {
+                        "name": "HCC_COL_3",
+                        "index": 34
+                    },
+                    {
+                        "name": "HCC_COL_4",
+                        "index": 35
+                    },
+                    {
+                        "name": "HCC_COL_5",
+                        "index": 36
+                    },
+                    {
+                        "name": "HCC_COL_6",
+                        "index": 37
+                    },
+                    {
+                        "name": "HCC_COL_7",
+                        "index": 38
+                    },
+                    {
+                        "name": "HCC_COL_8",
+                        "index": 39
+                    },
+                    {
+                        "name": "HCC_COL_9",
+                        "index": 40
+                    },
+                    {
+                        "name": "HCC_COL_10",
+                        "index": 41
+                    },
+                    {
+                        "name": "HCC_COL_11",
+                        "index": 42
+                    },
+                    {
+                        "name": "HCC_COL_12",
+                        "index": 43
+                    },
+                    {
+                        "name": "HCC_COL_13",
+                        "index": 44
+                    },
+                    {
+                        "name": "HCC_COL_14",
+                        "index": 45
+                    },
+                    {
+                        "name": "HCC_COL_15",
+                        "index": 46
+                    },
+                    {
+                        "name": "HCC_COL_16",
+                        "index": 47
+                    },
+                    {
+                        "name": "HCC_COL_17",
+                        "index": 48
+                    },
+                    {
+                        "name": "HCC_COL_18",
+                        "index": 49
+                    },
+                    {
+                        "name": "HCC_COL_19",
+                        "index": 50
+                    },
+                    {
+                        "name": "HCC_COL_20",
+                        "index": 51
+                    },
+                    {
+                        "name": "HCC_COL_21",
+                        "index": 52
+                    },
+                    {
+                        "name": "HCC_COL_22",
+                        "index": 53
+                    },
+                    {
+                        "name": "HCC_COL_23",
+                        "index": 54
+                    },
+                    {
+                        "name": "HCC_COL_24",
+                        "index": 55
+                    },
+                    {
+                        "name": "HCC_COL_25",
+                        "index": 56
+                    },
+                    {
+                        "name": "HCC_COL_26",
+                        "index": 57
+                    },
+                    {
+                        "name": "HCC_COL_27",
+                        "index": 58
+                    },
+                    {
+                        "name": "HCC_COL_28",
+                        "index": 59
+                    },
+                    {
+                        "name": "HCC_COL_29",
+                        "index": 60
+                    },
+                    {
+                        "name": "HCC_COL_30",
+                        "index": 61
+                    },
+                    {
+                        "name": "HCC_COL_31",
+                        "index": 62
+                    },
+                    {
+                        "name": "HCC_COL_32",
+                        "index": 63
+                    },
+                    {
+                        "name": "HCC_COL_33",
+                        "index": 64
+                    },
+                    {
+                        "name": "HCC_COL_34",
+                        "index": 65
+                    },
+                    {
+                        "name": "HCC_COL_35",
+                        "index": 66
+                    },
+                    {
+                        "name": "HCC_COL_36",
+                        "index": 67
+                    },
+                    {
+                        "name": "HCC_COL_37",
+                        "index": 68
+                    },
+                    {
+                        "name": "HCC_COL_38",
+                        "index": 69
+                    },
+                    {
+                        "name": "HCC_COL_39",
+                        "index": 70
+                    },
+                    {
+                        "name": "HCC_COL_40",
+                        "index": 71
+                    },
+                    {
+                        "name": "HCC_COL_41",
+                        "index": 72
+                    },
+                    {
+                        "name": "HCC_COL_42",
+                        "index": 73
+                    },
+                    {
+                        "name": "HCC_COL_43",
+                        "index": 74
+                    },
+                    {
+                        "name": "HCC_COL_44",
+                        "index": 75
+                    },
+                    {
+                        "name": "HCC_COL_45",
+                        "index": 76
+                    },
+                    {
+                        "name": "HCC_COL_46",
+                        "index": 77
+                    },
+                    {
+                        "name": "HCC_COL_47",
+                        "index": 78
+                    },
+                    {
+                        "name": "HCC_COL_48",
+                        "index": 79
+                    },
+                    {
+                        "name": "HCC_COL_49",
+                        "index": 80
+                    },
+                    {
+                        "name": "HCC_COL_50",
+                        "index": 81
+                    },
+                    {
+                        "name": "HCC_COL_51",
+                        "index": 82
+                    },
+                    {
+                        "name": "HCC_COL_52",
+                        "index": 83
+                    },
+                    {
+                        "name": "HCC_COL_53",
+                        "index": 84
+                    },
+                    {
+                        "name": "HCC_COL_54",
+                        "index": 85
+                    },
+                    {
+                        "name": "HCC_COL_55",
+                        "index": 86
+                    },
+                    {
+                        "name": "HCC_COL_56",
+                        "index": 87
+                    },
+                    {
+                        "name": "HCC_COL_57",
+                        "index": 88
+                    },
+                    {
+                        "name": "HCC_COL_58",
+                        "index": 89
+                    },
+                    {
+                        "name": "HCC_COL_59",
+                        "index": 90
+                    },
+                    {
+                        "name": "HCC_COL_60",
+                        "index": 91
+                    },
+                    {
+                        "name": "HCC_COL_61",
+                        "index": 92
+                    },
+                    {
+                        "name": "HCC_COL_62",
+                        "index": 93
+                    },
+                    {
+                        "name": "HCC_COL_63",
+                        "index": 94
+                    },
+                    {
+                        "name": "HCC_COL_64",
+                        "index": 95
+                    },
+                    {
+                        "name": "HCC_COL_65",
+                        "index": 96
+                    },
+                    {
+                        "name": "HCC_COL_66",
+                        "index": 97
+                    },
+                    {
+                        "name": "HCC_COL_67",
+                        "index": 98
+                    },
+                    {
+                        "name": "HCC_COL_68",
+                        "index": 99
+                    },
+                    {
+                        "name": "HCC_COL_69",
+                        "index": 100
+                    },
+                    {
+                        "name": "HCC_COL_70",
+                        "index": 101
+                    },
+                    {
+                        "name": "HCC_COL_71",
+                        "index": 102
+                    },
+                    {
+                        "name": "HCC_COL_72",
+                        "index": 103
+                    },
+                    {
+                        "name": "HCC_COL_73",
+                        "index": 104
+                    },
+                    {
+                        "name": "HCC_COL_74",
+                        "index": 105
+                    },
+                    {
+                        "name": "HCC_COL_75",
+                        "index": 106
+                    },
+                    {
+                        "name": "HCC_COL_76",
+                        "index": 107
+                    },
+                    {
+                        "name": "HCC_COL_77",
+                        "index": 108
+                    },
+                    {
+                        "name": "HCC_COL_78",
+                        "index": 109
+                    },
+                    {
+                        "name": "HCC_COL_79",
+                        "index": 110
+                    },
+                    {
+                        "name": "HCC_COL_80",
+                        "index": 111
+                    },
+                    {
+                        "name": "HCC_COL_81",
+                        "index": 112
+                    },
+                    {
+                        "name": "HCC_COL_82",
+                        "index": 113
+                    },
+                    {
+                        "name": "HCC_COL_83",
+                        "index": 114
+                    },
+                    {
+                        "name": "HCC_COL_84",
+                        "index": 115
+                    },
+                    {
+                        "name": "HCC_COL_85",
+                        "index": 116
+                    },
+                    {
+                        "name": "HCC_COL_86",
+                        "index": 117
+                    },
+                    {
+                        "name": "HCC_COL_87",
+                        "index": 118
+                    },
+                    {
+                        "name": "HCC_COL_88",
+                        "index": 119
+                    },
+                    {
+                        "name": "HCC_COL_89",
+                        "index": 120
+                    },
+                    {
+                        "name": "HCC_COL_90",
+                        "index": 121
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_01",
+                        "index": 122
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_02",
+                        "index": 123
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_03",
+                        "index": 124
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_04",
+                        "index": 125
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_05",
+                        "index": 126
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_06",
+                        "index": 127
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_07",
+                        "index": 128
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_08",
+                        "index": 129
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_9",
+                        "index": 130
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_10",
+                        "index": 131
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_11",
+                        "index": 132
+                    },
+                    {
+                        "name": "BENE_RSK_R_SCRE_12",
+                        "index": 133
+                    },
+                    {
+                        "name": "ESRD_SCORE",
+                        "index": 134
+                    },
+                    {
+                        "name": "DIS_SCORE",
+                        "index": 135
+                    },
+                    {
+                        "name": "AGDU_SCORE",
+                        "index": 136
+                    },
+                    {
+                        "name": "AGND_SCORE",
+                        "index": 137
+                    },
+                    {
+                        "name": "DEM_ESRD_SCORE",
+                        "index": 138
+                    },
+                    {
+                        "name": "DEM_DIS_SCORE",
+                        "index": 139
+                    },
+                    {
+                        "name": "DEM_AGDU_SCORE",
+                        "index": 140
+                    },
+                    {
+                        "name": "DEM_AGND_SCORE",
+                        "index": 141
+                    },
+                    {
+                        "name": "NEW_ENROLLEE",
+                        "index": 142
+                    },
+                    {
+                        "name": "LTI_STATUS",
+                        "index": 143
+                    },
+                    {
+                        "name": "BENE_RACE_CD",
+                        "index": 144
+                    }
+                ]
+            }
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": {
+            "object": {
+                "row_id": {
+                    "template": "uuidv4"
+                },
+                "bene_mbi_id": {
+                    "xpath": "BENE_MBI_ID"
+                },
+                "bene_hic_num": {
+                    "xpath": "BENE_HIC_NUM"
+                },
+                "bene_1st_name": {
+                    "xpath": "BENE_1ST_NAME"
+                },
+                "bene_last_name": {
+                    "xpath": "BENE_LAST_NAME"
+                },
+                "bene_sex_cd": {
+                    "xpath": "BENE_SEX_CD"
+                },
+                "bene_brth_dt": {
+                    "xpath": "BENE_BRTH_DT"
+                },
+                "bene_death_dt": {
+                    "xpath": "BENE_DEATH_DT"
+                },
+                "geo_ssa_cnty_cd_name": {
+                    "xpath": "GEO_SSA_CNTY_CD_NAME"
+                },
+                "geo_ssa_state_name": {
+                    "xpath": "GEO_SSA_STATE_NAME"
+                },
+                "state_county_cd": {
+                    "xpath": "STATE_COUNTY_CD"
+                },
+                "in_va_max": {
+                    "xpath": "IN_VA_MAX"
+                },
+                "va_tin": {
+                    "xpath": "VA_TIN"
+                },
+                "va_npi": {
+                    "xpath": "VA_NPI"
+                },
+                "cba_flag": {
+                    "xpath": "CBA_FLAG"
+                },
+                "assignment_type": {
+                    "xpath": "ASSIGNMENT_TYPE"
+                },
+                "assigned_before": {
+                    "xpath": "ASSIGNED_BEFORE"
+                },
+                "asg_status": {
+                    "xpath": "ASG_STATUS"
+                },
+                "partd_months": {
+                    "xpath": "PARTD_MONTHS"
+                },
+                "enrollflag_1": {
+                    "xpath": "EnrollFlag1"
+                },
+                "enrollflag_2": {
+                    "xpath": "EnrollFlag2"
+                },
+                "enrollflag_3": {
+                    "xpath": "EnrollFlag3"
+                },
+                "enrollflag_4": {
+                    "xpath": "EnrollFlag4"
+                },
+                "enrollflag_5": {
+                    "xpath": "EnrollFlag5"
+                },
+                "enrollflag_6": {
+                    "xpath": "EnrollFlag6"
+                },
+                "enrollflag_7": {
+                    "xpath": "EnrollFlag7"
+                },
+                "enrollflag_8": {
+                    "xpath": "EnrollFlag8"
+                },
+                "enrollflag_9": {
+                    "xpath": "EnrollFlag9"
+                },
+                "enrollflag_10": {
+                    "xpath": "EnrollFlag10"
+                },
+                "enrollflag_11": {
+                    "xpath": "EnrollFlag11"
+                },
+                "enrollflag_12": {
+                    "xpath": "EnrollFlag12"
+                },
+                "hcc_version": {
+                    "xpath": "HCC_version"
+                },
+                "hcc_col_1": {
+                    "xpath": "HCC_COL_1"
+                },
+                "hcc_col_2": {
+                    "xpath": "HCC_COL_2"
+                },
+                "hcc_col_3": {
+                    "xpath": "HCC_COL_3"
+                },
+                "hcc_col_4": {
+                    "xpath": "HCC_COL_4"
+                },
+                "hcc_col_5": {
+                    "xpath": "HCC_COL_5"
+                },
+                "hcc_col_6": {
+                    "xpath": "HCC_COL_6"
+                },
+                "hcc_col_7": {
+                    "xpath": "HCC_COL_7"
+                },
+                "hcc_col_8": {
+                    "xpath": "HCC_COL_8"
+                },
+                "hcc_col_9": {
+                    "xpath": "HCC_COL_9"
+                },
+                "hcc_col_10": {
+                    "xpath": "HCC_COL_10"
+                },
+                "hcc_col_11": {
+                    "xpath": "HCC_COL_11"
+                },
+                "hcc_col_12": {
+                    "xpath": "HCC_COL_12"
+                },
+                "hcc_col_13": {
+                    "xpath": "HCC_COL_13"
+                },
+                "hcc_col_14": {
+                    "xpath": "HCC_COL_14"
+                },
+                "hcc_col_15": {
+                    "xpath": "HCC_COL_15"
+                },
+                "hcc_col_16": {
+                    "xpath": "HCC_COL_16"
+                },
+                "hcc_col_17": {
+                    "xpath": "HCC_COL_17"
+                },
+                "hcc_col_18": {
+                    "xpath": "HCC_COL_18"
+                },
+                "hcc_col_19": {
+                    "xpath": "HCC_COL_19"
+                },
+                "hcc_col_20": {
+                    "xpath": "HCC_COL_20"
+                },
+                "hcc_col_21": {
+                    "xpath": "HCC_COL_21"
+                },
+                "hcc_col_22": {
+                    "xpath": "HCC_COL_22"
+                },
+                "hcc_col_23": {
+                    "xpath": "HCC_COL_23"
+                },
+                "hcc_col_24": {
+                    "xpath": "HCC_COL_24"
+                },
+                "hcc_col_25": {
+                    "xpath": "HCC_COL_25"
+                },
+                "hcc_col_26": {
+                    "xpath": "HCC_COL_26"
+                },
+                "hcc_col_27": {
+                    "xpath": "HCC_COL_27"
+                },
+                "hcc_col_28": {
+                    "xpath": "HCC_COL_28"
+                },
+                "hcc_col_29": {
+                    "xpath": "HCC_COL_29"
+                },
+                "hcc_col_30": {
+                    "xpath": "HCC_COL_30"
+                },
+                "hcc_col_31": {
+                    "xpath": "HCC_COL_31"
+                },
+                "hcc_col_32": {
+                    "xpath": "HCC_COL_32"
+                },
+                "hcc_col_33": {
+                    "xpath": "HCC_COL_33"
+                },
+                "hcc_col_34": {
+                    "xpath": "HCC_COL_34"
+                },
+                "hcc_col_35": {
+                    "xpath": "HCC_COL_35"
+                },
+                "hcc_col_36": {
+                    "xpath": "HCC_COL_36"
+                },
+                "hcc_col_37": {
+                    "xpath": "HCC_COL_37"
+                },
+                "hcc_col_38": {
+                    "xpath": "HCC_COL_38"
+                },
+                "hcc_col_39": {
+                    "xpath": "HCC_COL_39"
+                },
+                "hcc_col_40": {
+                    "xpath": "HCC_COL_40"
+                },
+                "hcc_col_41": {
+                    "xpath": "HCC_COL_41"
+                },
+                "hcc_col_42": {
+                    "xpath": "HCC_COL_42"
+                },                
+                "hcc_col_43": {
+                    "xpath": "HCC_COL_43"
+                },
+                "hcc_col_44": {
+                    "xpath": "HCC_COL_44"
+                },
+                "hcc_col_45": {
+                    "xpath": "HCC_COL_45"
+                },
+                "hcc_col_46": {
+                    "xpath": "HCC_COL_46"
+                },
+                "hcc_col_47": {
+                    "xpath": "HCC_COL_47"
+                },
+                "hcc_col_48": {
+                    "xpath": "HCC_COL_48"
+                },
+                "hcc_col_49": {
+                    "xpath": "HCC_COL_49"
+                },
+                "hcc_col_50": {
+                    "xpath": "HCC_COL_50"
+                },
+                "hcc_col_51": {
+                    "xpath": "HCC_COL_51"
+                },
+                "hcc_col_52": {
+                    "xpath": "HCC_COL_52"
+                },
+                "hcc_col_53": {
+                    "xpath": "HCC_COL_53"
+                },
+                "hcc_col_54": {
+                    "xpath": "HCC_COL_54"
+                },
+                "hcc_col_55": {
+                    "xpath": "HCC_COL_55"
+                },
+                "hcc_col_56": {
+                    "xpath": "HCC_COL_56"
+                },
+                "hcc_col_57": {
+                    "xpath": "HCC_COL_57"
+                },
+                "hcc_col_58": {
+                    "xpath": "HCC_COL_58"
+                },
+                "hcc_col_59": {
+                    "xpath": "HCC_COL_59"
+                },
+                "hcc_col_60": {
+                    "xpath": "HCC_COL_60"
+                },
+                "hcc_col_61": {
+                    "xpath": "HCC_COL_61"
+                },
+                "hcc_col_62": {
+                    "xpath": "HCC_COL_62"
+                },
+                "hcc_col_63": {
+                    "xpath": "HCC_COL_63"
+                },
+                "hcc_col_64": {
+                    "xpath": "HCC_COL_64"
+                },
+                "hcc_col_65": {
+                    "xpath": "HCC_COL_65"
+                },
+                "hcc_col_66": {
+                    "xpath": "HCC_COL_66"
+                },
+                "hcc_col_67": {
+                    "xpath": "HCC_COL_67"
+                },
+                "hcc_col_68": {
+                    "xpath": "HCC_COL_68"
+                },
+                "hcc_col_69": {
+                    "xpath": "HCC_COL_69"
+                },
+                "hcc_col_70": {
+                    "xpath": "HCC_COL_70"
+                },
+                "hcc_col_71": {
+                    "xpath": "HCC_COL_71"
+                },
+                "hcc_col_72": {
+                    "xpath": "HCC_COL_72"
+                },
+                "hcc_col_73": {
+                    "xpath": "HCC_COL_73"
+                },
+                "hcc_col_74": {
+                    "xpath": "HCC_COL_74"
+                },
+                "hcc_col_75": {
+                    "xpath": "HCC_COL_75"
+                },
+                "hcc_col_76": {
+                    "xpath": "HCC_COL_76"
+                },
+                "hcc_col_77": {
+                    "xpath": "HCC_COL_77"
+                },
+                "hcc_col_78": {
+                    "xpath": "HCC_COL_78"
+                },
+                "hcc_col_79": {
+                    "xpath": "HCC_COL_79"
+                },
+                "hcc_col_80": {
+                    "xpath": "HCC_COL_80"
+                },
+                "hcc_col_81": {
+                    "xpath": "HCC_COL_81"
+                },
+                "hcc_col_82": {
+                    "xpath": "HCC_COL_82"
+                },
+                "hcc_col_83": {
+                    "xpath": "HCC_COL_83"
+                },
+                "hcc_col_84": {
+                    "xpath": "HCC_COL_84"
+                },
+                "hcc_col_85": {
+                    "xpath": "HCC_COL_85"
+                },
+                "hcc_col_86": {
+                    "xpath": "HCC_COL_86"
+                },
+                "hcc_col_87": {
+                    "xpath": "HCC_COL_87"
+                },
+                "hcc_col_88": {
+                    "xpath": "HCC_COL_88"
+                },
+                "hcc_col_89": {
+                    "xpath": "HCC_COL_89"
+                },
+                "hcc_col_90": {
+                    "xpath": "HCC_COL_90"
+                },
+                "bene_rsk_r_scre_01": {
+                    "xpath": "BENE_RSK_R_SCRE_01"
+                },
+                "bene_rsk_r_scre_02": {
+                    "xpath": "BENE_RSK_R_SCRE_02"
+                },
+                "bene_rsk_r_scre_03": {
+                    "xpath": "BENE_RSK_R_SCRE_03"
+                },
+                "bene_rsk_r_scre_04": {
+                    "xpath": "BENE_RSK_R_SCRE_04"
+                },
+                "bene_rsk_r_scre_05": {
+                    "xpath": "BENE_RSK_R_SCRE_05"
+                },
+                "bene_rsk_r_scre_06": {
+                    "xpath": "BENE_RSK_R_SCRE_06"
+                },
+                "bene_rsk_r_scre_07": {
+                    "xpath": "BENE_RSK_R_SCRE_07"
+                },
+                "bene_rsk_r_scre_08": {
+                    "xpath": "BENE_RSK_R_SCRE_08"
+                },
+                "bene_rsk_r_scre_09": {
+                    "xpath": "BENE_RSK_R_SCRE_09"
+                },
+                "bene_rsk_r_scre_10": {
+                    "xpath": "BENE_RSK_R_SCRE_10"
+                },
+                "bene_rsk_r_scre_11": {
+                    "xpath": "BENE_RSK_R_SCRE_11"
+                },
+                "bene_rsk_r_scre_12": {
+                    "xpath": "BENE_RSK_R_SCRE_12"
+                },
+                "esrd_score": {
+                    "xpath": "ESRD_SCORE"
+                },
+                "dis_score": {
+                    "xpath": "DIS_SCORE"
+                },
+                "agdu_score": {
+                    "xpath": "AGDU_SCORE"
+                },
+                "agnd_score": {
+                    "xpath": "AGND_SCORE"
+                },
+                "dem_esrd_score": {
+                    "xpath": "DEM_ESRD_SCORE"
+                },
+                "dem_dis_score": {
+                    "xpath": "DEM_DIS_SCORE"
+                },
+                "dem_agdu_score": {
+                    "xpath": "DEM_AGDU_SCORE"
+                },
+                "dem_agnd_score": {
+                    "xpath": "DEM_AGND_SCORE"
+                },
+                "new_enrollee": {
+                    "xpath": "NEW_ENROLLEE"
+                },
+                "lti_status": {
+                    "xpath": "LTI_STATUS"
+                },
+                "bene_race_cd": {
+                    "xpath": "BENE_RACE_CD"
+                }
+            }
+        },
+        "uuidv4": {
+            "custom_func": {
+                "name": "javascript_with_context",
+                "args": [
+                    {
+                        "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+                    }
+                ],
+                "ignore_error": true
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+rx_claim_member_first_name:
+  key_path: member_first_name
+  min_length: 1
+  required: True
+
+rx_claim_member_id:
+  key_path: member_id
+  min_length: 1
+  required: True
+
+rx_claim_render_prescriber_npi:
+  key_path: render_prescriber_npi
+  required: True
+  type: string

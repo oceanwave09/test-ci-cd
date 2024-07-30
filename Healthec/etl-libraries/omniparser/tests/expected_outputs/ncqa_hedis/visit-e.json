@@ -1,0 +1,52 @@
+[
+	{
+		"activity_type": "99283",
+		"code_flag": "C",
+		"end_date": "20220531",
+		"member_id": "95123",
+		"provider_id": "UNK001",
+		"row_id": "873d1966-8c9d-4365-b44a-3359d44c3db8",
+		"service_date": "20220531",
+		"status": "2"
+	},
+	{
+		"activity_type": "304568006",
+		"code_flag": "S",
+		"end_date": "20210407",
+		"member_id": "95202",
+		"provider_id": "UNK001",
+		"row_id": "fa25c85f-ba98-4468-84c5-e4e1f13a34eb",
+		"service_date": "20210407",
+		"status": "2"
+	},
+	{
+		"activity_type": "185317003",
+		"code_flag": "S",
+		"end_date": "20240813",
+		"member_id": "95202",
+		"provider_id": "UNK001",
+		"row_id": "c4bc9942-8fff-45bb-9a8c-62fe5ba1a953",
+		"service_date": "20240813",
+		"status": "2"
+	},
+	{
+		"activity_type": "99232",
+		"code_flag": "C",
+		"end_date": "20220911",
+		"member_id": "95241",
+		"provider_id": "UNK001",
+		"row_id": "8bc0d3ba-10ab-4d0b-a796-000e98de790d",
+		"service_date": "20220911",
+		"status": "2"
+	},
+	{
+		"activity_type": "305336008",
+		"code_flag": "S",
+		"end_date": "20220616",
+		"member_id": "95256",
+		"provider_id": "UNK001",
+		"row_id": "74c84c04-f7d4-4c25-93a7-1069e99687fc",
+		"service_date": "20220616",
+		"status": "2"
+	}
+]

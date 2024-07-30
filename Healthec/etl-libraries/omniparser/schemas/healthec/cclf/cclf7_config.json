@@ -1,0 +1,204 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          { "name": "CUR_CLM_UNIQ_ID", "start_pos": 1, "length": 13 },
+          { "name": "BENE_MBI_ID", "start_pos": 14, "length": 11 },
+          { "name": "BENE_HIC_NUM", "start_pos": 25, "length": 11 },
+          { "name": "CLM_LINE_NDC_CD", "start_pos": 36, "length": 11 },
+          { "name": "CLM_TYPE_CD", "start_pos": 47, "length": 2 },
+          { "name": "CLM_LINE_FROM_DT", "start_pos": 49, "length": 10 },
+          { "name": "PRVDR_SRVC_ID_QLFYR_CD", "start_pos": 59, "length": 2 },
+          {
+            "name": "CLM_SRVC_PRVDR_GNRC_ID_NUM",
+            "start_pos": 61,
+            "length": 20
+          },
+          { "name": "CLM_DSPNSNG_STUS_CD", "start_pos": 81, "length": 1 },
+          { "name": "CLM_DAW_PROD_SLCTN_CD", "start_pos": 82, "length": 1 },
+          { "name": "CLM_LINE_SRVC_UNIT_QTY", "start_pos": 83, "length": 24 },
+          { "name": "CLM_LINE_DAYS_SUPLY_QTY", "start_pos": 107, "length": 9 },
+          { "name": "PRVDR_PRSBNG_ID_QLFYR_CD", "start_pos": 116, "length": 2 },
+          {
+            "name": "CLM_PRSBNG_PRVDR_GNRC_ID_NUM",
+            "start_pos": 118,
+            "length": 20
+          },
+          { "name": "CLM_LINE_BENE_PMT_AMT", "start_pos": 138, "length": 13 },
+          { "name": "CLM_ADJSMT_TYPE_CD", "start_pos": 151, "length": 2 },
+          { "name": "CLM_EFCTV_DT", "start_pos": 153, "length": 10 },
+          { "name": "CLM_IDR_LD_DT", "start_pos": 163, "length": 10 },
+          {
+            "name": "CLM_LINE_RX_SRVC_RFRNC_NUM",
+            "start_pos": 173,
+            "length": 12
+          },
+          { "name": "CLM_LINE_RX_FILL_NUM", "start_pos": 185, "length": 9 },
+          { "name": "CLM_PHRMCY_SRVC_TYPE_CD", "start_pos": 194, "length": 2 }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "cur_clm_uniq_id": { "xpath": "CUR_CLM_UNIQ_ID", "type": "int" },
+        "bene_mbi_id": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_MBI_ID",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_hic_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_HIC_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_line_ndc_cd": {
+          "xpath": "CLM_LINE_NDC_CD",
+          "template": "remove_special_char"
+        },
+        "clm_type_cd": { "xpath": "CLM_TYPE_CD", "type": "int" },
+        "clm_line_from_dt": {
+          "xpath": "CLM_LINE_FROM_DT",
+          "template": "remove_special_char"
+        },
+        "prvdr_srvc_id_qlfyr_cd": {
+          "xpath": "PRVDR_SRVC_ID_QLFYR_CD",
+          "template": "remove_special_char"
+        },
+        "clm_srvc_prvdr_gnrc_id_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "CLM_SRVC_PRVDR_GNRC_ID_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_dspnsng_stus_cd": {
+          "xpath": "CLM_DSPNSNG_STUS_CD",
+          "template": "remove_special_char"
+        },
+        "clm_daw_prod_slctn_cd": {
+          "xpath": "CLM_DAW_PROD_SLCTN_CD",
+          "template": "remove_special_char"
+        },
+        "clm_line_srvc_unit_qty": {
+          "xpath": "CLM_LINE_SRVC_UNIT_QTY",
+          "type": "float"
+        },
+        "clm_line_days_suply_qty": {
+          "xpath": "CLM_LINE_DAYS_SUPLY_QTY",
+          "type": "int"
+        },
+        "prvdr_prsbng_id_qlfyr_cd": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "PRVDR_PRSBNG_ID_QLFYR_CD",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_prsbng_prvdr_gnrc_id_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "CLM_PRSBNG_PRVDR_GNRC_ID_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_line_bene_pmt_amt": {
+          "xpath": "CLM_LINE_BENE_PMT_AMT",
+          "type": "float"
+        },
+        "clm_adjsmt_type_cd": {
+          "xpath": "CLM_ADJSMT_TYPE_CD",
+          "template": "remove_special_char"
+        },
+        "clm_efctv_dt": {
+          "xpath": "CLM_EFCTV_DT",
+          "template": "remove_special_char"
+        },
+        "clm_idr_ld_dt": {
+          "xpath": "CLM_IDR_LD_DT",
+          "template": "remove_special_char"
+        },
+        "clm_line_rx_srvc_rfrnc_num": {
+          "xpath": "CLM_LINE_RX_SRVC_RFRNC_NUM",
+          "type": "int"
+        },
+        "clm_line_rx_fill_num": {
+          "xpath": "CLM_LINE_RX_FILL_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_phrmcy_srvc_type_cd": {
+          "xpath": "CLM_PHRMCY_SRVC_TYPE_CD",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

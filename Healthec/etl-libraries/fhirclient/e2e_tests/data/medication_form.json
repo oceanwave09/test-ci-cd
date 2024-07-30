@@ -1,0 +1,11 @@
+{
+  "form": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "${form_code}",
+        "display": "Oral suspension (qualifier value)"
+      }
+    ]
+  }
+}

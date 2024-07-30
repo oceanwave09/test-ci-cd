@@ -1,0 +1,17 @@
+[
+  {% for specialty in data.specialties %}
+  {
+    {%- if specialty.code -%}
+    "coding": [
+      {
+        "system": "http://nucc.org/provider-taxonomy",
+        "code": "{{ specialty.code }}",
+        "display": "{{ specialty.display }}"
+      }
+    ],
+    {%- endif %}
+    "text": "{{ specialty.text }}"
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+]

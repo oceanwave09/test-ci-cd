@@ -1,0 +1,16 @@
+[
+  {%- if data.special_courtesy_code or data.special_courtesy_text -%}
+  {
+    {% if data.special_courtesy_code %}
+    "coding": [
+      {
+        "system": "{{ data.special_courtesy_system }}",
+        "code": "{{ data.special_courtesy_code }}",
+        "display": "{{ data.special_courtesy_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.special_courtesy_text }}"
+  }
+  {%- endif %}
+]

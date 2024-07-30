@@ -1,0 +1,394 @@
+{
+    "parser_settings": {
+        "version": "omni.2.1",
+        "file_format_type": "csv2"
+    },
+    "file_declaration": {
+        "delimiter": ",",
+        "replace_double_quotes": false,
+        "records": [
+            {
+                "rows": 1,
+                "min": 1,
+                "max": 1
+            },
+            {
+                "is_target": true,
+                "columns": [
+                    {
+                        "name": "row",
+                        "index": 1
+                    },
+                    {
+                        "name": "domain",
+                        "index": 2
+                    },
+                    {
+                        "name": "patient_first_name",
+                        "index": 3
+                    },
+                    {
+                        "name": "patient_last_name",
+                        "index": 4
+                    },
+                    {
+                        "name": "patient_dob",
+                        "index": 5
+                    },
+                    {
+                        "name": "external_patient_id",
+                        "index": 6
+                    },
+                    {
+                        "name": "external_practice_id",
+                        "index": 7
+                    },
+                    {
+                        "name": "code",
+                        "index": 8
+                    },
+                    {
+                        "name": "name",
+                        "index": 9
+                    },
+                    {
+                        "name": "dictionary_name",
+                        "index": 10
+                    },
+                    {
+                        "name": "start_date",
+                        "index": 11
+                    },
+                    {
+                        "name": "end_date",
+                        "index": 12
+                    },
+                    {
+                        "name": "action_date",
+                        "index": 13
+                    },
+                    {
+                        "name": "signed_date",
+                        "index": 14
+                    },
+                    {
+                        "name": "form",
+                        "index": 15
+                    },
+                    {
+                        "name": "medication_type",
+                        "index": 16
+                    },
+                    {
+                        "name": "medi_contraindicated_flag",
+                        "index": 17
+                    },
+                    {
+                        "name": "medi_class_contraindicated_flag",
+                        "index": 18
+                    },
+                    {
+                        "name": "dose_value",
+                        "index": 19
+                    },
+                    {
+                        "name": "units",
+                        "index": 20
+                    },
+                    {
+                        "name": "other",
+                        "index": 21
+                    },
+                    {
+                        "name": "schedule",
+                        "index": 22
+                    },
+                    {
+                        "name": "notes",
+                        "index": 23
+                    },
+                    {
+                        "name": "action",
+                        "index": 24
+                    },
+                    {
+                        "name": "refills",
+                        "index": 25
+                    },
+                    {
+                        "name": "quantity",
+                        "index": 26
+                    },
+                    {
+                        "name": "quantity_unit",
+                        "index": 27
+                    },
+                    {
+                        "name": "route_code_text",
+                        "index": 28
+                    },
+                    {
+                        "name": "duration",
+                        "index": 29
+                    },
+                    {
+                        "name": "substitution_permitted",
+                        "index": 30
+                    },
+                    {
+                        "name": "fill_number",
+                        "index": 31
+                    },
+                    {
+                        "name": "fill_date",
+                        "index": 32
+                    },
+                    {
+                        "name": "source_medication_id",
+                        "index": 33
+                    },
+                    {
+                        "name": "stop_reason",
+                        "index": 34
+                    },
+                    {
+                        "name": "prescription_id",
+                        "index": 35
+                    },
+                    {
+                        "name": "schedule_alternatives",
+                        "index": 36
+                    },
+                    {
+                        "name": "deleted",
+                        "index": 37
+                    },
+                    {
+                        "name": "source_system",
+                        "index": 38
+                    },
+                    {
+                        "name": "vendor",
+                        "index": 39
+                    },
+                    {
+                        "name": "source_type",
+                        "index": 40
+                    }
+                ]
+            }
+        ]
+    },
+    "transform_declarations": {
+        "FINAL_OUTPUT": {
+            "object": {
+                "row_id": {
+                    "custom_func": {
+                        "name": "uuidv4"
+                    }
+                },
+                "row": {
+                    "xpath": "row",
+                    "template": "remove_special_char"
+                },
+                "domain": {
+                    "xpath": "domain",
+                    "template": "remove_special_char"
+                },
+                "patient_first_name": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_first_name",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "patient_last_name": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_last_name",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "patient_dob": {
+                    "custom_func": {
+                        "name": "encryptAesEcb",
+                        "args": [
+                            {
+                                "external": "data_key"
+                            },
+                            {
+                                "xpath": "patient_dob",
+                                "template": "remove_special_char"
+                            }
+                        ]
+                    }
+                },
+                "external_patient_id": {
+                    "xpath": "external_patient_id",
+                    "template": "remove_special_char"
+                },
+                "external_practice_id": {
+                    "xpath": "external_practice_id",
+                    "template": "remove_special_char"
+                },
+                "code": {
+                    "xpath": "code",
+                    "template": "remove_special_char"
+                },
+                "name": {
+                    "xpath": "name",
+                    "template": "remove_special_char"
+                },
+                "dictionary_name": {
+                    "xpath": "dictionary_name",
+                    "template": "remove_special_char"
+                },
+                "start_date": {
+                    "xpath": "start_date",
+                    "template": "remove_special_char"
+                },
+                "end_date": {
+                    "xpath": "end_date",
+                    "template": "remove_special_char"
+                },
+                "action_date": {
+                    "xpath": "action_date",
+                    "template": "remove_special_char"
+                },
+                "signed_date": {
+                    "xpath": "signed_date",
+                    "template": "remove_special_char"
+                },
+                "form": {
+                    "xpath": "form",
+                    "template": "remove_special_char"
+                },
+                "medication_type": {
+                    "xpath": "medication_type",
+                    "template": "remove_special_char"
+                },
+                "medi_contraindicated_flag": {
+                    "xpath": "medi_contraindicated_flag",
+                    "template": "remove_special_char"
+                },
+                "medi_class_contraindicated_flag": {
+                    "xpath": "medi_class_contraindicated_flag",
+                    "template": "remove_special_char"
+                },
+                "dose_value": {
+                    "xpath": "dose_value",
+                    "template": "remove_special_char"
+                },
+                "units": {
+                    "xpath": "units",
+                    "template": "remove_special_char"
+                },
+                "other": {
+                    "xpath": "other",
+                    "template": "remove_special_char"
+                },
+                "schedule": {
+                    "xpath": "schedule",
+                    "template": "remove_special_char"
+                },
+                "notes": {
+                    "xpath": "notes",
+                    "template": "remove_special_char"
+                },
+                "action": {
+                    "xpath": "action",
+                    "template": "remove_special_char"
+                },
+                "refills": {
+                    "xpath": "refills",
+                    "template": "remove_special_char"
+                },
+                "quantity": {
+                    "xpath": "quantity",
+                    "template": "remove_special_char"
+                },
+                "quantity_unit": {
+                    "xpath": "quantity_unit",
+                    "template": "remove_special_char"
+                },
+                "route_code_text": {
+                    "xpath": "route_code_text",
+                    "template": "remove_special_char"
+                },
+                "duration": {
+                    "xpath": "duration",
+                    "template": "remove_special_char"
+                },
+                "substitution_permitted": {
+                    "xpath": "substitution_permitted",
+                    "template": "remove_special_char"
+                },
+                "fill_number": {
+                    "xpath": "fill_number",
+                    "template": "remove_special_char"
+                },
+                "fill_date": {
+                    "xpath": "fill_date",
+                    "template": "remove_special_char"
+                },
+                "source_medication_id": {
+                    "xpath": "source_medication_id",
+                    "template": "remove_special_char"
+                },
+                "stop_reason": {
+                    "xpath": "stop_reason",
+                    "template": "remove_special_char"
+                },
+                "prescription_id": {
+                    "xpath": "prescription_id",
+                    "template": "remove_special_char"
+                },
+                "schedule_alternatives": {
+                    "xpath": "schedule_alternatives",
+                    "template": "remove_special_char"
+                },
+                "deleted": {
+                    "xpath": "deleted",
+                    "template": "remove_special_char"
+                },
+                "source_system": {
+                    "xpath": "source_system",
+                    "template": "remove_special_char"
+                },
+                "vendor": {
+                    "xpath": "vendor",
+                    "template": "remove_special_char"
+                },
+                "source_type": {
+                    "xpath": "source_type",
+                    "template": "remove_special_char"
+                }
+            }
+        },
+        "remove_special_char": {
+            "custom_func": {
+                "name": "javascript_with_context",
+                "args": [
+                    {
+                        "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+                    }
+                ],
+                "ignore_error": false
+            }
+        }
+    }
+}

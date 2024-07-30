@@ -1,0 +1,11 @@
+{
+  {%- if data.billable_period_start -%}
+  "start": "{{ data.billable_period_start }}"
+  {%- endif %}
+  {%- if data.billable_period_start and data.billable_period_end -%}
+  ,
+  {%- endif -%}
+  {%- if data.billable_period_end -%}
+  "end": "{{ data.billable_period_end }}"
+  {%- endif %}
+}

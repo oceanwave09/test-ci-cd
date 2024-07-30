@@ -1,0 +1,333 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "prescribed_date",
+            "index": 8
+          },
+          {
+            "name": "medication_status",
+            "index": 9
+          },
+          {
+            "name": "medication_name",
+            "index": 10
+          },
+          {
+            "name": "medication_ndc",
+            "index": 11
+          },
+          {
+            "name": "dosage_form",
+            "index": 12
+          },
+          {
+            "name": "strength",
+            "index": 13
+          },
+          {
+            "name": "units",
+            "index": 14
+          },
+          {
+            "name": "quantity",
+            "index": 15
+          },
+          {
+            "name": "daily_frequency",
+            "index": 16
+          },
+          {
+            "name": "weekly_frequnecy",
+            "index": 17
+          },
+          {
+            "name": "sig",
+            "index": 18
+          },
+          {
+            "name": "prescriber_first_name",
+            "index": 19
+          },
+          {
+            "name": "prescriber_last_name",
+            "index": 20
+          },
+          {
+            "name": "prescriber_dea",
+            "index": 21
+          },
+          {
+            "name": "prescriber_npi",
+            "index": 22
+          },
+          {
+            "name": "electronic_prescription",
+            "index": 23
+          },
+          {
+            "name": "pharmacy_name",
+            "index": 24
+          },
+          {
+            "name": "pharmacy_phone",
+            "index": 25
+          },
+          {
+            "name": "j_code",
+            "index": 26
+          },
+          {
+            "name": "prescription_begin_date",
+            "index": 27
+          },
+          {
+            "name": "prescription_end_date",
+            "index": 28
+          },
+          {
+            "name": "days_supply",
+            "index": 29
+          },
+          {
+            "name": "refills",
+            "index": 30
+          },
+          {
+            "name": "take",
+            "index": 31
+          },
+          {
+            "name": "medication_origin_id",
+            "index": 32
+          },
+          {
+            "name": "medication_code_system",
+            "index": 33
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "prescribed_date": {
+          "xpath": "prescribed_date"
+        },
+        "medication_status": {
+          "xpath": "medication_status"
+        },
+        "medication_name": {
+          "xpath": "medication_name"
+        },
+        "medication_ndc": {
+          "xpath": "medication_ndc"
+        },
+        "dosage_form": {
+          "xpath": "dosage_form"
+        },
+        "strength": {
+          "xpath": "strength"
+        },
+        "units": {
+          "xpath": "units"
+        },
+        "quantity": {
+          "xpath": "quantity"
+        },
+        "daily_frequency": {
+          "xpath": "daily_frequency"
+        },
+        "weekly_frequnecy": {
+          "xpath": "weekly_frequnecy"
+        },
+        "sig": {
+          "xpath": "sig"
+        },
+        "prescriber_first_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "prescriber_first_name"
+              }
+            ]
+          }
+        },
+        "prescriber_last_name": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "prescriber_last_name"
+              }
+            ]
+          }
+        },
+        "prescriber_dea": {
+          "xpath": "prescriber_dea"
+        },
+        "prescriber_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "prescriber_npi"
+              }
+            ]
+          }
+        },
+        "electronic_prescription": {
+          "xpath": "electronic_prescription"
+        },
+        "pharmacy_name": {
+          "xpath": "pharmacy_name"
+        },
+        "pharmacy_phone": {
+          "xpath": "pharmacy_phone"
+        },
+        "j_code": {
+          "xpath": "j_code"
+        },
+        "prescription_begin_date": {
+          "xpath": "prescription_begin_date"
+        },
+        "prescription_end_date": {
+          "xpath": "prescription_end_date"
+        },
+        "days_supply": {
+          "xpath": "days_supply"
+        },
+        "refills": {
+          "xpath": "refills"
+        },
+        "take": {
+          "xpath": "take"
+        },
+        "medication_origin_id": {
+          "xpath": "medication_origin_id"
+        },
+        "medication_code_system": {
+          "xpath": "medication_code_system"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+is_delimited_file: false
+field_mappings:
+    member_id: "start=1;len=11;rule=rule_c003"
+    lastname: "start=28;len=20"
+    firstname: "start=48;len=20"
+    middle_initials: "start=68;len=5"
+    member_ssn: "start=73;len=9"
+    phone_home: "start=82;len=10;type=bigint"
+    street_address_1: "start=92;len=19"
+    street_address_2: "start=111;len=10"
+    city: "start=121;len=6"
+    state: "start=127;len=2"
+    zip: "start=129;len=5"
+    country: "start=134;len=2;fillna=US"
+    dob: "start=136;len=10;type=date"
+    sex: "start=146;len=1;fillna=U"
+    phone_mobile: "start=190;len=10;type=bigint"
+    fax: "start=200;len=10;type=bigint"
+    phone_work: "start=210;len=10;type=bigint"
+    email: "start=220;len=20"
+    custom_field: "fillna=test"
+include_fields:
+    - user_format_type
+exclude_fields:
+    - middle_initials
+validation_rules:
+    - business_rule_c002

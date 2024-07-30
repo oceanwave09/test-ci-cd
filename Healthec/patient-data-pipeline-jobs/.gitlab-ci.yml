@@ -1,0 +1,57 @@
+# You can override the included template(s) by including variable overrides
+# SAST customization: https://docs.gitlab.com/ee/user/application_security/sast/#customizing-the-sast-settings
+# Secret Detection customization: https://docs.gitlab.com/ee/user/application_security/secret_detection/#customizing-settings
+# Dependency Scanning customization: https://docs.gitlab.com/ee/user/application_security/dependency_scanning/#customizing-the-dependency-scanning-settings
+# Container Scanning customization: https://docs.gitlab.com/ee/user/application_security/container_scanning/#customizing-the-container-scanning-settings
+# Note that environment variables can be set in several places
+# See https://docs.gitlab.com/ee/ci/variables/#cicd-variable-precedence
+
+image: registry.gitlab.com/health-ec/platform/infrastructure/build-images/python-ci-build:v1.0.0
+
+
+stages:
+  - build
+  - test
+  - release
+
+
+include:
+  - local: 'build_template.yml'
+  - template: Security/SAST.gitlab-ci.yml
+
+
+lint:
+  stage: build
+  extends: .lint
+
+
+sast:
+  stage: test
+
+
+docker:
+  stage: release
+  extends: .docker
+  variables:
+    CI_REGISTRY_IMAGE_NAME: "registry.gitlab.com/health-ec/platform/domain/member/etl/patient-data-pipeline-jobs/patient-data-pipeline"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" && $CI_COMMIT_TAG == null'
+
+
+s3sync:
+  stage: release
+  extends: .s3sync
+  variables:
+    TARGET_ENV: "development"
+    AWS_ACCOUNT_ID: "717301278693"
+    SRC_PATH: infra/job_definitions/
+    DEST_S3_PATH: "s3://phm-development-datapipeline-bucket/airflow-workflow/dags/templates/patient/"
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" && $CI_COMMIT_TAG == null'
+
+
+# version:
+#   stage: release
+#   extends: .version
+#   rules:
+#     - if: '$CI_COMMIT_BRANCH == "main" && $CI_COMMIT_TAG == null'

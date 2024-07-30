@@ -1,0 +1,148 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "patient_id",
+            "index": 3
+          },
+          {
+            "name": "patient_account_no",
+            "index": 4
+          },
+          {
+            "name": "encounter_id",
+            "index": 5
+          },
+          {
+            "name": "provider_npi",
+            "index": 6
+          },
+          {
+            "name": "relationship",
+            "index": 7
+          },
+          {
+            "name": "status",
+            "index": 8
+          },
+          {
+            "name": "age",
+            "index": 9
+          },
+          {
+            "name": "date_of_birth",
+            "index": 10
+          },
+          {
+            "name": "icd_item_id",
+            "index": 11
+          },
+          {
+            "name": "icd_code",
+            "index": 12
+          },
+          {
+            "name": "icd_desc",
+            "index": 13
+          },
+          {
+            "name": "diagnosed_year",
+            "index": 14
+          },
+          {
+            "name": "diagnosed_age",
+            "index": 15
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "relationship": {
+          "xpath": "relationship"
+        },
+        "status": {
+          "xpath": "status"
+        },
+        "age": {
+          "xpath": "age"
+        },
+        "date_of_birth": {
+          "xpath": "date_of_birth"
+        },
+        "icd_item_id": {
+          "xpath": "icd_item_id"
+        },
+        "icd_code": {
+          "xpath": "icd_code"
+        },
+        "icd_desc": {
+          "xpath": "icd_desc"
+        },
+        "diagnosed_year": {
+          "xpath": "diagnosed_year"
+        },
+        "diagnosed_age": {
+          "xpath": "diagnosed_age"
+        }
+      }
+    }
+  }
+}

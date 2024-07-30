@@ -1,0 +1,28 @@
+demographic_first_name:
+  key_path: caremanager_first_name
+  type: string
+  min_length: 1
+
+demographic_last_name:
+  key_path: caremanager_last_name
+  type: string
+  min_length: 1
+
+demographic_patient_external_id:
+  key_path: external_practice_id
+  min_length: 1
+  required: True
+
+demographic_patient_first_name:
+  key_path: patient_first_name
+  type: string
+  min_length: 1
+
+demographic_patient_last_name:
+  key_path: patient_last_name
+  type: string
+  min_length: 1
+
+demographic_practice_external_id:
+  key_path: external_practice_id
+  required: True

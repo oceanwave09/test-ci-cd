@@ -1,0 +1,24 @@
+allergy_patient_id:
+  key_path: patient_id
+  min_length: 1
+  required: True
+
+allergy_provider_npi:
+  key_path: provider_npi
+  required: True
+  type: string
+  min_length: 10
+
+allergy_encounter_id:
+  key_path: encounter_id
+  required: True
+  type: string
+  min_length: 1
+
+allergy_canonical_status:
+  key_path: allergy_status
+  type: string
+  choices:
+    - Inactive
+    - Active
+    - Resolved

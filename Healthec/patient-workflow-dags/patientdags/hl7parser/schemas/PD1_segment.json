@@ -1,0 +1,499 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "edi"
+  },
+  "file_declaration": {
+    "segment_delimiter": "\n",
+    "element_delimiter": "|",
+    "component_delimiter": "^",
+    "segment_declarations": [
+      {
+        "min": 1,
+        "max": -1,
+        "is_target": true,
+        "name": "Message-header",
+        "type": "segment_group",
+        "child_segments": [
+          {
+            "name": "PD1",
+            "min": 1,
+            "max": -1,
+            "elements": [
+              {
+                "name": "patient_sequence",
+                "index": 1
+              },
+              {
+                "name": "living_dependency",
+                "index": 2,
+                "default": ""
+              },
+              {
+                "name": "living_arrangement",
+                "index": 3,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_organization_name",
+                "index": 4,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_organization_type_code",
+                "index": 4,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_facility_identifier",
+                "index": 4,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_facility_check_digit",
+                "index": 4,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_facility_check_digit_scheme",
+                "index": 4,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_facility_assigning_authority",
+                "index": 4,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_facility_identifier_type_code",
+                "index": 4,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_assigning_facility",
+                "index": 4,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_facility_representation_code",
+                "index": 4,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_organization_identifier",
+                "index": 4,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_identifier",
+                "index": 5,
+                "component_index": 1,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_family_name",
+                "index": 5,
+                "component_index": 2,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_given_name",
+                "index": 5,
+                "component_index": 3,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_middle_name",
+                "index": 5,
+                "component_index": 4,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_suffix",
+                "index": 5,
+                "component_index": 5,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_prefix",
+                "index": 5,
+                "component_index": 6,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_degree",
+                "index": 5,
+                "component_index": 7,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_source_table",
+                "index": 5,
+                "component_index": 8,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_assigning_authority",
+                "index": 5,
+                "component_index": 9,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_type_code",
+                "index": 5,
+                "component_index": 10,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_identifier_check_digit",
+                "index": 5,
+                "component_index": 11,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_check_digit_scheme",
+                "index": 5,
+                "component_index": 12,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_identifier_type_code",
+                "index": 5,
+                "component_index": 13,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_assigning_facility",
+                "index": 5,
+                "component_index": 14,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_representation_code",
+                "index": 5,
+                "component_index": 15,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_name_context",
+                "index": 5,
+                "component_index": 16,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_name_validity_range",
+                "index": 5,
+                "component_index": 17,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_name_assembly_order",
+                "index": 5,
+                "component_index": 18,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_effective_date",
+                "index": 5,
+                "component_index": 19,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_expiration_date",
+                "index": 5,
+                "component_index": 20,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_professional_suffix",
+                "index": 5,
+                "component_index": 21,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_assigning_jurisdiction",
+                "index": 5,
+                "component_index": 22,
+                "default": ""
+              },
+              {
+                "name": "patient_primary_care_provider_assigning_agency",
+                "index": 5,
+                "component_index": 23,
+                "default": ""
+              },
+              {
+                "name": "student_indicator",
+                "index": 6,
+                "default": ""
+              },
+              {
+                "name": "handicap",
+                "index": 7,
+                "default": ""
+              },
+              {
+                "name": "living_will_code",
+                "index": 8,
+                "default": ""
+              },
+              {
+                "name": "organ_donor_code",
+                "index": 9,
+                "default": ""
+              },
+              {
+                "name": "separate_bill",
+                "index": 10,
+                "default": ""
+              },
+              {
+                "name": "duplicate_patient",
+                "index": 11,
+                "default": ""
+              },
+              {
+                "name": "publicity_code",
+                "index": 12,
+                "default": ""
+              },
+              {
+                "name": "protection_indicator",
+                "index": 13,
+                "default": ""
+              },
+              {
+                "name": "protection_indicator_effective_date",
+                "index": 14,
+                "default": ""
+              },
+              {
+                "name": "place_of_worship",
+                "index": 15,
+                "default": ""
+              },
+              {
+                "name": "advance_directive_code",
+                "index": 16,
+                "default": ""
+              },
+              {
+                "name": "immunization_registry_status",
+                "index": 17,
+                "default": ""
+              },
+              {
+                "name": "immunization_registry_status_effective_date",
+                "index": 18,
+                "default": ""
+              },
+              {
+                "name": "publicity_code_effective_date",
+                "index": 19,
+                "default": ""
+              },
+              {
+                "name": "military_branch",
+                "index": 20,
+                "default": ""
+              },
+              {
+                "name": "military_rank_grade",
+                "index": 21,
+                "default": ""
+              },
+              {
+                "name": "military_status",
+                "index": 22,
+                "default": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "PD1": {
+          "array":[
+            {
+              "xpath": "PD1",
+              "object": {
+                "patient_sequence":{
+                  "xpath": "patient_sequence"
+                },
+                "living_dependency": {
+                  "xpath": "living_dependency"
+                },
+                "living_arrangement": {
+                  "xpath": "living_arrangement"
+                },
+                "patient_primary_organization_name": {
+                  "xpath": "patient_primary_organization_name"
+                },
+                "patient_primary_organization_type_code": {
+                  "xpath": "patient_primary_organization_type_code"
+                },
+                "patient_primary_facility_identifier": {
+                  "xpath": "patient_primary_facility_identifier"
+                },
+                "patient_primary_facility_check_digit": {
+                  "xpath": "patient_primary_facility_check_digit"
+                },
+                "patient_primary_facility_check_digit_scheme": {
+                  "xpath": "patient_primary_facility_check_digit_scheme"
+                },
+                "patient_primary_facility_assigning_authority": {
+                  "xpath": "patient_primary_facility_assigning_authority"
+                },
+                "patient_primary_facility_identifier_type_code": {
+                  "xpath": "patient_primary_facility_identifier_type_code"
+                },
+                "patient_primary_assigning_facility": {
+                  "xpath": "patient_primary_assigning_facility"
+                },
+                "patient_primary_facility_representation_code": {
+                  "xpath": "patient_primary_facility_representation_code"
+                },
+                "patient_primary_organization_identifier": {
+                  "xpath": "patient_primary_organization_identifier"
+                },
+                "patient_primary_care_provider_identifier": {
+                  "xpath": "patient_primary_care_provider_identifier"
+                },
+                "patient_primary_care_provider_family_name": {
+                  "xpath": "patient_primary_care_provider_family_name"
+                },
+                "patient_primary_care_provider_given_name": {
+                  "xpath": "patient_primary_care_provider_given_name"
+                },
+                "patient_primary_care_provider_middle_name": {
+                  "xpath": "patient_primary_care_provider_middle_name"
+                },
+                "patient_primary_care_provider_suffix": {
+                  "xpath": "patient_primary_care_provider_suffix"
+                },
+                "patient_primary_care_provider_prefix": {
+                  "xpath": "patient_primary_care_provider_prefix"
+                },
+                "patient_primary_care_provider_degree": {
+                  "xpath": "patient_primary_care_provider_degree"
+                },
+                "patient_primary_care_provider_source_table": {
+                  "xpath": "patient_primary_care_provider_source_table"
+                },
+                "patient_primary_care_provider_assigning_authority": {
+                  "xpath": "patient_primary_care_provider_assigning_authority"
+                },
+                "patient_primary_care_provider_type_code": {
+                  "xpath": "patient_primary_care_provider_type_code"
+                },
+                "patient_primary_care_identifier_check_digit": {
+                  "xpath": "patient_primary_care_identifier_check_digit"
+                },
+                "patient_primary_care_provider_check_digit_scheme": {
+                  "xpath": "patient_primary_care_provider_check_digit_scheme"
+                },
+                "patient_primary_care_provider_identifier_type_code": {
+                  "xpath": "patient_primary_care_provider_identifier_type_code"
+                },
+                "patient_primary_care_provider_assigning_facility": {
+                  "xpath": "patient_primary_care_provider_assigning_facility"
+                },
+                "patient_primary_care_provider_representation_code": {
+                  "xpath": "patient_primary_care_provider_representation_code"
+                },
+                "patient_primary_care_provider_name_context": {
+                  "xpath": "patient_primary_care_provider_name_context"
+                },
+                "patient_primary_care_provider_name_validity_range": {
+                  "xpath": "patient_primary_care_provider_name_validity_range"
+                },
+                "patient_primary_care_provider_name_assembly_order": {
+                  "xpath": "patient_primary_care_provider_name_assembly_order"
+                },
+                "patient_primary_care_provider_effective_date": {
+                  "xpath": "patient_primary_care_provider_effective_date"
+                },
+                "patient_primary_care_provider_expiration_date": {
+                  "xpath": "patient_primary_care_provider_expiration_date"
+                },
+                "patient_primary_care_provider_professional_suffix": {
+                  "xpath": "patient_primary_care_provider_professional_suffix"
+                },
+                "patient_primary_care_provider_assigning_jurisdiction": {
+                  "xpath": "patient_primary_care_provider_assigning_jurisdiction"
+                },
+                "patient_primary_care_provider_assigning_agency": {
+                  "xpath": "patient_primary_care_provider_assigning_agency"
+                },
+                "student_indicator": {
+                  "xpath": "student_indicator"
+                },
+                "handicap": {
+                  "xpath": "handicap"
+                },
+                "living_will_code": {
+                  "xpath": "living_will_code"
+                },
+                "organ_donor_code": {
+                  "xpath": "organ_donor_code"
+                },
+                "separate_bill": {
+                  "xpath": "separate_bill"
+                },
+                "duplicate_patient": {
+                  "xpath": "duplicate_patient"
+                },
+                "publicity_code": {
+                  "xpath": "publicity_code"
+                },
+                "protection_indicator": {
+                  "xpath": "protection_indicator"
+                },
+                "protection_indicator_effective_date": {
+                  "xpath": "protection_indicator_effective_date"
+                },
+                "place_of_worship": {
+                  "xpath": "place_of_worship"
+                },
+                "advance_directive_code": {
+                  "xpath": "advance_directive_code"
+                },
+                "immunization_registry_status": {
+                  "xpath": "immunization_registry_status"
+                },
+                "immunization_registry_status_effective_date": {
+                  "xpath": "immunization_registry_status_effective_date"
+                },
+                "publicity_code_effective_date": {
+                  "xpath": "publicity_code_effective_date"
+                },
+                "military_branch": {
+                  "xpath": "military_branch"
+                },
+                "military_rank_grade": {
+                  "xpath": "military_rank_grade"
+                },
+                "military_status": {
+                  "xpath": "military_status"
+                }
+              }
+            }
+      ]}
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+ncqa_hedis_record_type:
+  key_path: record_type
+  min_length: 1
+  required: True
+
+ncqa_hedis_beneficary_id:
+  key_path: beneficiary_id
+  min_length: 1
+  required: True

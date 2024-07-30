@@ -1,0 +1,4 @@
+py4j==0.10.9.3
+pyspark==3.2.1
+PyYAML==6.0
+smart-open[all]==6.0.0

@@ -1,0 +1,9 @@
+referral_patient_id:
+  key_path: patient_id
+  min_length: 1
+  required: True
+
+referral_practice_apuid:
+  key_path: apuid
+  type: string
+  required: True

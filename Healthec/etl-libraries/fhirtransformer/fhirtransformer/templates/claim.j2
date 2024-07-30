@@ -1,0 +1,45 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "type": {% include "attributes/claim/type.j2" %},
+  "use": "{{ data.use }}",
+  "related": {% include "attributes/claim/related_referrence.j2" %},
+  "patient": {% include "attributes/patient_reference.j2" %},
+  "billablePeriod": {% include "attributes/claim/billable_period.j2" %},
+  "created": "{{ data.created_date_time }}",
+  "insurer": {% include "attributes/claim/insurer_organization_reference.j2" %},
+  "provider": {% include "attributes/claim/provider_reference.j2" %},
+  "priority": {% include "attributes/claim/priority.j2" %},
+  "fundsReserve": {% include "attributes/claim/funds_reserve.j2" %},
+  "prescription": {% include "attributes/claim/prescription_medication_request_reference.j2" %},
+  "originalPrescription": {% include "attributes/claim/orig_prescription_medication_request_reference.j2" %},
+  "payee": {% include "attributes/claim/payee.j2" %},
+  "referral": {% include "attributes/service_request_reference.j2" %},
+  "facility": {% include "attributes/claim/facility_location_reference.j2" %},
+  "careTeam": {% include "attributes/claim/care_team.j2" %},
+  "diagnosis": {% include "attributes/claim/diagnosis.j2" %},
+  "procedure": {% include "attributes/claim/procedure.j2" %},
+  "insurance": {% include "attributes/claim/insurance.j2" %},
+  "accident": {% include "attributes/claim/accident.j2" %},
+  "item": {% include "attributes/claim/item.j2" %},
+  "supportingInfo": {% include "attributes/claim/support_info.j2" %},
+  "diagnosisRelatedGroup": {% include "attributes/claim/diag_related_group.j2" %},
+  {% if data.patient_paid_amount -%}
+  "patientPaid": {% include "attributes/claim/patient_paid.j2" %},
+  {%- endif %}
+  "total": {% include "attributes/claim/total.j2" %}
+{% endblock %}

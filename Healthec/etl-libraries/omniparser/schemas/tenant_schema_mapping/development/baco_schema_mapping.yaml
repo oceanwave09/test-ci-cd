@@ -1,0 +1,212 @@
+baco:
+  common:
+    PRACTICE:
+      schema: healthec/practice_roster/practice_config.json
+      validation: validation/practice_validation_config.yaml
+      fhir_bundle: practice_stage_to_fhirbundle_dag
+    PROVIDER:
+      schema: baco/provider_config.json
+      validation: validation/provider_validation_config.yaml
+      fhir_bundle: provider_stage_to_fhirbundle_dag
+    # ECW
+    ECW_ALLERGY:
+      schema: healthec/ecw/allergy_config.json
+      validation: validation/ecw/allergy_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_DIAGNOSIS:
+      schema: healthec/ecw/diagnosis_config.json
+      validation: validation/ecw/diagnois_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_ENCOUNTER:
+      schema: healthec/ecw/encounter_config.json
+      validation: validation/ecw/encounter_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_EXAMINATION:
+      schema: healthec/ecw/examination_config.json
+      validation: validation/ecw/examination_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_FACILITY:
+      schema: healthec/ecw/facility_config.json
+      validation: validation/ecw/facility_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_FAMILYHISTORY:
+      schema: healthec/ecw/family_history_config.json
+      validation: validation/ecw/familyhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_HOSPITALIZATION:
+      schema: healthec/ecw/hospitalization_config.json
+      validation: validation/ecw/hospitalization_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_HPI:
+      schema: healthec/ecw/hpi_config.json
+      validation: validation/ecw/hpi_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_IMMUNIZATION:
+      schema: healthec/ecw/immunization_config.json
+      validation: validation/ecw/immunization_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_MEDICALHISTORY:
+      schema: healthec/ecw/medical_history_config.json
+      validation: validation/ecw/medicalhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_MEDICATION:
+      schema: healthec/ecw/medication_config.json
+      validation: validation/ecw/medication_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_OBGYNHISTORY:
+      schema: healthec/ecw/obgyn_history_config.json
+      validation: validation/ecw/obygnhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_ORDERANDRESULT:
+      schema: healthec/ecw/order_and_result_config.json
+      validation: validation/ecw/orderandresult_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PATIENTDEMOGRAPHIC:
+      schema: healthec/ecw/patient_demographic_config.json
+      validation: validation/ecw/patientdemographic_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PHYSICALEXAM:
+      schema: healthec/ecw/physical_exam_config.json
+      validation: validation/ecw/physicalexam_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PRACTICEUSER:
+      schema: healthec/ecw/practice_user_config.json
+      validation: validation/ecw/practiceuser_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PREVENTIVE:
+      schema: healthec/ecw/preventive_config.json
+      validation: validation/ecw/preventive_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROBLEMLIST:
+      schema: healthec/ecw/problem_list_config.json
+      validation: validation/ecw/problemlist_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROCEDURECODE:
+      schema: healthec/ecw/procedure_code_config.json
+      validation: validation/ecw/procedurecode_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_PROCEDURE:
+      schema: healthec/ecw/procedure_config.json
+      validation: validation/ecw/procedure_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_REFERRAL:
+      schema: healthec/ecw/referral_config.json
+      validation: validation/ecw/referral_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_SOCIALHISTORY:
+      schema: healthec/ecw/social_history_config.json
+      validation: validation/ecw/socialhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_SURGICALHISTORY:
+      schema: healthec/ecw/surgical_history_config.json
+      validation: validation/ecw/surgicalhistory_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    ECW_VITAL:
+      schema: healthec/ecw/vital_config.json
+      validation: validation/ecw/vital_validation_config.yaml
+      fhir_bundle: ecw_stage_to_fhirbundle_dag
+    # GAP
+    GAP_ALLERGY:
+      schema: healthec/gap/allergy_config.json
+      validation: validation/gap/allergy_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_CARE:
+      schema: healthec/gap/care_config.json
+      validation: validation/gap/care_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_LAB:
+      schema: healthec/gap/lab_config.json
+      validation: validation/gap/lab_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_DEMOGRAPHIC:
+      schema: healthec/gap/demographic_config.json
+      validation: validation/gap/demographic_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_MEDICATION:
+      schema: healthec/gap/medication_config.json
+      validation: validation/gap/medication_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_MEDICALCONDITION:
+      schema: healthec/gap/medicalcondition_config.json
+      validation: validation/gap/medicalcondition_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_SMOKING:
+      schema: healthec/gap/smoking_config.json
+      validation: validation/gap/smoking_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_IMMUNIZATION:
+      schema: healthec/gap/immunization_config.json
+      validation: validation/gap/immunization_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_VITAL:
+      schema: healthec/gap/vital_config.json
+      validation: validation/gap/vital_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+    GAP_SDOH:
+      schema: healthec/gap/sdoh_config.json
+      validation: validation/gap/sdoh_validation_config.yaml
+      fhir_bundle: gap_stage_to_fhirbundle_dag
+  beaumont_family_medicine_clinic_taylor_015e812b-cff2-4fc3-8256-13d099753e54:
+    src_organization_id: 015e812b-cff2-4fc3-8256-13d099753e54
+    src_location_id: "a0fd5200-d14d-4b09-becb-7103c5806c5a"
+  legacy_family_medicine_pc_d4bfe100-aeb8-4e89-b3e3-895007cc290c:
+    src_organization_id: d4bfe100-aeb8-4e89-b3e3-895007cc290c
+    src_location_id: "f74f74df-289b-49be-9974-1b2367f4d952"
+  Ali_Nasser_e453d35d-dca7-481d-a1ab-7573960ec355:
+    src_organization_id: e453d35d-dca7-481d-a1ab-7573960ec355
+  Downriver_Internal_Medicine_practice_cf99f921-cc56-47b1-b793-5c8fb3383515:
+    src_organization_id: cf99f921-cc56-47b1-b793-5c8fb3383515
+  Dearborn_Heights_Medical_Center_65d0f397-e2ca-4d59-bf9e-b38691da40d8:
+    src_organization_id: 65d0f397-e2ca-4d59-bf9e-b38691da40d8
+  Manor_Medical_Center_e92a956a-c62d-441a-80d7-cc748cacd6e3:
+    src_organization_id: e92a956a-c62d-441a-80d7-cc748cacd6e3
+  Tarif_Mustafa_MD_PC_2dc0c239-5031-4a0c-8b94-318ba7ed032a:
+    src_organization_id: 2dc0c239-5031-4a0c-8b94-318ba7ed032a
+  Alka_D_Aggarwal_MD_PC_fd39b89d-ff1e-40af-9603-e5b3256434a0:
+    src_organization_id: fd39b89d-ff1e-40af-9603-e5b3256434a0
+  Ayman_Daoud_MD_PC_e429526a-3c41-4718-99fb-dfc62c4d6994:
+    src_organization_id: e429526a-3c41-4718-99fb-dfc62c4d6994
+  Canton_Family_Medicine_and_Medical_Spa_LLC_61193cc2-9096-47c8-9f49-fa29d1a3d6e7:
+    src_organization_id: 61193cc2-9096-47c8-9f49-fa29d1a3d6e7
+  Elanjian_Marcel_D_O_9115b400-1c25-455c-83f0-e453a9dafab4:
+    src_organization_id: 9115b400-1c25-455c-83f0-e453a9dafab4
+  Legacy_Family_Medicine_PC_1bdaee54-be88-4cae-b7b2-739ec24bca13:
+    src_organization_id: 1bdaee54-be88-4cae-b7b2-739ec24bca13
+  Alok_Shukla_00e01b3b-5149-472e-b35c-b3e818f09e81:
+    src_organization_id: 00e01b3b-5149-472e-b35c-b3e818f09e81
+  Rochester_Internist_PLLC_38f22a0b-d096-4a34-a8d0-a63869e4d2c9:
+    src_organization_id: 38f22a0b-d096-4a34-a8d0-a63869e4d2c9
+  Michigan_Medical_Group_c7e74de2-b0de-4030-921e-d64b0e2f7c65:
+    src_organization_id: c7e74de2-b0de-4030-921e-d64b0e2f7c65
+  Apex_medical_Center_827ea9c7-c86d-4ff9-af6d-482a7e1496dc:
+    src_organization_id: 827ea9c7-c86d-4ff9-af6d-482a7e1496dc
+  Maha_Dabbagh_MD_769fa767-585d-46d1-ba53-f2e5cd4c77ff:
+    src_organization_id: 769fa767-585d-46d1-ba53-f2e5cd4c77ff
+  Beaumont_ACO_Group_d436daf4-d6bc-45f2-971d-4702ac590c74:
+    src_organization_id: d436daf4-d6bc-45f2-971d-4702ac590c74
+  baco_hap_dee2682e-d18c-42be-9fc6-af9f34a31802:
+    BENEFICIARY:
+      schema: baco/hap/beneficiary_config.json
+      validation: validation/beneficiary_validation_config.yaml
+      fhir_bundle: beneficiary_stage_to_fhirbundle_dag
+    MEDICAL_CLAIM:
+      schema: baco/hap/medical_claim_config.json
+      validation: validation/medical_claim_validation_config.yaml
+      fhir_bundle: medical_claim_stage_to_fhirbundle_dag
+    RX_CLAIM:
+      schema: baco/hap/rx_claim_config.json
+      validation: validation/rx_claim_validation_config.yaml
+      fhir_bundle: rx_claim_stage_to_fhirbundle_dag
+  baco_humana_da63954b-cb0f-4527-aabf-2c9e0b30c5e6:
+    BENEFICIARY:
+      schema: baco/humana/beneficiary_config.json
+      validation: validation/beneficiary_validation_config.yaml
+      fhir_bundle: beneficiary_stage_to_fhirbundle_dag
+    MEDICAL_CLAIM:
+      schema: baco/humana/medical_claim_config.json
+      validation: validation/medical_claim_validation_config.yaml
+      fhir_bundle: medical_claim_stage_to_fhirbundle_dag
+    RX_CLAIM:
+      schema: baco/humana/rx_claim_config.json
+      validation: validation/rx_claim_validation_config.yaml
+      fhir_bundle: rx_claim_stage_to_fhirbundle_dag

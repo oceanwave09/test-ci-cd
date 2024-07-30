@@ -1,0 +1,31 @@
+[
+  {% if data.firstname or data.lastname -%}
+  {
+    "use": "official",
+    {% if data.lastname -%}
+    "family": "{{ data.lastname }}",
+    {%- endif %}
+    "given": [
+      {% if data.firstname -%}
+      "{{ data.firstname }}"
+      {%- endif %}
+      {%- if data.firstname and data.middleinitials -%}
+      ,
+      {%- endif %}
+      {% if data.middleinitials -%}
+      "{{ data.middleinitials }}"
+      {%- endif %}
+    ],
+    "prefix": [
+      {% if data.prefix -%}
+      "{{ data.prefix }}"
+      {%- endif %}
+    ],
+    "suffix": [
+      {% if data.suffix -%}
+      "{{ data.suffix }}"
+      {%- endif %}
+    ]
+  }
+  {%- endif %}
+]

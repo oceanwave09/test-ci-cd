@@ -1,0 +1,32 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+    "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "category": {% include "attributes/medication_statement/category.j2" %},
+  "medicationCodeableConcept": {% include "attributes/medication_statement/medication_codeable_concept.j2" %},
+  "medicationReference": {% include "attributes/medication_reference.j2" %},
+  "subject": {% include "attributes/patient_reference.j2" %},
+  "context": {% include "attributes/encounter_reference.j2" %},
+  {%- if data.effective_date_time -%}
+  "effectiveDateTime": "{{ data.effective_date_time }}",
+  {%- endif %}
+  "effectivePeriod": {% include "attributes/medication_statement/effective_period.j2" %},
+  "dateAsserted": "{{ data.asserted_date_time }}",
+  "reasonCode": {% include "attributes/medication_statement/reason_code.j2" %},
+  "derivedFrom": {% include "attributes/medication_statement/derived_from_reference.j2" %},
+  "note": {% include "attributes/medication_statement/note.j2" %},
+  "dosage": {% include "attributes/medication_statement/dosage.j2" %}
+{% endblock%}

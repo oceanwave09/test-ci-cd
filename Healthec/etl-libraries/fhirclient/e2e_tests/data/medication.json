@@ -1,0 +1,12 @@
+{
+  "resourceType": "Medication",
+  "code": {
+    "coding": [
+      {
+        "system": "http://snomed.info/sct",
+        "code": "${medication_code}",
+        "display": "Nystatin 100,000 units/ml oral suspension (product)"
+      }
+    ]
+  }
+}

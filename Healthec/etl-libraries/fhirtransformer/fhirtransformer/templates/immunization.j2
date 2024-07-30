@@ -1,0 +1,35 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "status": "{{ data.status }}",
+  "statusReason": {% include "attributes/immunization/status_reason.j2" %},
+  "vaccineCode": {% include "attributes/immunization/vaccine_code.j2" %},
+  "manufacturer":{% include "attributes/organization_reference.j2" %},
+  "patient": {% include "attributes/patient_reference.j2" %},
+  "encounter": {% include "attributes/encounter_reference.j2" %},
+  "occurrenceDateTime": "{{ data.occurrence_date_time }}",
+  "recorded": "{{ data.recorded_date_time }}",
+  "location": {% include "attributes/location_reference.j2" %},
+  "lotNumber": "{{ data.lot_number }}",
+  "expirationDate": "{{ data.expiration_date }}",
+  "site": {% include "attributes/immunization/site.j2" %},
+  "route": {% include "attributes/immunization/route.j2" %},
+  {%- if data.dose_quantity_value -%}
+  "doseQuantity": {% include "attributes/immunization/dose_quantity.j2" %},
+  {%- endif %}
+  "performer": {% include "attributes/immunization/performer.j2" %},
+  {%- if data.condition_id -%}
+  "reasonReference": {% include "attributes/immunization/reason_reference.j2"%},
+  {% elif data.reason_code or data.reason_code_text or data.reason_codes %}
+  "reasonCode" : {% include "attributes/immunization/reason_code.j2" %},
+  {%- endif %}
+  "programEligibility": {% include "attributes/immunization/program_eligibility.j2" %},
+  "extension": {% include "attributes/extension.j2" %}
+{% endblock %}

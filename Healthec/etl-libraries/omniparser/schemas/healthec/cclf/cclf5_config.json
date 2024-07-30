@@ -1,0 +1,324 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          { "name": "CUR_CLM_UNIQ_ID", "start_pos": 1, "length": 13 },
+          { "name": "CLM_LINE_NUM", "start_pos": 14, "length": 10 },
+          { "name": "BENE_MBI_ID", "start_pos": 24, "length": 11 },
+          { "name": "BENE_HIC_NUM", "start_pos": 35, "length": 11 },
+          { "name": "CLM_TYPE_CD", "start_pos": 46, "length": 2 },
+          { "name": "CLM_FROM_DT", "start_pos": 48, "length": 10 },
+          { "name": "CLM_THRU_DT", "start_pos": 58, "length": 10 },
+          { "name": "RNDRG_PRVDR_TYPE_CD", "start_pos": 68, "length": 3 },
+          { "name": "RNDRG_PRVDR_FIPS_ST_CD", "start_pos": 71, "length": 2 },
+          { "name": "CLM_PRVDR_SPCLTY_CD", "start_pos": 73, "length": 2 },
+          { "name": "CLM_FED_TYPE_SRVC_CD", "start_pos": 75, "length": 1 },
+          { "name": "CLM_POS_CD", "start_pos": 76, "length": 2 },
+          { "name": "CLM_LINE_FROM_DT", "start_pos": 78, "length": 10 },
+          { "name": "CLM_LINE_THRU_DT", "start_pos": 88, "length": 10 },
+          { "name": "CLM_LINE_HCPCS_CD", "start_pos": 98, "length": 5 },
+          { "name": "CLM_LINE_CVRD_PD_AMT", "start_pos": 103, "length": 15 },
+          { "name": "CLM_LINE_PRMRY_PYR_CD", "start_pos": 118, "length": 1 },
+          { "name": "CLM_LINE_DGNS_CD", "start_pos": 119, "length": 7 },
+          { "name": "CLM_RNDRG_PRVDR_TAX_NUM", "start_pos": 126, "length": 10 },
+          { "name": "RNDRG_PRVDR_NPI_NUM", "start_pos": 136, "length": 10 },
+          { "name": "CLM_CARR_PMT_DNL_CD", "start_pos": 146, "length": 2 },
+          { "name": "CLM_PRCSG_IND_CD", "start_pos": 148, "length": 2 },
+          { "name": "CLM_ADJSMT_TYPE_CD", "start_pos": 150, "length": 2 },
+          { "name": "CLM_EFCTV_DT", "start_pos": 152, "length": 10 },
+          { "name": "CLM_IDR_LD_DT", "start_pos": 162, "length": 10 },
+          { "name": "CLM_CNTL_NUM", "start_pos": 172, "length": 40 },
+          { "name": "BENE_EQTBL_BIC_HICN_NUM", "start_pos": 212, "length": 11 },
+          { "name": "CLM_LINE_ALOWD_CHRG_AMT", "start_pos": 223, "length": 17 },
+          { "name": "CLM_LINE_SRVC_UNIT_QTY", "start_pos": 240, "length": 24 },
+          { "name": "HCPCS_1_MDFR_CD", "start_pos": 264, "length": 2 },
+          { "name": "HCPCS_2_MDFR_CD", "start_pos": 266, "length": 2 },
+          { "name": "HCPCS_3_MDFR_CD", "start_pos": 268, "length": 2 },
+          { "name": "HCPCS_4_MDFR_CD", "start_pos": 270, "length": 2 },
+          { "name": "HCPCS_5_MDFR_CD", "start_pos": 272, "length": 2 },
+          { "name": "CLM_DISP_CD", "start_pos": 274, "length": 2 },
+          { "name": "CLM_DGNS_1_CD", "start_pos": 276, "length": 7 },
+          { "name": "CLM_DGNS_2_CD", "start_pos": 283, "length": 7 },
+          { "name": "CLM_DGNS_3_CD", "start_pos": 290, "length": 7 },
+          { "name": "CLM_DGNS_4_CD", "start_pos": 297, "length": 7 },
+          { "name": "CLM_DGNS_5_CD", "start_pos": 304, "length": 7 },
+          { "name": "CLM_DGNS_6_CD", "start_pos": 311, "length": 7 },
+          { "name": "CLM_DGNS_7_CD", "start_pos": 318, "length": 7 },
+          { "name": "CLM_DGNS_8_CD", "start_pos": 325, "length": 7 },
+          { "name": "DGNS_PRCDR_ICD_IND", "start_pos": 332, "length": 1 },
+          { "name": "CLM_DGNS_9_CD", "start_pos": 333, "length": 7 },
+          { "name": "CLM_DGNS_10_CD", "start_pos": 340, "length": 7 },
+          { "name": "CLM_DGNS_11_CD", "start_pos": 347, "length": 7 },
+          { "name": "CLM_DGNS_12_CD", "start_pos": 354, "length": 7 },
+          { "name": "HCPCS_BETOS_CD", "start_pos": 361, "length": 3 },
+          { "name": "CLM_RNDRG_PRVDR_NPI_NUM", "start_pos": 364, "length": 10 },
+          { "name": "CLM_RFRG_PRVDR_NPI_NUM", "start_pos": 374, "length": 10 },
+          { "name": "CLM_CNTRCTR_NUM", "start_pos": 384, "length": 5 }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "cur_clm_uniq_id": { "xpath": "CUR_CLM_UNIQ_ID", "type": "int" },
+        "clm_line_num": { "xpath": "CLM_LINE_NUM", "type": "int" },
+        "bene_mbi_id": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_MBI_ID",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_hic_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_HIC_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_type_cd": { "xpath": "CLM_TYPE_CD", "type": "int" },
+        "clm_from_dt": {
+          "xpath": "CLM_FROM_DT",
+          "template": "remove_special_char"
+        },
+        "clm_thru_dt": {
+          "xpath": "CLM_THRU_DT",
+          "template": "remove_special_char"
+        },
+        "rndrg_prvdr_type_cd": {
+          "xpath": "RNDRG_PRVDR_TYPE_CD",
+          "template": "remove_special_char"
+        },
+        "rndrg_prvdr_fips_st_cd": {
+          "xpath": "RNDRG_PRVDR_FIPS_ST_CD",
+          "template": "remove_special_char"
+        },
+        "clm_prvdr_spclty_cd": {
+          "xpath": "CLM_PRVDR_SPCLTY_CD",
+          "template": "remove_special_char"
+        },
+        "clm_fed_type_srvc_cd": {
+          "xpath": "CLM_FED_TYPE_SRVC_CD",
+          "template": "remove_special_char"
+        },
+        "clm_pos_cd": {
+          "xpath": "CLM_POS_CD",
+          "template": "remove_special_char"
+        },
+        "clm_line_from_dt": {
+          "xpath": "CLM_LINE_FROM_DT",
+          "template": "remove_special_char"
+        },
+        "clm_line_thru_dt": {
+          "xpath": "CLM_LINE_THRU_DT",
+          "template": "remove_special_char"
+        },
+        "clm_line_hcpcs_cd": {
+          "xpath": "CLM_LINE_HCPCS_CD",
+          "template": "remove_special_char"
+        },
+        "clm_line_cvrd_pd_amt": {
+          "xpath": "CLM_LINE_CVRD_PD_AMT",
+          "template": "remove_special_char"
+        },
+        "clm_line_prmry_pyr_cd": {
+          "xpath": "CLM_LINE_PRMRY_PYR_CD",
+          "template": "remove_special_char"
+        },
+        "clm_line_dgns_cd": {
+          "xpath": "CLM_LINE_DGNS_CD",
+          "template": "remove_special_char"
+        },
+        "clm_rndrg_prvdr_tax_num": {
+          "xpath": "CLM_RNDRG_PRVDR_TAX_NUM",
+          "template": "remove_special_char"
+        },
+        "rndrg_prvdr_npi_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "RNDRG_PRVDR_NPI_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_carr_pmt_dnl_cd": {
+          "xpath": "CLM_CARR_PMT_DNL_CD",
+          "template": "remove_special_char"
+        },
+        "clm_prcsg_ind_cd": {
+          "xpath": "CLM_PRCSG_IND_CD",
+          "template": "remove_special_char"
+        },
+        "clm_adjsmt_type_cd": {
+          "xpath": "CLM_ADJSMT_TYPE_CD",
+          "template": "remove_special_char"
+        },
+        "clm_efctv_dt": {
+          "xpath": "CLM_EFCTV_DT",
+          "template": "remove_special_char"
+        },
+        "clm_idr_ld_dt": {
+          "xpath": "CLM_IDR_LD_DT",
+          "template": "remove_special_char"
+        },
+        "clm_cntl_num": {
+          "xpath": "CLM_CNTL_NUM",
+          "template": "remove_special_char"
+        },
+        "bene_eqtbl_bic_hicn_num": {
+          "xpath": "BENE_EQTBL_BIC_HICN_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_line_alowd_chrg_amt": {
+          "xpath": "CLM_LINE_ALOWD_CHRG_AMT",
+          "template": "remove_special_char"
+        },
+        "clm_line_srvc_unit_qty": {
+          "xpath": "CLM_LINE_SRVC_UNIT_QTY",
+          "type": "float"
+        },
+        "hcpcs_1_mdfr_cd": {
+          "xpath": "HCPCS_1_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_2_mdfr_cd": {
+          "xpath": "HCPCS_2_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_3_mdfr_cd": {
+          "xpath": "HCPCS_3_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_4_mdfr_cd": {
+          "xpath": "HCPCS_4_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_5_mdfr_cd": {
+          "xpath": "HCPCS_5_MDFR_CD",
+          "template": "remove_special_char"
+        },
+        "clm_disp_cd": {
+          "xpath": "CLM_DISP_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_1_cd": {
+          "xpath": "CLM_DGNS_1_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_2_cd": {
+          "xpath": "CLM_DGNS_2_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_3_cd": {
+          "xpath": "CLM_DGNS_3_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_4_cd": {
+          "xpath": "CLM_DGNS_4_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_5_cd": {
+          "xpath": "CLM_DGNS_5_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_6_cd": {
+          "xpath": "CLM_DGNS_6_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_7_cd": {
+          "xpath": "CLM_DGNS_7_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_8_cd": {
+          "xpath": "CLM_DGNS_8_CD",
+          "template": "remove_special_char"
+        },
+        "dgns_prcdr_icd_ind": {
+          "xpath": "DGNS_PRCDR_ICD_IND",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_9_cd": {
+          "xpath": "CLM_DGNS_9_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_10_cd": {
+          "xpath": "CLM_DGNS_10_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_11_cd": {
+          "xpath": "CLM_DGNS_11_CD",
+          "template": "remove_special_char"
+        },
+        "clm_dgns_12_cd": {
+          "xpath": "CLM_DGNS_12_CD",
+          "template": "remove_special_char"
+        },
+        "hcpcs_betos_cd": {
+          "xpath": "HCPCS_BETOS_CD",
+          "template": "remove_special_char"
+        },
+        "clm_rndrg_prvdr_npi_num": {
+          "xpath": "CLM_RNDRG_PRVDR_NPI_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_rfrg_prvdr_npi_num": {
+          "xpath": "CLM_RFRG_PRVDR_NPI_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_cntrctr_num": {
+          "xpath": "CLM_CNTRCTR_NUM",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {% if data.preferred_day or data.preferred_time -%}
+  {
+    "availableTime": [{
+      {%- if data.preferred_day -%}
+      "daysOfWeek": ["{{ data.preferred_day }}"]
+      {%- endif %}
+      {%- if data.preferred_day and data.preferred_time -%}
+      ,
+      {%- endif %}
+      {%- if data.preferred_time -%}
+      "availableStartTime": "{{ data.preferred_time }}"
+      {%- endif %}
+    }
+  }
+  {%- endif %}
+]

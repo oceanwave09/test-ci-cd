@@ -1,0 +1,57 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          {
+            "name": "record_type",
+            "start_pos": 1,
+            "length": 1
+          },
+          {
+            "name": "beneficiary_id",
+            "start_pos": 10,
+            "length": 12
+          },
+          {
+            "name": "low_income_period_start_date",
+            "start_pos": 51,
+            "length": 8
+          },
+          {
+            "name": "low_income_period_end_date",
+            "start_pos": 59,
+            "length": 8
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "beneficiary_id": {
+          "xpath": "beneficiary_id"
+        },
+        "low_income_period_start_date": {
+          "xpath": "low_income_period_start_date"
+        },
+        "low_income_period_end_date": {
+          "xpath": "low_income_period_end_date"
+        }
+      }
+    }
+  }
+}

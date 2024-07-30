@@ -1,0 +1,41 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+    {%- if data.source_id and data.source_file_id -%}
+    ,
+    {%- endif %}
+    {%- if data.source_file_id -%}
+    {% include "attributes/source_file_id.j2" %}
+    {%- endif %}
+  ],
+  "clinicalStatus": {% include "attributes/condition/clinical_status.j2" %},
+  "verificationStatus": {% include "attributes/condition/verification_status.j2" %},
+  "category": {% include "attributes/condition/category.j2" %},
+  "severity": {% include "attributes/condition/severity.j2" %},
+  "code": {% include "attributes/condition/code.j2" %},
+  "bodySite": {% include "attributes/condition/body_site.j2" %},
+  "subject": {% include "attributes/patient_reference.j2" %},
+  "encounter": {% include "attributes/encounter_reference.j2" %},
+  {%- if data.onset_date_time -%}
+  "onsetDateTime": "{{ data.onset_date_time }}",
+  {%- endif %}
+  "onsetPeriod": {% include "attributes/condition/onset_period.j2" %},
+  {%- if data.recorded_date_time -%}
+  "recordedDate": "{{ data.recorded_date_time }}",
+  {%- endif %}
+  {%- if data.abatement_date_time -%}
+  "abatementDateTime": "{{ data.abatement_date_time }}",
+  {%- endif %}
+  "participant": [
+    {
+      "function": {% include "attributes/condition/participant_function.j2" %},
+      "actor": {% include "attributes/condition/participant_actor.j2" %}
+    }
+  ]
+{% endblock %}

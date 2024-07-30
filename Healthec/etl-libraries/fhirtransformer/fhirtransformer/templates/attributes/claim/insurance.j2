@@ -1,0 +1,17 @@
+[
+  {
+    {%- if data.insurance_sequence -%}
+    "sequence": {{data.insurance_sequence}},
+    {%- endif %}
+    {%- if data.insurance_focal -%}
+    "focal": {{data.insurance_focal}},
+    {%- endif %}
+    "coverage": {
+      {%- if data.insurance_coverage_id -%}
+      "reference": "Coverage/{{ data.insurance_coverage_id }}"
+      {%- endif %}
+    },
+    "businessArrangement": "{{ data.insurance_business_arrangement }}",
+    "preAuthRef": "{{ data.insurance_prior_auth_ref_number }}"
+  }
+]

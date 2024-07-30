@@ -1,0 +1,224 @@
+[
+  {% if data.contact_firstname and data.contact_lastname -%}
+  {
+    "relationship": [
+      {%- if data.contact_relationship_code or data.contact_relationship_text -%}
+      {
+        {% if data.contact_relationship_code %}
+        "coding": [
+          {
+            "system": "{{ data.contact_relationship_system }}",
+            "code": "{{ data.contact_relationship_code }}",
+            "display": "{{ data.contact_relationship_display }}"
+          }
+        ],
+        {%- endif %}
+        "text": "{{ data.contact_relationship_text }}"
+      }
+      {%- endif %}
+    ],
+    {% if data.contact_firstname or data.contact_lastname -%}
+    "name": {
+      "use": "official",
+      {% if data.contact_lastname -%}
+      "family": "{{ data.contact_lastname }}",
+      {%- endif %}
+      "given": [
+        {% if data.contact_firstname -%}
+        "{{ data.contact_firstname }}"
+        {%- endif %}
+        {%- if data.contact_firstname and data.contact_middleinitials -%}
+        ,
+        {%- endif %}
+        {% if data.contact_middleinitials -%}
+        "{{ data.contact_middleinitials }}"
+        {%- endif %}
+      ],
+      "prefix": [
+        {% if data.contact_prefix -%}
+        "{{ data.contact_prefix }}"
+        {%- endif %}
+      ],
+      "suffix": [
+        {% if data.contact_suffix -%}
+        "{{ data.contact_suffix }}"
+        {%- endif %}
+      ]
+    },
+    {%- endif %}
+    "telecom": [
+      {%- if data.contact_phone_home -%}
+      {
+       "system": "phone",
+       "use": "home",
+       "value": "{{ data.contact_phone_home }}"
+      }
+      {%- endif %}
+      {%- if data.phone_home and data.contact_phone_mobile -%}
+      ,
+      {%- endif -%}
+      {%- if data.contact_phone_mobile -%}
+      {
+        "system": "phone",
+        "use": "mobile",
+        "value": "{{ data.contact_phone_mobile }}"
+      }
+      {%- endif %}
+      {%- if (data.contact_phone_home or data.contact_phone_mobile) and data.contact_phone_work -%}
+      ,
+      {%- endif -%}
+      {%- if data.contact_phone_work -%}
+      {
+        "system": "phone",
+        "use": "work",
+        "value": "{{ data.contact_phone_work }}"
+      }
+      {%- endif %}
+    ],
+    {% if data.contact_city or data.contact_state or data.contact_zip %}
+    "address": {
+      "line": [
+        {%- if data.contact_street_address_1 -%}
+        "{{ data.contact_street_address_1 }}"
+        {%- endif %}
+        {%- if data.contact_street_address_1 and data.contact_street_address_2 -%}
+        ,
+        {%- endif -%}
+        {%- if data.contact_street_address_2 -%}
+        "{{ data.contact_street_address_2 }}"
+        {%- endif %}
+      ],
+      "city": "{{ data.contact_city }}",
+      "district": "{{ data.contact_district_code }}",
+      "state": "{{ data.contact_state }}",
+      "postalCode": "{{ data.contact_zip }}",
+      "country": "{{ data.contact_country }}"
+    },
+    {%- endif %}
+    "gender": "{{ data.contact_gender }}",
+    "period": {
+      {%- if data.contact_period_start_date -%}
+      "start": "{{ data.contact_period_start_date }}"
+      {%- endif %}
+      {%- if data.contact_period_start_date and data.contact_period_end_date -%}
+      ,
+      {%- endif %}
+      {%- if data.contact_period_end_date -%}
+      "end": "{{ data.contact_period_end_date }}"
+      {%- endif %}
+    }
+  }
+  {% elif data.contacts -%}
+  {% for entry in data.contacts %}
+  {
+    "relationship": [
+      {%- if entry.relationship_code or entry.relationship_text -%}
+      {
+        {% if entry.relationship_code %}
+        "coding": [
+          {
+            "system": "{{ entry.relationship_system }}",
+            "code": "{{ entry.relationship_code }}",
+            "display": "{{ entry.relationship_display }}"
+          }
+        ],
+        {%- endif %}
+        "text": "{{ entry.relationship_text }}"
+      }
+      {%- endif %}
+    ],
+    {% if entry.firstname or entry.lastname -%}
+    "name": {
+      "use": "official",
+      {% if entry.lastname -%}
+      "family": "{{ entry.lastname }}",
+      {%- endif %}
+      "given": [
+        {% if entry.firstname -%}
+        "{{ entry.firstname }}"
+        {%- endif %}
+        {%- if entry.firstname and entry.middleinitials -%}
+        ,
+        {%- endif %}
+        {% if entry.middleinitials -%}
+        "{{ entry.middleinitials }}"
+        {%- endif %}
+      ],
+      "prefix": [
+        {% if entry.prefix -%}
+        "{{ entry.prefix }}"
+        {%- endif %}
+      ],
+      "suffix": [
+        {% if entry.suffix -%}
+        "{{ entry.suffix }}"
+        {%- endif %}
+      ]
+    },
+    {%- endif %}
+    "telecom": [
+      {%- if entry.phone_home -%}
+      {
+       "system": "phone",
+       "use": "home",
+       "value": "{{ entry.phone_home }}"
+      }
+      {%- endif %}
+      {%- if entry.phone_home and entry.phone_mobile -%}
+      ,
+      {%- endif -%}
+      {%- if entry.phone_mobile -%}
+      {
+        "system": "phone",
+        "use": "mobile",
+        "value": "{{ entry.phone_mobile }}"
+      }
+      {%- endif %}
+      {%- if (entry.phone_home or entry.phone_mobile) and entry.phone_work -%}
+      ,
+      {%- endif -%}
+      {%- if entry.phone_work -%}
+      {
+        "system": "phone",
+        "use": "work",
+        "value": "{{ entry.phone_work }}"
+      }
+      {%- endif %}
+    ],
+    {% if entry.city or entry.state or entry.zip %}
+    "address": {
+      "line": [
+        {%- if entry.street_address_1 -%}
+        "{{ entry.street_address_1 }}"
+        {%- endif %}
+        {%- if entry.street_address_1 and entry.street_address_2 -%}
+        ,
+        {%- endif -%}
+        {%- if entry.street_address_2 -%}
+        "{{ entry.street_address_2 }}"
+        {%- endif %}
+      ],
+      "city": "{{ entry.city }}",
+      "district": "{{ entry.district_code }}",
+      "state": "{{ entry.state }}",
+      "postalCode": "{{ entry.zip }}",
+      "country": "{{ entry.country }}"
+    },
+    {%- endif %}
+    "gender": "{{ entry.gender }}",
+    "period": {
+      {%- if entry.period_start_date -%}
+      "start": "{{ entry.period_start_date }}"
+      {%- endif %}
+      {%- if entry.period_start_date and entry.period_end_date -%}
+      ,
+      {%- endif %}
+      {%- if entry.period_end_date -%}
+      "end": "{{ entry.period_end_date }}"
+      {%- endif %}
+    }
+  }
+  {% if not loop.last %},{% endif %}
+  {% endfor %}
+  {%- endif %}
+]

@@ -1,0 +1,7 @@
+{
+  {%- if data.class_code -%}
+  "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+  "code": "{{ data.class_code }}",
+  "display": "{{ data.class_display }}"
+  {%- endif %}
+}

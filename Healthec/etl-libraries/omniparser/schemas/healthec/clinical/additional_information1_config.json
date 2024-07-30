@@ -1,0 +1,345 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "influenza_immunization_date",
+            "index": 8
+          },
+          {
+            "name": "influenza_exclusion",
+            "index": 9
+          },
+          {
+            "name": "pneumococcal_vaccination_date",
+            "index": 10
+          },
+          {
+            "name": "pneumococcal_exclusion",
+            "index": 11
+          },
+          {
+            "name": "tobacco_screen_date",
+            "index": 12
+          },
+          {
+            "name": "tobacco_use",
+            "index": 13
+          },
+          {
+            "name": "tobacco_exclusion",
+            "index": 14
+          },
+          {
+            "name": "tabacco_intervention_date",
+            "index": 15
+          },
+          {
+            "name": "fall_risk_screen_date",
+            "index": 16
+          },
+          {
+            "name": "fall_risk_exclusion",
+            "index": 17
+          },
+          {
+            "name": "depression_screening_date",
+            "index": 18
+          },
+          {
+            "name": "depression_screening_result",
+            "index": 19
+          },
+          {
+            "name": "depression_screening_exclusion",
+            "index": 20
+          },
+          {
+            "name": "depression_screening_exclusion_followup",
+            "index": 21
+          },
+          {
+            "name": "colorectal_screening_date",
+            "index": 22
+          },
+          {
+            "name": "colorectal_screening_exclusion",
+            "index": 23
+          },
+          {
+            "name": "mammogram_screening_date",
+            "index": 24
+          },
+          {
+            "name": "mammogram_screening_exclusion",
+            "index": 25
+          },
+          {
+            "name": "colorectal_screening_type",
+            "index": 26
+          },
+          {
+            "name": "immunization_given_date",
+            "index": 27
+          },
+          {
+            "name": "immunization_description",
+            "index": 28
+          },
+          {
+            "name": "history_flag",
+            "index": 29
+          },
+          {
+            "name": "lot_number",
+            "index": 30
+          },
+          {
+            "name": "vaccine_manufacture",
+            "index": 31
+          },
+          {
+            "name": "immunization_dose",
+            "index": 32
+          },
+          {
+            "name": "site",
+            "index": 33
+          },
+          {
+            "name": "route",
+            "index": 34
+          },
+          {
+            "name": "expiration_date",
+            "index": 35
+          },
+          {
+            "name": "immunization_givenby",
+            "index": 36
+          },
+          {
+            "name": "immunization_status",
+            "index": 37
+          },
+          {
+            "name": "code",
+            "index": 38
+          },
+          {
+            "name": "code_system",
+            "index": 39
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "influenza_immunization_date": {
+          "xpath": "influenza_immunization_date"
+        },
+        "influenza_exclusion": {
+          "xpath": "influenza_exclusion"
+        },
+        "pneumococcal_vaccination_date": {
+          "xpath": "pneumococcal_vaccination_date"
+        },
+        "pneumococcal_exclusion": {
+          "xpath": "pneumococcal_exclusion"
+        },
+        "tobacco_use": {
+          "xpath": "tobacco_use"
+        },
+        "tobacco_screen_date": {
+          "xpath": "tobacco_screen_date"
+        },
+        "tobacco_exclusion": {
+          "xpath": "tobacco_exclusion"
+        },
+        "tabacco_intervention_date": {
+          "xpath": "tabacco_intervention_date"
+        },
+        "fall_risk_screen_date": {
+          "xpath": "fall_risk_screen_date"
+        },
+        "fall_risk_exclusion": {
+          "xpath": "fall_risk_exclusion"
+        },
+        "depression_screening_date": {
+          "xpath": "depression_screening_date"
+        },
+        "depression_screening_result": {
+          "xpath": "depression_screening_result"
+        },
+        "depression_screening_exclusion": {
+          "xpath": "depression_screening_exclusion"
+        },
+        "depression_screening_exclusion_followup": {
+          "xpath": "depression_screening_exclusion_followup"
+        },
+        "colorectal_screening_date": {
+          "xpath": "colorectal_screening_date"
+        },
+        "colorectal_screening_exclusion": {
+          "xpath": "colorectal_screening_exclusion"
+        },
+        "mammogram_screening_date": {
+          "xpath": "mammogram_screening_date"
+        },
+        "mammogram_screening_exclusion": {
+          "xpath": "mammogram_screening_exclusion"
+        },
+        "colorectal_screening_type": {
+          "xpath": "colorectal_screening_type"
+        },
+        "immunization_given_date": {
+          "xpath": "immunization_given_date"
+        },
+        "immunization_description": {
+          "xpath": "immunization_description"
+        },
+        "history_flag": {
+          "xpath": "history_flag"
+        },
+        "lot_number": {
+          "xpath": "lot_number"
+        },
+        "vaccine_manufacture": {
+          "xpath": "vaccine_manufacture"
+        },
+        "immunization_dose": {
+          "xpath": "immunization_dose"
+        },
+        "site": {
+          "xpath": "site"
+        },
+        "route": {
+          "xpath": "route"
+        },
+        "expiration_date": {
+          "xpath": "expiration_date"
+        },
+        "immunization_givenby": {
+          "xpath": "immunization_givenby"
+        },
+        "immunization_status": {
+          "xpath": "immunization_status"
+        },
+        "code": {
+          "xpath": "code"
+        },
+        "code_system": {
+          "xpath": "code_system"
+        }
+      }
+    }
+  }
+}

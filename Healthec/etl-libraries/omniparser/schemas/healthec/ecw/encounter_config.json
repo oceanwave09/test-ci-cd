@@ -1,0 +1,169 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "record_id",
+            "index": 2
+          },
+          {
+            "name": "patient_id",
+            "index": 3
+          },
+          {
+            "name": "patient_account_no",
+            "index": 4
+          },
+          {
+            "name": "provider_id",
+            "index": 5
+          },
+          {
+            "name": "provider_npi",
+            "index": 6
+          },
+          {
+            "name": "encounter_id",
+            "index": 7
+          },
+          {
+            "name": "encounter_visit_type",
+            "index": 8
+          },
+          {
+            "name": "encounter_status",
+            "index": 9
+          },
+          {
+            "name": "encounter_date",
+            "index": 10
+          },
+          {
+            "name": "encounter_start_time",
+            "index": 11
+          },
+          {
+            "name": "encounter_end_time",
+            "index": 12
+          },
+          {
+            "name": "encounter_reason",
+            "index": 13
+          },
+          {
+            "name": "encounter_lock_status",
+            "index": 14
+          },
+          {
+            "name": "medication_reconciliation_flag",
+            "index": 15
+          },
+          {
+            "name": "facility_name",
+            "index": 16
+          },
+          {
+            "name": "facility_id",
+            "index": 17
+          },
+          {
+            "name": "pos",
+            "index": 18
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "record_id": {
+          "xpath": "record_id"
+        },
+        "patient_id": {
+          "xpath": "patient_id"
+        },
+        "patient_account_no": {
+          "xpath": "patient_account_no"
+        },
+        "provider_id": {
+          "xpath": "provider_id"
+        },
+        "provider_npi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "provider_npi"
+              }
+            ]
+          }
+        },
+        "encounter_id": {
+          "xpath": "encounter_id"
+        },
+        "encounter_visit_type": {
+          "xpath": "encounter_visit_type"
+        },
+        "encounter_status": {
+          "xpath": "encounter_status"
+        },
+        "encounter_date": {
+          "xpath": "encounter_date"
+        },
+        "encounter_start_time": {
+          "xpath": "encounter_start_time"
+        },
+        "encounter_end_time": {
+          "xpath": "encounter_end_time"
+        },
+        "encounter_reason": {
+          "xpath": "encounter_reason"
+        },
+        "encounter_lock_status": {
+          "xpath": "encounter_lock_status"
+        },
+        "medication_reconciliation_flag": {
+          "xpath": "medication_reconciliation_flag"
+        },
+        "facility_name": {
+          "xpath": "facility_name"
+        },
+        "facility_id": {
+          "xpath": "facility_id"
+        },
+        "pos": {
+          "xpath": "pos"
+        }
+      }
+    }
+  }
+}

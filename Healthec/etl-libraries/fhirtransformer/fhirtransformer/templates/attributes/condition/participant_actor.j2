@@ -1,0 +1,8 @@
+{
+  {%- if data.practitioner_id -%}
+  "reference": "Practitioner/{{ data.practitioner_id }}"
+  {%- endif %}
+  {%- if data.practitioner_role_id -%}
+  "reference": "PractitionerRole/{{ data.practitioner_role_id }}"
+  {%- endif %}
+}

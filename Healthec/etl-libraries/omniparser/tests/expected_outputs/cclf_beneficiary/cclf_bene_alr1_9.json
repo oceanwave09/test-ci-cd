@@ -1,0 +1,38 @@
+[
+	{
+		"adi_natrank": "91",
+		"bene_dual_status": "0",
+		"bene_lis_status": "1",
+		"bene_mbi_id": "1AAAAMKR10",
+		"bene_psnyrs": "1",
+		"bene_psnyrs_lis_dual": "1",
+		"row_id": "6c2fcbd1-cc9d-4365-b44a-3359d44c3db8"
+	},
+	{
+		"adi_natrank": "37",
+		"bene_dual_status": "0",
+		"bene_lis_status": "0",
+		"bene_mbi_id": "1AAAAMKR20",
+		"bene_psnyrs": "1",
+		"bene_psnyrs_lis_dual": "0",
+		"row_id": "ef177aca-fa98-4468-84c5-e4e1f13a34eb"
+	},
+	{
+		"adi_natrank": "58",
+		"bene_dual_status": "0",
+		"bene_lis_status": "0",
+		"bene_mbi_id": "1AAAAMKR30",
+		"bene_psnyrs": "1",
+		"bene_psnyrs_lis_dual": "0",
+		"row_id": "a8ae4bbd-cfff-45bb-9a8c-62fe5ba1a953"
+	},
+	{
+		"adi_natrank": "84",
+		"bene_dual_status": "0",
+		"bene_lis_status": "0",
+		"bene_mbi_id": "1AAAAMKR40",
+		"bene_psnyrs": "1",
+		"bene_psnyrs_lis_dual": "0",
+		"row_id": "7fb28525-50ab-4d0b-a796-000e98de790d"
+	}
+]

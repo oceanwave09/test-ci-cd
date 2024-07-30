@@ -1,0 +1,119 @@
+{
+    "parser_settings": {
+      "version": "omni.2.1",
+      "file_format_type": "csv2"
+    },
+    "file_declaration": {
+      "delimiter": ",",
+      "replace_double_quotes": false,
+      "records": [
+        {
+          "rows": 1,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "is_target": true,
+          "columns": [
+            {
+              "name": "batch_type",
+              "index": 1
+            },
+            {
+              "name": "first_name",
+              "index": 2
+            },
+            {
+              "name": "last_name",
+              "index": 3
+            },
+            {
+              "name": "mrn",
+              "index": 4
+            },
+            {
+              "name": "proc_date",
+              "index": 5
+            },
+            {
+              "name": "proc_name",
+              "index": 6
+            },
+            {
+              "name": "proc_code",
+              "index": 7
+            },
+            {
+              "name": "proc_result",
+              "index": 8
+            }
+          ]
+        }
+      ]
+    },
+    "transform_declarations": {
+      "FINAL_OUTPUT": {
+        "object": {
+          "row_id": {
+            "custom_func": {
+              "name": "uuidv4"
+            }
+          },
+          "batch_type": {
+            "xpath": "batch_type"
+          },
+          "first_name": {
+            "custom_func": {
+              "name": "encryptAesEcb",
+              "args": [
+                {
+                  "external": "data_key"
+                },
+                {
+                  "xpath": "first_name"
+                }
+              ]
+            }
+          },
+          "last_name": {
+            "custom_func": {
+              "name": "encryptAesEcb",
+              "args": [
+                {
+                  "external": "data_key"
+                },
+                {
+                  "xpath": "last_name"
+                }
+              ]
+            }
+          },
+          "mrn": {
+            "custom_func": {
+              "name": "encryptAesEcb",
+              "args": [
+                {
+                  "external": "data_key"
+                },
+                {
+                  "xpath": "mrn"
+                }
+              ]
+            }
+          },
+          "proc_date": {
+            "xpath": "proc_date"
+          },
+          "proc_name": {
+            "xpath": "proc_name"
+          },
+          "proc_code": {
+            "xpath": "proc_code"
+          },
+          "proc_result": {
+            "xpath": "proc_result"
+          }
+        }
+      }
+    }
+  }

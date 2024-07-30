@@ -1,0 +1,164 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "fixedlength2"
+  },
+  "file_declaration": {
+    "envelopes": [
+      {
+        "columns": [
+          { "name": "CUR_CLM_UNIQ_ID", "start_pos": 1, "length": 13 },
+          { "name": "CLM_LINE_NUM", "start_pos": 14, "length": 10 },
+          { "name": "BENE_MBI_ID", "start_pos": 24, "length": 11 },
+          { "name": "BENE_HIC_NUM", "start_pos": 35, "length": 11 },
+          { "name": "CLM_TYPE_CD", "start_pos": 46, "length": 2 },
+          { "name": "CLM_LINE_NGACO_PBPMT_SW", "start_pos": 48, "length": 1 },
+          {
+            "name": "CLM_LINE_NGACO_PDSCHRG_HCBS_SW",
+            "start_pos": 49,
+            "length": 1
+          },
+          { "name": "CLM_LINE_NGACO_SNF_WVR_SW", "start_pos": 50, "length": 1 },
+          { "name": "CLM_LINE_NGACO_TLHLTH_SW", "start_pos": 51, "length": 1 },
+          { "name": "CLM_LINE_NGACO_CPTATN_SW", "start_pos": 52, "length": 1 },
+          { "name": "CLM_DEMO_1ST_NUM", "start_pos": 53, "length": 2 },
+          { "name": "CLM_DEMO_2ND_NUM", "start_pos": 55, "length": 2 },
+          { "name": "CLM_DEMO_3RD_NUM", "start_pos": 57, "length": 2 },
+          { "name": "CLM_DEMO_4TH_NUM", "start_pos": 59, "length": 2 },
+          { "name": "CLM_DEMO_5TH_NUM", "start_pos": 61, "length": 2 },
+          { "name": "CLM_PBP_INCLSN_AMT", "start_pos": 63, "length": 15 },
+          { "name": "CLM_PBP_RDCTN_AMT", "start_pos": 78, "length": 15 },
+          { "name": "CLM_NGACO_CMG_WVR_SW", "start_pos": 93, "length": 1 },
+          { "name": "CLM_MDCR_DDCTBL_AMT", "start_pos": 94, "length": 19 },
+          { "name": "CLM_SQSTRTN_RDCTN_AMT", "start_pos": 113, "length": 15 },
+          {
+            "name": "CLM_LINE_CARR_HPSA_SCRCTY_CD",
+            "start_pos": 128,
+            "length": 1
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": { "template": "uuidv4" },
+        "cur_clm_uniq_id": { "xpath": "CUR_CLM_UNIQ_ID", "type": "int" },
+        "clm_line_num": { "xpath": "CLM_LINE_NUM", "type": "int" },
+        "bene_mbi_id": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_MBI_ID",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "bene_hic_num": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "BENE_HIC_NUM",
+                "template": "remove_special_char"
+              }
+            ]
+          }
+        },
+        "clm_type_cd": { "xpath": "CLM_TYPE_CD", "type": "int" },
+        "clm_line_ngaco_pbpmt_sw": {
+          "xpath": "CLM_LINE_NGACO_PBPMT_SW",
+          "template": "remove_special_char"
+        },
+        "clm_line_ngaco_pdschrg_hcbs_sw": {
+          "xpath": "CLM_LINE_NGACO_PDSCHRG_HCBS_SW",
+          "template": "remove_special_char"
+        },
+        "clm_line_ngaco_snf_wvr_sw": {
+          "xpath": "CLM_LINE_NGACO_SNF_WVR_SW",
+          "template": "remove_special_char"
+        },
+        "clm_line_ngaco_tlhlth_sw": {
+          "xpath": "CLM_LINE_NGACO_TLHLTH_SW",
+          "template": "remove_special_char"
+        },
+        "clm_line_ngaco_cptatn_sw": {
+          "xpath": "CLM_LINE_NGACO_CPTATN_SW",
+          "template": "remove_special_char"
+        },
+        "clm_demo_1st_num": {
+          "xpath": "CLM_DEMO_1ST_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_demo_2nd_num": {
+          "xpath": "CLM_DEMO_2ND_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_demo_3rd_num": {
+          "xpath": "CLM_DEMO_3RD_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_demo_4th_num": {
+          "xpath": "CLM_DEMO_4TH_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_demo_5th_num": {
+          "xpath": "CLM_DEMO_5TH_NUM",
+          "template": "remove_special_char"
+        },
+        "clm_pbp_inclsn_amt": {
+          "xpath": "CLM_PBP_INCLSN_AMT",
+          "type": "float"
+        },
+        "clm_pbp_rdctn_amt": { "xpath": "CLM_PBP_RDCTN_AMT", "type": "float" },
+        "clm_ngaco_cmg_wvr_sw": {
+          "xpath": "CLM_NGACO_CMG_WVR_SW",
+          "template": "remove_special_char"
+        },
+        "clm_mdcr_ddctbl_amt": {
+          "xpath": "CLM_MDCR_DDCTBL_AMT",
+          "type": "float"
+        },
+        "clm_sqstrtn_rdctn_amt": {
+          "xpath": "CLM_SQSTRTN_RDCTN_AMT",
+          "type": "float"
+        },
+        "clm_line_carr_hpsa_scrcty_cd": {
+          "xpath": "CLM_LINE_CARR_HPSA_SCRCTY_CD",
+          "template": "remove_special_char"
+        }
+      }
+    },
+    "uuidv4": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+          }
+        ],
+        "ignore_error": true
+      }
+    },
+    "remove_special_char": {
+      "custom_func": {
+        "name": "javascript_with_context",
+        "args": [
+          {
+            "const": "var get_value = JSON.parse(_node); get_value.replace(/^~|~$/g, '')"
+          }
+        ],
+        "ignore_error": false
+      }
+    }
+  }
+}

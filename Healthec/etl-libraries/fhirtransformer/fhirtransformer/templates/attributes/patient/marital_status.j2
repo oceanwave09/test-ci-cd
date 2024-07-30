@@ -1,0 +1,10 @@
+{
+  {%- if data.marital_status_code -%}
+    "coding" : [{
+      "system" : "{{ data.marital_status_system }}",
+      "code" : "{{ data.marital_status_code }}",
+      "display": "{{ data.marital_status_display }}"
+    }],
+  {%- endif %}
+  "text": "{{ data.marital_status_text }}"
+}

@@ -1,0 +1,89 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "replace_double_quotes": true,
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "apuid",
+            "index": 1
+          },
+          {
+            "name": "facility_id",
+            "index": 2
+          },
+          {
+            "name": "facility_name",
+            "index": 3
+          },
+          {
+            "name": "address_line_1",
+            "index": 4
+          },
+          {
+            "name": "address_line_2",
+            "index": 5
+          },
+          {
+            "name": "address_city",
+            "index": 6
+          },
+          {
+            "name": "address_state",
+            "index": 7
+          },
+          {
+            "name": "address_zip",
+            "index": 8
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "apuid": {
+          "xpath": "apuid"
+        },
+        "facility_id": {
+          "xpath": "facility_id"
+        },
+        "facility_name": {
+          "xpath": "facility_name"
+        },
+        "address_line_1": {
+          "xpath": "address_line_1"
+        },
+        "address_line_2": {
+          "xpath": "address_line_2"
+        },
+        "address_city": {
+          "xpath": "address_city"
+        },
+        "address_state": {
+          "xpath": "address_state"
+        },
+        "address_zip": {
+          "xpath": "address_zip"
+        }
+      }
+    }
+  }
+}

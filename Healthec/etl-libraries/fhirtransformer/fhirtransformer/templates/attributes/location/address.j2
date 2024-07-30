@@ -1,0 +1,17 @@
+{
+  "line": [
+      {%- if data.street_address_1 -%}
+      "{{ data.street_address_1 }}"
+      {%- endif %}
+      {%- if data.street_address_1 and data.street_address_2 -%}
+      ,
+      {%- endif -%}
+      {%- if data.street_address_2 -%}
+      "{{ data.street_address_2 }}"
+      {%- endif %}
+  ],
+  "city": "{{ data.city }}",
+  "district": "{{ data.county_code }}",
+  "state": "{{ data.state }}",
+  "postalCode": "{{ data.zip }}"
+}

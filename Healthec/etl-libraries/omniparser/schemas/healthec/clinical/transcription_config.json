@@ -1,0 +1,184 @@
+{
+  "parser_settings": {
+    "version": "omni.2.1",
+    "file_format_type": "csv2"
+  },
+  "file_declaration": {
+    "delimiter": "|",
+    "records": [
+      {
+        "rows": 1,
+        "min": 1,
+        "max": 1
+      },
+      {
+        "is_target": true,
+        "columns": [
+          {
+            "name": "record_type",
+            "index": 1
+          },
+          {
+            "name": "mrn",
+            "index": 2
+          },
+          {
+            "name": "ssn",
+            "index": 3
+          },
+          {
+            "name": "hic",
+            "index": 4
+          },
+          {
+            "name": "empi",
+            "index": 5
+          },
+          {
+            "name": "visit_date",
+            "index": 6
+          },
+          {
+            "name": "visit_number",
+            "index": 7
+          },
+          {
+            "name": "result_number",
+            "index": 8
+          },
+          {
+            "name": "order_date",
+            "index": 9
+          },
+          {
+            "name": "order_time",
+            "index": 10
+          },
+          {
+            "name": "result_date",
+            "index": 11
+          },
+          {
+            "name": "result_time",
+            "index": 12
+          },
+          {
+            "name": "transcription_type_code",
+            "index": 13
+          },
+          {
+            "name": "transcription_type_description",
+            "index": 14
+          },
+          {
+            "name": "transcription_text",
+            "index": 15
+          },
+          {
+            "name": "transcription_number",
+            "index": 16
+          }
+        ]
+      }
+    ]
+  },
+  "transform_declarations": {
+    "FINAL_OUTPUT": {
+      "object": {
+        "row_id": {
+          "custom_func": {
+            "name": "uuidv4"
+          }
+        },
+        "record_type": {
+          "xpath": "record_type"
+        },
+        "mrn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "mrn"
+              }
+            ]
+          }
+        },
+        "ssn": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "ssn"
+              }
+            ]
+          }
+        },
+        "hic": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "hic"
+              }
+            ]
+          }
+        },
+        "empi": {
+          "custom_func": {
+            "name": "encryptAesEcb",
+            "args": [
+              {
+                "external": "data_key"
+              },
+              {
+                "xpath": "empi"
+              }
+            ]
+          }
+        },
+        "visit_date": {
+          "xpath": "visit_date"
+        },
+        "visit_number": {
+          "xpath": "visit_number"
+        },
+        "result_number": {
+          "xpath": "result_number"
+        },
+        "order_date": {
+          "xpath": "order_date"
+        },
+        "order_time": {
+          "xpath": "order_time"
+        },
+        "result_date": {
+          "xpath": "result_date"
+        },
+        "result_time": {
+          "xpath": "result_time"
+        },
+        "transcription_type_code": {
+          "xpath": "transcription_type_code"
+        },
+        "transcription_type_description": {
+          "xpath": "transcription_type_description"
+        },
+        "transcription_text": {
+          "xpath": "transcription_text"
+        },
+        "transcription_number": {
+          "xpath": "transcription_number"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "type": {
+      {% if data.class_type_code %}
+      "coding": [
+        {
+          "system": "{{ data.class_type_system }}",
+          "code": "{{ data.class_type_code }}",
+          "display": "{{ data.class_type_display }}"
+        }
+      ],
+      {%- endif %}
+      "text": "{{ data.class_type_text }}"
+    },
+    "value": "{{ data.class_value }}",
+    "name": "{{ data.class_name }}"
+  }
+]

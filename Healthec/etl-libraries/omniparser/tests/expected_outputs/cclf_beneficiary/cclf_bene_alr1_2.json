@@ -1,0 +1,42 @@
+[
+	{
+		"b_em_line_cnt_t": "6",
+		"bene_1st_name": "2501FirstName",
+		"bene_brth_dt": "01/01/1965",
+		"bene_last_name": "2501LastName",
+		"bene_mbi_id": "1AAAAMKR10",
+		"bene_sex_cd": "2",
+		"master_id": "202084193",
+		"row_id": "c427dbd1-cc9d-4365-b44a-3359d44c3db8"
+	},
+	{
+		"b_em_line_cnt_t": "2",
+		"bene_1st_name": "2502FirstName",
+		"bene_brth_dt": "01/01/1947",
+		"bene_last_name": "2502LastName",
+		"bene_mbi_id": "1AAAAMKR20",
+		"bene_sex_cd": "2",
+		"master_id": "383593303",
+		"row_id": "471f8aca-fa98-4468-84c5-e4e1f13a34eb"
+	},
+	{
+		"b_em_line_cnt_t": "16",
+		"bene_1st_name": "2503FirstName",
+		"bene_brth_dt": "01/01/1953",
+		"bene_last_name": "2503LastName",
+		"bene_mbi_id": "1AAAAMKR30",
+		"bene_sex_cd": "1",
+		"master_id": "382386354",
+		"row_id": "00a65bbd-cfff-45bb-9a8c-62fe5ba1a953"
+	},
+	{
+		"b_em_line_cnt_t": "4",
+		"bene_1st_name": "2504FirstName",
+		"bene_brth_dt": "01/01/1952",
+		"bene_last_name": "2504LastName",
+		"bene_mbi_id": "1AAAAMKR40",
+		"bene_sex_cd": "2",
+		"master_id": "383593303",
+		"row_id": "c7ba9525-50ab-4d0b-a796-000e98de790d"
+	}
+]

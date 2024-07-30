@@ -1,0 +1,12 @@
+{
+  {% if data.form_code %}
+  "coding": [
+    {
+      "system": "{{ data.form_system }}",
+      "code": "{{ data.form_code }}",
+      "display": "{{ data.form_display }}"
+    } 
+  ],
+  {%- endif %}
+  "text": "{{ data.form_text }}"
+}

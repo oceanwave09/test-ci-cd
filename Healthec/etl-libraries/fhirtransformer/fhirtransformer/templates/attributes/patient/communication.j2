@@ -1,0 +1,19 @@
+[
+  {% if data.preferred_language_code or data.preferred_language_text %}
+  {
+    "language": {
+      {% if data.preferred_language_code %}
+      "coding": [
+        {
+          "system": "{{ data.preferred_language_system }}",
+          "code": "{{ data.preferred_language_code }}",
+          "display": "{{ data.preferred_language_display }}"
+        }
+      ],
+      {%- endif %}
+      "text": "{{ data.preferred_language_text }}"
+    },
+    "preferred": true
+  }
+  {%- endif %}
+]

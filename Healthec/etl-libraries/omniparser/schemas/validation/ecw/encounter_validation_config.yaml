@@ -1,0 +1,27 @@
+encounter_patient_id:
+  key_path: patient_id
+  min_length: 1
+  required: True
+
+encounter_provider_npi:
+  key_path: provider_npi
+  required: True
+  type: string
+  min_length: 10
+
+encounter_provider_id:
+  key_path: provider_id
+  required: True
+  type: string
+  min_length: 1
+
+encounter_facility_id:
+  key_path: facility_id
+  required: True
+  type: string
+  min_length: 1
+
+encounter_facility_name:
+  key_path: facility_name
+  type: string
+  min_length: 1

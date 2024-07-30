@@ -1,0 +1,14 @@
+[
+  {
+    {%- if data.role_code -%}
+    "coding": [
+      {
+        "system": "{{ data.role_system }}",
+        "code": "{{ data.role_code }}",
+        "display": "{{ data.role_display }}"
+      } 
+    ],
+    {%- endif %}
+    "text": "{{ data.role_text }}"
+  }
+]

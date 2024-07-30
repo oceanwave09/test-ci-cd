@@ -1,0 +1,165 @@
+{
+    "parser_settings": {
+      "version": "omni.2.1",
+      "file_format_type": "csv2"
+    },
+    "file_declaration": {
+      "delimiter": ",",
+      "records": [
+        {
+          "rows": 1,
+          "min": 1,
+          "max": 1
+        },
+        {
+          "is_target": true,
+          "columns": [
+            {
+              "name": "BENE_MBI_ID",
+              "index": 1
+            },
+            {
+              "name": "B9729",
+              "index": 2
+            },
+            {
+              "name": "U071",
+              "index": 3
+            },
+            {
+              "name": "COVID19_EPISODE",
+              "index": 4
+            },
+            {
+              "name": "ADMISSION_DT",
+              "index": 5
+            },
+            {
+              "name": "DISCHARGE_DT",
+              "index": 6
+            },
+            {
+              "name": "COVID19_MONTH01",
+              "index": 7
+            },
+            {
+              "name": "COVID19_MONTH02",
+              "index": 8
+            },
+            {
+              "name": "COVID19_MONTH03",
+              "index": 9
+            },
+            {
+              "name": "COVID19_MONTH04",
+              "index": 10
+            },
+            {
+              "name": "COVID19_MONTH05",
+              "index": 11
+            },
+            {
+              "name": "COVID19_MONTH06",
+              "index": 12
+            },
+            {
+              "name": "COVID19_MONTH07",
+              "index": 13
+            },
+            {
+              "name": "COVID19_MONTH08",
+              "index": 14
+            },
+            {
+              "name": "COVID19_MONTH09",
+              "index": 15
+            },
+            {
+              "name": "COVID19_MONTH10",
+              "index": 16
+            },
+            {
+              "name": "COVID19_MONTH11",
+              "index": 17
+            },
+            {
+              "name": "COVID19_MONTH12",
+              "index": 18
+            }
+          ]
+        }
+      ]
+    },
+    "transform_declarations": {
+      "FINAL_OUTPUT": {
+        "object": {
+          "row_id": { "template": "uuidv4" },
+          "bene_mbi_id": {
+            "xpath": "BENE_MBI_ID"
+          },
+          "b9729": {
+            "xpath": "B9729"
+          },
+          "u071": {
+            "xpath": "U071"
+          },
+          "covid19_episode": {
+            "xpath": "COVID19_EPISODE"
+          },
+          "admission_dt": {
+            "xpath": "ADMISSION_DT"
+          },
+          "discharge_dt": {
+            "xpath": "DISCHARGE_DT"
+          },
+          "covid19_month01": {
+            "xpath": "COVID19_MONTH01"
+          },
+          "covid19_month02": {
+            "xpath": "COVID19_MONTH02"
+          },
+          "covid19_month03": {
+            "xpath": "COVID19_MONTH03"
+          },
+          "covid19_month04": {
+            "xpath": "COVID19_MONTH04"
+          },
+          "covid19_month05": {
+            "xpath": "COVID19_MONTH05"
+          },
+          "covid19_month06": {
+            "xpath": "COVID19_MONTH06"
+          },
+          "covid19_month07": {
+            "xpath": "COVID19_MONTH07"
+          },
+          "covid19_month08": {
+            "xpath": "COVID19_MONTH08"
+          },
+          "covid19_month09": {
+            "xpath": "COVID19_MONTH09"
+          },
+          "covid19_month10": {
+            "xpath": "COVID19_MONTH10"
+          },
+          "covid19_month11": {
+            "xpath": "COVID19_MONTH11"
+          },
+          "covid19_month12": {
+            "xpath": "COVID19_MONTH12"
+          }
+        }
+      },
+      "uuidv4": {
+        "custom_func": {
+          "name": "javascript_with_context",
+          "args": [
+            {
+              "const": "var date_time = new Date().getTime(); var row_uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(param) {  var generate_id = (date_time + Math.random()*16)%16 | 0; date_time = Math.floor(date_time/16); return (param =='x' ? generate_id : (generate_id&0x3|0x8)).toString(16);}); row_uuid"
+            }
+          ],
+          "ignore_error": true
+        }
+      }
+    }
+  }

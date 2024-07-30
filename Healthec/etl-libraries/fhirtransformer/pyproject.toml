@@ -1,0 +1,33 @@
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
+branch = "main"
+build_command = "poetry build"
+commit_author = "semantic-release-bot <semantic-release-bot@healthec.com>"
+commit_subject = "chore(release): fhirtransformer {version}"
+commit_message = "chore(release): fhirtransformer {version} [skip ci]"
+hvcs = "gitlab"
+pre_commit_command = "git pull origin main"
+tag_format="fhirtransformer/v{version}"
+upload_to_release = false
+
+[tool.poetry]
+name = "fhirtransformer"
+version = "0.6.1"
+description = "FHIR Transformer is used to render FHIR resources with Jinja template based on the given input data."
+authors = ["Suresh Nakkeran"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+jinja2 = ">=3.1.2"
+markupsafe = ">=2.1.1"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.2.2"
+mypy = "^1.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,19 @@
+{% extends "base.j2" %}
+{% block resource_attributes %}
+  {%- if data.internal_id -%}
+  "id": "{{ data.internal_id }}",
+  {%- endif %}
+  "identifier": [
+    {%- if data.source_id -%}
+    {% include "attributes/source_id.j2" %}
+    {%- endif %}
+  ],
+  "active": {% include "attributes/active.j2" %},
+  "period": {% include "attributes/period.j2" %},
+  "organization": {% include "attributes/organization_reference.j2" %},
+  "participatingOrganization": {% include "attributes/organization_affiliation/participating_organization.j2" %},
+  "network": {% include "attributes/organization_affiliation/network_organization.j2" %},
+  "code": {% include "attributes/organization_affiliation/participating_organization_role.j2" %},
+  "specialty": {% include "attributes/specialty.j2" %},
+  "location": {% include "attributes/location_reference.j2" %}
+{% endblock %}
